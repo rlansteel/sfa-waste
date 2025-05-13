@@ -1,0 +1,242 @@
+{
+  "id": 54,
+  "country_code_iso3": "DNK",
+  "country_name": "Denmark",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 57821.19922,
+  "population_total": 5818553.0,
+  "total_msw_generated_tons_year": 4910858.5,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 27.27,
+  "waste_treatment_compost_percent": 18.99,
+  "waste_treatment_incineration_percent": 52.59,
+  "waste_treatment_landfill_unspecified_percent": 1.13,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 168614.0,
+  "hazardous_waste_tons_year": 1718394.0,
+  "composition_food_organic": 12.78,
+  "composition_glass": 5.78,
+  "composition_metal": 6.29,
+  "composition_paper_cardboard": 11.57,
+  "composition_plastic": 1.61,
+  "composition_rubber_leather": 0.0,
+  "composition_wood": 7.65,
+  "composition_yard_garden_green": 30.46,
+  "composition_other": 23.86,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 77.3,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 52.5, \"composition_status\": \"consistent_strict\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"9/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 315.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 77.3, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (consistent_strict, Suma: 100.0, Presentes: 9/9): 52.5 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 315.0 / 407.51 => Normalizado: 77.3\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "5; data from source-separated and residual (non source-separated) household waste studies"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2019,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "5; data from source-separated and residual (non source-separated) household waste studies"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "3"
+    }
+  ]
+}

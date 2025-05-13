@@ -1,0 +1,180 @@
+{
+  "id": 123,
+  "country_code_iso3": "MDA",
+  "country_name": "Moldova",
+  "region": "ECS",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 10360.83008,
+  "population_total": 3554108.0,
+  "total_msw_generated_tons_year": 3981200.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 15.32,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 35.08,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 6300.0,
+  "hazardous_waste_tons_year": 418.0,
+  "composition_food_organic": 55.0,
+  "composition_glass": 4.0,
+  "composition_metal": 3.0,
+  "composition_paper_cardboard": 5.0,
+  "composition_plastic": 10.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 23.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "Data from urban areas; other includes inert (5 percent), hazardous (0.2 percent), textile (3 percent), and other unspecified (14.8 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Anon. 2013. \"STRATEGY WASTE MANAGEMENT IN THE REPUBLIC OF MOLDOVA FOR THE YEARS 2013-2027\" [\"STRATEGIA DE GESTIONARE A DEŞEURILOR ÎN REPUBLICA MOLDOVA PENTRU ANII 2013-2027\"]. Annex to the Government Decision no. 248 of 10 April 2013 [Anexă la Hotărîrea Guvernului nr. 248 din 10 aprilie 2013].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2017. \"Hazardous waste generated.\" UNSD Environmental Indicators. United Nations Statistics Division (UNSD), United Nations. https://unstats.un.org/unsd/envstats/qindicators.cshtml",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2008,
+      "source": "Anon. 2013. \"STRATEGY WASTE MANAGEMENT IN THE REPUBLIC OF MOLDOVA FOR THE YEARS 2013-2027\" [\"STRATEGIA DE GESTIONARE A DEŞEURILOR ÎN REPUBLICA MOLDOVA PENTRU ANII 2013-2027\"]. Annex to the Government Decision no. 248 of 10 April 2013 [Anexă la Hotărîrea Guvernului nr. 248 din 10 aprilie 2013].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Anon. 2013. \"STRATEGY WASTE MANAGEMENT IN THE REPUBLIC OF MOLDOVA FOR THE YEARS 2013-2027\" [\"STRATEGIA DE GESTIONARE A DEŞEURILOR ÎN REPUBLICA MOLDOVA PENTRU ANII 2013-2027\"]. Annex to the Government Decision no. 248 of 10 April 2013 [Anexă la Hotărîrea Guvernului nr. 248 din 10 aprilie 2013].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Moldova, Statistica Moldovei (National Bureau of Statistics of the Republic of Moldova). 2016. Natural Resources and the Environment in the Republic of Moldova: Collected Statistics [Resursele naturale şi mediul în Republica Moldova: Culegere statistică / Природные ресурсы и окружающая среда в Республике Молдова: Статистический сборник]. National Bureau of Statistics of the Republic of Moldova (Statistica Moldovei), Government of Moldova. Сhişinău.",
+      "comments": "9 (Legislation does not clearly differentiate between industrial and municipal waste. Existing law defines waste from production and consumption; hence, waste statistics include both types of waste)"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Moldova, Statistica Moldovei (National Bureau of Statistics of the Republic of Moldova). 2016. Natural Resources and the Environment in the Republic of Moldova: Collected Statistics [Resursele naturale şi mediul în Republica Moldova: Culegere statistică / Природные ресурсы и окружающая среда в Республике Молдова: Статистический сборник]. National Bureau of Statistics of the Republic of Moldova (Statistica Moldovei), Government of Moldova, Сhişinău.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2014d. \"Report on Household Waste Analysis in Urban and Rural Areas\" [\"Raport privind analiza deseurilor menajere in mediul urban si in mediul rural\"]. \"Modernising Local Public Services\" project, German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)].",
+      "comments": "Data from urban areas; other includes inert (5 percent), hazardous (0.2 percent), textile (3 percent), and other unspecified (14.8 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Moldova, Statistica Moldovei (National Bureau of Statistics of the Republic of Moldova). 2016. Natural Resources and the Environment in the Republic of Moldova: Collected Statistics [Resursele naturale şi mediul în Republica Moldova: Culegere statistică / Природные ресурсы и окружающая среда в Республике Молдова: Статистический сборник]. National Bureau of Statistics of the Republic of Moldova (Statistica Moldovei), Government of Moldova, Сhişinău.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "OD: Calculated based on the amount deposited compared to the amount of waste generated; RE: Calculated based on the amount recycled compared to the amount of waste generated"
+    }
+  ],
+  "ai_profile_data": {}
+}

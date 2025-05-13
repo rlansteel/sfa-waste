@@ -1,0 +1,44 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+*.venv
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Archivos sensibles (¡ASEGÚRATE DE QUE TU .env ESTÉ AQUÍ!)
+.env
+*.env.*
+secrets.yaml
+
+# Archivos específicos del SO
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos de Salida (¡Decide qué quieres ignorar!)
+# Puedes ignorar toda la carpeta de salida o archivos específicos
+output/db/waste_data_*.db  # Ignora los archivos de BD (pueden ser grandes)
+# output/quality_analysis/ # ¿Quizás quieres versionar los reportes finales?
+# output/profiles_*/ # Ignora las carpetas de perfiles (pueden ser muchos archivos)
+# output/refined_search_results/ # Ignora resultados de búsqueda
+# output/refined_queries/ # Quizás quieres guardar las queries?
+# output/eda_plots/ # ¿Ignorar plots?
+# output/sfa4_visualizations/ # ¿Ignorar plots?
+# output/ui_data/ # ¿Quizás SÍ quieres incluir la versión final de esto? Decide.
+# scraped_web_data_all.json # Probablemente ignorar (grande)
+# *.json # ¡Cuidado! Esto ignoraría TODOS los JSON, incluyendo los de configuración.
+         # Es mejor ser específico:
+processed_*.json # Ignorar JSON procesados intermedios
+
+# Archivos grandes de datos fuente (si no quieres subirlos)
+# WFD_database.xlsx # Si tienes el Excel original aquí
+# *.csv # ¡Cuidado! Esto ignoraría los codebooks y datos fuente. Decide.
+
+# Otros
+*.bak
+*.swp

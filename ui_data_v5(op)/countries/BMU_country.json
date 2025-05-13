@@ -1,0 +1,184 @@
+{
+  "id": 25,
+  "country_code_iso3": "BMU",
+  "country_name": "Bermuda",
+  "region": "NAC",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 80982.36719,
+  "population_total": 64798.0,
+  "total_msw_generated_tons_year": 82000.0,
+  "waste_collection_coverage_total_percent_of_population": 100.0,
+  "waste_treatment_recycling_percent": 2.0,
+  "waste_treatment_compost_percent": 18.3,
+  "waste_treatment_incineration_percent": 67.6,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 12.2,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": null,
+  "hazardous_waste_tons_year": 525.0,
+  "composition_food_organic": 17.0,
+  "composition_glass": 9.0,
+  "composition_metal": 6.0,
+  "composition_paper_cardboard": 29.0,
+  "composition_plastic": 13.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 26.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "missing_unimputed",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Other includes other inorganic (9 percent) and textile (17 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UN (United Nations). 2016a. \"Environmental Indicators and Selected Time Series: Hazardous waste generation.\" November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste: Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "6"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Other includes other inorganic (9 percent) and textile (17 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    }
+  ]
+}

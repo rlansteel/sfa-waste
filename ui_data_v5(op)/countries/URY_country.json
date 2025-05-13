@@ -1,0 +1,219 @@
+{
+  "id": 203,
+  "country_code_iso3": "URY",
+  "country_name": "Uruguay",
+  "region": "LCN",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 20588.39258,
+  "population_total": 3431552.0,
+  "total_msw_generated_tons_year": 1260139.509,
+  "waste_collection_coverage_total_percent_of_population": 98.0,
+  "waste_treatment_recycling_percent": 8.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 17.5,
+  "waste_treatment_sanitary_landfill_percent": 10.5,
+  "waste_treatment_controlled_landfill_percent": 61.7,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 37000.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 53.5,
+  "composition_glass": 3.0,
+  "composition_metal": 5.0,
+  "composition_paper_cardboard": 20.0,
+  "composition_plastic": 11.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 7.5,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Data for domestic waste from Montevideo and its metropolitan area; other includes textile (2 percent) and other inorganic (5.5 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Status of Solid Waste Management in Latin America and the Caribbean\" [\"Situación de la gestión de residuos sólidos en América Latina y el Caribe\"]. Inter-American Development Bank (IDB).",
+      "comments": "2 (urban, 1.03 kg/person/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Status of Solid Waste Management in Latin America and the Caribbean\" [\"Situación de la gestión de residuos sólidos en América Latina y el Caribe\"]. Inter-American Development Bank (IDB) [Banco Interamericano de Desarrollo (BID)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Status of Solid Waste Management in Latin America and the Caribbean\" [\"Situación de la gestión de residuos sólidos en América Latina y el Caribe\"]. Inter-American Development Bank (IDB) [Banco Interamericano de Desarrollo (BID)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Status of Solid Waste Management in Latin America and the Caribbean\" [\"Situación de la gestión de residuos sólidos en América Latina y el Caribe\"]. Inter-American Development Bank (IDB) [Banco Interamericano de Desarrollo (BID)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Status of Solid Waste Management in Latin America and the Caribbean\" [\"Situación de la gestión de residuos sólidos en América Latina y el Caribe\"]. Inter-American Development Bank (IDB) [Banco Interamericano de Desarrollo (BID)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. /// Anon. n.d.(d) \"Sanitary Filling of Roses\" [\"RELLENO SANITARIO DE LAS ROSAS\"]. Maldonado; Seminar of Small Municipalities, CEMPRE. /// LKSur. 2013. \"Study of Characterization of Urban Solid Waste for Energy Purposes\" [\"Estudio de Caracterizacion de Residuos Solidos Urbanos con Fines Energeticos\"]. ALUR Alcoholes del Uruguay. MIEM DNE. February.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. /// Anon. n.d.(d) \"Sanitary Filling of Roses\" [\"RELLENO SANITARIO DE LAS ROSAS\"]. Maldonado; Seminar of Small Municipalities, CEMPRE. /// LKSur. 2013. \"Study of Characterization of Urban Solid Waste for Energy Purposes\" [\"Estudio de Caracterizacion de Residuos Solidos Urbanos con Fines Energeticos\"]. ALUR Alcoholes del Uruguay. MIEM DNE. February.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Data for domestic waste from Montevideo and its metropolitan area; other includes textile (2 percent) and other inorganic (5.5 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Oriental Republic of Uruguay. 2004. \"TOMO II: Urban Solid Waste. Solid Waste Management Plan of Montevideo and the Metropolitan Area.\" Office of Planning and Budgeting. Directorate of Development Projects.  [REPÚBLICA ORIENTAL DEL URUGUAY. OFICINA DE PLANEAMIENTO Y PRESUPUESTO. DIRECCIÓN DE PROYECTOS DE DESARROLLO. 2004. \"TOMO II: Residuos Sólidos Urbanos. Plan Director de Residuos Sólidos de Montevideo y Área Metropolitana.\"] November. /// CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "CSI Ingenieros. 2011. \"Background Information for the Design of a Solid Waste Strategic Plan\" [\"Informacion de Base para el Diseno de Un Plan Estrategico de Residuos Solidos\"]. CSI Ingenieros. Pittamiglio Studio [Estudio Pittamiglio]. August. /// Anon. n.d.(d) \"Sanitary Filling of Roses\" [\"RELLENO SANITARIO DE LAS ROSAS\"]. Maldonado; Seminar of Small Municipalities, CEMPRE. /// LKSur. 2013. \"Study of Characterization of Urban Solid Waste for Energy Purposes\" [\"Estudio de Caracterizacion de Residuos Solidos Urbanos con Fines Energeticos\"]. ALUR Alcoholes del Uruguay. MIEM DNE. February.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "OD, CLF, SLF: Calculated based on amount disposed at type of facility and coverage rate; RE: Calculated based on values available from formal recycling programs; does not include informal recycling or other formal recycling activities"
+    }
+  ]
+}

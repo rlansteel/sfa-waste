@@ -1,0 +1,250 @@
+{
+  "id": 176,
+  "country_code_iso3": "SRB",
+  "country_name": "Serbia",
+  "region": "ECS",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 18351.27344,
+  "population_total": 6944975.0,
+  "total_msw_generated_tons_year": 2347401.5,
+  "waste_collection_coverage_total_percent_of_population": 70.0,
+  "waste_treatment_recycling_percent": 0.76,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": 73.91,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 14388.0,
+  "hazardous_waste_tons_year": 13475026.0,
+  "composition_food_organic": 37.62,
+  "composition_glass": 5.44,
+  "composition_metal": 1.38,
+  "composition_paper_cardboard": 13.57,
+  "composition_plastic": 12.73,
+  "composition_rubber_leather": 0.4,
+  "composition_wood": null,
+  "composition_yard_garden_green": 12.14,
+  "composition_other": 16.72,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 84.95,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 26, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 18.2, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 26, \"measurements_with_source\": 26, \"measurements_with_comments\": 26, \"raw_score\": 346.2, \"max_potential_score\": 407.51, \"final_normalized_score\": 84.95, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 8/9): 0.0 pts.\\n- Mediciones (26 \\u00fanicas): Disp=28.0, Detalle/Rec=18.2 pts.\\n-> Puntaje Bruto: 346.2 / 407.51 => Normalizado: 84.95\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "Paper/cardboard includes paper (5.34 percent), cardboard (6.13 percent), Al-coated cardboard (1.01 percent), and waxed cardboard (1.09 percent) waste; plastic includes plastic bags (5.61 percent), hard plastic (3.39 percent), and plastic packaging (3.73 percent) waste; metal inclues aluminum cans (0.26 percent), metal packaging and other (1.12 percent) waste; rubber/leather reported as leather; other includes fines (7.82 percent), disposable diapers (3.65 percent), and textile (5.25 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2019,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Anthouli, Aida, Konstantine Aravossis, Rozy Charitopoulou, Boјana Tot, and Goran Vujic. 2013. \"Opportunities and Barriers of Recycling in Balkan Countries: The Cases of Greece and Serbia.\" Hellenic Solid Waste Management Association (HSWMA) and Serbian Solid Waste Management Association (SeSWA), with the International Solid Waste Association (ISWA). July.",
+      "comments": "Paper/cardboard includes paper (5.34 percent), cardboard (6.13 percent), Al-coated cardboard (1.01 percent), and waxed cardboard (1.09 percent) waste; plastic includes plastic bags (5.61 percent), hard plastic (3.39 percent), and plastic packaging (3.73 percent) waste; metal inclues aluminum cans (0.26 percent), metal packaging and other (1.12 percent) waste; rubber/leather reported as leather; other includes fines (7.82 percent), disposable diapers (3.65 percent), and textile (5.25 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "OD: There are 3,582 identified landfills, of which 165 are municipality landfills, 5 are sanitary landfills, and rest are dumps"
+    }
+  ],
+  "ai_profile_data": {}
+}

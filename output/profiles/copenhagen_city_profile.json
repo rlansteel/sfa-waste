@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "entity_id": "81",
+    "entity_type": "city",
+    "profile_generation_timestamp_utc": "2025-05-12T07:26:12.415135+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.0-ProfileJSON"
+  },
+  "waste_profile": {
+    "entity_name": "Copenhagen",
+    "country": "Denmark",
+    "iso3": "DNK",
+    "overall_summary": "Copenhagen, the capital of Denmark, generates a significant amount of waste annually, though specific recycling rates are not available in the provided data. As a high-income city, effective waste management strategies are likely in place, but challenges may persist.",
+    "generation_context": {
+      "scale_and_rate": "With a population of over 570,000 and classified as a high-income city, Copenhagen likely generates a substantial amount of waste per capita annually, though the exact rate is not provided in the data.",
+      "contributing_factors_trends": "No specific information found in sources."
+    },
+    "waste_stream_composition": {
+      "summary": "No specific information on waste stream composition is provided in the database.",
+      "data_notes": "No notes on composition data source or status."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "The primary collection mode for Copenhagen is listed as 'Other', but no further details are provided on collection coverage or methods used in the formal or informal sectors.",
+      "key_challenges": "No specific collection challenges are mentioned in the provided sources."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "The database does not provide information on the dominant treatment or disposal methods used in Copenhagen.",
+      "infrastructure_highlights": "No specific waste treatment or disposal facilities are mentioned in the provided sources.",
+      "key_challenges": "No specific treatment or disposal challenges are mentioned in the provided sources."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "The recycling rate for Copenhagen is not provided in the database.",
+      "programs_mentioned": "No specific recycling, composting, or circular economy programs are mentioned in the provided sources.",
+      "informal_sector_role": "No information on the role of the informal sector is provided in the sources."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "No information on the regulatory framework or local waste management plans is provided in the database or sources.",
+      "governance_issues": "No specific governance, funding, or administrative issues are mentioned in the provided sources."
+    },
+    "overall_assessment": {
+      "strengths": [],
+      "weaknesses_or_challenges": [
+        "Lack of specific data on waste generation rates, composition, treatment methods, and recycling rates",
+        "Limited information on waste management practices, infrastructure, and governance"
+      ],
+      "recent_developments_or_outlook": "No recent developments or future outlook information is provided in the sources."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 81,
+      "data_quality_score": 58.0
+    },
+    "web_finding_ids": []
+  }
+}

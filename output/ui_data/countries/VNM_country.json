@@ -1,0 +1,271 @@
+{
+  "id": 210,
+  "country_code_iso3": "VNM",
+  "country_name": "Vietnam",
+  "region": "EAS",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 5089.411133,
+  "population_total": 86932496.0,
+  "total_msw_generated_tons_year": 9570300.0,
+  "waste_collection_coverage_total_percent_of_population": 72.0,
+  "waste_treatment_recycling_percent": 23.0,
+  "waste_treatment_compost_percent": 15.0,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 141000.0,
+  "hazardous_waste_tons_year": 2995153.5,
+  "composition_food_organic": 61.9,
+  "composition_glass": 2.18,
+  "composition_metal": 0.58,
+  "composition_paper_cardboard": 5.2,
+  "composition_plastic": 12.15,
+  "composition_rubber_leather": 0.6,
+  "composition_wood": 3.74,
+  "composition_yard_garden_green": null,
+  "composition_other": 15.18,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 85.45,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 101.53, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 29, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 20.2, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 28, \"measurements_with_source\": 29, \"measurements_with_comments\": 29, \"raw_score\": 348.2, \"max_potential_score\": 407.51, \"final_normalized_score\": 85.45, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 101.53, Presentes: 8/9): 0.0 pts.\\n- Mediciones (29 \\u00fanicas): Disp=28.0, Detalle/Rec=20.2 pts.\\n-> Puntaje Bruto: 348.2 / 407.51 => Normalizado: 85.45\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "Glass includes glass (1.37 percent) and porcelain (0.81 percent) waste; Other includes textile (3.19 percent), soil and sand (6.42 percent), cinder (2.58 percent), hazardous (0.17 percent), sludge (2.33 percent), and other unspecified (0.49 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5: 365–374.",
+      "comments": "8  (26,220 tonnes/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science (Springer). ISSN 1431-6250. ISBN 978-981-4451-72-7. ISBN 978-981-4451-73-4 (eBook). DOI 10.1007/978-981-4451-73-4.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Vietnam WENID (Waste Management and Environment Improvement Department). 2013. \"Country Analysis Paper.\" Paper presented at the Fourth Regional 3R Forum in Asia, \"3Rs in the Context of Rio+20 Outcomes: The Future We Want,\" Hanoi, March 18–20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Nguyen, H. H., S. Heaven, and C. Banks. 2014. \"Energy Potential from the Anaerobic Digestion of Food Waste in Municipal Solid Waste Stream of Urban Areas in Vietnam.\" International Journal of Energy and Environmental Engineering 5 (4): 365–374.",
+      "comments": "Glass includes glass (1.37 percent) and porcelain (0.81 percent) waste; Other includes textile (3.19 percent), soil and sand (6.42 percent), cinder (2.58 percent), hazardous (0.17 percent), sludge (2.33 percent), and other unspecified (0.49 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Patriamby, Agamuthu and Masaru Tanaka. 2014. \"Municipal Solid Waste Management in Asia and the Pacific Islands: Challenges and Strategic Solutions.\" Journal of Environmental Science.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "RE: Reported as a range of 18-28 percent (average used)"
+    }
+  ],
+  "ai_profile_data": {}
+}

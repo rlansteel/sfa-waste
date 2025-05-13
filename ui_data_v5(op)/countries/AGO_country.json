@@ -1,0 +1,163 @@
+{
+  "id": 3,
+  "country_code_iso3": "AGO",
+  "country_name": "Angola",
+  "region": "SSF",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 8036.69043,
+  "population_total": 25096150.0,
+  "total_msw_generated_tons_year": 4213643.585,
+  "waste_collection_coverage_total_percent_of_population": 23.1,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 92000.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 51.8,
+  "composition_glass": 6.7,
+  "composition_metal": 4.4,
+  "composition_paper_cardboard": 11.9,
+  "composition_plastic": 13.5,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 11.5,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Data from Benguela Province; other includes textile (6.1 percent) and inorganic (5.4 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2009,
+      "source": "Vide, Aderito de Castro. 2009. \"Angola's National Health Care Management Plan.\" HAMSET project, MHSS project.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Angola, Ministry of Environment. 2012. \"Strategic Plan for the Management of Urban Waste in Angola\" [\"Plano Estratégico para a Gestão de Resíduos Urbanos em Angola (PESGRUA)\"]. Paper presented at the First Congress of Portuguese-Language Engineers [Primero Congresso dos Engenheiros de Língua Portuguesa], September 18.",
+      "comments": "1 (0.46 kg/person/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Data from Benguela Province; other includes textile (6.1 percent) and inorganic (5.4 percent) waste"
+    }
+  ]
+}

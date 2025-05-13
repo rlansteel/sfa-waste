@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "entity_id": "MEX",
+    "entity_type": "country",
+    "profile_generation_timestamp_utc": "2025-05-12T16:51:19.281973+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.0-ProfileJSON"
+  },
+  "waste_profile": {
+    "entity_name": "Mexico",
+    "country": "Mexico",
+    "iso3": "MEX",
+    "overall_summary": "Mexico generates a significant amount of municipal solid waste, around 53 million tons per year, with a relatively high recycling rate of 5% compared to regional averages. However, a large portion (21%) is still disposed of in open dumps, posing environmental risks. Key challenges include improving waste collection coverage and diverting waste from landfills through increased recycling and composting.",
+    "generation_context": {
+      "scale_and_rate": "With a population of over 125 million and an upper-middle income status, Mexico generates a substantial amount of municipal solid waste at 53 million tons per year, or around 0.42 tons per capita. The generation rate appears to be increasing, likely driven by population growth and economic development.",
+      "contributing_factors_trends": "No specific information found in sources regarding factors like tourism, industry, or population growth affecting waste generation trends."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream in Mexico is predominantly organic waste (52.4%), followed by paper/cardboard (13.8%), plastics (10.9%), glass (5.9%), metals (3.4%), and other materials (12.1%).",
+      "data_notes": "The composition data appears to be based on a national study, but the specific source or year is not provided in the database."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "No specific data is provided on waste collection coverage rates. The sources do not mention details on primary collection methods or the roles of formal and informal sectors.",
+      "key_challenges": "No specific collection challenges are mentioned in the web findings."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "The dominant waste treatment methods in Mexico are sanitary landfills (74.5%) and open dumps (21%). Recycling accounts for only 5% of waste treatment. The web findings do not provide additional details on treatment methods.",
+      "infrastructure_highlights": "No specific waste treatment or disposal infrastructure facilities are highlighted in the web findings.",
+      "key_challenges": "A key challenge mentioned is the significant portion (21%) of waste still being disposed of in open dumps, which can pose environmental and health risks."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "The recycling rate in Mexico is 5% according to the database. No specific recycling or composting targets are mentioned in the web findings.",
+      "programs_mentioned": "No specific recycling, composting, or circular economy programs are mentioned in the web findings.",
+      "informal_sector_role": "No information is provided in the web findings regarding the role of the informal sector in recycling or waste recovery activities."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "According to the database, Mexico has a national law governing waste management. However, the web findings do not provide additional details on local or regional waste regulations or plans.",
+      "governance_issues": "No specific governance, funding, or administrative issues related to waste management are mentioned in the web findings."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Relatively high recycling rate of 5% compared to regional averages",
+        "Existence of a national waste management law"
+      ],
+      "weaknesses_or_challenges": [
+        "Significant portion (21%) of waste still disposed of in open dumps",
+        "Limited information available on waste collection coverage and methods"
+      ],
+      "recent_developments_or_outlook": "No specific information found in sources regarding recent developments or future outlook for waste management in Mexico."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 126,
+      "data_quality_score": 74.55
+    },
+    "web_finding_ids": [
+      368,
+      345,
+      363,
+      367,
+      373,
+      374,
+      343,
+      361,
+      375
+    ]
+  }
+}

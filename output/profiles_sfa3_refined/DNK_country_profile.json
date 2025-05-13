@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "entity_id": "DNK",
+    "entity_type": "country",
+    "profile_generation_timestamp_utc": "2025-05-12T17:24:41.335931+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.1-ProfileJSON_Granular",
+    "generation_mode": "granular_sections"
+  },
+  "waste_profile": {
+    "entity_name": "Denmark",
+    "country": "Denmark",
+    "iso3": "DNK",
+    "overall_summary": "Denmark generates a high amount of municipal solid waste per capita, among the highest in the EU. The waste stream is dominated by yard/garden waste, food/organic waste, paper/cardboard, and other unspecified materials. While data on collection coverage is lacking, Denmark has a well-established waste management infrastructure with formal collection systems. The dominant treatment methods are incineration, recycling, and composting. Denmark appears on track to meet most 2025 recycling targets except for plastic packaging. Despite its advanced system, high waste generation rates and increasing recycling of plastics remain key challenges.",
+    "generation_context": {
+      "scale_and_rate": "Denmark generates a high amount of municipal solid waste, around 4.9 million tons per year or 786 kg per capita as of 2021, which is among the highest levels in the EU. According to some reports, the total waste generation increased until 2018 but has decreased slightly since then, suggesting a potential decoupling between waste generation and economic growth.",
+      "contributing_factors_trends": "No specific information found in sources regarding key contributing factors or trends affecting Denmark's municipal solid waste generation, such as impacts from tourism, industry, or population growth."
+    },
+    "waste_stream_composition": {
+      "summary": "The municipal solid waste stream in Denmark is predominantly composed of yard/garden green waste (30.46%), followed by other unspecified materials (23.86%), food/organic waste (12.78%), paper/cardboard (11.57%), metal (6.29%), glass (5.78%), wood (7.65%), and plastic (1.61%), with no rubber/leather waste reported.",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "No specific information found in sources on national waste collection coverage or primary collection methods. However, some reports suggest Denmark has a well-established waste management infrastructure with formal waste collection systems in place.",
+      "key_challenges": "While Denmark appears to have robust waste collection systems, one potential challenge inferred from the findings is the high per capita waste generation rate, which is among the highest in the EU. Efficiently collecting and transporting these large volumes of waste could strain existing infrastructure and resources."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the structured data, the dominant waste treatment methods in Denmark are incineration (52.59%), recycling (27.27%), and composting (18.99%). Some reports suggest Denmark is on track to meet the 2035 landfill target and the 2025 municipal waste recycling target. However, the country faces challenges in meeting the 2025 plastic packaging recycling target.",
+      "infrastructure_highlights": "Denmark has a well-established waste management infrastructure with a high number of waste incineration plants. The country has historically relied heavily on waste incineration, which some reports describe as a path dependency.",
+      "key_challenges": "Despite its advanced waste management system, Denmark faces challenges related to its high per capita waste generation rates, which are among the highest in the EU. Transitioning towards more sustainable consumption patterns and further increasing recycling rates, particularly for plastic packaging, remain key challenges."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Denmark has a waste treatment recycling rate of 27.27% and a composting rate of 18.99%. Some reports suggest Denmark is on track to meet the 2035 landfill target, the 2025 municipal waste recycling target, and the 2025 targets for packaging waste recycling for all materials except plastic packaging.",
+      "programs_mentioned": "No specific programs mentioned in the provided sources.",
+      "informal_sector_role": "No specific information found in sources."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "According to web findings, Denmark has a national law and agency governing waste management. Some reports suggest Denmark is considered on track to meet the 2035 landfill target, the 2025 municipal waste recycling target, and the 2025 targets for packaging waste recycling for most materials except plastic packaging. The country has a well-established waste management infrastructure and strategy that relies heavily on recycling and incineration. A national waste management strategy dating back to the 1980s prioritizes recycling as the optimum handling of waste.",
+      "governance_issues": "No specific information found in sources."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Well-established waste management infrastructure",
+        "High incineration and recycling rates",
+        "On track to meet most 2025 recycling targets",
+        "National laws and agencies governing waste management"
+      ],
+      "weaknesses_or_challenges": [
+        "Among the highest municipal solid waste generation rates per capita in the EU",
+        "Challenges in meeting 2025 plastic packaging recycling target",
+        "Potential path dependency on waste incineration",
+        "Need to transition towards more sustainable consumption patterns"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 54,
+      "data_quality_score": 88.44
+    },
+    "web_finding_ids": [
+      225,
+      228,
+      255,
+      185,
+      183,
+      184,
+      226,
+      229,
+      230,
+      256,
+      257
+    ]
+  }
+}

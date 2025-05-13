@@ -1,0 +1,201 @@
+{
+  "id": 119,
+  "country_code_iso3": "MAC",
+  "country_name": "Macao SAR, China",
+  "region": "EAS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 117335.5859,
+  "population_total": 612167.0,
+  "total_msw_generated_tons_year": 377942.0,
+  "waste_collection_coverage_total_percent_of_population": 100.0,
+  "waste_treatment_recycling_percent": 20.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 11000.0,
+  "hazardous_waste_tons_year": 3118.0,
+  "composition_food_organic": 3.1,
+  "composition_glass": 3.3,
+  "composition_metal": 1.7,
+  "composition_paper_cardboard": 58.7,
+  "composition_plastic": 7.9,
+  "composition_rubber_leather": null,
+  "composition_wood": 22.3,
+  "composition_yard_garden_green": null,
+  "composition_other": 3.1,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 73.62,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.1, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 300.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.62, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.1, Presentes: 7/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 300.0 / 407.51 => Normalizado: 73.62\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "Glass includes glass and rubble waste; other reported as textile waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Macao. 2014. Report on the State of the Environment of Macao 2014. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/04.pdf ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Macao. 2014. Report on the State of the Environment of Macao 2014. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/04.pdf ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2009,
+      "source": "UN (United Nations). 2017b. \"Hazardous waste generation (tonnes).\" October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Macau SAR China, DSEC (Statistics and Census Service). 2017. \"Environmental Statistics 2016.\" Statistics and Census Service, Government of Macau SAR China. April 18. http://www.dsec.gov.mo/Statistic/Social/EnvironmentStatistics/2016%E5%B9%B4%E7%92%B0%E5%A2%83%E7%B5%B1%E8%A8%88.aspx?lang=en-US.",
+      "comments": "Value includes domestic waste and waste produced by businesses"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2009,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2009,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2009,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2009,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Macau SAR China, DSPA (Environmental Protection Bureau). 2014. \"Report on the State of the Environment of Macao 2014.\" Environmental Protection Bureau [Direcção dos Serviços de Protecção Ambiental (DSPA)], Government of Macau SAR China. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/2014en.pdf.",
+      "comments": "Glass includes glass and rubble waste; other reported as textile waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Macao. 2014. Report on the State of the Environment of Macao 2014. http://www.dspa.gov.mo/StateReportHTML/2014/pdf/en/04.pdf ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "RE: Includes plastics, rubber, paper, metal, and other recoverable waste; approximated from figure in source; IN: Some incineration occurs at Macao Refuse Incineration Plant, which treats domestic and ICI waste but exact percentage unknown"
+    }
+  ],
+  "ai_profile_data": {}
+}

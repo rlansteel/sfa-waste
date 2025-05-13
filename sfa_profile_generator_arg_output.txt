@@ -1,0 +1,7 @@
+usage: sfa_profile_generator.py [-h] [--db-file DB_FILE]
+                                --entity-type {city,country}
+                                --entity-id ENTITY_ID
+                                [--output-dir OUTPUT_DIR]
+                                [--anthropic-api-key ANTHROPIC_API_KEY]
+                                [--llm-model LLM_MODEL]
+sfa_profile_generator.py: error: the following arguments are required: --entity-type, --entity-id

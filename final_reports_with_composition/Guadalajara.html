@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Residuos - Guadalajara</title> <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 2em; color: #333; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: auto; background-color: #ffffff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #1a237e; /* Azul oscuro */ }
+        h1 { border-bottom: 2px solid #c5cae9; padding-bottom: 0.3em; text-align: center; }
+        h2 { margin-top: 1.5em; border-bottom: 1px solid #e8eaf6; padding-bottom: 0.2em;}
+        .data-section { background-color: #e8eaf6; /* Azul muy claro */ border: 1px solid #c5cae9; padding: 1.5em; margin-bottom: 1.5em; border-radius: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; }
+        .data-item { background-color: #ffffff; padding: 0.8em; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .data-label { font-weight: bold; color: #303f9f; /* Azul medio */ display: block; margin-bottom: 0.3em; }
+        .data-value { color: #333; }
+        .llm-analysis { margin-top: 2em; padding: 1.5em; border: 1px dashed #9fa8da; border-radius: 8px; background-color: #f1f3f5; }
+        .llm-analysis h2 { border-bottom: none; margin-bottom: 1em;}
+        .llm-analysis ul { list-style-type: disc; margin-left: 20px; padding-left: 1em; }
+        .llm-analysis li { margin-bottom: 0.6em; }
+        .llm-analysis p { margin-bottom: 0.8em; }
+        .footer { margin-top: 2.5em; font-size: 0.85em; color: #555; text-align: center; border-top: 1px solid #eee; padding-top: 1em;}
+        /* Estilo para N/A */
+        .na-value { color: #888; font-style: italic; }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body { margin: 1em; }
+            .container { padding: 1em; }
+            .data-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Reporte de Gestión de Residuos: Guadalajara</h1>
+
+    <div class="data-section">
+        <h2>Información Base (Datos CSV)</h2>
+        <div class="data-item"><span class="data-label">Municipio:</span> <span class="data-value">Guadalajara</span></div>
+        <div class="data-item"><span class="data-label">País:</span> <span class="data-value">Mexico</span></div>
+        <div class="data-item"><span class="data-label">Población:</span> <span class="data-value">1,460,148</span></div>
+        <div class="data-item"><span class="data-label">Residuos Totales (Toneladas/Año):</span> <span class="data-value">648,812</span></div>
+        <div class="data-item"><span class="data-label">Nivel de Ingresos:</span> <span class="data-value">UMC</span></div>
+        <div class="data-item"><span class="data-label">Tasa de Reciclaje (%):</span> <span class="data-value">8.0%</span></div>
+        <div class="data-item"><span class="data-label">Cobertura Colección (Población %):</span> <span class="data-value"><span class="na-value">N/A</span></span></div>
+        <div class="data-item"><span class="data-label">Modo Colección Primario:</span> <span class="data-value">Other</span></div>
+        </div>
+        <h2>Waste Composition (%)</h2>
+<table>
+  <thead>
+    <tr><th>Waste Type</th><th>Percentage</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Food/Organic</td><td>33</td></tr>
+    <tr><td>Glass</td><td>4</td></tr>
+    <tr><td>Metal</td><td>0</td></tr>
+    <tr><td>Paper/Cardboard</td><td>20</td></tr>
+    <tr><td>Plastic</td><td>18</td></tr>
+    <tr><td>Other</td><td><span class="na-value">N/A</span></td></tr>
+    </tbody>
+</table>
+
+    <div class="llm-analysis">
+        <h2>Análisis y Hallazgos Web (Resumen LLM)</h2>
+        <h2>Key Initiatives and Programs</h2>
+<ul>
+<li>Implementation of "Puntos Limpios" (Clean Point) system featuring public trash and recycling cans connected to underground storage (Source: hotspotcitiesproject.com)</li>
+<li>Commitment to organizing environmentally and socially inclusive initiatives for the 2026 FIFA World Cup (Source: mexicobusiness.news)</li>
+</ul>
+
+<h2>Identified Challenges</h2>
+<ul>
+<li>Historical lack of waste management planning, with the city relying on private companies and partnerships with neighboring towns for disposal (Source: hotspotcitiesproject.com)</li>
+<li>Past issues with unreliable collection services, especially in lower-income areas (Source: hotspotcitiesproject.com)</li>
+<li>Problems with street littering and low environmental awareness among citizens (Source: hotspotcitiesproject.com)</li>
+<li>Closure of Matatlán landfill due to reaching capacity and environmental risks to nearby residents (Source: bnamericas.com)</li>
+</ul>
+
+<h2>Data and Statistics</h2>
+<ul>
+<li>Guadalajara had 1.56k economic units in waste management and remediation services as of 2019 (Source: economia.gob.mx)</li>
+<li>The Ajijic recycling project collected and sold 28,368 kilos of material to Guadalajara dealers (Source: theguadalajarareporter.net)</li>
+<li>Mexico's average daily plastic waste generation is 1.16kg per person (Source: mexicobusiness.news)</li>
+</ul>
+
+<h2>Collaborations and Partnerships</h2>
+<ul>
+<li>ANIPAC's collaboration with educational institutions like Anáhuac University for recycling initiatives and educational campaigns (Source: mexicobusiness.news)</li>
+<li>Historical partnerships between private waste management companies and neighboring towns for waste disposal (Source: hotspotcitiesproject.com)</li>
+</ul>
+    </div>
+
+    <div class="footer">
+        <p><em>Reporte generado automáticamente el: 2025-05-06 02:35:36 UTC</em></p>
+        <p><em>Fuentes de datos: CSV procesado, Búsquedas web vía Tavily API, Análisis por LLM (claude-3-5-sonnet-20241022).</em></p> </div>
+</div>
+</body>
+</html>

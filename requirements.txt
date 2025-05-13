@@ -1,0 +1,29 @@
+# Core Data Handling & Processing
+pandas==2.2.3
+numpy==1.26.4
+ftfy==6.3.1 # For fixing text encoding issues
+
+# API Clients & Environment
+anthropic==0.50.0
+tavily-python==0.5.3
+python-dotenv==1.1.0 # For loading environment variables (.env file)
+
+# Web Interaction & Parsing (Added for SFA2 v2)
+requests==2.32.3 # For making HTTP requests
+beautifulsoup4==4.12.3 # For parsing HTML content
+validators==0.33.0 # For robust URL validation
+PyPDF2==3.0.1 # For PDF file handling
+pycryptodome==3.20.0 # For cryptographic functions (used in sfa_csv_processor.py)
+
+# Console Output & Visualization
+rich==13.9.4 # For enhanced console output (progress bars, tables, etc.)
+matplotlib==3.9.4 # For plotting
+seaborn==0.13.2 # For enhanced statistical visualizations
+
+# Utilities (Implicitly used or good to have listed)
+unidecode==1.3.8 # For sanitizing filenames (used by prepare_ui_data.py, sfa_csv_processor.py)
+
+# Nota: Las dependencias de estas librerías (como pytz, urllib3, idna, etc.)
+# se instalarán automáticamente al instalar las listadas arriba.
+# Se recomienda usar un entorno virtual (ej. venv) para gestionar estas dependencias.
+# Ejecutar: pip install -r requirements.txt

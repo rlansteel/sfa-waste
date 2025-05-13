@@ -1,0 +1,194 @@
+{
+  "id": 78,
+  "country_code_iso3": "GRD",
+  "country_name": "Grenada",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 13207.71191,
+  "population_total": 105481.0,
+  "total_msw_generated_tons_year": 29536.11394,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": 0.2,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 98.3,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 800.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 27.1,
+  "composition_glass": 3.1,
+  "composition_metal": 2.4,
+  "composition_paper_cardboard": 13.6,
+  "composition_plastic": 16.4,
+  "composition_rubber_leather": 0.9,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 36.5,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "not_found",
+  "longitude_geo_status": "not_found",
+  "data_quality_score": 65.18,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 18, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 12.6, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 18, \"measurements_with_source\": 18, \"measurements_with_comments\": 18, \"raw_score\": 265.6, \"max_potential_score\": 407.51, \"final_normalized_score\": 65.18, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 225.0 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing; waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 7/9): 0.0 pts.\\n- Mediciones (18 \\u00fanicas): Disp=28.0, Detalle/Rec=12.6 pts.\\n-> Puntaje Bruto: 265.6 / 407.51 => Normalizado: 65.18\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "Other includes textile (2 percent) and other inorganic (5 percent) waste"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "Rubber/leather reported as used tires; other includes site cleaning (21.3 percent), CandD (11.6 percent), textile (2.3 percent), household bulky (0.7 percent), and street sweepings (0.6 percent) waste"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Caribbean Development Bank. 2014. \"Appraisal Report on Integrated Solid Waste Management Project—Grenada.\" Report No. AR 14/11 (BD 94/14). Paper presented at the Two Hundred and Sixty-Fourth Meeting of the Board of Directors, Caribbean Development Bank, Barbados, December 11.",
+      "comments": "Value includes household (20,818 tonnes/year), institutional (1,017 tonnes/year), and commercial (5,560 tonnes/year) waste disposed in Perserverance Landfill and all the waste in Dumfries Landfill (1,639 tonnes/year) totalling 29,034 tonnes/year. This value is then adjusted by the collection rate of 98.3 percent; CandD, shipping, industrial, and green waste excluded"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of households",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of households",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2009,
+      "source": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH). 2015b. \"Reducing the Input of Plastic Litter into the Ocean around Grenada: Applicability and Effects of Selected Instruments.\" German Corporation for International Cooperation [Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)]. December.",
+      "comments": "Rubber/leather reported as used tires; other includes site cleaning (21.3 percent), CandD (11.6 percent), textile (2.3 percent), household bulky (0.7 percent), and street sweepings (0.6 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Grenada, Population and Housing Census. 2011. http://finance.gd/images/Censussubmissionfinal.pdf.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

@@ -1,0 +1,270 @@
+{
+  "id": 57,
+  "country_code_iso3": "ECU",
+  "country_name": "Ecuador",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 11896.37695,
+  "population_total": 16144368.0,
+  "total_msw_generated_tons_year": 5297211.143,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 12.9,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 22.28,
+  "waste_treatment_sanitary_landfill_percent": 53.22,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "No",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 73000.0,
+  "hazardous_waste_tons_year": 193812.0,
+  "composition_food_organic": 58.67,
+  "composition_glass": 3.01,
+  "composition_metal": 1.53,
+  "composition_paper_cardboard": 10.25,
+  "composition_plastic": 11.44,
+  "composition_rubber_leather": 0.45,
+  "composition_wood": 0.86,
+  "composition_yard_garden_green": null,
+  "composition_other": 13.78,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 99.99, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 99.99, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "Measured in 161 municipalities and weighted average used; rubber/leather includes leather only; other includes includes scrap metal, textile, lightbulbs, batteries, diapers, sanitary napkins, and other unspecified waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "GSMA. 2015. \"eWaste in Latin America: Statistical analysis and policy recommendations.\" GSMA and UNU-IAS (United Nations University Institute for the Advanced Study of Sustainability). November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2008,
+      "source": "UNSD (United Nations Statistics Division). 2017. \"Hazardous waste generated.\" UNSD Environmental Indicators. United Nations Statistics Division (UNSD), United Nations. https://unstats.un.org/unsd/envstats/qindicators.cshtml",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "INEC (National Institute of Statistics and Census). n.d. \"Hazardous Waste in Health Establishments 2015.\" [INEC (Instituto Nacional de Estadística y Censos). \"DESECHOS PELIGROSOS EN ESTABLECIMIENTOS DE SALUD 2015\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February.",
+      "comments": "3; 11 (12,829.41 tonnes/day collected and a collection rate of 88.5 percent)"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2016,
+      "source": "Ecuador ENEMDU (Employment, Unemployment and Underemployment Survey). 2017. \"Percentage of households with garbage collection service: Housing Tabulations\". [Encuesta de Empleo, Desempleo y Subempleo - ENEMDU. 2017. \"Porcentaje de hogares con servicio de recolección de basura\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February. ",
+      "comments": "Measured in 161 municipalities and weighted average used; rubber/leather includes leather only; other includes includes scrap metal, textile, lightbulbs, batteries, diapers, sanitary napkins, and other unspecified waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Ecuador, Ministry of Environment. 2018. National Program for Integrated Solid Waste Management [Programa Nacional para Gestión Integral de Residuos Sólidos], Ministry of Environment [Ministerio del Ambiente], Government of Ecuador. Personal communication with the World Bank. February.",
+      "comments": "16; OD: Calculated assuming that 29.5 percent of all collected waste (88.4 percent) that is not recycled is dumped; SLF: Calculated based on  percent of people with collection service for this disposal method times the  percent of total collection coverage; RE: 13; UA: Refers to uncollected waste"
+    }
+  ]
+}

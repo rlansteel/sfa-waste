@@ -1,0 +1,257 @@
+{
+  "id": 151,
+  "country_code_iso3": "PAK",
+  "country_name": "Pakistan",
+  "region": "SAS",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 4571.414551,
+  "population_total": 193203472.0,
+  "total_msw_generated_tons_year": 30760000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 8.0,
+  "waste_treatment_compost_percent": 2.0,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": 40.0,
+  "waste_treatment_open_dump_percent": 50.0,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "No",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 301000.0,
+  "hazardous_waste_tons_year": 1538000.0,
+  "composition_food_organic": 30.0,
+  "composition_glass": 6.0,
+  "composition_metal": 4.0,
+  "composition_paper_cardboard": 13.0,
+  "composition_plastic": 9.0,
+  "composition_rubber_leather": 2.0,
+  "composition_wood": 2.0,
+  "composition_yard_garden_green": 14.0,
+  "composition_other": 20.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 88.81,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 52.5, \"composition_status\": \"consistent_strict\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"9/9\", \"measurements_unique_count\": 27, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 18.9, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 27, \"measurements_with_source\": 27, \"measurements_with_comments\": 27, \"raw_score\": 361.9, \"max_potential_score\": 407.51, \"final_normalized_score\": 88.81, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (consistent_strict, Suma: 100.0, Presentes: 9/9): 52.5 pts.\\n- Mediciones (27 \\u00fanicas): Disp=28.0, Detalle/Rec=18.9 pts.\\n-> Puntaje Bruto: 361.9 / 407.51 => Normalizado: 88.81\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "Paper/cardboard includes paper (6 percent) and cardboard (7 percent) waste; rubber/leather includes rubber (1 percent) and leather (1 percent) waste; other includes ash, bricks, dust (18 percent) and textile (2 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Saeed, M. A., A. Irshad, H. Sattar, G.E. Andrews, H.N. Phylaktou, and B.M. Gibbs. 2015. \"Agricultural Waste Biomass Energy Potential in Pakistan.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2006,
+      "source": "Khan, Jawed Ali. 2006. \"Hospital Waste Management Issues and Steps taken by the Government of Pakistan.\" Ministry of Environment, Pakistan. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "Paper/cardboard includes paper (6 percent) and cardboard (7 percent) waste; rubber/leather includes rubber (1 percent) and leather (1 percent) waste; other includes ash, bricks, dust (18 percent) and textile (2 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Korai, Muhammad Safar, Rasool Bux Mahar, and Muhammad Aslam Uqaili. 2017. \"The Feasibility of Municipal Solid Waste for Energy Generation and Its Existing Management Practices in Pakistan.\" Renewable and Sustainable Energy Reviews 72: 338–353.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

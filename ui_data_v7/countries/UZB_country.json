@@ -1,0 +1,152 @@
+{
+  "id": 205,
+  "country_code_iso3": "UZB",
+  "country_name": "Uzbekistan",
+  "region": "ECS",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 5164.274414,
+  "population_total": 29774500.0,
+  "total_msw_generated_tons_year": 4000000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 60.0,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": null,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 40.0,
+  "composition_glass": 3.0,
+  "composition_metal": 2.0,
+  "composition_paper_cardboard": 17.5,
+  "composition_plastic": 2.5,
+  "composition_rubber_leather": 1.5,
+  "composition_wood": 4.0,
+  "composition_yard_garden_green": null,
+  "composition_other": 17.5,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "missing_unimputed",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 55.21,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 88.0, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 225.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 55.21, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 225.0 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing; waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 88.0, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 225.0 / 407.51 => Normalizado: 55.21\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "Food/organic reported as a range of 35-45 percent; wood 2-6 percent; paper/carboard 10-25 percent; plastic 1-4 percent; glass  2-4 percent; metal 1-3 percent; rubber/leather 1-2 percent; and other includes textile (2-5 percent) and other inert (10-18 percent) waste (average used for all ranges)"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "ADB (Asian Development Bank). 2012b. \"Sector Assessment (Summary): Water and Other Municipal Infrastructure and Services.\" Solid Waste Management Improvement Project RRP UZB 45366. Asian Development Bank (ADB). Accessed April 18, 2017. https://www.adb.org/sites/default/files/linked-documents/45366-004-ssa.pdf.",
+      "comments": "Reported as over 4 million tons/year of MSW generated"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "CER (Center for Economic Research). 2011. \"Improvement of urban governance and urban infrastructure in Uzbekistan: problems and the search for new mechanisms and tools.\" [Центр экономических исследований. 2011. \"Совершенствование городского управления и инфраструктуры городов в Узбекистане: проблемы и поиск новых механизмов и инструментов\"]. Accessed April 18. http://www.unece.org/fileadmin/DAM/hlm/prgm/cph/experts/uzbekistan/UZB-Urban-Development-2011-RUS.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2006,
+      "source": "OSCE (Organization for Security and Co-operation in Europe). 2006. \"Environmental Safety and Civil Initiative, No. 8\" [\"Экологическая безопасность и гражданская инициатива, № 8\"]. Organization for Security and Co-operation in Europe (OSCE). Accessed April 19, 2017. https://www.osce.org/ru/uzbekistan/71088.",
+      "comments": "Food/organic reported as a range of 35-45 percent; wood 2-6 percent; paper/carboard 10-25 percent; plastic 1-4 percent; glass  2-4 percent; metal 1-3 percent; rubber/leather 1-2 percent; and other includes textile (2-5 percent) and other inert (10-18 percent) waste (average used for all ranges)"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "OD: According to the State Committee for Nature Protection, there are 178 registered dumps and several hundred additional unregistered dumps"
+    }
+  ],
+  "ai_profile_data": {}
+}

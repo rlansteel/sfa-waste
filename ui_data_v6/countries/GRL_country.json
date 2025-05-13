@@ -1,0 +1,151 @@
+{
+  "id": 79,
+  "country_code_iso3": "GRL",
+  "country_name": "Greenland",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 43948.5625,
+  "population_total": 56905.0,
+  "total_msw_generated_tons_year": 50000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": 40.0,
+  "waste_treatment_landfill_unspecified_percent": 60.0,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": null,
+  "hazardous_waste_tons_year": 730.0,
+  "composition_food_organic": 42.8,
+  "composition_glass": 7.1,
+  "composition_metal": 2.0,
+  "composition_paper_cardboard": 11.4,
+  "composition_plastic": 2.4,
+  "composition_rubber_leather": null,
+  "composition_wood": 1.0,
+  "composition_yard_garden_green": null,
+  "composition_other": 33.4,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "missing_unimputed",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 55.21,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.1, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 225.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 55.21, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 225.0 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing; waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.1, Presentes: 7/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 225.0 / 407.51 => Normalizado: 55.21\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "Paper/cardboard includes paper (8.4 percent) and cardboard (3 percent) waste; metal includes non-aluminum (1.5 percent) and aluminum (0.5 percent) waste; other includes combustible (30.4 percent), non-combustible (1.8 percent), battery (0.1 percent), e-waste (0.6 percent), other hazardous (0.5 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2009,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011b. \"Waste Management in Greenland: Current Situation and Challenges.\" Waste Management and Research 29 (10): 1064–1070.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011b. \"Waste Management in Greenland: Current Situation and Challenges.\" Waste Management and Research 29 (10): 1064–1070.",
+      "comments": "9"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011b. \"Waste Management in Greenland: Current Situation and Challenges.\" Waste Management and Research 29 (10): 1064–1070.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011b. \"Waste Management in Greenland: Current Situation and Challenges.\" Waste Management and Research 29 (10): 1064–1070.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "Eisted, Rasmus, and Thomas H. Christensen. 2011a. \"Characterization of Household Waste in Greenland.\" Waste Management 31: 1461–1466. doi:10.1016/j.wasman.2011.02.018.",
+      "comments": "Paper/cardboard includes paper (8.4 percent) and cardboard (3 percent) waste; metal includes non-aluminum (1.5 percent) and aluminum (0.5 percent) waste; other includes combustible (30.4 percent), non-combustible (1.8 percent), battery (0.1 percent), e-waste (0.6 percent), other hazardous (0.5 percent) waste"
+    }
+  ]
+}

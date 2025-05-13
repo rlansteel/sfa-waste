@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "entity_id": "DNK",
+    "entity_type": "country",
+    "profile_generation_timestamp_utc": "2025-05-12T21:54:07.966407+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.1-ProfileJSON_Granular",
+    "generation_mode": "granular_sections"
+  },
+  "waste_profile": {
+    "entity_name": "Denmark",
+    "country": "Denmark",
+    "iso3": "DNK",
+    "overall_summary": "Denmark generates a high amount of municipal solid waste, around 4.9 million tons per year or 786 kg per capita as of 2021, which is among the highest levels in the EU. The waste stream is composed mainly of yard/garden waste, food/organic waste, paper/cardboard, metals, glass, wood, plastics, and other materials. Denmark has a well-established waste management infrastructure, with incineration, recycling, and composting as the dominant treatment methods. While Denmark appears on track to meet various EU recycling and landfill diversion targets, it faces challenges in reducing its high per capita waste generation and potential over-reliance on incineration.",
+    "generation_context": {
+      "scale_and_rate": "Denmark generates a high amount of municipal solid waste, around 4.9 million tons per year or 786 kg per capita as of 2021, which is among the highest levels in the EU against an average of 530 kg per capita. According to some reports, the total waste generation increased until 2018 but has decreased slightly since then, suggesting a potential decoupling from economic growth.",
+      "contributing_factors_trends": "The high waste generation in Denmark can be attributed to factors like high consumption levels associated with its status as a high-income country, as well as contributions from industries and tourism. However, with increasing urbanization and population growth, residential and commercial waste generation is expected to rise further. Some reports note that Denmark faces challenges in transitioning towards sustainability despite having an advanced waste management infrastructure."
+    },
+    "waste_stream_composition": {
+      "summary": "The municipal solid waste stream in Denmark is predominantly composed of yard/garden green waste (30.46%), followed by food/organic waste (12.78%), paper/cardboard (11.57%), metal (6.29%), glass (5.78%), wood (7.65%), plastic (1.61%), and other materials (23.86%). Rubber and leather make up 0% of the waste stream.",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "According to the structured data, no specific information on waste collection coverage was provided for Denmark. However, some reports suggest Denmark has a well-established waste management infrastructure with high recycling rates. Collection likely involves formal municipal services covering most of the population. Some findings mention roles for both the formal and informal repair/reuse sectors in waste management.",
+      "key_challenges": "While Denmark appears to have comprehensive waste collection systems, a few potential challenges were inferred from the findings: high per capita waste generation rates compared to other EU countries, managing large volumes of waste despite advanced infrastructure, and dealing with path dependencies favoring incineration over increased recycling and reuse pathways."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the structured data, the dominant waste treatment methods in Denmark are incineration (52.59%), recycling (27.27%), and composting (18.99%). Some reports suggest Denmark is on track to meet the 2035 landfill target and the 2025 municipal waste recycling targets. While a well-established waste management infrastructure is in place, Denmark faces challenges in reducing high waste generation levels, which are among the highest in the EU.",
+      "infrastructure_highlights": "Denmark has historically been able to significantly reduce landfilling through investments in incineration plants and recycling facilities. However, some reports indicate a potential path dependency on waste incineration that may hinder further progress towards a circular economy.",
+      "key_challenges": "Key challenges mentioned in the findings include Denmark's high per capita waste generation rates compared to other EU countries, reducing dependency on incineration to enable more recycling and re-use, and strengthening household plastic waste recycling streams."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Denmark has a recycling rate of 27.27%, a composting rate of 18.99%, and an incineration rate of 52.59%. Some reports suggest Denmark is on track to meet the 2035 landfill target, the 2025 municipal waste recycling target, and the 2025 packaging waste recycling targets for most materials except plastic packaging.",
+      "programs_mentioned": "The Danish Government's Action Plan for Circular Economy constitutes the national plan for waste prevention and management from 2021 to 2032. A new Danish project also aims to strengthen household plastic waste recycling.",
+      "informal_sector_role": "No specific information found in sources regarding the role of the informal waste sector in Denmark."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "Denmark has a national law and agency focused on waste management, according to the structured data. Some reports suggest Denmark has integrated its waste prevention program into its Circular Economy Action Plan - National Plan for Prevention and Management of Waste 2020-2032. This plan outlines Denmark's strategy for waste management and recycling until 2032. The European Environment Agency has published country profiles analyzing Denmark's progress towards EU waste targets, indicating Denmark is considered on track to meet various recycling and landfill diversion targets.",
+      "governance_issues": "No specific governance issues were mentioned in the provided sources."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Advanced waste management infrastructure with high recycling rates",
+        "Integrated national plan for waste prevention and circular economy (2020-2032)",
+        "On track to meet EU targets for recycling and landfill diversion"
+      ],
+      "weaknesses_or_challenges": [
+        "High per capita waste generation compared to other EU countries",
+        "Potential path dependency favoring incineration over increased recycling and reuse",
+        "Managing large volumes of waste despite advanced infrastructure",
+        "Strengthening household plastic waste recycling streams"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 54,
+      "data_quality_score": 88.44
+    },
+    "web_finding_ids": [
+      225,
+      228,
+      255,
+      521,
+      530,
+      550,
+      185,
+      183,
+      184,
+      226,
+      229,
+      230,
+      256,
+      505,
+      508,
+      511,
+      522,
+      523,
+      524,
+      532,
+      538,
+      545,
+      551,
+      555,
+      558,
+      561,
+      562,
+      566,
+      257,
+      507,
+      510,
+      520,
+      552,
+      559
+    ]
+  }
+}

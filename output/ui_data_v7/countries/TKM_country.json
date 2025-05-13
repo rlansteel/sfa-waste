@@ -1,0 +1,152 @@
+{
+  "id": 192,
+  "country_code_iso3": "TKM",
+  "country_name": "Turkmenistan",
+  "region": "ECS",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 11471.18652,
+  "population_total": 5366277.0,
+  "total_msw_generated_tons_year": 500000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": 100.0,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 22000.0,
+  "hazardous_waste_tons_year": 1000.0,
+  "composition_food_organic": 16.18,
+  "composition_glass": 4.64,
+  "composition_metal": 11.44,
+  "composition_paper_cardboard": null,
+  "composition_plastic": 2.19,
+  "composition_rubber_leather": null,
+  "composition_wood": 3.01,
+  "composition_yard_garden_green": null,
+  "composition_other": 62.54,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "missing_unimputed",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "not_found",
+  "longitude_geo_status": "not_found",
+  "data_quality_score": 64.15,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 12, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 8.4, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 12, \"measurements_with_source\": 12, \"measurements_with_comments\": 12, \"raw_score\": 261.4, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.15, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 225.0 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing; waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (12 \\u00fanicas): Disp=28.0, Detalle/Rec=8.4 pts.\\n-> Puntaje Bruto: 261.4 / 407.51 => Normalizado: 64.15\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "Other includes textile (2.09 percent) and other unspecified (60.45 percent) waste"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "STEP (Solving the E-waste Problem). 2018. \"Overview of e-waste related information- Turkmenistan.\" United Nations University. http://www.step-initiative.org/Overview_Turkmenistan.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Zoï Environment Network. 2013. \"Waste and Chemicals in Central Asia: A Visual Synthesis.\" Zoï Environment Network, with support from the Swiss Federal Office for the Environment (FOEN). Accessed April 27, 2017. http://wedocs.unep.org/handle/20.500.11822/7538.",
+      "comments": "Reported as almost 500,000 tonnes/year of municipal waste generated, including hazardous waste"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Zoï Environment Network. 2013. \"Waste and Chemicals in Central Asia: A Visual Synthesis.\" Zoï Environment Network, with support from the Swiss Federal Office for the Environment (FOEN). Accessed April 27, 2017. http://wedocs.unep.org/handle/20.500.11822/7538.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2000,
+      "source": "UNECE (United Nations Economic Commission for Europe). 2012. \"Turkmenistan Environmental Performance Reviews: Turkmenistan: First Review.\" Environmental Performance Reviews Series No. 35. ECE/CEP/165. Economic Commission for Europe (ECE), United Nations. Geneva, October. ISBN 978-92-1-117066-5. e-ISBN 978-92-1-055912-6. ISSN 1020-4563. Accessed on 24 April 2017. http://www.unece.org/fileadmin/DAM/env/epr/epr_studies/Turkmenistan.pdf.",
+      "comments": "Other includes textile (2.09 percent) and other unspecified (60.45 percent) waste"
+    }
+  ],
+  "ai_profile_data": {}
+}

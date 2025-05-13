@@ -1,0 +1,152 @@
+{
+  "id": 90,
+  "country_code_iso3": "IND",
+  "country_name": "India",
+  "region": "SAS",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 6496.807617,
+  "population_total": 1352617344.0,
+  "total_msw_generated_tons_year": 189750000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 5.0,
+  "waste_treatment_compost_percent": 18.0,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 77.0,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 1700000.0,
+  "hazardous_waste_tons_year": 7467000.0,
+  "composition_food_organic": null,
+  "composition_glass": null,
+  "composition_metal": null,
+  "composition_paper_cardboard": null,
+  "composition_plastic": null,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": null,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "missing_unimputed",
+  "composition_glass_status": "missing_unimputed",
+  "composition_metal_status": "missing_unimputed",
+  "composition_paper_cardboard_status": "missing_unimputed",
+  "composition_plastic_status": "missing_unimputed",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "missing_unimputed",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "not_found",
+  "longitude_geo_status": "not_found",
+  "data_quality_score": 73.35,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": \"N/A\", \"composition_fields_present\": \"0/9\", \"measurements_unique_count\": 12, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 8.4, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 12, \"measurements_with_source\": 12, \"measurements_with_comments\": 12, \"raw_score\": 298.9, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.35, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: N/A, Presentes: 0/9): 0.0 pts.\\n- Mediciones (12 \\u00fanicas): Disp=28.0, Detalle/Rec=8.4 pts.\\n-> Puntaje Bruto: 298.9 / 407.51 => Normalizado: 73.35\"}",
+  "measurements_data": [
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "India CPCB (Central Pollution Control Board). 2017b. \"Guidelines on Environmental Management of Construction and Demolition (CandD) Wastes.\" Government of India Ministry of Environment, Forests and Climate Change. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "India CPCB (Central Pollution Control Board). 2016. CPCB Bulletin. Vol 1, July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2016. CPCB Bulletin. Vol 1, July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "WHO (World Health Organization). 2017. \"Report on health-care waste management (HCWM) status in Countries of the South-East Asia Region (SEA Region).\" World Health Organization, Regional Office for South-East Asia, New Delhi, April. Licence: CC BY-NC-SA 3.0 IGO.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2018,
+      "source": "Ministry of Housing and Urban Affairs. 2019. \"Solid Waste ManagementIncluding Hazardous Waste, Medical Waste and E-Waste.\" Accessed June 1, 2020. http://164.100.47.193/lsscommittee/Urban%20Development/16_Urban_Development_25.pdf.\n\nNational Institute of Rural Development and Panchayati Raj. 2016. \"Solid Waste Management in Rural Areas.\" Accessed June 1, 2020. http://nirdpr.org.in/nird_docs/sb/doc5.pdf.",
+      "comments": "Urban: 62 million tonnes/year for a population of 377 million for 0.45 kg/capita/day (2018 data from Lok Sabha Secretariat, Ministry of Housing and Urban Affairs)\nRural: 127.75 million tonnes (0.35 million tonnes/day x 365 days). Since the publication says 0.3-0.4 M tonnes/day the average was used. (2015 or 2016 data from the Ministry of Drinking Water and Sanitation in a 2016 report by Centre for Rural Infrastructure, National Institute Of Rural Development & Panchayati Raj)\n= Total: 189.75 million tonnes (assuming 2018 to be conservative)"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2015a. \"Consolidated Annual Review Report on Implementation of Municipal Solid Wastes (Management and Handling) Rules, 2000 – Annual Review Report 2013-14.\" Government of India Ministry of Environment, Forests and Climate Change. January.  /// India CPCB (Central Pollution Control Board). 2015b. \"Report on Status of Municipal Solid Waste Management in Southern States.\" Government of India Ministry of Environment, Forests and Climate Change, Central Pollution Control Board Zonal Office (South).   ///  India CPCB (Central Pollution Control Board). 2017a. \"Consolidated Annual Review Report on Implementation of Solid Wastes Management Rules, 2016 – Annual Review Report 2015-16.\" Government of India Ministry of Environment, Forests and Climate Change. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2015a. \"Consolidated Annual Review Report on Implementation of Municipal Solid Wastes (Management and Handling) Rules, 2000 – Annual Review Report 2013-14.\" Government of India Ministry of Environment, Forests and Climate Change. January.  /// India CPCB (Central Pollution Control Board). 2015b. \"Report on Status of Municipal Solid Waste Management in Southern States.\" Government of India Ministry of Environment, Forests and Climate Change, Central Pollution Control Board Zonal Office (South).   ///  India CPCB (Central Pollution Control Board). 2017a. \"Consolidated Annual Review Report on Implementation of Solid Wastes Management Rules, 2016 – Annual Review Report 2015-16.\" Government of India Ministry of Environment, Forests and Climate Change. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2015a. \"Consolidated Annual Review Report on Implementation of Municipal Solid Wastes (Management and Handling) Rules, 2000 – Annual Review Report 2013-14.\" Government of India Ministry of Environment, Forests and Climate Change. January.  /// India CPCB (Central Pollution Control Board). 2015b. \"Report on Status of Municipal Solid Waste Management in Southern States.\" Government of India Ministry of Environment, Forests and Climate Change, Central Pollution Control Board Zonal Office (South).   ///  India CPCB (Central Pollution Control Board). 2017a. \"Consolidated Annual Review Report on Implementation of Solid Wastes Management Rules, 2016 – Annual Review Report 2015-16.\" Government of India Ministry of Environment, Forests and Climate Change. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2015a. \"Consolidated Annual Review Report on Implementation of Municipal Solid Wastes (Management and Handling) Rules, 2000 – Annual Review Report 2013-14.\" Government of India Ministry of Environment, Forests and Climate Change. January.  /// India CPCB (Central Pollution Control Board). 2015b. \"Report on Status of Municipal Solid Waste Management in Southern States.\" Government of India Ministry of Environment, Forests and Climate Change, Central Pollution Control Board Zonal Office (South).   ///  India CPCB (Central Pollution Control Board). 2017a. \"Consolidated Annual Review Report on Implementation of Solid Wastes Management Rules, 2016 – Annual Review Report 2015-16.\" Government of India Ministry of Environment, Forests and Climate Change. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2017a. \"Consolidated Annual Review Report on Implementation of Solid Wastes Management Rules, 2016 – Annual Review Report 2015-16.\" Government of India Ministry of Environment, Forests and Climate Change. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "India CPCB (Central Pollution Control Board). 2017a. \"Consolidated Annual Review Report on Implementation of Solid Wastes Management Rules, 2016 – Annual Review Report 2015-16.\" Government of India Ministry of Environment, Forests and Climate Change. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Mahapatra, Dhananjay. 2013. \"Plastic waste time bomb ticking for India, SC says.\" Times of India. April.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

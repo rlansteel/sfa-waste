@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "entity_id": "13",
+    "entity_type": "city",
+    "profile_generation_timestamp_utc": "2025-05-12T07:25:58.271926+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.0-ProfileJSON"
+  },
+  "waste_profile": {
+    "entity_name": "Ciudada Autónoma De Buenos Aires (Caba).",
+    "country": "Argentina",
+    "iso3": "ARG",
+    "overall_summary": "Buenos Aires generates over 2.5 million tons of waste annually, with a relatively low recycling rate of 7.2% despite high collection coverage of 97.7% of the population. The composition data suggests a significant organic waste fraction.",
+    "generation_context": {
+      "scale_and_rate": "With a population of nearly 3 million and a high-income status, Buenos Aires generates a substantial amount of waste totaling over 2.5 million tons per year. No specific generation trends were mentioned in the available sources.",
+      "contributing_factors_trends": "No specific information found in sources regarding factors like tourism, industry, or population growth affecting waste generation trends."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream is dominated by organic waste at 38%, with plastics and paper/cardboard each comprising 16%, glass 6%, metals 2%, and yard/green waste 4%.",
+      "data_notes": "The composition data appears to be incomplete, with only 82% of the waste accounted for across the available categories."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "Buenos Aires has a high collection coverage rate of 97.7% of the population, utilizing multiple collection modes according to the database. No additional details were provided on formal vs informal sector roles or specific collection methods.",
+      "key_challenges": "No specific information found in sources regarding key challenges in waste collection and transport."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "The database indicates a recycling rate of only 7.2%, suggesting landfilling or dumping as the dominant disposal methods. No further details were available on treatment percentages or facilities.",
+      "infrastructure_highlights": "No specific information found in sources regarding key waste treatment or disposal infrastructure.",
+      "key_challenges": "No specific information found in sources regarding challenges related to waste treatment and disposal methods."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "The recycling rate for Buenos Aires is reported as 7.2% in the database. No specific recycling or recovery targets were mentioned.",
+      "programs_mentioned": "No specific recycling, composting, or circular economy programs were mentioned in the available sources.",
+      "informal_sector_role": "No information was provided regarding the role of the informal sector in recycling or recovery activities."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "No specific information was provided in the database or web findings regarding the existence of local waste management laws, regulations, or governing agencies.",
+      "governance_issues": "No governance, funding, or administrative issues related to waste management were mentioned in the available sources."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "High collection coverage rate of 97.7% of the population"
+      ],
+      "weaknesses_or_challenges": [
+        "Low recycling rate of only 7.2%",
+        "Significant fraction of organic waste in the stream"
+      ],
+      "recent_developments_or_outlook": "No specific information found in sources regarding recent developments or future outlook for waste management in Buenos Aires."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 13,
+      "data_quality_score": 73.48
+    },
+    "web_finding_ids": []
+  }
+}

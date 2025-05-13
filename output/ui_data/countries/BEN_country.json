@@ -1,0 +1,152 @@
+{
+  "id": 16,
+  "country_code_iso3": "BEN",
+  "country_name": "Benin",
+  "region": "SSF",
+  "income_group_wb": "LIC",
+  "gdp_per_capita_usd": 2227.352295,
+  "population_total": 5521763.0,
+  "total_msw_generated_tons_year": 685936.01,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 25.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 8200.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 52.1,
+  "composition_glass": 1.6,
+  "composition_metal": 1.6,
+  "composition_paper_cardboard": 3.1,
+  "composition_plastic": 7.3,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 34.3,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "not_found",
+  "longitude_geo_status": "not_found",
+  "data_quality_score": 73.32,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 12, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 8.3, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 11, \"measurements_with_source\": 12, \"measurements_with_comments\": 12, \"raw_score\": 298.8, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.32, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (12 \\u00fanicas): Disp=28.0, Detalle/Rec=8.3 pts.\\n-> Puntaje Bruto: 298.8 / 407.51 => Normalizado: 73.32\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Other includes textile (1.1 percent) and other inorganic (33.2 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2002,
+      "source": "UN (United Nations). 2017b. \"Hazardous waste generation (tonnes).\" October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 1993,
+      "source": "Achankeng, Eric. 2003. \"Globalization, Urbanization and Municipal Solid Waste Management in Africa.\" Paper presented at African Studies Association of Australasia and the Pacific, \"African on a Global Stage,\" Adelaide, Australia.",
+      "comments": "2 (Porto Novo, 0.5 kg/person/day)"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Other includes textile (1.1 percent) and other inorganic (33.2 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2005,
+      "source": "AFED (Arab Forum for Environment and Development). 2008. \"Arab Environment: Future Challenges. 2008 Report of the Arab Forum for Environment and Development.\" Edited by M. K. Tolba and N. W. Saab.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

@@ -1,0 +1,249 @@
+{
+  "id": 91,
+  "country_code_iso3": "IRL",
+  "country_name": "Ireland",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 83388.71875,
+  "population_total": 4867316.0,
+  "total_msw_generated_tons_year": 2910655.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 33.0,
+  "waste_treatment_compost_percent": 6.0,
+  "waste_treatment_incineration_percent": 17.0,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 41.0,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 212874.0,
+  "hazardous_waste_tons_year": 482907.0,
+  "composition_food_organic": 16.6,
+  "composition_glass": 8.5,
+  "composition_metal": 3.7,
+  "composition_paper_cardboard": 25.0,
+  "composition_plastic": 12.4,
+  "composition_rubber_leather": null,
+  "composition_wood": 1.9,
+  "composition_yard_garden_green": 6.1,
+  "composition_other": 25.8,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "3; paper/cardboard includes paper (19 percent) and cardboard (6 percent) waste; other includes textile (5.6 percent), disposable diapers (5.4 percent), hazarduous (0.9 percent), e-waste (1.8 percent), unclassified combustible (1.7 percent), unclassified incombustible (1.6 percent), fines <20mm (7.8 percent), and composite (1 percent) waste"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2018,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland. ISBN: 978-1-84095-550-7  08/14/250.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland. ISBN: 978-1-84095-550-7  08/14/250.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland. ISBN: 978-1-84095-550-7  08/14/250.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland. ISBN: 978-1-84095-550-7  08/14/250.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. National Waste Report for 2012. Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "3; paper/cardboard includes paper (19 percent) and cardboard (6 percent) waste; other includes textile (5.6 percent), disposable diapers (5.4 percent), hazarduous (0.9 percent), e-waste (1.8 percent), unclassified combustible (1.7 percent), unclassified incombustible (1.6 percent), fines <20mm (7.8 percent), and composite (1 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Ireland, EPA (Environmental Protection Agency). 2014. \"National Waste Report for 2012.\" Environmental Protection Agency (EPA), Government of Ireland.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "CM: 3; Other: 34 percent of MSW managed in Ireland was exported for energy recovery and recycling"
+    }
+  ]
+}

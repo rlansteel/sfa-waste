@@ -1,0 +1,761 @@
+2025-05-12 11:29:42,345 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:29:42,345 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:29:42,375 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:29:42,375 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:29:42,376 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:29:42,376 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:29:42,376 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país MEX (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:29:42,376 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país MEX (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:29:42,376 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:29:42,376 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:29:42,376 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:29:42,376 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 343 (URL: https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf)
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 343 (URL: https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf)
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf (Intento 1)...
+2025-05-12 11:29:42,379 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf (Intento 1)...
+2025-05-12 11:29:44,376 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:44,390 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some high-level information about environmental statistics and indicators in Mexico, but does not specifically focus on municipal solid waste management aspects.",
+  "keywords": ["environmental statistics", "environmental indicators"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:44,390 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some high-level information about environmental statistics and indicators in Mexico, but does not specifically focus on municipal solid waste management aspects.",
+  "keywords": ["environmental statistics", "environmental indicators"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:44,390 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf: Score=70
+2025-05-12 11:29:44,390 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe_12/pdf/Cap0_docs_previos.pdf: Score=70
+2025-05-12 11:29:44,390 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 343 con measurement 2373 (country)
+2025-05-12 11:29:44,390 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 343 con measurement 2373 (country)
+2025-05-12 11:29:44,393 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=343 y measurement_id=2373 (type=country).
+2025-05-12 11:29:44,393 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 343 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:29:44,393 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 343 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:29:44,598 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 344 (URL: https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html)
+2025-05-12 11:29:44,598 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 344 (URL: https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html)
+2025-05-12 11:29:44,599 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html (Intento 1)...
+2025-05-12 11:29:44,599 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html (Intento 1)...
+2025-05-12 11:29:45,869 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:45,871 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html: {
+  "relevance_score": 60,
+  "justification": "The content snippet provides some general information about environmental issues in Mexico, but does not specifically address municipal solid waste management aspects. It lacks detailed data or information on waste generation, collection, treatment, or policies related to MSW.",
+  "keywords": ["residuos sólidos urbanos", "residuos de manejo especial", "residuos peligrosos"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:45,871 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html: {
+  "relevance_score": 60,
+  "justification": "The content snippet provides some general information about environmental issues in Mexico, but does not specifically address municipal solid waste management aspects. It lacks detailed data or information on waste generation, collection, treatment, or policies related to MSW.",
+  "keywords": ["residuos sólidos urbanos", "residuos de manejo especial", "residuos peligrosos"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:45,871 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html: Score=60
+2025-05-12 11:29:45,871 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe18/index.html: Score=60
+2025-05-12 11:29:45,871 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 344 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:29:45,871 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 344 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:29:46,072 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 345 (URL: https://sswm.info/es/node/11525)
+2025-05-12 11:29:46,072 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 345 (URL: https://sswm.info/es/node/11525)
+2025-05-12 11:29:46,075 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sswm.info/es/node/11525 (Intento 1)...
+2025-05-12 11:29:46,075 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sswm.info/es/node/11525 (Intento 1)...
+2025-05-12 11:29:47,508 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:47,513 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://sswm.info/es/node/11525: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about environmental reporting and data in Mexico, which could be useful for understanding municipal solid waste management aspects in the country.",
+  "keywords": ["environment", "environmental reporting", "data"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:47,513 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://sswm.info/es/node/11525: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about environmental reporting and data in Mexico, which could be useful for understanding municipal solid waste management aspects in the country.",
+  "keywords": ["environment", "environmental reporting", "data"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:47,513 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://sswm.info/es/node/11525: Score=80
+2025-05-12 11:29:47,513 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://sswm.info/es/node/11525: Score=80
+2025-05-12 11:29:47,514 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 345 con measurement 2373 (country)
+2025-05-12 11:29:47,514 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 345 con measurement 2373 (country)
+2025-05-12 11:29:47,517 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=345 y measurement_id=2373 (type=country).
+2025-05-12 11:29:47,518 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 345 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:29:47,518 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 345 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:29:47,720 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 361 (URL: https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217)
+2025-05-12 11:29:47,720 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 361 (URL: https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217)
+2025-05-12 11:29:47,724 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217 (Intento 1)...
+2025-05-12 11:29:47,724 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217 (Intento 1)...
+2025-05-12 11:29:49,583 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:49,587 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217: {
+  "relevance_score": 70,
+  "justification": "The snippet provides information on a specific policy related to construction and demolition waste management in Mexico, which is somewhat relevant to understanding municipal solid waste management in the country.",
+  "keywords": ["construction waste", "waste management plan", "reuse", "recycling"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:49,587 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217: {
+  "relevance_score": 70,
+  "justification": "The snippet provides information on a specific policy related to construction and demolition waste management in Mexico, which is somewhat relevant to understanding municipal solid waste management in the country.",
+  "keywords": ["construction waste", "waste management plan", "reuse", "recycling"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:49,588 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217: Score=70
+2025-05-12 11:29:49,588 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://onlinelibrary.wiley.com/doi/10.1155/2024/8503217: Score=70
+2025-05-12 11:29:49,588 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 361 con measurement 2379 (country)
+2025-05-12 11:29:49,588 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 361 con measurement 2379 (country)
+2025-05-12 11:29:49,590 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=361 y measurement_id=2379 (type=country).
+2025-05-12 11:29:49,591 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 361 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:29:49,591 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 361 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:29:49,796 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 362 (URL: https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies)
+2025-05-12 11:29:49,796 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 362 (URL: https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies)
+2025-05-12 11:29:49,796 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies (Intento 1)...
+2025-05-12 11:29:49,796 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies (Intento 1)...
+2025-05-12 11:29:50,773 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:50,774 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific information about municipal solid waste management in Mexico. It discusses environmental technologies and trade opportunities, but lacks details on waste generation, collection, treatment, or policies related to MSW in Mexico.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:50,774 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific information about municipal solid waste management in Mexico. It discusses environmental technologies and trade opportunities, but lacks details on waste generation, collection, treatment, or policies related to MSW in Mexico.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:50,774 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies: Score=40
+2025-05-12 11:29:50,774 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.trade.gov/country-commercial-guides/mexico-environmental-technologies: Score=40
+2025-05-12 11:29:50,775 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 362 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:29:50,775 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 362 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:29:50,978 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 363 (URL: https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html)
+2025-05-12 11:29:50,978 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 363 (URL: https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html)
+2025-05-12 11:29:50,978 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html (Intento 1)...
+2025-05-12 11:29:50,978 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html (Intento 1)...
+2025-05-12 11:29:52,325 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:52,327 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on the current state of municipal solid waste management in Mexico City, including data on waste generation, collection methods, and disposal practices. This is highly relevant for understanding MSW management in Mexico.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste disposal", "Mexico City"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:52,327 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on the current state of municipal solid waste management in Mexico City, including data on waste generation, collection methods, and disposal practices. This is highly relevant for understanding MSW management in Mexico.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste disposal", "Mexico City"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:52,327 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html: Score=80
+2025-05-12 11:29:52,327 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.wtert.net/paper/4414/Current-State-of-Waste-Management-in-Mexico-City.html: Score=80
+2025-05-12 11:29:52,327 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 363 con measurement 2379 (country)
+2025-05-12 11:29:52,327 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 363 con measurement 2379 (country)
+2025-05-12 11:29:52,331 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=363 y measurement_id=2379 (type=country).
+2025-05-12 11:29:52,332 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 363 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:29:52,332 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 363 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:29:52,536 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 364 (URL: https://www.scribd.com/presentation/398573137/Waste-Management-2)
+2025-05-12 11:29:52,536 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 364 (URL: https://www.scribd.com/presentation/398573137/Waste-Management-2)
+2025-05-12 11:29:52,536 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.scribd.com/presentation/398573137/Waste-Management-2 (Intento 1)...
+2025-05-12 11:29:52,536 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.scribd.com/presentation/398573137/Waste-Management-2 (Intento 1)...
+2025-05-12 11:29:54,133 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:54,133 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.scribd.com/presentation/398573137/Waste-Management-2: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on waste electrical and electronic equipment (WEEE) management in Latin America, and does not provide any specific information about municipal solid waste management in Mexico.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:54,133 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.scribd.com/presentation/398573137/Waste-Management-2: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on waste electrical and electronic equipment (WEEE) management in Latin America, and does not provide any specific information about municipal solid waste management in Mexico.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:54,134 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.scribd.com/presentation/398573137/Waste-Management-2: Score=30
+2025-05-12 11:29:54,134 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.scribd.com/presentation/398573137/Waste-Management-2: Score=30
+2025-05-12 11:29:54,134 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 364 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:29:54,134 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 364 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:29:54,339 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 365 (URL: https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx)
+2025-05-12 11:29:54,339 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 365 (URL: https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx)
+2025-05-12 11:29:54,339 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx (Intento 1)...
+2025-05-12 11:29:54,339 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx (Intento 1)...
+2025-05-12 11:29:55,649 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:55,650 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx: {
+  "relevance_score": 25,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Mexico. It provides an overview of the Basel Convention, which is an international agreement related to the control of transboundary movements of hazardous wastes and their disposal, but does not mention Mexico or any details about its municipal solid waste management.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:55,650 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx: {
+  "relevance_score": 25,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Mexico. It provides an overview of the Basel Convention, which is an international agreement related to the control of transboundary movements of hazardous wastes and their disposal, but does not mention Mexico or any details about its municipal solid waste management.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:55,650 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx: Score=25
+2025-05-12 11:29:55,650 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.basel.int/Implementation/Ewaste/Overview/tabid/4063/Default.aspx: Score=25
+2025-05-12 11:29:55,650 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 365 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:29:55,650 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 365 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:29:55,855 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 366 (URL: https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste)
+2025-05-12 11:29:55,855 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 366 (URL: https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste)
+2025-05-12 11:29:55,856 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste (Intento 1)...
+2025-05-12 11:29:55,856 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste (Intento 1)...
+2025-05-12 11:29:56,766 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:56,771 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on international agreements related to hazardous waste shipments and does not contain any information specific to municipal solid waste management in Mexico.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:56,771 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on international agreements related to hazardous waste shipments and does not contain any information specific to municipal solid waste management in Mexico.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:29:56,771 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste: Score=30
+2025-05-12 11:29:56,771 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.epa.gov/hwgenerators/international-agreements-transboundary-shipments-hazardous-waste: Score=30
+2025-05-12 11:29:56,771 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 366 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:29:56,771 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 366 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:29:56,976 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 367 (URL: https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf)
+2025-05-12 11:29:56,976 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 367 (URL: https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf)
+2025-05-12 11:29:56,976 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf (Intento 1)...
+2025-05-12 11:29:56,976 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf (Intento 1)...
+2025-05-12 11:29:58,362 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:58,363 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management in Mexico, including data on waste generation, recycling rates, and the challenges faced. However, it lacks more detailed information on specific waste composition, collection methods, treatment and disposal practices, and policies/regulations related to MSW.",
+  "keywords": ["waste generation", "recycling rate", "waste management", "municipal solid waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:58,363 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management in Mexico, including data on waste generation, recycling rates, and the challenges faced. However, it lacks more detailed information on specific waste composition, collection methods, treatment and disposal practices, and policies/regulations related to MSW.",
+  "keywords": ["waste generation", "recycling rate", "waste management", "municipal solid waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:58,363 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf: Score=80
+2025-05-12 11:29:58,363 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Mexico_20210322.pdf: Score=80
+2025-05-12 11:29:58,363 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 367 con measurement 2381 (country)
+2025-05-12 11:29:58,363 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 367 con measurement 2381 (country)
+2025-05-12 11:29:58,367 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=367 y measurement_id=2381 (type=country).
+2025-05-12 11:29:58,367 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 367 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:29:58,367 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 367 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:29:58,569 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:29:58,569 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:29:58,569 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:29:58,569 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:29:58,569 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:29:58,569 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 368 (URL: https://www.sciencedirect.com/science/article/pii/S2667095X21000076)
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 368 (URL: https://www.sciencedirect.com/science/article/pii/S2667095X21000076)
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sciencedirect.com/science/article/pii/S2667095X21000076 (Intento 1)...
+2025-05-12 11:29:58,571 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sciencedirect.com/science/article/pii/S2667095X21000076 (Intento 1)...
+2025-05-12 11:29:59,812 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:29:59,812 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.sciencedirect.com/science/article/pii/S2667095X21000076: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on the current and future situation of municipal solid waste (MSW) final disposal in Mexico, including data on landfill gas emissions, potential power generation, and greenhouse gas emissions. It covers key aspects of MSW management such as waste generation, disposal methods, and policy considerations, making it highly relevant for understanding MSW management in Mexico.",
+  "keywords": ["municipal solid waste", "landfill gas", "power generation", "greenhouse gas emissions", "final disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:59,812 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.sciencedirect.com/science/article/pii/S2667095X21000076: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on the current and future situation of municipal solid waste (MSW) final disposal in Mexico, including data on landfill gas emissions, potential power generation, and greenhouse gas emissions. It covers key aspects of MSW management such as waste generation, disposal methods, and policy considerations, making it highly relevant for understanding MSW management in Mexico.",
+  "keywords": ["municipal solid waste", "landfill gas", "power generation", "greenhouse gas emissions", "final disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:29:59,812 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.sciencedirect.com/science/article/pii/S2667095X21000076: Score=90
+2025-05-12 11:29:59,812 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.sciencedirect.com/science/article/pii/S2667095X21000076: Score=90
+2025-05-12 11:29:59,812 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 368 con measurement 2381 (country)
+2025-05-12 11:29:59,812 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 368 con measurement 2381 (country)
+2025-05-12 11:29:59,813 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=368 y measurement_id=2381 (type=country).
+2025-05-12 11:29:59,813 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 368 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:29:59,813 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 368 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:30:00,018 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 373 (URL: https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf)
+2025-05-12 11:30:00,018 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 373 (URL: https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf)
+2025-05-12 11:30:00,018 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf (Intento 1)...
+2025-05-12 11:30:00,018 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf (Intento 1)...
+2025-05-12 11:30:01,510 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:01,511 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on a case study of a municipal landfill in Mexico, including assessments of environmental impacts and social perceptions. This is highly relevant for understanding municipal solid waste management aspects in Mexico.",
+  "keywords": ["municipal solid waste", "landfill", "environmental impact", "social perception"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:01,511 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on a case study of a municipal landfill in Mexico, including assessments of environmental impacts and social perceptions. This is highly relevant for understanding municipal solid waste management aspects in Mexico.",
+  "keywords": ["municipal solid waste", "landfill", "environmental impact", "social perception"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:01,511 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf: Score=80
+2025-05-12 11:30:01,511 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://siid.insp.mx/documents/curriculum/articles/indicators/1553188301_waste_management_85_4259.pdf: Score=80
+2025-05-12 11:30:01,511 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 373 con measurement 2383 (country)
+2025-05-12 11:30:01,511 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 373 con measurement 2383 (country)
+2025-05-12 11:30:01,512 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=373 y measurement_id=2383 (type=country).
+2025-05-12 11:30:01,512 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 373 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:01,512 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 373 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:01,718 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 374 (URL: https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf)
+2025-05-12 11:30:01,718 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 374 (URL: https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf)
+2025-05-12 11:30:01,718 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf (Intento 1)...
+2025-05-12 11:30:01,718 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf (Intento 1)...
+2025-05-12 11:30:02,798 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:02,799 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about Mexico's waste sector, including details on a methane assessment platform and acknowledgment of a local partner organization. However, it lacks specific data on waste generation, collection, treatment, and disposal methods for Mexico.",
+  "keywords": ["waste methane", "waste sector", "methane assessment"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:02,799 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about Mexico's waste sector, including details on a methane assessment platform and acknowledgment of a local partner organization. However, it lacks specific data on waste generation, collection, treatment, and disposal methods for Mexico.",
+  "keywords": ["waste methane", "waste sector", "methane assessment"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:02,799 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf: Score=80
+2025-05-12 11:30:02,799 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://cdn.catf.us/wp-content/uploads/2024/10/28173156/mexico-wastemap-report.pdf: Score=80
+2025-05-12 11:30:02,799 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 374 con measurement 2383 (country)
+2025-05-12 11:30:02,799 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 374 con measurement 2383 (country)
+2025-05-12 11:30:02,802 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=374 y measurement_id=2383 (type=country).
+2025-05-12 11:30:02,802 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 374 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:02,802 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 374 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:03,007 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 375 (URL: https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf)
+2025-05-12 11:30:03,007 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 375 (URL: https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf)
+2025-05-12 11:30:03,008 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf (Intento 1)...
+2025-05-12 11:30:03,008 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf (Intento 1)...
+2025-05-12 11:30:04,031 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:04,031 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some high-level information about environmental statistics and indicators in Mexico, but does not specifically mention municipal solid waste management aspects.",
+  "keywords": ["environment statistics", "environmental indicators", "green growth"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:04,031 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some high-level information about environmental statistics and indicators in Mexico, but does not specifically mention municipal solid waste management aspects.",
+  "keywords": ["environment statistics", "environmental indicators", "green growth"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:04,032 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf: Score=70
+2025-05-12 11:30:04,032 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://apps1.semarnat.gob.mx:8443/dgeia/informe15/tema/pdf/Resumen15_ing.pdf: Score=70
+2025-05-12 11:30:04,032 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 375 con measurement 2383 (country)
+2025-05-12 11:30:04,032 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 375 con measurement 2383 (country)
+2025-05-12 11:30:04,032 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=375 y measurement_id=2383 (type=country).
+2025-05-12 11:30:04,033 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 375 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:30:04,033 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 375 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:30:04,234 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 401 (URL: https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf)
+2025-05-12 11:30:04,234 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 401 (URL: https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf)
+2025-05-12 11:30:04,235 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf (Intento 1)...
+2025-05-12 11:30:04,235 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf (Intento 1)...
+2025-05-12 11:30:05,313 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:05,314 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information about municipal solid waste management in México City, including data on waste generation, composition, and challenges. It covers key aspects like waste collection, treatment, and disposal methods.",
+  "keywords": ["municipal solid waste", "waste generation", "waste composition", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:05,314 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information about municipal solid waste management in México City, including data on waste generation, composition, and challenges. It covers key aspects like waste collection, treatment, and disposal methods.",
+  "keywords": ["municipal solid waste", "waste generation", "waste composition", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:05,314 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf: Score=80
+2025-05-12 11:30:05,314 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://nowaste.whatdesigncando.com/app/uploads/2021/01/Mexico-City-Perspective.pdf: Score=80
+2025-05-12 11:30:05,314 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 401 con measurement 268 (city)
+2025-05-12 11:30:05,314 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 401 con measurement 268 (city)
+2025-05-12 11:30:05,315 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=401 y measurement_id=268 (type=city).
+2025-05-12 11:30:05,315 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 401 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:05,315 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 401 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:05,520 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 402 (URL: https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution)
+2025-05-12 11:30:05,520 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 402 (URL: https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution)
+2025-05-12 11:30:05,520 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution (Intento 1)...
+2025-05-12 11:30:05,520 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution (Intento 1)...
+2025-05-12 11:30:06,702 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:06,705 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution: {
+  "relevance_score": 40,
+  "justification": "The content snippet focuses on air pollution in Mexico City and does not provide any specific details about municipal solid waste management aspects.",
+  "keywords": ["waste", "disposal", "management"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:06,705 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution: {
+  "relevance_score": 40,
+  "justification": "The content snippet focuses on air pollution in Mexico City and does not provide any specific details about municipal solid waste management aspects.",
+  "keywords": ["waste", "disposal", "management"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:06,705 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution: Score=40
+2025-05-12 11:30:06,705 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://shunwaste.com/article/how-is-mexico-city-fighting-air-pollution: Score=40
+2025-05-12 11:30:06,706 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 402 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:30:06,706 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 402 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:30:06,907 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 406 (URL: https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE)
+2025-05-12 11:30:06,907 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 406 (URL: https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE)
+2025-05-12 11:30:06,907 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE (Intento 1)...
+2025-05-12 11:30:06,907 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE (Intento 1)...
+2025-05-12 11:30:07,936 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:07,937 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE: {
+  "relevance_score": 60,
+  "justification": "The snippet mentions waste management challenges in Guadalajara, but lacks specific details on waste generation, collection, or disposal methods.",
+  "keywords": ["waste management", "administrative inefficiencies"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:07,937 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE: {
+  "relevance_score": 60,
+  "justification": "The snippet mentions waste management challenges in Guadalajara, but lacks specific details on waste generation, collection, or disposal methods.",
+  "keywords": ["waste management", "administrative inefficiencies"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:07,937 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE: Score=60
+2025-05-12 11:30:07,937 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE: Score=60
+2025-05-12 11:30:07,937 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 406 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:30:07,937 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 406 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:30:08,142 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 407 (URL: https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area)
+2025-05-12 11:30:08,142 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 407 (URL: https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area)
+2025-05-12 11:30:08,142 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area (Intento 1)...
+2025-05-12 11:30:08,142 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area (Intento 1)...
+2025-05-12 11:30:09,362 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:09,363 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area: {
+  "relevance_score": 65,
+  "justification": "The snippet mentions municipal solid waste management in Guadalajara, Mexico, but lacks specific details on waste generation, collection, treatment, and disposal methods.",
+  "keywords": ["municipal solid waste", "recycling", "scavengers"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:09,363 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area: {
+  "relevance_score": 65,
+  "justification": "The snippet mentions municipal solid waste management in Guadalajara, Mexico, but lacks specific details on waste generation, collection, treatment, and disposal methods.",
+  "keywords": ["municipal solid waste", "recycling", "scavengers"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:09,363 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area: Score=65
+2025-05-12 11:30:09,363 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area: Score=65
+2025-05-12 11:30:09,363 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 407 preparada para actualizar (Status: evaluated_irrelevant, Score: 65).
+2025-05-12 11:30:09,363 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 407 preparada para actualizar (Status: evaluated_irrelevant, Score: 65).
+2025-05-12 11:30:09,566 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 408 (URL: https://iieg.gob.mx/ns/?page_id=825)
+2025-05-12 11:30:09,566 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 408 (URL: https://iieg.gob.mx/ns/?page_id=825)
+2025-05-12 11:30:09,567 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://iieg.gob.mx/ns/?page_id=825 (Intento 1)...
+2025-05-12 11:30:09,567 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://iieg.gob.mx/ns/?page_id=825 (Intento 1)...
+2025-05-12 11:30:10,913 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:10,914 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://iieg.gob.mx/ns/?page_id=825: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not contain any information related to municipal solid waste management in Guadalajara. It focuses on demographic and economic data for the state of Jalisco, but does not mention anything about waste generation, collection, or disposal.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:30:10,914 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://iieg.gob.mx/ns/?page_id=825: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not contain any information related to municipal solid waste management in Guadalajara. It focuses on demographic and economic data for the state of Jalisco, but does not mention anything about waste generation, collection, or disposal.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:30:10,914 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://iieg.gob.mx/ns/?page_id=825: Score=20
+2025-05-12 11:30:10,914 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://iieg.gob.mx/ns/?page_id=825: Score=20
+2025-05-12 11:30:10,915 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 408 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:30:10,915 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 408 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:30:11,120 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 409 (URL: https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html)
+2025-05-12 11:30:11,120 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 409 (URL: https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html)
+2025-05-12 11:30:11,121 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html (Intento 1)...
+2025-05-12 11:30:11,121 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html (Intento 1)...
+2025-05-12 11:30:12,657 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:12,661 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides details on Guadalajara's program for integrated solid waste management, including its objectives and plans for waste infrastructure and recycling. This is highly relevant information for understanding the municipal solid waste management aspects of Guadalajara.",
+  "keywords": ["integrated solid waste management", "waste infrastructure", "recycling", "waste prevention"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:12,661 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides details on Guadalajara's program for integrated solid waste management, including its objectives and plans for waste infrastructure and recycling. This is highly relevant information for understanding the municipal solid waste management aspects of Guadalajara.",
+  "keywords": ["integrated solid waste management", "waste infrastructure", "recycling", "waste prevention"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:12,661 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html: Score=80
+2025-05-12 11:30:12,661 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.informador.mx/Jalisco/Presenta-Guadalajara-su-Programa-para-Gestion-Integral-de-Residuos-20091202-0292.html: Score=80
+2025-05-12 11:30:12,661 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 409 con measurement 470 (city)
+2025-05-12 11:30:12,661 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 409 con measurement 470 (city)
+2025-05-12 11:30:12,668 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=409 y measurement_id=470 (type=city).
+2025-05-12 11:30:12,669 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 409 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:12,669 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 409 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:12,876 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:30:12,876 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:30:12,876 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:30:12,876 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:30:12,876 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:30:12,876 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 8 hallazgos pendientes de análisis.
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - Seleccionados 8 hallazgos pendientes de análisis.
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 8 hallazgos...
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - Procesando lote de 8 hallazgos...
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 410 (URL: https://info.jalisco.gob.mx/gobierno/programas/6162)
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 410 (URL: https://info.jalisco.gob.mx/gobierno/programas/6162)
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://info.jalisco.gob.mx/gobierno/programas/6162 (Intento 1)...
+2025-05-12 11:30:12,878 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://info.jalisco.gob.mx/gobierno/programas/6162 (Intento 1)...
+2025-05-12 11:30:14,917 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:14,917 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://info.jalisco.gob.mx/gobierno/programas/6162: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management programs and policies in the state of Jalisco, which includes the city of Guadalajara. However, it lacks specific details about waste generation, collection, treatment, and disposal for Guadalajara itself.",
+  "keywords": ["municipal solid waste", "waste management", "waste prevention", "waste disposal", "environmental regulation"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:14,917 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://info.jalisco.gob.mx/gobierno/programas/6162: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management programs and policies in the state of Jalisco, which includes the city of Guadalajara. However, it lacks specific details about waste generation, collection, treatment, and disposal for Guadalajara itself.",
+  "keywords": ["municipal solid waste", "waste management", "waste prevention", "waste disposal", "environmental regulation"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:14,918 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://info.jalisco.gob.mx/gobierno/programas/6162: Score=70
+2025-05-12 11:30:14,918 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://info.jalisco.gob.mx/gobierno/programas/6162: Score=70
+2025-05-12 11:30:14,919 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 410 con measurement 470 (city)
+2025-05-12 11:30:14,919 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 410 con measurement 470 (city)
+2025-05-12 11:30:14,920 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=410 y measurement_id=470 (type=city).
+2025-05-12 11:30:14,921 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 410 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:30:14,921 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 410 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:30:15,126 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 411 (URL: https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf)
+2025-05-12 11:30:15,126 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 411 (URL: https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf)
+2025-05-12 11:30:15,126 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf (Intento 1)...
+2025-05-12 11:30:15,126 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf (Intento 1)...
+2025-05-12 11:30:16,852 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:16,855 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on the municipal solid waste management regulations and policies for Guadalajara, Mexico, including specific aspects like waste prevention and integrated waste management.",
+  "keywords": ["municipal solid waste", "waste prevention", "integrated waste management", "waste regulations", "waste policies"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:16,855 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on the municipal solid waste management regulations and policies for Guadalajara, Mexico, including specific aspects like waste prevention and integrated waste management.",
+  "keywords": ["municipal solid waste", "waste prevention", "integrated waste management", "waste regulations", "waste policies"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:16,855 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf: Score=90
+2025-05-12 11:30:16,855 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://transparencia.guadalajara.gob.mx/sites/default/files/GacetaTomoIIEjemplar25Abril28-2016.pdf: Score=90
+2025-05-12 11:30:16,855 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 411 con measurement 470 (city)
+2025-05-12 11:30:16,855 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 411 con measurement 470 (city)
+2025-05-12 11:30:16,856 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=411 y measurement_id=470 (type=city).
+2025-05-12 11:30:16,856 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 411 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:30:16,856 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 411 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:30:17,061 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 412 (URL: https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey)
+2025-05-12 11:30:17,061 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 412 (URL: https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey)
+2025-05-12 11:30:17,061 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey (Intento 1)...
+2025-05-12 11:30:17,061 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey (Intento 1)...
+2025-05-12 11:30:18,181 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:18,182 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Monterrey. It appears to be a general article about reducing greenhouse gas emissions, with no details on waste generation, collection, or disposal for the city.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:30:18,182 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Monterrey. It appears to be a general article about reducing greenhouse gas emissions, with no details on waste generation, collection, or disposal for the city.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:30:18,183 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey: Score=30
+2025-05-12 11:30:18,183 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://documents.worldbank.org/pt/publication/documents-reports/documentdetail/172731468091170733/reducing-greenhouse-gas-emissions-in-monterrey: Score=30
+2025-05-12 11:30:18,183 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 412 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:30:18,183 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 412 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:30:18,388 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 413 (URL: https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf)
+2025-05-12 11:30:18,388 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 413 (URL: https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf)
+2025-05-12 11:30:18,389 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf (Intento 1)...
+2025-05-12 11:30:18,389 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf (Intento 1)...
+2025-05-12 11:30:19,573 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:19,574 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about a waste-to-energy project in Monterrey, Mexico, which is related to municipal solid waste management. It discusses aspects like waste management practices, greenhouse gas emissions, and electricity generation from landfill waste.",
+  "keywords": ["waste-to-energy", "landfill", "greenhouse gas emissions", "electricity generation", "municipal waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:19,574 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about a waste-to-energy project in Monterrey, Mexico, which is related to municipal solid waste management. It discusses aspects like waste management practices, greenhouse gas emissions, and electricity generation from landfill waste.",
+  "keywords": ["waste-to-energy", "landfill", "greenhouse gas emissions", "electricity generation", "municipal waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:30:19,574 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf: Score=80
+2025-05-12 11:30:19,574 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://assets.publishing.service.gov.uk/media/57a08a08e5274a27b20003b5/130530_ENV_CitAdaMit_BRIEF2.pdf: Score=80
+2025-05-12 11:30:19,574 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 413 con measurement 185 (city)
+2025-05-12 11:30:19,574 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 413 con measurement 185 (city)
+2025-05-12 11:30:19,575 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=413 y measurement_id=185 (type=city).
+2025-05-12 11:30:19,575 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 413 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:19,575 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 413 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:30:19,778 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 414 (URL: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey)
+2025-05-12 11:30:19,778 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 414 (URL: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey)
+2025-05-12 11:30:19,779 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey (Intento 1)...
+2025-05-12 11:30:19,779 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey (Intento 1)...
+2025-05-12 11:30:21,089 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:21,089 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specifically related to municipal solid waste management in Monterrey. It appears to be a general website about the World Bank and its activities, without any details on waste management in the specified location.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:30:21,089 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specifically related to municipal solid waste management in Monterrey. It appears to be a general website about the World Bank and its activities, without any details on waste management in the specified location.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:30:21,089 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey: Score=30
+2025-05-12 11:30:21,089 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/297871468091171274/reduire-les-emissions-de-gaz-a-effet-de-serre-a-monterrey: Score=30
+2025-05-12 11:30:21,089 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 414 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:30:21,089 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 414 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:30:21,291 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 415 (URL: http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf)
+2025-05-12 11:30:21,291 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 415 (URL: http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf)
+2025-05-12 11:30:21,291 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf (Intento 1)...
+2025-05-12 11:30:21,291 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf (Intento 1)...
+2025-05-12 11:30:23,140 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:23,141 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf: {
+  "relevance_score": 65,
+  "justification": "The content snippet mentions the 'Sistema Integral para el manejo Ecológico y Procesamiento de Desechos (SIMEPRODE)' which is likely related to municipal solid waste management in the region, but it does not provide any specific details about waste generation, collection, treatment, or policies for Monterrey.",
+  "keywords": ["waste management", "processing", "ecological"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:23,141 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf: {
+  "relevance_score": 65,
+  "justification": "The content snippet mentions the 'Sistema Integral para el manejo Ecológico y Procesamiento de Desechos (SIMEPRODE)' which is likely related to municipal solid waste management in the region, but it does not provide any specific details about waste generation, collection, treatment, or policies for Monterrey.",
+  "keywords": ["waste management", "processing", "ecological"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:23,141 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf: Score=65
+2025-05-12 11:30:23,141 - INFO - SFA_ContentAnalyzer - Evaluación LLM para http://sgi.nl.gob.mx/Transparencia_2015/Archivos/SIMEPRODE_0006_0002_20160900_T05_000005.pdf: Score=65
+2025-05-12 11:30:23,141 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 415 preparada para actualizar (Status: evaluated_irrelevant, Score: 65).
+2025-05-12 11:30:23,141 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 415 preparada para actualizar (Status: evaluated_irrelevant, Score: 65).
+2025-05-12 11:30:23,346 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 416 (URL: https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf)
+2025-05-12 11:30:23,346 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 416 (URL: https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf)
+2025-05-12 11:30:23,346 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf (Intento 1)...
+2025-05-12 11:30:23,346 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf (Intento 1)...
+2025-05-12 11:30:24,722 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:24,725 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Monterrey, Mexico. It provides a general overview of waste management in the Latin American region, but lacks details on the specific city of interest.",
+  "keywords": ["waste management", "Latin America", "circular economy"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:24,725 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Monterrey, Mexico. It provides a general overview of waste management in the Latin American region, but lacks details on the specific city of interest.",
+  "keywords": ["waste management", "Latin America", "circular economy"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:24,725 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf: Score=30
+2025-05-12 11:30:24,725 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.rvo.nl/files/file/2021/02/Report_LATAM_Waste_Management_feb_2021.pdf: Score=30
+2025-05-12 11:30:24,725 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 416 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:30:24,725 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 416 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:30:24,930 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 417 (URL: https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE)
+2025-05-12 11:30:24,930 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 417 (URL: https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE)
+2025-05-12 11:30:24,931 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE (Intento 1)...
+2025-05-12 11:30:24,931 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE (Intento 1)...
+2025-05-12 11:30:26,565 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:30:26,574 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides detailed information about the SIMEPRODE waste management system in Nuevo León, Mexico, which includes a landfill, classification plant, and biogas plant. While this is not specifically for Monterrey, it provides relevant insights into municipal solid waste management in the region.",
+  "keywords": ["landfill", "classification plant", "biogas plant", "waste processing", "waste generation"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:26,574 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides detailed information about the SIMEPRODE waste management system in Nuevo León, Mexico, which includes a landfill, classification plant, and biogas plant. While this is not specifically for Monterrey, it provides relevant insights into municipal solid waste management in the region.",
+  "keywords": ["landfill", "classification plant", "biogas plant", "waste processing", "waste generation"],
+  "mentions_entity": false
+}
+2025-05-12 11:30:26,574 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE: Score=70
+2025-05-12 11:30:26,574 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://es.scribd.com/document/732223499/21480331-Reporte-SIMEPRODE: Score=70
+2025-05-12 11:30:26,575 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 417 con measurement 673 (city)
+2025-05-12 11:30:26,575 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 417 con measurement 673 (city)
+2025-05-12 11:30:26,576 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=417 y measurement_id=673 (type=city).
+2025-05-12 11:30:26,577 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 417 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:30:26,577 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 417 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 8 actualizaciones del lote realizado.
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - Commit de 8 actualizaciones del lote realizado.
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: MEX (límite: 10)...
+2025-05-12 11:30:26,782 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:30:26,782 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['MEX', 'MEX', 10]
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país MEX.
+2025-05-12 11:30:26,782 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país MEX.
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país MEX ---
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país MEX ---
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 28
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 28
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 15
+2025-05-12 11:30:26,783 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 15
+2025-05-12 11:30:26,784 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:30:26,784 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

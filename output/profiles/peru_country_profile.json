@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "entity_id": "PER",
+    "entity_type": "country",
+    "profile_generation_timestamp_utc": "2025-05-12T16:50:42.648773+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.0-ProfileJSON"
+  },
+  "waste_profile": {
+    "entity_name": "Peru",
+    "country": "Peru",
+    "iso3": "PER",
+    "overall_summary": "Peru generates around 8.4 million tons of municipal solid waste annually, with a recycling rate of only 4% and over 56% disposed in open dumps. Key challenges include improving waste collection coverage, transitioning from open dumpsites to sanitary landfills, and increasing recycling through formalization of the informal sector.",
+    "generation_context": {
+      "scale_and_rate": "With a population of around 31 million and an upper-middle income status, Peru generates a significant amount of municipal solid waste totaling over 8 million tons per year. The per capita generation rate is moderate compared to its income level.",
+      "contributing_factors_trends": "Rapid urbanization, population growth, and increasing economic activity, particularly in sectors like tourism and industry, are likely contributing to rising waste generation rates in Peru."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream in Peru is predominantly organic (50.4%), followed by plastics (10.5%), paper/cardboard (7.4%), and glass (3.1%).",
+      "data_notes": "Composition data based on national statistics, no specific study year mentioned."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "Peru has a relatively high waste collection coverage of around 83% of the population. Both formal municipal services and informal waste pickers play a role in collection. Specific collection methods are not detailed in the available sources.",
+      "key_challenges": "No specific collection challenges were mentioned in the web findings reviewed."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "Open dumping is the dominant waste disposal method in Peru, accounting for 56.4% of waste. Only 24% goes to sanitary landfills and 15.6% to controlled landfills. Recycling is very limited at 4%.",
+      "infrastructure_highlights": "No specific waste treatment facilities or landfills were highlighted in the web findings.",
+      "key_challenges": "A major challenge is transitioning from reliance on open dumpsites to developing sanitary landfill capacity and improving waste treatment infrastructure."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "The recycling rate in Peru is only 4% based on available data. No specific recycling targets were mentioned in the sources reviewed.",
+      "programs_mentioned": "No specific recycling or composting programs were discussed in the web findings.",
+      "informal_sector_role": "The informal waste picker sector plays a role in waste collection and likely informal recycling activities, though their specific role is not detailed."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "Peru has national solid waste laws and a designated national agency for waste management. However, details on specific local regulations or municipal plans were not provided in the sources reviewed.",
+      "governance_issues": "No major governance or funding issues were explicitly mentioned in the available web findings."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Relatively high waste collection coverage of 83% of the population",
+        "Existence of national solid waste laws and designated agency"
+      ],
+      "weaknesses_or_challenges": [
+        "Heavy reliance on open dumping (56.4%) with limited sanitary landfill capacity",
+        "Very low recycling rate of only 4%",
+        "Need to transition informal waste sector activities to the formal economy"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook were discussed in the web findings reviewed."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 153,
+      "data_quality_score": 85.47
+    },
+    "web_finding_ids": [
+      288,
+      296,
+      326,
+      327,
+      334,
+      262,
+      263,
+      290,
+      294,
+      295,
+      297,
+      308,
+      316,
+      289,
+      292,
+      298,
+      299,
+      333
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "description": "Configuración v3 para procesar wfd_cities_data_clean.csv incluyendo todas las columnas relevantes para la tabla 'cities' extendida.",
+  "target_concepts": {
+    "municipality": "municipality",
+    "country": "country",
+    "iso3c": "iso3c",
+    "year": "year",
+    "original_wfd_id": "original_wfd_id",
+    "population": "population_served",
+    "waste_gen_rate_kg_cap_day": "waste_gen_rate_kg_cap_day",
+    "composition_food_organic": "comp_pct_food_organic",
+    "composition_paper_cardboard": "comp_pct_paper_cardboard",
+    "composition_plastic": "comp_pct_plastic",
+    "composition_glass": "comp_pct_glass",
+    "composition_metal": "comp_pct_metal",
+    "composition_other": "comp_pct_other",
+    "collection_pct_formal": "collection_pct_formal",
+    "collection_pct_informal": "collection_pct_informal",
+    "treatment_pct_recycling_composting": "treatment_pct_recycling_composting",
+    "treatment_pct_thermal": "treatment_pct_thermal",
+    "treatment_pct_landfill": "treatment_pct_landfill",
+    "composition_sum_pct": "composition_sum_pct",
+    "composition_sum_flag": "composition_sum_flag"
+  },
+  "numeric_concepts": [
+    "year",
+    "original_wfd_id",
+    "population",
+    "waste_gen_rate_kg_cap_day",
+    "composition_food_organic",
+    "composition_paper_cardboard",
+    "composition_plastic",
+    "composition_glass",
+    "composition_metal",
+    "composition_other",
+    "collection_pct_formal",
+    "collection_pct_informal",
+    "treatment_pct_recycling_composting",
+    "treatment_pct_thermal",
+    "treatment_pct_landfill",
+    "composition_sum_pct"
+  ],
+  "text_concepts": [
+    "municipality",
+    "country",
+    "iso3c",
+    "composition_sum_flag"
+  ],
+  "required_concepts": [
+    "municipality",
+    "iso3c",
+    "year"
+  ],
+  "imputation_params": {
+    "enabled": false
+  },
+  "custom_processing": {}
+}

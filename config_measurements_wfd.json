@@ -1,0 +1,35 @@
+{
+    "description": "Configuración v3 para procesar wfd_city_measurements_clean.csv y mapear a columnas de 'city_measurements' (incluyendo value_text).",
+    "target_concepts": {
+      "city_name_codebook": "Nombre del municipio/ciudad (de la columna 'municipality').",
+      "country_name_codebook": "Nombre del país (de la columna 'country').",
+      "country_iso3c_codebook": "Código ISO3 del país (de la columna 'iso3c').",
+      "year": "Año del estudio o dato (de la columna 'year').",
+      "measurement": "Nombre descriptivo de la medición (de la columna 'measurement_name').",
+      "value_text": "Valor numérico o textual de la medición (de la columna 'measurement_value').",
+      "units": "Unidad de la medición (de la columna 'measurement_unit').",
+      "source": "Variable original WFD como fuente/contexto (de la columna 'original_variable_name')."
+    },
+    "numeric_concepts": [
+      "year"
+    ],
+    "text_concepts": [
+      "city_name_codebook",
+      "country_name_codebook",
+      "country_iso3c_codebook",
+      "measurement",
+      "value_text", 
+      "units",
+      "source"
+    ],
+    "required_concepts": [
+      "city_name_codebook",
+      "country_iso3c_codebook",
+      "measurement"
+    ],
+    "imputation_params": {
+      "enabled": false
+    },
+    "custom_processing": {}
+  }
+  

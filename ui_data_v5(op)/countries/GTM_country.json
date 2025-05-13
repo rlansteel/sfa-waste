@@ -1,0 +1,198 @@
+{
+  "id": 80,
+  "country_code_iso3": "GTM",
+  "country_name": "Guatemala",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 8125.364746,
+  "population_total": 16252429.0,
+  "total_msw_generated_tons_year": 2756740.971,
+  "waste_collection_coverage_total_percent_of_population": 77.7,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 69.8,
+  "waste_treatment_sanitary_landfill_percent": 15.4,
+  "waste_treatment_controlled_landfill_percent": 9.6,
+  "national_law_exists": "No",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 55000.0,
+  "hazardous_waste_tons_year": 10051.0,
+  "composition_food_organic": 37.71449118,
+  "composition_glass": 4.39183558,
+  "composition_metal": null,
+  "composition_paper_cardboard": 16.04670215,
+  "composition_plastic": 17.29080875,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": 6.537688691,
+  "composition_other": 18.01847364,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "missing_unimputed",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "5; data from 16 out of 22 districts (weighted average)"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ITU (International Telecommunication Union). 2015. \"Sustainable Waste Management of Electrical and Electronic Devices in Latin America\" [\"Gestión Sostenible de Residuos de Aparatos Eléctricos y Electrónicos en América Latina\"]. ITU, Basel Convention, CRBAS-Basel Regional Center for South America, UNESCO, WHO, UNIDO, WIPO, ECLAC 2015 [UIT, Convenio de Basilea, CRBAS-Centro Regional Basilea para América del Sur, UNESCO, OMS, ONUDI, OMPI, CEPAL 2015]. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "ERS Basel 2015. 2015b. \"Electronic Reporting System of the Basel Convention: Guatemala.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "INE (Statistics National Institute of Guatemala). 2015. \"Environmental Statistical Compendium of Guatemala, 2014.\" [INE (Instituto Nacional de Estadística Guatemala). 2015. \"Compendio Estadístico Ambiental de Guatemala, 2014\"]. November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Status of Solid Waste Management in Latin America and the Caribbean\" [\"Situación de la gestión de residuos sólidos en América Latina y el Caribe\"]. Inter-American Development Bank (IDB).",
+      "comments": "2 (urban, 0.61 kg/person/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Guatemala, INE (National Statistics Institute). 2015. \"Environmental Statistics 2014: Summary\" [\"Estadístico Ambiental 2014: Compendio\"]. National Statistics Institute [Instituto Nacional de Estadística (INE)], Government of Guatemala. November.",
+      "comments": "5; data from 16 out of 22 districts (weighted average)"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "UA: 14"
+    }
+  ]
+}

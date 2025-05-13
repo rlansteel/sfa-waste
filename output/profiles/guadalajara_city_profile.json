@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "entity_id": "229",
+    "entity_type": "city",
+    "profile_generation_timestamp_utc": "2025-05-12T07:25:38.395111+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.0-ProfileJSON"
+  },
+  "waste_profile": {
+    "entity_name": "Guadalajara",
+    "country": "Mexico",
+    "iso3": "MEX",
+    "overall_summary": "Guadalajara, a city with a population of over 1.4 million, generates around 649,000 tons of waste annually. With a recycling rate of only 8%, most waste ends up in landfills or dumps, posing environmental challenges.",
+    "generation_context": {
+      "scale_and_rate": "With a total waste generation of 648,812 tons per year and a population of 1,460,148, Guadalajara generates a significant amount of waste relative to its size. As an upper-middle-income city, waste generation rates are likely influenced by economic factors and consumption patterns.",
+      "contributing_factors_trends": "No specific information found in sources."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream in Guadalajara is dominated by organic waste (33.68%), followed by paper/cardboard (20.15%), plastic (18.96%), glass (4.03%), and metal (0.77%).",
+      "data_notes": "The composition data appears to be incomplete, with a sum of 77.59% across the reported categories."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "The primary collection mode for Guadalajara is listed as 'Other', with no specific details provided on coverage or formal/informal sector involvement.",
+      "key_challenges": "No specific collection challenges were mentioned in the available sources."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "With a recycling rate of only 8%, the dominant waste treatment method appears to be landfilling or dumping. No specific information on composting or other treatment methods was provided.",
+      "infrastructure_highlights": "No specific waste treatment or disposal facilities were mentioned in the available sources.",
+      "key_challenges": "No specific treatment or disposal challenges were mentioned in the available sources."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "The recycling rate for Guadalajara is reported as 8%.",
+      "programs_mentioned": "No specific recycling, composting, or circular economy programs were mentioned in the available sources.",
+      "informal_sector_role": "No information on the role of the informal sector in recycling or recovery was found in the available sources."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "No specific information on local waste management laws, agencies, or regulatory frameworks was provided.",
+      "governance_issues": "No specific governance, funding, or administrative issues related to waste management were mentioned in the available sources."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Availability of waste composition data"
+      ],
+      "weaknesses_or_challenges": [
+        "Low recycling rate of 8%",
+        "Lack of information on collection coverage and treatment methods"
+      ],
+      "recent_developments_or_outlook": "No specific information found in sources."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 229,
+      "data_quality_score": 68.45
+    },
+    "web_finding_ids": []
+  }
+}

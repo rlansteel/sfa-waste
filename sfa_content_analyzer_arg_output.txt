@@ -1,0 +1,683 @@
+2025-05-12 11:07:29,879 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:07:29,879 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:07:29,907 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:07:29,907 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:07:29,908 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:07:29,908 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:07:29,908 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país ARG (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:07:29,908 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país ARG (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:07:29,908 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:07:29,908 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:07:29,908 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:07:29,908 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:07:29,910 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:07:29,910 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:07:29,911 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:07:29,911 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:07:29,911 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 11 (URL: https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx)
+2025-05-12 11:07:29,911 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 11 (URL: https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx)
+2025-05-12 11:07:29,911 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx (Intento 1)...
+2025-05-12 11:07:29,911 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx (Intento 1)...
+2025-05-12 11:07:32,010 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:32,022 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on the Basel Convention's electronic reporting system and does not contain any specific information about municipal solid waste management in Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:32,022 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on the Basel Convention's electronic reporting system and does not contain any specific information about municipal solid waste management in Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:32,022 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx: Score=30
+2025-05-12 11:07:32,022 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.basel.int/Countries/NationalReporting/ElectronicReportingSystem/tabid/3356/Default.aspx: Score=30
+2025-05-12 11:07:32,023 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 11 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:32,023 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 11 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:32,228 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 12 (URL: https://www.basel.int/?tabid=3356)
+2025-05-12 11:07:32,228 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 12 (URL: https://www.basel.int/?tabid=3356)
+2025-05-12 11:07:32,229 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.basel.int/?tabid=3356 (Intento 1)...
+2025-05-12 11:07:32,229 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.basel.int/?tabid=3356 (Intento 1)...
+2025-05-12 11:07:33,733 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:33,737 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.basel.int/?tabid=3356: {
+  "relevance_score": 20,
+  "justification": "The content snippet is focused on the Basel Convention and its procedures, and does not contain any specific information about municipal solid waste management in Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:33,737 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.basel.int/?tabid=3356: {
+  "relevance_score": 20,
+  "justification": "The content snippet is focused on the Basel Convention and its procedures, and does not contain any specific information about municipal solid waste management in Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:33,738 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.basel.int/?tabid=3356: Score=20
+2025-05-12 11:07:33,738 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.basel.int/?tabid=3356: Score=20
+2025-05-12 11:07:33,738 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 12 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:07:33,738 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 12 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:07:33,943 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 13 (URL: https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea)
+2025-05-12 11:07:33,943 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 13 (URL: https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea)
+2025-05-12 11:07:33,944 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea (Intento 1)...
+2025-05-12 11:07:33,944 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea (Intento 1)...
+2025-05-12 11:07:35,412 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:35,413 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea: {
+  "relevance_score": 50,
+  "justification": "The content snippet provides some information about the Basel Convention and its regulations on transboundary movement of hazardous waste, but does not contain any specific details about municipal solid waste management in Argentina.",
+  "keywords": ["hazardous waste", "transboundary movement", "Basel Convention"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:35,413 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea: {
+  "relevance_score": 50,
+  "justification": "The content snippet provides some information about the Basel Convention and its regulations on transboundary movement of hazardous waste, but does not contain any specific details about municipal solid waste management in Argentina.",
+  "keywords": ["hazardous waste", "transboundary movement", "Basel Convention"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:35,413 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea: Score=50
+2025-05-12 11:07:35,413 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.argentina.gob.ar/interior/ambiente/control/acuerdos/basilea: Score=50
+2025-05-12 11:07:35,413 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 13 preparada para actualizar (Status: evaluated_irrelevant, Score: 50).
+2025-05-12 11:07:35,413 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 13 preparada para actualizar (Status: evaluated_irrelevant, Score: 50).
+2025-05-12 11:07:35,613 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 23 (URL: https://www.calameo.com/books/004411831a651cde6d806)
+2025-05-12 11:07:35,613 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 23 (URL: https://www.calameo.com/books/004411831a651cde6d806)
+2025-05-12 11:07:35,614 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.calameo.com/books/004411831a651cde6d806 (Intento 1)...
+2025-05-12 11:07:35,614 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.calameo.com/books/004411831a651cde6d806 (Intento 1)...
+2025-05-12 11:07:37,234 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:37,235 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.calameo.com/books/004411831a651cde6d806: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not mention anything specific about municipal solid waste management in Argentina. It appears to be about a tool for visualizing sustainable development indicators, but does not provide any details on waste generation, collection, treatment, or policies related to Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:37,235 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.calameo.com/books/004411831a651cde6d806: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not mention anything specific about municipal solid waste management in Argentina. It appears to be about a tool for visualizing sustainable development indicators, but does not provide any details on waste generation, collection, treatment, or policies related to Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:37,235 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.calameo.com/books/004411831a651cde6d806: Score=30
+2025-05-12 11:07:37,235 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.calameo.com/books/004411831a651cde6d806: Score=30
+2025-05-12 11:07:37,236 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 23 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:37,236 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 23 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:37,439 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 24 (URL: https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/)
+2025-05-12 11:07:37,439 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 24 (URL: https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/)
+2025-05-12 11:07:37,439 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/ (Intento 1)...
+2025-05-12 11:07:37,439 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/ (Intento 1)...
+2025-05-12 11:07:38,791 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:38,792 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information related to municipal solid waste management in Argentina. It appears to be about a publication on sustainable development indicators, which is not directly relevant to the given topic.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:38,792 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information related to municipal solid waste management in Argentina. It appears to be about a publication on sustainable development indicators, which is not directly relevant to the given topic.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:38,792 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/: Score=30
+2025-05-12 11:07:38,792 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://cerlalc.org/rilvi/sistema-de-indicadores-de-desarrollo-sostenible-10549/: Score=30
+2025-05-12 11:07:38,792 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 24 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:38,792 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 24 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:38,993 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 25 (URL: https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/)
+2025-05-12 11:07:38,993 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 25 (URL: https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/)
+2025-05-12 11:07:38,993 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/ (Intento 1)...
+2025-05-12 11:07:38,993 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/ (Intento 1)...
+2025-05-12 11:07:40,519 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:40,521 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/: {
+  "relevance_score": 60,
+  "justification": "The content snippet does not directly mention municipal solid waste management in Argentina. It appears to be a general book on sustainable development indicators, which may include some waste-related data, but lacks specific details on Argentina's MSW system.",
+  "keywords": ["sustainable development", "indicators"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:40,521 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/: {
+  "relevance_score": 60,
+  "justification": "The content snippet does not directly mention municipal solid waste management in Argentina. It appears to be a general book on sustainable development indicators, which may include some waste-related data, but lacks specific details on Argentina's MSW system.",
+  "keywords": ["sustainable development", "indicators"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:40,521 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/: Score=60
+2025-05-12 11:07:40,521 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://isbn.cloud/9789872934064/sistema-de-indicadores-de-desarrollo-sostenible/: Score=60
+2025-05-12 11:07:40,522 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 25 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:07:40,522 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 25 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:07:40,725 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 58 (URL: https://www.redalyc.org/pdf/928/92815711002.pdf)
+2025-05-12 11:07:40,725 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 58 (URL: https://www.redalyc.org/pdf/928/92815711002.pdf)
+2025-05-12 11:07:40,725 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.redalyc.org/pdf/928/92815711002.pdf (Intento 1)...
+2025-05-12 11:07:40,725 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.redalyc.org/pdf/928/92815711002.pdf (Intento 1)...
+2025-05-12 11:07:42,054 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:42,055 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.redalyc.org/pdf/928/92815711002.pdf: {
+  "relevance_score": 60,
+  "justification": "The snippet mentions municipal waste disposal sites in Córdoba Province, Argentina, but lacks detailed information on waste generation, collection, treatment, and management aspects.",
+  "keywords": ["municipal waste disposal sites", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:42,055 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.redalyc.org/pdf/928/92815711002.pdf: {
+  "relevance_score": 60,
+  "justification": "The snippet mentions municipal waste disposal sites in Córdoba Province, Argentina, but lacks detailed information on waste generation, collection, treatment, and management aspects.",
+  "keywords": ["municipal waste disposal sites", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:42,056 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.redalyc.org/pdf/928/92815711002.pdf: Score=60
+2025-05-12 11:07:42,056 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.redalyc.org/pdf/928/92815711002.pdf: Score=60
+2025-05-12 11:07:42,056 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 58 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:07:42,056 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 58 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:07:42,260 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 59 (URL: https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2)
+2025-05-12 11:07:42,260 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 59 (URL: https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2)
+2025-05-12 11:07:42,260 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2 (Intento 1)...
+2025-05-12 11:07:42,260 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2 (Intento 1)...
+2025-05-12 11:07:44,025 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:44,026 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific details on municipal solid waste management practices and groundwater contamination issues in Córdoba Province, Argentina, which is highly relevant for understanding MSW management in the region.",
+  "keywords": ["municipal waste management", "groundwater contamination", "waste disposal site", "waste management practices"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:44,026 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific details on municipal solid waste management practices and groundwater contamination issues in Córdoba Province, Argentina, which is highly relevant for understanding MSW management in the region.",
+  "keywords": ["municipal waste management", "groundwater contamination", "waste disposal site", "waste management practices"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:44,027 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2: Score=80
+2025-05-12 11:07:44,027 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ri.conicet.gov.ar/bitstream/handle/11336/101618/CONICET_Digital_Nro.eb4943df-0981-483d-b976-3e5e0a3c56b3_A.pdf?sequence=2: Score=80
+2025-05-12 11:07:44,027 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 59 con measurement 22 (city)
+2025-05-12 11:07:44,027 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 59 con measurement 22 (city)
+2025-05-12 11:07:44,054 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=59 y measurement_id=22 (type=city).
+2025-05-12 11:07:44,071 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 59 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:07:44,071 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 59 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:07:44,284 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 60 (URL: https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices)
+2025-05-12 11:07:44,284 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 60 (URL: https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices)
+2025-05-12 11:07:44,285 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices (Intento 1)...
+2025-05-12 11:07:44,285 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices (Intento 1)...
+2025-05-12 11:07:45,452 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:45,453 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Córdoba, Argentina. It discusses waste management in Argentina in general, but lacks details on the specific city of Córdoba.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:45,453 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Córdoba, Argentina. It discusses waste management in Argentina in general, but lacks details on the specific city of Córdoba.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:45,453 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices: Score=30
+2025-05-12 11:07:45,453 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.worldbank.org/en/news/feature/2012/10/26/argentina-urban-solid-waste-management-best-practices: Score=30
+2025-05-12 11:07:45,453 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 60 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:45,453 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 60 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:45,657 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 64 (URL: https://circulars.iclei.org/city/rosario-argentina/)
+2025-05-12 11:07:45,657 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 64 (URL: https://circulars.iclei.org/city/rosario-argentina/)
+2025-05-12 11:07:45,657 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://circulars.iclei.org/city/rosario-argentina/ (Intento 1)...
+2025-05-12 11:07:45,657 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://circulars.iclei.org/city/rosario-argentina/ (Intento 1)...
+2025-05-12 11:07:46,923 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:46,923 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://circulars.iclei.org/city/rosario-argentina/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about Rosario's municipal solid waste management, including details on its urban agriculture program, waste reduction and composting policies, and specific outcomes related to waste management.",
+  "keywords": ["waste management", "waste reduction", "composting", "urban agriculture", "circular economy"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:46,923 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://circulars.iclei.org/city/rosario-argentina/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about Rosario's municipal solid waste management, including details on its urban agriculture program, waste reduction and composting policies, and specific outcomes related to waste management.",
+  "keywords": ["waste management", "waste reduction", "composting", "urban agriculture", "circular economy"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:46,923 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://circulars.iclei.org/city/rosario-argentina/: Score=80
+2025-05-12 11:07:46,923 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://circulars.iclei.org/city/rosario-argentina/: Score=80
+2025-05-12 11:07:46,924 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 64 con measurement 21 (city)
+2025-05-12 11:07:46,924 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 64 con measurement 21 (city)
+2025-05-12 11:07:46,925 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=64 y measurement_id=21 (type=city).
+2025-05-12 11:07:46,926 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 64 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:07:46,926 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 64 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:07:47,127 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:07:47,127 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:07:47,127 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:07:47,127 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:07:47,127 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:07:47,127 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 66 (URL: https://static.pmg.org.za/docs/080304gaia.htm)
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 66 (URL: https://static.pmg.org.za/docs/080304gaia.htm)
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://static.pmg.org.za/docs/080304gaia.htm (Intento 1)...
+2025-05-12 11:07:47,128 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://static.pmg.org.za/docs/080304gaia.htm (Intento 1)...
+2025-05-12 11:07:49,241 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:49,242 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://static.pmg.org.za/docs/080304gaia.htm: {
+  "relevance_score": 70,
+  "justification": "The snippet provides specific information about waste incineration bans and policies in various cities in Argentina, including Rosario. This is relevant for understanding the municipal solid waste management aspects of Rosario, though it lacks detailed data on waste generation, collection, and disposal methods.",
+  "keywords": ["waste incineration", "waste ban", "municipal solid waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:49,242 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://static.pmg.org.za/docs/080304gaia.htm: {
+  "relevance_score": 70,
+  "justification": "The snippet provides specific information about waste incineration bans and policies in various cities in Argentina, including Rosario. This is relevant for understanding the municipal solid waste management aspects of Rosario, though it lacks detailed data on waste generation, collection, and disposal methods.",
+  "keywords": ["waste incineration", "waste ban", "municipal solid waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:07:49,242 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://static.pmg.org.za/docs/080304gaia.htm: Score=70
+2025-05-12 11:07:49,242 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://static.pmg.org.za/docs/080304gaia.htm: Score=70
+2025-05-12 11:07:49,242 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 66 con measurement 21 (city)
+2025-05-12 11:07:49,242 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 66 con measurement 21 (city)
+2025-05-12 11:07:49,243 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=66 y measurement_id=21 (type=city).
+2025-05-12 11:07:49,243 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 66 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:07:49,243 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 66 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:07:49,444 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 70 (URL: https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf)
+2025-05-12 11:07:49,444 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 70 (URL: https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf)
+2025-05-12 11:07:49,445 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf (Intento 1)...
+2025-05-12 11:07:49,445 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf (Intento 1)...
+2025-05-12 11:07:50,517 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:50,519 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any specific information about municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). It appears to be a general guidance document for waste management in Argentina, without any details about the specific city.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:50,519 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any specific information about municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). It appears to be a general guidance document for waste management in Argentina, without any details about the specific city.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:50,519 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf: Score=30
+2025-05-12 11:07:50,519 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://globalrec.org/wp-content/uploads/2024/01/2023_guidance-implementation-integrated-inclusive-waste-management-argentina.pdf: Score=30
+2025-05-12 11:07:50,520 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 70 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:50,520 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 70 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:07:50,725 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 71 (URL: https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014)
+2025-05-12 11:07:50,725 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 71 (URL: https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014)
+2025-05-12 11:07:50,725 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014 (Intento 1)...
+2025-05-12 11:07:50,725 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014 (Intento 1)...
+2025-05-12 11:07:52,352 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:52,353 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not contain any information related to municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). It appears to be a household survey covering various socioeconomic and demographic topics, but does not mention anything about waste generation, collection, treatment, or disposal.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:52,353 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not contain any information related to municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). It appears to be a household survey covering various socioeconomic and demographic topics, but does not mention anything about waste generation, collection, treatment, or disposal.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:52,354 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014: Score=20
+2025-05-12 11:07:52,354 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ghdx.healthdata.org/record/argentina-permanent-household-survey-fourth-quarter-2014: Score=20
+2025-05-12 11:07:52,354 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 71 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:07:52,354 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 71 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:07:52,555 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 72 (URL: https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf)
+2025-05-12 11:07:52,555 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 72 (URL: https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf)
+2025-05-12 11:07:52,555 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf (Intento 1)...
+2025-05-12 11:07:52,555 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf (Intento 1)...
+2025-05-12 11:07:54,054 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:54,056 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific details about municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). It is a general overview of urban development in Argentina and does not focus on waste management aspects.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:54,056 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific details about municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). It is a general overview of urban development in Argentina and does not focus on waste management aspects.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:07:54,056 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf: Score=40
+2025-05-12 11:07:54,056 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://documents1.worldbank.org/curated/en/704531506578982251/pdf/120113-WP-PUBLIC-27-9-2017-13-26-5-CleanandinclusivecitiesinArgentinajul.pdf: Score=40
+2025-05-12 11:07:54,056 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 72 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:07:54,056 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 72 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:07:54,260 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 73 (URL: https://www.acumar.gob.ar/gestion-de-residuos/)
+2025-05-12 11:07:54,260 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 73 (URL: https://www.acumar.gob.ar/gestion-de-residuos/)
+2025-05-12 11:07:54,260 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.acumar.gob.ar/gestion-de-residuos/ (Intento 1)...
+2025-05-12 11:07:54,260 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.acumar.gob.ar/gestion-de-residuos/ (Intento 1)...
+2025-05-12 11:07:56,341 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:56,342 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.acumar.gob.ar/gestion-de-residuos/: {
+  "relevance_score": 60,
+  "justification": "The content snippet mentions some general information about waste management issues in the Matanza Riachuelo basin, but does not provide any specific details about municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba).",
+  "keywords": ["waste generation", "waste management", "basurales"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:56,342 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.acumar.gob.ar/gestion-de-residuos/: {
+  "relevance_score": 60,
+  "justification": "The content snippet mentions some general information about waste management issues in the Matanza Riachuelo basin, but does not provide any specific details about municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba).",
+  "keywords": ["waste generation", "waste management", "basurales"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:56,342 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.acumar.gob.ar/gestion-de-residuos/: Score=60
+2025-05-12 11:07:56,342 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.acumar.gob.ar/gestion-de-residuos/: Score=60
+2025-05-12 11:07:56,343 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 73 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:07:56,343 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 73 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:07:56,548 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 74 (URL: https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf)
+2025-05-12 11:07:56,548 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 74 (URL: https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf)
+2025-05-12 11:07:56,548 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf (Intento 1)...
+2025-05-12 11:07:56,548 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf (Intento 1)...
+2025-05-12 11:07:58,096 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:07:58,097 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet is focused on the Matanza Riachuelo basin in Argentina, which is not directly related to municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). The information provided is more general and does not contain specific details about waste generation, collection, or disposal for Caba.",
+  "keywords": ["residuos sólidos urbanos", "gestión integral de residuos sólidos urbanos", "cuenca matanza riachuelo"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:58,097 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet is focused on the Matanza Riachuelo basin in Argentina, which is not directly related to municipal solid waste management in Ciudada Autónoma De Buenos Aires (Caba). The information provided is more general and does not contain specific details about waste generation, collection, or disposal for Caba.",
+  "keywords": ["residuos sólidos urbanos", "gestión integral de residuos sólidos urbanos", "cuenca matanza riachuelo"],
+  "mentions_entity": false
+}
+2025-05-12 11:07:58,098 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf: Score=40
+2025-05-12 11:07:58,098 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://storage.dtelab.com.ar/uploads/2020/08/matanza-riachuelo-acumar.pdf: Score=40
+2025-05-12 11:07:58,098 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 74 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:07:58,098 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 74 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:07:58,303 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 75 (URL: https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto)
+2025-05-12 11:07:58,303 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 75 (URL: https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto)
+2025-05-12 11:07:58,303 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto (Intento 1)...
+2025-05-12 11:07:58,303 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto (Intento 1)...
+2025-05-12 11:08:00,731 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:00,733 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about waste management policies and plans for the Matanza Riachuelo basin, which includes the Ciudada Autónoma De Buenos Aires (Caba). However, it lacks specific details on waste generation, collection, and disposal methods for Caba.",
+  "keywords": ["waste management", "Matanza Riachuelo", "ACUMAR", "waste regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:00,733 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about waste management policies and plans for the Matanza Riachuelo basin, which includes the Ciudada Autónoma De Buenos Aires (Caba). However, it lacks specific details on waste generation, collection, and disposal methods for Caba.",
+  "keywords": ["waste management", "Matanza Riachuelo", "ACUMAR", "waste regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:00,733 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto: Score=70
+2025-05-12 11:08:00,733 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.argentina.gob.ar/normativa/nacional/resolución-5-2019-319769/texto: Score=70
+2025-05-12 11:08:00,733 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 75 con measurement 428 (city)
+2025-05-12 11:08:00,733 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 75 con measurement 428 (city)
+2025-05-12 11:08:00,736 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=75 y measurement_id=428 (type=city).
+2025-05-12 11:08:00,736 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 75 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:08:00,736 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 75 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:08:00,941 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 76 (URL: https://catalog.princeton.edu/catalog/SCSB-9028592)
+2025-05-12 11:08:00,941 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 76 (URL: https://catalog.princeton.edu/catalog/SCSB-9028592)
+2025-05-12 11:08:00,942 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://catalog.princeton.edu/catalog/SCSB-9028592 (Intento 1)...
+2025-05-12 11:08:00,942 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://catalog.princeton.edu/catalog/SCSB-9028592 (Intento 1)...
+2025-05-12 11:08:03,167 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:03,167 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://catalog.princeton.edu/catalog/SCSB-9028592: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific information about municipal solid waste management in Argentina, including details on waste generation, collection, and disposal methods. It appears to be a relevant resource for understanding MSW aspects in the country.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste disposal", "Argentina"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:03,167 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://catalog.princeton.edu/catalog/SCSB-9028592: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific information about municipal solid waste management in Argentina, including details on waste generation, collection, and disposal methods. It appears to be a relevant resource for understanding MSW aspects in the country.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste disposal", "Argentina"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:03,167 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://catalog.princeton.edu/catalog/SCSB-9028592: Score=80
+2025-05-12 11:08:03,167 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://catalog.princeton.edu/catalog/SCSB-9028592: Score=80
+2025-05-12 11:08:03,167 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 76 con measurement 1896 (country)
+2025-05-12 11:08:03,167 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 76 con measurement 1896 (country)
+2025-05-12 11:08:03,169 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=76 y measurement_id=1896 (type=country).
+2025-05-12 11:08:03,169 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 76 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:03,169 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 76 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:03,373 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 77 (URL: https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions)
+2025-05-12 11:08:03,373 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 77 (URL: https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions)
+2025-05-12 11:08:03,373 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions (Intento 1)...
+2025-05-12 11:08:03,373 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions (Intento 1)...
+2025-05-12 11:08:04,901 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:04,902 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on organic waste recovery initiatives and policies related to municipal solid waste management in Argentina, including details on a collaboration with the Climate and Clean Air Coalition to address methane emissions from organic waste sources.",
+  "keywords": ["organic waste recovery", "methane emissions", "waste management policies", "greenhouse gas emissions"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:04,902 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on organic waste recovery initiatives and policies related to municipal solid waste management in Argentina, including details on a collaboration with the Climate and Clean Air Coalition to address methane emissions from organic waste sources.",
+  "keywords": ["organic waste recovery", "methane emissions", "waste management policies", "greenhouse gas emissions"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:04,902 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions: Score=80
+2025-05-12 11:08:04,902 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.ccap.org/post/new-collaboration-advances-organic-waste-recovery-in-argentina-to-reduce-greenhouse-gas-emissions: Score=80
+2025-05-12 11:08:04,903 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 77 con measurement 1896 (country)
+2025-05-12 11:08:04,903 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 77 con measurement 1896 (country)
+2025-05-12 11:08:04,904 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=77 y measurement_id=1896 (type=country).
+2025-05-12 11:08:04,904 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 77 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:04,904 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 77 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:05,108 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 78 (URL: https://ri.conicet.gov.ar/handle/11336/243248)
+2025-05-12 11:08:05,108 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 78 (URL: https://ri.conicet.gov.ar/handle/11336/243248)
+2025-05-12 11:08:05,108 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ri.conicet.gov.ar/handle/11336/243248 (Intento 1)...
+2025-05-12 11:08:05,108 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ri.conicet.gov.ar/handle/11336/243248 (Intento 1)...
+2025-05-12 11:08:06,421 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:06,424 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ri.conicet.gov.ar/handle/11336/243248: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Argentina, including the application of SWOT analysis to a specific case study. It covers aspects such as waste generation, collection, and disposal methods.",
+  "keywords": ["municipal solid waste", "SWOT analysis", "waste generation", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:06,424 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ri.conicet.gov.ar/handle/11336/243248: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Argentina, including the application of SWOT analysis to a specific case study. It covers aspects such as waste generation, collection, and disposal methods.",
+  "keywords": ["municipal solid waste", "SWOT analysis", "waste generation", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:06,424 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ri.conicet.gov.ar/handle/11336/243248: Score=80
+2025-05-12 11:08:06,424 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ri.conicet.gov.ar/handle/11336/243248: Score=80
+2025-05-12 11:08:06,424 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 78 con measurement 1896 (country)
+2025-05-12 11:08:06,424 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 78 con measurement 1896 (country)
+2025-05-12 11:08:06,427 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=78 y measurement_id=1896 (type=country).
+2025-05-12 11:08:06,428 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 78 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:06,428 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 78 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:06,636 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:08:06,636 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:08:06,637 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:08:06,637 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:08:06,637 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:08:06,637 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 5 hallazgos pendientes de análisis.
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - Seleccionados 5 hallazgos pendientes de análisis.
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 5 hallazgos...
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - Procesando lote de 5 hallazgos...
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 103 (URL: https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436)
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 103 (URL: https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436)
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436 (Intento 1)...
+2025-05-12 11:08:06,644 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436 (Intento 1)...
+2025-05-12 11:08:09,075 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:09,076 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific information on the diagnosis of integrated municipal solid waste management in Argentina, including details on collection, transfer, treatment, and final disposal of municipal solid waste.",
+  "keywords": ["municipal solid waste", "waste management", "waste collection", "waste treatment", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:09,076 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific information on the diagnosis of integrated municipal solid waste management in Argentina, including details on collection, transfer, treatment, and final disposal of municipal solid waste.",
+  "keywords": ["municipal solid waste", "waste management", "waste collection", "waste treatment", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:09,076 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436: Score=80
+2025-05-12 11:08:09,076 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.studocu.com/es-ar/document/universidad-nacional-del-litoral/residuos-solidos-urbanos/banco-mundial-diagnostico-de-la-gestion-integral-de-rsu-en-argentina-bm-jul-2015/73153436: Score=80
+2025-05-12 11:08:09,076 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 103 con measurement 1907 (country)
+2025-05-12 11:08:09,076 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 103 con measurement 1907 (country)
+2025-05-12 11:08:09,077 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=103 y measurement_id=1907 (type=country).
+2025-05-12 11:08:09,077 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 103 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:09,077 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 103 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:09,278 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 105 (URL: https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf)
+2025-05-12 11:08:09,278 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 105 (URL: https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf)
+2025-05-12 11:08:09,278 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf (Intento 1)...
+2025-05-12 11:08:09,278 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf (Intento 1)...
+2025-05-12 11:08:10,839 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:10,842 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific details on waste management infrastructure and capacity in Argentina, including information on transfer stations and treatment facilities. This is highly relevant for understanding municipal solid waste management in the country.",
+  "keywords": ["municipal solid waste", "waste treatment", "waste disposal", "waste management infrastructure"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:10,842 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific details on waste management infrastructure and capacity in Argentina, including information on transfer stations and treatment facilities. This is highly relevant for understanding municipal solid waste management in the country.",
+  "keywords": ["municipal solid waste", "waste treatment", "waste disposal", "waste management infrastructure"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:10,842 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf: Score=80
+2025-05-12 11:08:10,842 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ars.org.ar/documentos-download/Banco+mundial+Diagnóstico+de+la+Gestión+Integral+de+RSU+en+Argentina+BM+-+Jul+2015.pdf: Score=80
+2025-05-12 11:08:10,842 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 105 con measurement 1907 (country)
+2025-05-12 11:08:10,842 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 105 con measurement 1907 (country)
+2025-05-12 11:08:10,845 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=105 y measurement_id=1907 (type=country).
+2025-05-12 11:08:10,846 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 105 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:10,846 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 105 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:11,049 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 127 (URL: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111)
+2025-05-12 11:08:11,049 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 127 (URL: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111)
+2025-05-12 11:08:11,049 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111 (Intento 1)...
+2025-05-12 11:08:11,049 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111 (Intento 1)...
+2025-05-12 11:08:12,279 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:12,279 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Argentina. It appears to be a general page about the World Bank organization and does not mention any details about waste generation, collection, treatment, or policies in Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:08:12,279 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Argentina. It appears to be a general page about the World Bank organization and does not mention any details about waste generation, collection, treatment, or policies in Argentina.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:08:12,279 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111: Score=40
+2025-05-12 11:08:12,279 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://documents.worldbank.org/en/publication/documents-reports/documentdetail/550301467995081111: Score=40
+2025-05-12 11:08:12,279 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 127 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:08:12,279 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 127 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:08:12,482 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 128 (URL: https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf)
+2025-05-12 11:08:12,482 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 128 (URL: https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf)
+2025-05-12 11:08:12,482 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf (Intento 1)...
+2025-05-12 11:08:12,482 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf (Intento 1)...
+2025-05-12 11:08:13,729 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:13,730 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management in Argentina, including details on the country's geography, population, and economic context. It indicates that the report aims to provide a better understanding of business opportunities for the Dutch waste/circular economy sector in Argentina, suggesting the report may contain more detailed information on waste generation, collection, and treatment.",
+  "keywords": ["municipal solid waste", "waste management", "circular economy", "business opportunities"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:13,730 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management in Argentina, including details on the country's geography, population, and economic context. It indicates that the report aims to provide a better understanding of business opportunities for the Dutch waste/circular economy sector in Argentina, suggesting the report may contain more detailed information on waste generation, collection, and treatment.",
+  "keywords": ["municipal solid waste", "waste management", "circular economy", "business opportunities"],
+  "mentions_entity": true
+}
+2025-05-12 11:08:13,730 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf: Score=80
+2025-05-12 11:08:13,730 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Argentina_20210322.pdf: Score=80
+2025-05-12 11:08:13,730 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 128 con measurement 1915 (country)
+2025-05-12 11:08:13,730 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 128 con measurement 1915 (country)
+2025-05-12 11:08:13,732 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=128 y measurement_id=1915 (type=country).
+2025-05-12 11:08:13,733 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 128 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:13,733 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 128 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:08:13,933 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 129 (URL: https://www.giswatch.org/en/country-report/argentina-0)
+2025-05-12 11:08:13,933 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 129 (URL: https://www.giswatch.org/en/country-report/argentina-0)
+2025-05-12 11:08:13,933 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.giswatch.org/en/country-report/argentina-0 (Intento 1)...
+2025-05-12 11:08:13,933 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.giswatch.org/en/country-report/argentina-0 (Intento 1)...
+2025-05-12 11:08:15,200 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:08:15,202 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.giswatch.org/en/country-report/argentina-0: {
+  "relevance_score": 40,
+  "justification": "The content snippet discusses e-waste and technology reuse in general, but does not provide any specific information about municipal solid waste management in Argentina.",
+  "keywords": ["e-waste", "technology reuse", "recycling"],
+  "mentions_entity": false
+}
+2025-05-12 11:08:15,202 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.giswatch.org/en/country-report/argentina-0: {
+  "relevance_score": 40,
+  "justification": "The content snippet discusses e-waste and technology reuse in general, but does not provide any specific information about municipal solid waste management in Argentina.",
+  "keywords": ["e-waste", "technology reuse", "recycling"],
+  "mentions_entity": false
+}
+2025-05-12 11:08:15,202 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.giswatch.org/en/country-report/argentina-0: Score=40
+2025-05-12 11:08:15,202 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.giswatch.org/en/country-report/argentina-0: Score=40
+2025-05-12 11:08:15,202 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 129 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:08:15,202 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 129 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:08:15,409 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 5 actualizaciones del lote realizado.
+2025-05-12 11:08:15,409 - INFO - SFA_ContentAnalyzer - Commit de 5 actualizaciones del lote realizado.
+2025-05-12 11:08:15,410 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:08:15,410 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:08:15,410 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:08:15,410 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:08:15,411 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:08:15,411 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:08:15,411 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país ARG.
+2025-05-12 11:08:15,411 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país ARG.
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país ARG ---
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país ARG ---
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 25
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 25
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 10
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 10
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:08:15,412 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

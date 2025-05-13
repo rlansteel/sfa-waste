@@ -1,0 +1,226 @@
+{
+  "id": 50,
+  "country_code_iso3": "CZE",
+  "country_name": "Czech Republic",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 40836.32813,
+  "population_total": 10669709.0,
+  "total_msw_generated_tons_year": 5334854.5,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 25.5,
+  "waste_treatment_compost_percent": 4.22,
+  "waste_treatment_incineration_percent": 17.68,
+  "waste_treatment_landfill_unspecified_percent": 52.59,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 79581.0,
+  "hazardous_waste_tons_year": 1162342.0,
+  "composition_food_organic": 62.3,
+  "composition_glass": 2.4,
+  "composition_metal": 8.4,
+  "composition_paper_cardboard": 9.1,
+  "composition_plastic": 2.2,
+  "composition_rubber_leather": null,
+  "composition_wood": 0.7,
+  "composition_yard_garden_green": null,
+  "composition_other": 14.9,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "Food/organic includes mixed (56.5 percent) and biodegradable (5.8 percent) waste; other includes bulky (9.2 percent), street sweepings (1.7 percent), residual (3.6 percent), textile (0.2 percent), and other unspecified (0.2 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2019,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Czechia, MZP (Ministry of the Environment). 2014. Waste Management Plan of the Czech Republic for the Period 2015–2024. Ministry of the Environment [Ministerstvo životního prostředí (MZP)], Government of Czechia. Prague, November.",
+      "comments": "Food/organic includes mixed (56.5 percent) and biodegradable (5.8 percent) waste; other includes bulky (9.2 percent), street sweepings (1.7 percent), residual (3.6 percent), textile (0.2 percent), and other unspecified (0.2 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "3"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+2025-05-12 11:19:14,734 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:19:14,734 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país ESP (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país ESP (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ESP (límite: 10)...
+2025-05-12 11:19:14,757 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ESP (límite: 10)...
+2025-05-12 11:19:14,757 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ESP', 'ESP', 10]
+2025-05-12 11:19:14,757 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ESP', 'ESP', 10]
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 418 (URL: https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf)
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 418 (URL: https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf)
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf (Intento 1)...
+2025-05-12 11:19:14,759 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf (Intento 1)...
+2025-05-12 11:19:16,283 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:16,285 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Spain's national waste management plan, covering various aspects of municipal solid waste management such as waste generation, collection, treatment, and disposal methods, as well as relevant policies and regulations. This makes the content highly relevant for understanding MSW management in Spain.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste treatment", "waste disposal", "waste policies", "waste regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:16,285 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Spain's national waste management plan, covering various aspects of municipal solid waste management such as waste generation, collection, treatment, and disposal methods, as well as relevant policies and regulations. This makes the content highly relevant for understanding MSW management in Spain.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste treatment", "waste disposal", "waste policies", "waste regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:16,285 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf: Score=90
+2025-05-12 11:19:16,285 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.miteco.gob.es/content/dam/miteco/es/calidad-y-evaluacion-ambiental/planes-y-estrategias/pemaraprobado6noviembrecondae_tcm30-170428.pdf: Score=90
+2025-05-12 11:19:16,285 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 418 con measurement 1064 (country)
+2025-05-12 11:19:16,285 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 418 con measurement 1064 (country)
+2025-05-12 11:19:16,294 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=418 y measurement_id=1064 (type=country).
+2025-05-12 11:19:16,294 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 418 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:16,294 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 418 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:16,498 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 419 (URL: https://www.eea.europa.eu/publications/many-eu-member-states/spain)
+2025-05-12 11:19:16,498 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 419 (URL: https://www.eea.europa.eu/publications/many-eu-member-states/spain)
+2025-05-12 11:19:16,498 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/publications/many-eu-member-states/spain (Intento 1)...
+2025-05-12 11:19:16,498 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/publications/many-eu-member-states/spain (Intento 1)...
+2025-05-12 11:19:17,580 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:17,580 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/publications/many-eu-member-states/spain: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on various aspects of municipal solid waste management in Spain, including waste generation data, collection methods, treatment and disposal methods, and relevant policies and regulations. It covers key MSW management topics for the country.",
+  "keywords": ["municipal waste", "recycling", "separate collection", "extended producer responsibility", "bio-waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:17,580 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/publications/many-eu-member-states/spain: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on various aspects of municipal solid waste management in Spain, including waste generation data, collection methods, treatment and disposal methods, and relevant policies and regulations. It covers key MSW management topics for the country.",
+  "keywords": ["municipal waste", "recycling", "separate collection", "extended producer responsibility", "bio-waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:17,580 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/publications/many-eu-member-states/spain: Score=80
+2025-05-12 11:19:17,580 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/publications/many-eu-member-states/spain: Score=80
+2025-05-12 11:19:17,581 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 419 con measurement 1064 (country)
+2025-05-12 11:19:17,581 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 419 con measurement 1064 (country)
+2025-05-12 11:19:17,582 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=419 y measurement_id=1064 (type=country).
+2025-05-12 11:19:17,582 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 419 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:17,582 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 419 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:17,786 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 432 (URL: https://ine.es/en/prensa/cma_2017_res_en.pdf)
+2025-05-12 11:19:17,786 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 432 (URL: https://ine.es/en/prensa/cma_2017_res_en.pdf)
+2025-05-12 11:19:17,787 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ine.es/en/prensa/cma_2017_res_en.pdf (Intento 1)...
+2025-05-12 11:19:17,787 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ine.es/en/prensa/cma_2017_res_en.pdf (Intento 1)...
+2025-05-12 11:19:19,356 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:19,358 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ine.es/en/prensa/cma_2017_res_en.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on the generation and treatment of municipal solid waste in Spain, including data on waste composition, recycling rates, and disposal methods. This information is highly relevant for understanding the current state of MSW management in Spain.",
+  "keywords": ["waste generation", "waste composition", "recycling rate", "waste treatment", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:19,358 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ine.es/en/prensa/cma_2017_res_en.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on the generation and treatment of municipal solid waste in Spain, including data on waste composition, recycling rates, and disposal methods. This information is highly relevant for understanding the current state of MSW management in Spain.",
+  "keywords": ["waste generation", "waste composition", "recycling rate", "waste treatment", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:19,358 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ine.es/en/prensa/cma_2017_res_en.pdf: Score=80
+2025-05-12 11:19:19,358 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ine.es/en/prensa/cma_2017_res_en.pdf: Score=80
+2025-05-12 11:19:19,358 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 432 con measurement 1071 (country)
+2025-05-12 11:19:19,358 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 432 con measurement 1071 (country)
+2025-05-12 11:19:19,359 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=432 y measurement_id=1071 (type=country).
+2025-05-12 11:19:19,360 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 432 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:19,360 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 432 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:19,560 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 433 (URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017)
+2025-05-12 11:19:19,560 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 433 (URL: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017)
+2025-05-12 11:19:19,562 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017 (Intento 1)...
+2025-05-12 11:19:19,562 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017 (Intento 1)...
+2025-05-12 11:19:20,754 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:20,756 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Spain. It appears to be a general document about European Union legislation and does not provide any details on waste generation, collection, treatment, or policies in Spain.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:20,756 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Spain. It appears to be a general document about European Union legislation and does not provide any details on waste generation, collection, treatment, or policies in Spain.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:20,756 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017: Score=30
+2025-05-12 11:19:20,756 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52018SC0017: Score=30
+2025-05-12 11:19:20,756 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 433 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:20,756 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 433 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:20,957 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 447 (URL: https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file)
+2025-05-12 11:19:20,957 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 447 (URL: https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file)
+2025-05-12 11:19:20,957 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file (Intento 1)...
+2025-05-12 11:19:20,957 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file (Intento 1)...
+2025-05-12 11:19:22,185 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:22,185 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Spain, including data on waste generation trends, recycling rates, and policy initiatives. It covers several key aspects of MSW management for Spain.",
+  "keywords": ["waste generation", "recycling rate", "landfilling", "separate collection", "circular economy"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:22,185 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Spain, including data on waste generation trends, recycling rates, and policy initiatives. It covers several key aspects of MSW management for Spain.",
+  "keywords": ["waste generation", "recycling rate", "landfilling", "separate collection", "circular economy"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:22,185 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file: Score=80
+2025-05-12 11:19:22,185 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/es-municipal-waste-factsheet.pdf/@@download/file: Score=80
+2025-05-12 11:19:22,185 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 447 con measurement 1076 (country)
+2025-05-12 11:19:22,185 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 447 con measurement 1076 (country)
+2025-05-12 11:19:22,187 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=447 y measurement_id=1076 (type=country).
+2025-05-12 11:19:22,187 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 447 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:22,187 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 447 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:22,387 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 449 (URL: https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023)
+2025-05-12 11:19:22,387 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 449 (URL: https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023)
+2025-05-12 11:19:22,388 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023 (Intento 1)...
+2025-05-12 11:19:22,388 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023 (Intento 1)...
+2025-05-12 11:19:23,540 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:23,540 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste generation and trends in Spain, including specific data on per capita waste generation over time. It also mentions the national waste prevention program, indicating the relevance of the content for understanding MSW management in Spain.",
+  "keywords": ["municipal solid waste", "waste generation", "waste prevention", "waste management", "Spain"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:23,540 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste generation and trends in Spain, including specific data on per capita waste generation over time. It also mentions the national waste prevention program, indicating the relevance of the content for understanding MSW management in Spain.",
+  "keywords": ["municipal solid waste", "waste generation", "waste prevention", "waste management", "Spain"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:23,540 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023: Score=80
+2025-05-12 11:19:23,540 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/themes/waste/waste-prevention/countries/2023-waste-prevention-country-fact-sheets/spain_waste_prevention_2023: Score=80
+2025-05-12 11:19:23,540 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 449 con measurement 1076 (country)
+2025-05-12 11:19:23,540 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 449 con measurement 1076 (country)
+2025-05-12 11:19:23,542 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=449 y measurement_id=1076 (type=country).
+2025-05-12 11:19:23,542 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 449 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:23,542 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 449 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:23,747 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 450 (URL: https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm)
+2025-05-12 11:19:23,747 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 450 (URL: https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm)
+2025-05-12 11:19:23,747 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm (Intento 1)...
+2025-05-12 11:19:23,747 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm (Intento 1)...
+2025-05-12 11:19:24,784 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:24,785 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Spain. It appears to be a general description of Eurostat's metadata on municipal waste statistics, without any details on waste generation, collection, or treatment methods for a specific country.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:24,785 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Spain. It appears to be a general description of Eurostat's metadata on municipal waste statistics, without any details on waste generation, collection, or treatment methods for a specific country.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:24,785 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm: Score=30
+2025-05-12 11:19:24,785 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ec.europa.eu/eurostat/cache/metadata/en/env_wasmun_esms.htm: Score=30
+2025-05-12 11:19:24,785 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 450 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:24,785 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 450 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:24,990 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 468 (URL: https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/)
+2025-05-12 11:19:24,990 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 468 (URL: https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/)
+2025-05-12 11:19:24,990 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/ (Intento 1)...
+2025-05-12 11:19:24,990 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/ (Intento 1)...
+2025-05-12 11:19:25,877 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:25,880 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not provide any information related to municipal solid waste management in Pamplona. It focuses on general population statistics and demographics of the city.",
+  "keywords": [],
+  "mentions_entity": true
+}
+2025-05-12 11:19:25,880 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not provide any information related to municipal solid waste management in Pamplona. It focuses on general population statistics and demographics of the city.",
+  "keywords": [],
+  "mentions_entity": true
+}
+2025-05-12 11:19:25,880 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/: Score=30
+2025-05-12 11:19:25,880 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.citypopulation.de/en/spain/navarra/navarra/31201__pamplona/: Score=30
+2025-05-12 11:19:25,880 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 468 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:25,880 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 468 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:26,086 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 469 (URL: https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/)
+2025-05-12 11:19:26,086 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 469 (URL: https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/)
+2025-05-12 11:19:26,086 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/ (Intento 1)...
+2025-05-12 11:19:26,086 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/ (Intento 1)...
+2025-05-12 11:19:27,105 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:27,107 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/: {
+  "relevance_score": 50,
+  "justification": "The content snippet provides some general population and demographic information for Pamplona, but does not contain any specific details about municipal solid waste management aspects such as waste generation, collection, treatment, or policies.",
+  "keywords": [],
+  "mentions_entity": true
+}
+2025-05-12 11:19:27,107 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/: {
+  "relevance_score": 50,
+  "justification": "The content snippet provides some general population and demographic information for Pamplona, but does not contain any specific details about municipal solid waste management aspects such as waste generation, collection, treatment, or policies.",
+  "keywords": [],
+  "mentions_entity": true
+}
+2025-05-12 11:19:27,107 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/: Score=50
+2025-05-12 11:19:27,107 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.citypopulation.de/en/spain/urbanareas/navarra/114297__pamplona/: Score=50
+2025-05-12 11:19:27,107 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 469 preparada para actualizar (Status: evaluated_irrelevant, Score: 50).
+2025-05-12 11:19:27,107 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 469 preparada para actualizar (Status: evaluated_irrelevant, Score: 50).
+2025-05-12 11:19:27,312 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 470 (URL: https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra)
+2025-05-12 11:19:27,312 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 470 (URL: https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra)
+2025-05-12 11:19:27,312 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra (Intento 1)...
+2025-05-12 11:19:27,312 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra (Intento 1)...
+2025-05-12 11:19:28,223 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:28,224 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra: {
+  "relevance_score": 20,
+  "justification": "The content snippet is about the population of the Navarra region in Spain, and does not contain any information about municipal solid waste management in Pamplona or the surrounding area.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:28,224 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra: {
+  "relevance_score": 20,
+  "justification": "The content snippet is about the population of the Navarra region in Spain, and does not contain any information about municipal solid waste management in Pamplona or the surrounding area.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:28,224 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra: Score=20
+2025-05-12 11:19:28,224 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.ceicdata.com/en/spain/population-at-1st-of-january/population-navarra: Score=20
+2025-05-12 11:19:28,224 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 470 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:19:28,224 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 470 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:19:28,426 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:19:28,426 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:19:28,426 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ESP (límite: 10)...
+2025-05-12 11:19:28,426 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ESP (límite: 10)...
+2025-05-12 11:19:28,426 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ESP', 'ESP', 10]
+2025-05-12 11:19:28,426 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ESP', 'ESP', 10]
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 7 hallazgos pendientes de análisis.
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - Seleccionados 7 hallazgos pendientes de análisis.
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 7 hallazgos...
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - Procesando lote de 7 hallazgos...
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 471 (URL: https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba)
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 471 (URL: https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba)
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba (Intento 1)...
+2025-05-12 11:19:28,427 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba (Intento 1)...
+2025-05-12 11:19:30,488 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:30,488 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on the waste management plan for the region of Navarra in Spain, and does not contain any specific information about municipal solid waste management in Pamplona.",
+  "keywords": ["waste prevention", "circular economy", "recycling", "waste management plan"],
+  "mentions_entity": false
+}
+2025-05-12 11:19:30,488 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on the waste management plan for the region of Navarra in Spain, and does not contain any specific information about municipal solid waste management in Pamplona.",
+  "keywords": ["waste prevention", "circular economy", "recycling", "waste management plan"],
+  "mentions_entity": false
+}
+2025-05-12 11:19:30,489 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba: Score=30
+2025-05-12 11:19:30,489 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos-de-navarra/prueba: Score=30
+2025-05-12 11:19:30,489 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 471 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:30,489 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 471 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:30,691 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 472 (URL: https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027)
+2025-05-12 11:19:30,691 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 472 (URL: https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027)
+2025-05-12 11:19:30,691 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027 (Intento 1)...
+2025-05-12 11:19:30,691 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027 (Intento 1)...
+2025-05-12 11:19:32,899 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:32,901 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027: {
+  "relevance_score": 50,
+  "justification": "The content snippet mentions a waste management plan for the region of Navarra, but does not provide any specific details about municipal solid waste management in Pamplona.",
+  "keywords": ["waste management plan", "economy circular"],
+  "mentions_entity": false
+}
+2025-05-12 11:19:32,901 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027: {
+  "relevance_score": 50,
+  "justification": "The content snippet mentions a waste management plan for the region of Navarra, but does not provide any specific details about municipal solid waste management in Pamplona.",
+  "keywords": ["waste management plan", "economy circular"],
+  "mentions_entity": false
+}
+2025-05-12 11:19:32,901 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027: Score=50
+2025-05-12 11:19:32,901 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://gobiernoabierto.navarra.es/es/participacion/procesos-de-participacion/propuestas-gobierno/plan-residuos-navarra-2017-2027: Score=50
+2025-05-12 11:19:32,902 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 472 preparada para actualizar (Status: evaluated_irrelevant, Score: 50).
+2025-05-12 11:19:32,902 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 472 preparada para actualizar (Status: evaluated_irrelevant, Score: 50).
+2025-05-12 11:19:33,107 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 473 (URL: https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba)
+2025-05-12 11:19:33,107 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 473 (URL: https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba)
+2025-05-12 11:19:33,107 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba (Intento 1)...
+2025-05-12 11:19:33,107 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba (Intento 1)...
+2025-05-12 11:19:34,559 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:34,561 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba: {
+  "relevance_score": 31,
+  "justification": "The content snippet is about the waste management plan for the region of Navarra in Spain, but does not specifically mention Pamplona or provide any details about municipal solid waste management in that city.",
+  "keywords": ["waste prevention", "circular economy", "waste management"],
+  "mentions_entity": false
+}
+2025-05-12 11:19:34,561 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba: {
+  "relevance_score": 31,
+  "justification": "The content snippet is about the waste management plan for the region of Navarra in Spain, but does not specifically mention Pamplona or provide any details about municipal solid waste management in that city.",
+  "keywords": ["waste prevention", "circular economy", "waste management"],
+  "mentions_entity": false
+}
+2025-05-12 11:19:34,561 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba: Score=31
+2025-05-12 11:19:34,561 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.navarra.es/es/web/oficina-de-prevencion-de-residuos/plan-de-residuos/prueba: Score=31
+2025-05-12 11:19:34,562 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 473 preparada para actualizar (Status: evaluated_irrelevant, Score: 31).
+2025-05-12 11:19:34,562 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 473 preparada para actualizar (Status: evaluated_irrelevant, Score: 31).
+2025-05-12 11:19:34,767 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 474 (URL: https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1)
+2025-05-12 11:19:34,767 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 474 (URL: https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1)
+2025-05-12 11:19:34,767 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1 (Intento 1)...
+2025-05-12 11:19:34,767 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1 (Intento 1)...
+2025-05-12 11:19:37,495 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:37,496 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Madrid. It appears to be a general assessment of separate collection schemes across the 28 capitals of the EU.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:37,496 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Madrid. It appears to be a general assessment of separate collection schemes across the 28 capitals of the EU.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:37,496 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1: Score=30
+2025-05-12 11:19:37,496 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://publications.europa.eu/resource/cellar/2c93de42-a2fa-11e5-b528-01aa75ed71a1.0001.01/DOC_1: Score=30
+2025-05-12 11:19:37,497 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 474 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:37,497 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 474 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:37,699 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 475 (URL: https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid)
+2025-05-12 11:19:37,699 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 475 (URL: https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid)
+2025-05-12 11:19:37,699 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid (Intento 1)...
+2025-05-12 11:19:37,699 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid (Intento 1)...
+2025-05-12 11:19:39,622 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:39,623 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on the waste management strategy and policies for the Comunidad de Madrid region, which includes the city of Madrid. It covers aspects like waste generation, prevention, and treatment methods, as well as the region's goals and initiatives to transition towards a circular economy.",
+  "keywords": ["waste generation", "waste prevention", "waste treatment", "circular economy", "waste strategy"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:39,623 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on the waste management strategy and policies for the Comunidad de Madrid region, which includes the city of Madrid. It covers aspects like waste generation, prevention, and treatment methods, as well as the region's goals and initiatives to transition towards a circular economy.",
+  "keywords": ["waste generation", "waste prevention", "waste treatment", "circular economy", "waste strategy"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:39,623 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid: Score=80
+2025-05-12 11:19:39,623 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/estrategia-residuos-comunidad-madrid: Score=80
+2025-05-12 11:19:39,623 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 475 con measurement 522 (city)
+2025-05-12 11:19:39,623 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 475 con measurement 522 (city)
+2025-05-12 11:19:39,625 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=475 y measurement_id=522 (type=city).
+2025-05-12 11:19:39,625 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 475 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:39,625 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 475 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:39,825 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 476 (URL: https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf)
+2025-05-12 11:19:39,825 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 476 (URL: https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf)
+2025-05-12 11:19:39,826 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf (Intento 1)...
+2025-05-12 11:19:39,826 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf (Intento 1)...
+2025-05-12 11:19:41,224 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:41,227 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet mentions the Comunidad de Madrid's environmental mandate and its Strategy for Sustainable Waste Management, indicating some relevance to municipal solid waste management in Madrid. However, it lacks specific details on waste generation, collection, treatment, and disposal methods.",
+  "keywords": ["waste management", "sustainability", "environmental protection"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:41,227 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet mentions the Comunidad de Madrid's environmental mandate and its Strategy for Sustainable Waste Management, indicating some relevance to municipal solid waste management in Madrid. However, it lacks specific details on waste generation, collection, treatment, and disposal methods.",
+  "keywords": ["waste management", "sustainability", "environmental protection"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:41,228 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf: Score=70
+2025-05-12 11:19:41,228 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.comunidad.madrid/sites/default/files/img/profesiones/reporting_final.pdf: Score=70
+2025-05-12 11:19:41,228 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 476 con measurement 522 (city)
+2025-05-12 11:19:41,228 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 476 con measurement 522 (city)
+2025-05-12 11:19:41,232 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=476 y measurement_id=522 (type=city).
+2025-05-12 11:19:41,233 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 476 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:19:41,233 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 476 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:19:41,433 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 477 (URL: https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf)
+2025-05-12 11:19:41,433 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 477 (URL: https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf)
+2025-05-12 11:19:41,433 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf (Intento 1)...
+2025-05-12 11:19:41,433 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf (Intento 1)...
+2025-05-12 11:19:42,790 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:42,792 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific information about municipal solid waste management in Madrid. It discusses circular economy strategies in Spain in general, but lacks details on waste generation, collection, treatment, or policies related to Madrid.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:42,792 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific information about municipal solid waste management in Madrid. It discusses circular economy strategies in Spain in general, but lacks details on waste generation, collection, treatment, or policies related to Madrid.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:42,792 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf: Score=40
+2025-05-12 11:19:42,792 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.statigenerali.org/wp-content/uploads/2016/11/Presentazione_Jose_Oteiz_stati_generali_green_economy_2016.pdf: Score=40
+2025-05-12 11:19:42,793 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 477 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:19:42,793 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 477 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:19:43,000 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 7 actualizaciones del lote realizado.
+2025-05-12 11:19:43,000 - INFO - SFA_ContentAnalyzer - Commit de 7 actualizaciones del lote realizado.
+2025-05-12 11:19:43,000 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ESP (límite: 10)...
+2025-05-12 11:19:43,000 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ESP (límite: 10)...
+2025-05-12 11:19:43,001 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ESP', 'ESP', 10]
+2025-05-12 11:19:43,001 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ESP', 'ESP', 10]
+2025-05-12 11:19:43,001 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:19:43,001 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:19:43,001 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país ESP.
+2025-05-12 11:19:43,001 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país ESP.
+2025-05-12 11:19:43,002 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:19:43,002 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:19:43,002 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país ESP ---
+2025-05-12 11:19:43,002 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país ESP ---
+2025-05-12 11:19:43,002 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 17
+2025-05-12 11:19:43,002 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 17
+2025-05-12 11:19:43,003 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 7
+2025-05-12 11:19:43,003 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 7
+2025-05-12 11:19:43,003 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:19:43,003 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

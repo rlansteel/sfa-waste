@@ -1,0 +1,254 @@
+{
+  "id": 99,
+  "country_code_iso3": "JPN",
+  "country_name": "Japan",
+  "region": "EAS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 41309.95703,
+  "population_total": 126529104.0,
+  "total_msw_generated_tons_year": 42720000.0,
+  "waste_collection_coverage_total_percent_of_population": 99.9,
+  "waste_treatment_recycling_percent": 4.9,
+  "waste_treatment_compost_percent": 0.4,
+  "waste_treatment_incineration_percent": 80.2,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 1.1,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "No",
+  "e_waste_tons_year": 518978.0,
+  "hazardous_waste_tons_year": 3600000.0,
+  "composition_food_organic": 36.0,
+  "composition_glass": 5.0,
+  "composition_metal": 4.0,
+  "composition_paper_cardboard": 33.0,
+  "composition_plastic": 11.0,
+  "composition_rubber_leather": 1.0,
+  "composition_wood": 4.0,
+  "composition_yard_garden_green": null,
+  "composition_other": 6.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "Data from eight cities in Japan; plastic includes PET bottle (2 percent) waste"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "6 (excludes hazardous MSW); e-waste includes home appliances (air conditioners, TVs, refrigerator and freezers, washing and drying machines) (452,000 tonnes) and small electrical and electronic equipment (66,978 tonnes); IW includes agricultural waste; HCW includes infectious industrial waste "
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Japan, Ministry of Land, Infrastructure, Transport and Tourism. n.d. Press release - Results of survey on construction byproduct. http://www.mlit.go.jp/sogoseisaku/region/recycle/pdf/fukusanbutsu/jittaichousa/H24sensuskekka_gaiyou.pdf",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan Association for Electric Home Appliances. 2017. http://www.aeha.or.jp/recycling_report/03.html; Japan Ministry of the Environment. n.d. \"Document 2: About the situation of efforts of small household appliance recycling of each entity.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2004,
+      "source": "Takeda, T. and H. Ozaki. n.d. \"Estimation of domestic emissions of infectious industrial waste\". https://www.jstage.jst.go.jp/article/jsmcwm/22/0/22_0_5/_pdf",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Japan, Ministry of the Environment. 2017. \"About emission and processing situation etc. of industrial waste (FY2006 results)\". http://www.env.go.jp/press/103381.html",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2004,
+      "source": "Takeda, T. and H. Ozaki. n.d. \"Estimation of domestic emissions of infectious industrial waste\". https://www.jstage.jst.go.jp/article/jsmcwm/22/0/22_0_5/_pdf",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2018,
+      "source": "Ministry of Environment, Government of Japan. 2019. \"About discharge and treatment status of general waste (FY2018).\" Accessed July 10, 2010. https://www.env.go.jp/press/107932.html.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_anaerobic_digestion_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. n.d. \"FY 2005 Survey: C-2. Investigation on Actual Use / Discharge of Containers and Packaging Waste\" [\"平成27年度調査: C-2.容器包装廃棄物の使用・排出実態調査\"]. Ministry of the Environment, Government of Japan. http://www.env.go.jp/recycle/yoki/c_2_research/research_11.html.",
+      "comments": "Data from eight cities in Japan; plastic includes PET bottle (2 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Japan, Ministry of the Environment. 2015. \"Waste Treatment in Japan FY2015 Version\" [\"Nihonno haikibutsu syori heisei 27 nendo ban\"]. Ministry of the Environment, Government of Japan. 2015. http://www.env.go.jp/recycle/waste_tech/ippan/h27/data/disposal.pdf.",
+      "comments": "nan"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+ℹ️ Conectando a la base de datos: output/waste_data.db
+✅ Conexión establecida y claves foráneas habilitadas.
+ℹ️ Creando/Verificando tablas...
+✅ Tablas verificadas/creadas.
+ℹ️ Leyendo datos de países desde: processed_data/country_data_processed.json
+✅ Leídos 217 registros de países del JSON.
+ℹ️ Iniciando inserción en tabla 'countries'...
+✅ Inserción en tabla 'countries' completada.
+ℹ️ Registros insertados: 217
+ℹ️ DIAGNÓSTICO: Total de países en tabla 'countries' después de la carga: 217
+✅ DIAGNÓSTICO: 'ZWE' encontrado en tabla 'countries': {'country_code_iso3': 'ZWE', 'country_name': 'Zimbabwe'}
+ℹ️ Leyendo datos de ciudades desde: processed_data/city_data_processed.json
+✅ Leídos 367 registros de ciudades del JSON.
+ℹ️ Iniciando inserción en tabla 'cities'...
+✅ Inserción en tabla 'cities' completada.
+ℹ️ Registros insertados: 367
+ℹ️ DIAGNÓSTICO: Total de ciudades en tabla 'cities' después de la carga: 734
+⚠️ DIAGNÓSTICO: Discrepancia en conteo de ciudades. Insertados: 367, En DB: 734
+ℹ️ Leyendo datos del codebook de países desde: processed_data/country_codebook_processed.json
+✅ Leídos 3776 registros del codebook de países JSON.
+ℹ️ Iniciando inserción en tabla 'country_measurements'...
+⚠️ Error de integridad insertando registro en 'country_measurements': FOREIGN KEY constraint failed. Registro: {'measurement': 
+'composition_other_percent', 'units': '%', 'year': 2010.0, 'source': 'GIZ and SWEEP-Net. 2010b. "Country Report on the Solid Waste 
+Management in Syria." Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ) and Regional Solid Waste Exchange of Information
+and Expertise Network in Mashreq and Maghreb Countries (SWEEP-Net), on behalf of the German Federal Ministry for Economic Cooperation and
+Development (BMZ). July.', 'comments': 'nan', 'year_status': 'original', 'region_id_codebook': 'MEA', 'country_iso3c': 'p', 
+'country_name_codebook': 'nan', 'income_id_codebook': 'LMC'}
+⚠️ Error de integridad insertando registro en 'country_measurements': FOREIGN KEY constraint failed. Registro: {'measurement': 
+'waste_treatment_other_percent', 'units': '%', 'year': 2010.0, 'source': 'GIZ and SWEEP-Net. 2010b. "Country Report on the Solid Waste 
+Management in Syria." Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ) and Regional Solid Waste Exchange of Information
+and Expertise Network in Mashreq and Maghreb Countries (SWEEP-Net), on behalf of the German Federal Ministry for Economic Cooperation and
+Development (BMZ). July.', 'comments': 'nan', 'year_status': 'original', 'region_id_codebook': 'MEA', 'country_iso3c': 'p', 
+'country_name_codebook': 'nan', 'income_id_codebook': 'LMC'}
+✅ Inserción en tabla 'country_measurements' completada.
+ℹ️ Registros insertados: 3774
+⚠️ Registros omitidos/con error: 2
+ℹ️ Creando mapa de IDs de ciudades para vinculación con codebooks...
+✅ Mapa de 0 IDs de ciudades creado.
+⚠️ El mapa de IDs de ciudades está vacío aunque hay ciudades en la BD. Verificar 'fetch_city_id_map'.
+ℹ️ Leyendo datos del codebook de ciudades desde: processed_data/city_codebook_processed.json
+✅ Leídos 684 registros del codebook de ciudades JSON.
+⚠️ Total de 684 registros de codebook de ciudades omitidos (falta nombre/ISO o ID de ciudad no encontrado).
+ℹ️ Conexión a la base de datos 'output/waste_data.db' cerrada.

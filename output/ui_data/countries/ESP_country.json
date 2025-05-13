@@ -1,0 +1,270 @@
+{
+  "id": 60,
+  "country_code_iso3": "ESP",
+  "country_name": "Spain",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 40985.55859,
+  "population_total": 47076780.0,
+  "total_msw_generated_tons_year": 22408548.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 16.84,
+  "waste_treatment_compost_percent": 16.45,
+  "waste_treatment_incineration_percent": 11.62,
+  "waste_treatment_landfill_unspecified_percent": 55.09,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 1202597.0,
+  "hazardous_waste_tons_year": 2984518.0,
+  "composition_food_organic": 49.0,
+  "composition_glass": 8.0,
+  "composition_metal": 3.0,
+  "composition_paper_cardboard": 15.0,
+  "composition_plastic": 9.0,
+  "composition_rubber_leather": null,
+  "composition_wood": 2.0,
+  "composition_yard_garden_green": null,
+  "composition_other": 14.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 75.07,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 22, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 15.4, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 22, \"measurements_with_source\": 22, \"measurements_with_comments\": 22, \"raw_score\": 305.9, \"max_potential_score\": 407.51, \"final_normalized_score\": 75.07, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 7/9): 0.0 pts.\\n- Mediciones (22 \\u00fanicas): Disp=28.0, Detalle/Rec=15.4 pts.\\n-> Puntaje Bruto: 305.9 / 407.51 => Normalizado: 75.07\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "Food/organic includes food (7 percent) and organic (42 percent) waste; other includes brick (1 percent), textile (5 percent), and other unspecified (8 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2019,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Spain, MAAMA (Ministry of Agriculture, Food and Environment). n.d. State Plan Waste Management Framework, 2016–2022 [Plan Estatal Marco de Gestión de Residuos (PEMAR), 2016–2022]. Ministry of Agriculture, Food and Environment [Ministerio de Agricultura, Alimentación y Medio Ambiente (MAAMA)], Government of Spain.",
+      "comments": "Food/organic includes food (7 percent) and organic (42 percent) waste; other includes brick (1 percent), textile (5 percent), and other unspecified (8 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {
+    "entity_name": "Spain",
+    "country": "Spain",
+    "iso3": "ESP",
+    "overall_summary": "Spain has made progress in waste management, with decreasing total waste generation trends and increasing recycling and composting rates in recent years. However, landfilling remains the dominant treatment method at over 55%. Key challenges include reducing landfill reliance, improving separate collection systems, incentivizing proper sorting, diversifying treatment methods, and expanding recycling/composting infrastructure to meet EU targets. Spain has a comprehensive regulatory framework through laws like the Law 7/2022 promoting circular economy principles and mandating implementation of cost-reflective waste fees by 2025.",
+    "generation_context": {
+      "scale_and_rate": "Spain generated around 22.4 million tons of municipal solid waste in the latest available data, with a per capita generation rate of around 475 kg/person/year. Some reports suggest total waste generation has followed a decreasing trend in recent years, while waste generation excluding major mineral waste has increased overall, roughly following trends in economic growth.",
+      "contributing_factors_trends": "Spain's waste generation is influenced by factors such as tourism (which can contribute to increased waste, especially in coastal areas), industrial and commercial activities, and population growth. According to national plans, the service sector and consumption patterns are major drivers of municipal waste generation. However, specific quantitative trends for these contributing factors were not found in the provided sources."
+    },
+    "waste_stream_composition": {
+      "summary": "Based on the composition percentages, the municipal solid waste stream in Spain is predominantly organic (49%), followed by paper/cardboard (15%), glass (8%), plastics (9%), metals (3%), wood (2%), and other materials (14%).",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "No specific information found in sources regarding nationwide municipal solid waste collection coverage or primary collection methods. Some reports suggest that collection is generally handled by municipal authorities, but roles of formal vs informal sectors are not clearly stated.",
+      "key_challenges": "Some key challenges inferred from the findings include the need to improve effectiveness of separate collection systems, especially for bio-waste, and incentivize better sorting at source by residents and businesses. Expanding collection coverage to unserved areas may also be a challenge, though the extent is unclear from available information."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the structured data, the dominant waste treatment and disposal methods in Spain are landfilling (55.09%), recycling (16.84%), composting (16.45%), and incineration (11.62%). Some reports suggest efforts to increase recycling and composting rates, while reducing landfilling. However, landfilling remains the most prevalent method.",
+      "infrastructure_highlights": "Web findings highlight the construction of new composting and biomethanization plants for waste treatment, while the number of landfill sites has stabilized or decreased. The national waste management plan aims to improve separate collection systems and sorting infrastructure.",
+      "key_challenges": "Key challenges related to waste treatment and disposal in Spain include reducing reliance on landfilling to meet EU targets, improving effectiveness of separate collection (especially for bio-waste), incentivizing sorting at source, diversifying treatment methods beyond landfilling and incineration, and expanding recycling/composting infrastructure and capacity."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Spain has a waste treatment recycling rate of 16.84% and a composting rate of 16.45%. Some reports suggest Spain has already met the 2025 packaging recycling target, but the rate might be overestimated. More efforts are required to reach the 2025 municipal waste recycling target and the 2035 landfill reduction target.",
+      "programs_mentioned": "The 'State Programme for Waste Prevention 2014-2020' and the 'State Framework Waste Management Plan (PEMAR) 2016-2022' are mentioned as national programs. A new 'State Framework Waste Management Plan (PEMAR) 2023-2035' is being developed to align with the Waste Framework Directive and Law 7/2022 promoting circular economy principles.",
+      "informal_sector_role": "No specific information found in sources regarding the role of the informal sector in recycling and recovery initiatives in Spain."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "Spain has a comprehensive regulatory framework for waste management. The Law 7/2022, of April 8, on Waste and Contaminated Soils for a Circular Economy, establishes principles and requirements for waste management aligned with the circular economy. It mandates the implementation of a specific waste fee by April 2025 to reflect the real costs of waste services. According to some reports, Spain also has a National Waste Management Framework Plan (PEMAR) that provides guidance for regional waste plans. The Ministry for Ecological Transition and Demographic Challenge oversees waste policies and regulations.",
+      "governance_issues": "Some potential governance issues mentioned include the need for improved separate collection systems, especially for bio-waste, and incentives for proper source separation. Additionally, reports suggest heterogeneity in local waste fees across municipalities due to various factors. Increasing public participation and accountability is also highlighted as an area for improvement."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Comprehensive regulatory framework with Law 7/2022 and national waste management plans",
+        "Increasing recycling and composting rates",
+        "Construction of new composting and biomethanization plants",
+        "Reported achievement of 2025 packaging recycling target"
+      ],
+      "weaknesses_or_challenges": [
+        "Heavy reliance on landfilling as the dominant waste treatment method",
+        "Need to improve effectiveness of separate collection systems, especially for bio-waste",
+        "Lack of incentives for proper source separation by residents and businesses",
+        "Heterogeneity in local waste fees across municipalities",
+        "Limited diversification of treatment methods beyond landfilling and incineration",
+        "Expanding recycling/composting infrastructure and capacity to meet future targets"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  }
+}

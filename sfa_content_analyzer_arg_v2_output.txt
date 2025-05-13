@@ -1,0 +1,44 @@
+2025-05-12 11:37:19,050 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:37:19,050 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:37:19,072 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:37:19,072 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:37:19,073 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:37:19,073 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:37:19,073 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país ARG (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:37:19,073 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país ARG (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:37:19,073 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:37:19,073 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: ARG (límite: 10)...
+2025-05-12 11:37:19,073 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:37:19,073 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['ARG', 'ARG', 10]
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país ARG.
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país ARG.
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país ARG ---
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país ARG ---
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 0
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 0
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 0
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 0
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:37:19,075 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

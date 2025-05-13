@@ -1,0 +1,166 @@
+{
+  "id": 158,
+  "country_code_iso3": "PRI",
+  "country_name": "Puerto Rico",
+  "region": "LCN",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 34311.03125,
+  "population_total": 3473181.0,
+  "total_msw_generated_tons_year": 4170953.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 14.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": 66.5,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 946.44,
+  "hazardous_waste_tons_year": 4.92,
+  "composition_food_organic": 13.1,
+  "composition_glass": 2.4,
+  "composition_metal": 10.4,
+  "composition_paper_cardboard": 19.4,
+  "composition_plastic": 10.4,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": 20.5,
+  "composition_other": 23.8,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 73.67,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 14, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 9.7, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 13, \"measurements_with_source\": 14, \"measurements_with_comments\": 14, \"raw_score\": 300.2, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.67, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 7/9): 0.0 pts.\\n- Mediciones (14 \\u00fanicas): Disp=28.0, Detalle/Rec=9.7 pts.\\n-> Puntaje Bruto: 300.2 / 407.51 => Normalizado: 73.67\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "Other includes CandD (17 percent), household hazardous (0.5 percent), and other unspecified (6.3 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "Energy Answers. 2012. \"Materials Separation Plan.\" Energy Answers Arecibo LLC., Energy Answers International Inc. April.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "Energy Answers. 2012. \"Materials Separation Plan.\" Energy Answers Arecibo LLC., Energy Answers International Inc. April.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Energy Answers. 2012. \"Materials Separation Plan.\" Energy Answers Arecibo LLC, Energy Answers International Inc. April.",
+      "comments": "Value is a projection based on historical waste generation"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "Energy Answers. 2012. \"Materials Separation Plan.\" Energy Answers Arecibo LLC., Energy Answers International Inc. April.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2003,
+      "source": "Carim, Michael, Whitney Blake, Alex Amerman, Billy Gridley, Monica Kurpiewski, Sung Ah Lee, Safet Marke, Nina Kishore, Adam Raphaely, andAllison Diana Reilly. 2007. \"Waste to Energy: A Possibility for Puerto Rico.\" School of International and Public Affairs, Columbia University. May. http://www.energyanswers.com/pdf/WTE%20-%20A%20Possibility%20for%20Puerto%20Rico.pdf.",
+      "comments": "Other includes CandD (17 percent), household hazardous (0.5 percent), and other unspecified (6.3 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "PricewaterhouseCoopers Aruba. 2014. \"Environmental Sustainability Ranking: Determining and Fortifying Aruba's Position in the Caribbean.\" Version 1.1. PricewaterhouseCoopers Aruba. October 28. https://www.pwc.com/an/en/publications/assets/pwc-environmental-sustainability-ranking-positioning-and-fortifying-aruba-in-caribbean.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "LF: 13; assumed disposed in landfill as there are 29 operating landfills"
+    }
+  ],
+  "ai_profile_data": {}
+}

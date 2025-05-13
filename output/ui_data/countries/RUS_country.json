@@ -1,0 +1,159 @@
+{
+  "id": 165,
+  "country_code_iso3": "RUS",
+  "country_name": "Russian Federation",
+  "region": "ECS",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 26012.84961,
+  "population_total": 143201680.0,
+  "total_msw_generated_tons_year": 60000000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 4.5,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 95.0,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 1392000.0,
+  "hazardous_waste_tons_year": 110000000.0,
+  "composition_food_organic": 28.41,
+  "composition_glass": 16.82,
+  "composition_metal": 1.83,
+  "composition_paper_cardboard": 19.7,
+  "composition_plastic": 14.21,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 19.03,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 73.5,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 13, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 9.0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 12, \"measurements_with_source\": 13, \"measurements_with_comments\": 13, \"raw_score\": 299.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.5, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (13 \\u00fanicas): Disp=28.0, Detalle/Rec=9.0 pts.\\n-> Puntaje Bruto: 299.5 / 407.51 => Normalizado: 73.5\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "Plastic reported as polymeric materials; other includes textile (1.55 percent) and other unspecified (17.48 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Russia, Ministry of Natural Resources and Ecology. 2016. \"The State Report: On the State and Protection of the Environment of the Russian Federation in 2015\" [\"ОСУДАРСТВЕННЫЙДОКЛАД: О состоянии и об охране окружающей среды Российской Федерации в 2015 году\"]. Ministry of Natural Resources and Ecology of the Russian Federation [Министерство природных ресурсов и экологииРоссийской ФедерацииГ]. Moscow. ISBN 978-5-9562-0096-4. Accessed on April 18, 2017.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "IFC (International Finance Corporation). 2012. \"Municipal Solid Waste Management: Opportunities for Russia.\" IFC advisory services in eastern europe and Central asia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Tekes (Finnish Funding Agency for Technology and Innovation). 2013. Future Watch Report: Future of Waste Management in Russian Megacities. Tekse—The Finnish Funding Agency for Technology and Innovation. December. Accessed April 25, 2017. https://www.tekes.fi/globalassets/julkaisut/future_of_waste_management_in_russian_megacities.pdf.",
+      "comments": "Plastic reported as polymeric materials; other includes textile (1.55 percent) and other unspecified (17.48 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Russia, Ministry of Natural Resources and Ecology. 2012. \"The Substantiation of the Election of the Optimum Method of Waste Fund Disposal in the Cities of Russia.\"Federal Service for Supervision of Natural Resources Management Public Council under Rosprirodnadzor The Commission of the Scientific Council of the Russian Academy of Sciences on Ecology and Emergency Situations. [Министерство природных ресурсов и экологии Российской ФедерацииФедеральная служба по надзору в сфере природопользованияОбщественный совет при РосприроднадзореКомиссия научного совета РАН по экологии и чрезвычайным ситуациям. 2012. \"ОБОСНОВАНИЕ ВЫБОРА ОПТИМАЛЬНОГО СПОСОБА ОБЕЗВРЕЖИВАНИЯ  ТВЕРДЫХ БЫТОВЫХ ОТХОДОВЖИЛОГО ФОНДА В ГОРОДАХ РОССИИ\"]. Accessed April 18, 2017.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "RE: Source provides a range of 4-5 percent (average used)"
+    }
+  ],
+  "ai_profile_data": {}
+}

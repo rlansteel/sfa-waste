@@ -1,0 +1,229 @@
+{
+  "id": 204,
+  "country_code_iso3": "USA",
+  "country_name": "United States",
+  "region": "NAC",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 61498.37109,
+  "population_total": 326687488.0,
+  "total_msw_generated_tons_year": 265224528.0,
+  "waste_collection_coverage_total_percent_of_population": 100.0,
+  "waste_treatment_recycling_percent": 34.6,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": 12.8,
+  "waste_treatment_landfill_unspecified_percent": 52.6,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 2440000.0,
+  "hazardous_waste_tons_year": 28800000.0,
+  "composition_food_organic": 14.9,
+  "composition_glass": 4.4,
+  "composition_metal": 9.0,
+  "composition_paper_cardboard": 26.6,
+  "composition_plastic": 12.9,
+  "composition_rubber_leather": 9.5,
+  "composition_wood": 6.2,
+  "composition_yard_garden_green": 13.3,
+  "composition_other": 3.2,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 86.5,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 52.5, \"composition_status\": \"consistent_strict\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"9/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 352.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 86.5, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (consistent_strict, Suma: 100.0, Presentes: 9/9): 52.5 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 352.5 / 407.51 => Normalizado: 86.5\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "Rubber/leather includes rubber, leather, and textile waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Electronics Takeback Coalition. 2016. \"Facts and Figures on E-Waste and Recycling.\" January.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "US EPA (Environmental Protection Agency). n.d. \"Report on the Environment: Hazardous Waste.\" United States Environmental Protection Agency. http://www.epa.gov/roe/.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "US EPA (Environmental Protection Agency). 2016a. \"Guide for Industrial Waste Management.\" United States Environmental Protection Agency. https://www.epa.gov/sites/production/files/2016-03/documents/industrial-waste-guide.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "BCC Research LLC. 2012. \"U.S. Market For Medical Waste Treatment, Containment, Management And Disposal To Reach Nearly $3.2 Billion In 2017.\" https://www.bccresearch.com/pressroom/env/arket-medical-waste-treatment-containment-management-disposal-reach-nearly-$3.2-billion-2017.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2018,
+      "source": "United States Environmental Protection Agency. December 2020. \"Advancing Sustainable Materials Management: 2018 Fact Sheet Assessing Trends in Materials Generation and Management in the United Stated.\" Accessed March 26, 2021. https://www.epa.gov/sites/production/files/2021-01/documents/2018_ff_fact_sheet_dec_2020_fnl_508.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2005,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2005,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2005,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2005,
+      "source": "UN (United Nations). 2016b. \"Environmental Indicators and selected time series: Waste. Total Population served by Municipal Waste Collection.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "Rubber/leather includes rubber, leather, and textile waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "US EPA (Environmental Protection Agency). 2014. \"Advancing Sustainable Materials Management: 2014 Fact Sheet: Assessing Trends in Material Generation, Recycling, Composting, Combustion with Energy Recovery and Landfilling in the United States.\" Office of Land and Emergency Management (OLEM), Environmental Protection Agency (EPA), Government of the United States of America.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

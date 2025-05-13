@@ -1,0 +1,194 @@
+{
+  "id": 30,
+  "country_code_iso3": "BTN",
+  "country_name": "Bhutan",
+  "region": "SAS",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 6743.016113,
+  "population_total": 686958.0,
+  "total_msw_generated_tons_year": 111314.05,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 0.86,
+  "waste_treatment_compost_percent": 1.39,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 98.0,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 1457.5,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 58.0,
+  "composition_glass": 4.0,
+  "composition_metal": 1.0,
+  "composition_paper_cardboard": 17.0,
+  "composition_plastic": 13.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 7.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "Other includes textile (3 percent) and other inorganic (4 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Bhutan, National Environment Commission. 2016. \"Bhutan State of Environment Report 2016.\" ISBN # 978-99936-865-5-2.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bhutan, National Environment Commission. 2016. \"Bhutan State of Environment Report 2016.\" ISBN # 978-99936-865-5-2.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "WHO (World Health Organization). 2017. \"Report on health-care waste management (HCWM) status in Countries of the South-East Asia Region (SEA Region).\" World Health Organization, Regional Office for South-East Asia, New Delhi, April. Licence: CC BY-NC-SA 3.0 IGO.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "Phuntsho, S., S. Herat, H. Shon, S. Vigneswaran, I. Dulal, D. Yangden, and U. M. Tenzin. 2010. \"Studying Municipal Solid Waste Generation and Composition in the Urban Areas of Bhutan.\" Waste Management and Research 28 (6):545–51.",
+      "comments": "2 (urban, 0.53 kg/person/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "Bhutan Ministry of Works and Human Settlement. 2016. \"Report on the Existing Drinking Water and Sanitation Scenario in Thimphu City\". Report prepared under SUNYA project (supported by European Union) (2014)",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "Bhutan Ministry of Works and Human Settlement. 2016. \"Report on the Existing Drinking Water and Sanitation Scenario in Thimphu City\". Report prepared under SUNYA project (supported by European Union) (2014)",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "Bhutan Ministry of Works and Human Settlement. 2016. \"Report on the Existing Drinking Water and Sanitation Scenario in Thimphu City\". Report prepared under SUNYA project (supported by European Union) (2014)",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2016,
+      "source": "Bhutan Ministry of Works and Human Settlement. 2016. \"Report on the Existing Drinking Water and Sanitation Scenario in Thimphu City\". Report prepared under SUNYA project (supported by European Union) (2014)",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Bhutan, National Environment Commission. 2016. \"Bhutan State of Environment Report 2016.\" ISBN # 978-99936-865-5-2.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Bhutan, National Environment Commission. 2016. \"Bhutan State of Environment Report 2016.\" ISBN # 978-99936-865-5-2.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "Other includes textile (3 percent) and other inorganic (4 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Bhutan, National Environment Commission. 2016. \"Bhutan State of Environment Report 2016.\" ISBN # 978-99936-865-5-2.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

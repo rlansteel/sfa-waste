@@ -1,0 +1,357 @@
+ℹ️ Cargando configuración desde: config_city.json
+✅ Configuración cargada.
+ℹ️ Intentando leer cabecera con codificación: utf-8 y delimitador ','
+ℹ️ Lectura de cabecera exitosa con utf-8 y delimitador ','.
+╭─────────────────────────────────────────────────── Prompt Enviado a Claude (Mapeo) ───────────────────────────────────────────────────╮
+│ Analyze the following CSV header and example data rows to identify the columns that correspond *exactly* to the required concepts:    │
+│ municipality, country, iso3c, population, total_waste_tons_year, income_level, recycling_rate_percent,                                │
+│ collection_coverage_population_percent, primary_collection_mode, composition_food_organic, composition_glass, composition_metal,      │
+│ composition_paper_cardboard, composition_plastic, composition_rubber_leather, composition_wood, composition_yard_garden_green,        │
+│ composition_other.                                                                                                                    │
+│                                                                                                                                       │
+│ CSV Header:                                                                                                                           │
+│ `iso3c, region_id, country_name, income_id, city_name, additional_data_annual_budget_for_waste_management_year,                       │
+│ additional_data_annual_solid_waste_budget_year, additional_data_annual_swm_budget_2017_year, additional_data_annual_swm_budget_year,  │
+│ additional_data_annual_waste_budget_year, additional_data_collection_ton, additional_data_number_of_scavengers_on_dumpsites_number,   │
+│ additional_data_other_user_fees_na, additional_data_swm_contract_arrangement_1_year_contract_period,                                  │
+│ additional_data_swm_contract_arrangement_3_year_contract_period,                                                                      │
+│ additional_data_total_annual_costs_to_collect_and_dispose_of_city_s_waste_year, additional_data_total_swm_expenditures_year,          │
+│ additional_data_total_waste_management_budget_year,                                                                                   │
+│ communication_list_of_channels_through_which_the_city_collects_feedback_from_it_residents_on_issues_related_to_solid_waste_services_n │
+│ a, communication_summary_of_key_solid_waste_information_made_periodically_available_to_the_public_na,                                 │
+│ composition_food_organic_waste_percent, composition_glass_percent, composition_metal_percent, composition_other_percent,              │
+│ composition_paper_cardboard_percent, composition_plastic_percent, composition_rubber_leather_percent, composition_wood_percent,       │
+│ composition_yard_garden_green_waste_percent, informal_sector_child_waste_pickers_number, informal_sector_child_waste_pickers_percent, │
+│ informal_sector_female_waste_pickers_number, informal_sector_female_waste_pickers_percent,                                            │
+│ informal_sector_social_safeguards_for_waste_pickers_list, informal_sector_total_waste_pickers_number,                                 │
+│ institutional_framework_department_dedicated_to_solid_waste_management_na,                                                            │
+│ institutional_framework_environmental_assessment_for_solid_waste_management_in_the_past_5_years_na,                                   │
+│ institutional_framework_information_system_for_solid_waste_management_na,                                                             │
+│ institutional_framework_performed_a_social_assessment_for_solid_waste_management_in_the_past_5_years_na,                              │
+│ institutional_framework_unit_enforcing_solid_waste_issues_in_the_city_such_as_illegal_dumping_or_littering_na,                        │
+│ legal_framework_long_term_integrated_solid_waste_master_plan_na, legal_framework_master_plan_is_being_implemented_na,                 │
+│ legal_framework_solid_waste_management_rules_and_regulations_na, n_waste_pickers_number_of_waste_pickers_number_of_people,            │
+│ percent_informal_sector_percent_collected_by_informal_sector_percent, population_population_number_of_people,                         │
+│ primary_collection_mode_form_of_primary_collection_na, separation_breakdonw_cans_and_metals_na, separation_breakdonw_glass_na,        │
+│ separation_breakdonw_organics_na, separation_breakdonw_other_na, separation_breakdonw_paper_cardboard_na,                             │
+│ separation_breakdonw_plastics_and_packaging_na, separation_existence_of_source_separation_na,                                         │
+│ subisidies_other_subsidies_or_transfers_na, subisidies_subsidies_or_transfers_from_a_central_government_authority_na,                 │
+│ total_msw_total_msw_generated_tons_year, transportation_distance_from_city_center_to_main_landfill_or_dumpsite_km,                    │
+│ transportation_distance_km, transportation_distance_km_year, transportation_distance_na, transportation_distance_total_km_day,        │
+│ transportation_scale_calibration_and_operation_status_na, transportation_scale_usage_na,                                              │
+│ transportation_transfer_station_or_collection_point_aggregation_na,                                                                   │
+│ transportation_transfer_station_or_colletion_point_aggregation_na, transportation_transfer_stations_needed_number,                    │
+│ transportation_transfer_stations_needed_na, transportation_transfer_stations_operational_number,                                      │
+│ transportation_transfer_stations_operational_na, transportation_trips_per_year_na, transportation_trips_per_year_trips_year,          │
+│ waste_collection_cost_recovery_commercial_fee_amount_na, waste_collection_cost_recovery_household_fee_amount_na,                      │
+│ waste_collection_cost_recovery_household_fee_to_private_agents_non_municipal_na,                                                      │
+│ waste_collection_cost_recovery_metadata_commercial_fee_type_na, waste_collection_cost_recovery_metadata_household_fee_type_na,        │
+│ waste_collection_cost_recovery_metadata_main_method_of_household_billing_na,                                                          │
+│ waste_collection_cost_recovery_total_collection_revenues_na, waste_collection_cost_recovery_total_commercial_fees_collected_na,       │
+│ waste_collection_cost_recovery_total_household_fees_collected_na,                                                                     │
+│ waste_collection_coverage_total_percent_of_geographic_area_percent_of_geographic_area,                                                │
+│ waste_collection_coverage_total_percent_of_households_percent_of_households,                                                          │
+│ waste_collection_coverage_total_percent_of_population_percent_of_population,                                                          │
+│ waste_collection_coverage_total_percent_of_waste_percent_of_waste, waste_disposal_cost_recovery_metadata_disposal_fee_type_na,        │
+│ waste_disposal_cost_recovery_other_revenues_na, waste_disposal_cost_recovery_per_unit_disposal_cost_na,                               │
+│ waste_disposal_cost_recovery_total_disposal_revenues_na, waste_disposal_cost_recovery_total_revenues_from_compost_na,                 │
+│ waste_disposal_cost_recovery_total_revenues_from_recycling_na, waste_management_cost_controlled_landfill_na,                          │
+│ waste_management_cost_incineration_na, waste_management_cost_open_dump_na, waste_management_cost_other_na,                            │
+│ waste_management_cost_recycling_na, waste_management_cost_sanitary_landfill_landfill_gas_system_na,                                   │
+│ waste_to_energy_cost_recovery_amount_of_energy_distributed_through_feed_in_tariff_kwh_year,                                           │
+│ waste_to_energy_cost_recovery_amount_of_energy_generated_kwh_year, waste_to_energy_cost_recovery_feed_in_tariff_amount_na,            │
+│ waste_to_energy_cost_recovery_total_revenues_from_energy_recovery_na, waste_treatment_advanced_thermal_treatment_percent,             │
+│ waste_treatment_anaerobic_digestion_percent, waste_treatment_compost_percent, waste_treatment_controlled_landfill_percent,            │
+│ waste_treatment_incineration_percent, waste_treatment_landfill_unspecified_percent, waste_treatment_open_dump_percent,                │
+│ waste_treatment_other_percent, waste_treatment_recycling_percent, waste_treatment_sanitary_landfill_landfill_gas_system_percent,      │
+│ waste_treatment_unaccounted_for_percent, waste_treatment_waterways_marine_percent`                                                    │
+│                                                                                                                                       │
+│ Example Data Rows (up to 5):                                                                                                          │
+│ `AFG`, `SAS`, `Afghanistan`, `LIC`, `Jalalabad`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `1.0455`, `1.1175`,      │
+│ `0.0175`, `84.854`, `0.08`, `5.6455`, `4.9425`, `0.156`, `2.1395`, ``, ``, ``, ``, ``, ``, `Yes`, ``, `No`, ``, ``, `No`, `No`,       │
+│ `Yes`, ``, `10`, `326585`, `Door-to-door collection`, `No`, `No`, `No`, ``, `No`, `No`, `No`, ``, ``, `58914.45`, ``, ``, ``, ``, ``, │
+│ `No`, `No measurement`, `Yes`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `95`, ``, ``, ``, ``, ``, ``, ``, ``,  │
+│ ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `100`, ``, ``, ``, ``, ``                                         │
+│ `AFG`, `SAS`, `Afghanistan`, `LIC`, `Kandahar`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `11.6`, `2.311`, `0.169`, │
+│ `64.364`, `1.499`, `9.643`, `5.929`, ``, `4.49`, ``, ``, ``, ``, ``, ``, `Yes`, ``, `No`, ``, ``, `No`, `No`, `Yes`, ``, ``,          │
+│ `429000`, `Centralized drop-off point`, `No`, `No`, `No`, ``, `No`, `No`, `No`, ``, ``, `120971`, ``, ``, ``, ``, ``, `No`, `No       │
+│ measurement`, `Yes`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `95`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,    │
+│ ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `100`, ``, ``, ``, ``, ``                                                 │
+│ `AFG`, `SAS`, `Afghanistan`, `LIC`, `Mazar-E-Sharif`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `50.5`, `1.32`,     │
+│ `0.32`, `28.87`, `1.69`, `10.64`, `3.41`, `0.18`, `2.87`, ``, ``, ``, ``, ``, ``, `Yes`, ``, `No`, ``, ``, `No`, `No`, `Yes`, ``, ``, │
+│ `635250`, `Centralized drop-off point`, `No`, `No`, `No`, ``, `No`, `No`, `No`, ``, ``, `52368.4`, ``, ``, ``, ``, ``, `No`, `No      │
+│ measurement`, `Yes`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `Other`, ``, ``, `668168.97`, ``, ``, `95`, ``, ``, ``, ``, ``, ``,      │
+│ `53215348`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `100`, ``, ``, ``, ``, ``                         │
+│ `AFG`, `SAS`, `Afghanistan`, `LIC`, `Kabul`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `13.5`, `1`, `0.5`, `63`,    │
+│ `5`, `11`, ``, `1`, `4`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `No`, `No`, `Yes`, `1000`, `5`, `3700000`, `Centralized drop-off │
+│ point`, ``, ``, ``, ``, ``, ``, ``, ``, ``, `1989250`, `80`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `0`, ``, `401500`, ``,       │
+│ `700`, ``, ``, `Fee per income level`, ``, ``, ``, ``, ``, `70`, ``, `75`, ``, ``, ``, ``, ``, ``, ``, ``, `0.4`, ``, ``, ``, ``, ``, │
+│ ``, ``, ``, ``, ``, ``, ``, ``, `75`, ``, ``, ``, `25`, ``                                                                            │
+│ `AFG`, `SAS`, `Afghanistan`, `LIC`, `HiratÂ `, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `52.94`, `1.47`, `0.23`,   │
+│ `23.05`, `3.67`, `12.06`, `5.39`, `0.54`, `0.64`, ``, ``, ``, ``, ``, ``, `Yes`, ``, `No`, ``, ``, `No`, `No`, `Yes`, ``, `29`,       │
+│ `337000`, `Door-to-door collection`, `No`, `No`, `No`, ``, `No`, `No`, `No`, ``, ``, `91644.7`, ``, `35`, ``, ``, ``, `No`, `No       │
+│ measurement`, `Yes`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `Other`, ``, `Direct solid waste billing`, ``, ``, ``, `95`, ``, ``, ``, │
+│ ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `100`, ``, ``, ``, ``, ``                     │
+│                                                                                                                                       │
+│ Based *only* on the provided header and data, determine the best matching column name for each of the following concepts:             │
+│ - **municipality**: The primary name of the city, municipality, or administrative area.                                               │
+│ - **country**: The name of the country the municipality belongs to.                                                                   │
+│ - **iso3c**: The 3-letter ISO code for the country (e.g., MEX, AFG).                                                                  │
+│ - **population**: A numerical value representing the population count.                                                                │
+│ - **total_waste_tons_year**: A numerical value representing the total waste generated per year, preferably in tons.                   │
+│ - **income_level**: A category indicating the income level of the city/region (e.g., UMC, LMC, HIC). Often found in columns like      │
+│ 'income_id'.                                                                                                                          │
+│ - **recycling_rate_percent**: A numerical percentage indicating the rate of waste recycling. Look for columns like                    │
+│ 'waste_treatment_recycling_percent'.                                                                                                  │
+│ - **collection_coverage_population_percent**: A numerical percentage indicating the proportion of the population served by waste      │
+│ collection services. Look for columns like 'waste_collection_coverage_total_percent_of_population_percent_of_population'.             │
+│ - **primary_collection_mode**: The main method used for waste collection (e.g., 'Curbside collection', 'Door-to-door collection').    │
+│ Look for columns like 'primary_collection_mode_form_of_primary_collection_na'.                                                        │
+│ - **composition_food_organic**: Percentage of food/organic waste in the total waste stream. Look for columns like                     │
+│ 'composition_food_organic_waste_percent'.                                                                                             │
+│ - **composition_glass**: Percentage of glass waste in the total waste stream. Look for columns like 'composition_glass_percent'.      │
+│ - **composition_metal**: Percentage of metal waste in the total waste stream. Look for columns like 'composition_metal_percent'.      │
+│ - **composition_paper_cardboard**: Percentage of paper/cardboard waste in the total waste stream. Look for columns like               │
+│ 'composition_paper_cardboard_percent'.                                                                                                │
+│ - **composition_plastic**: Percentage of plastic waste in the total waste stream. Look for columns like                               │
+│ 'composition_plastic_percent'.                                                                                                        │
+│ - **composition_rubber_leather**: Percentage of rubber/leather waste in the total waste stream. Look for columns like                 │
+│ 'composition_rubber_leather_percent'.                                                                                                 │
+│ - **composition_wood**: Percentage of wood waste in the total waste stream. Look for columns like 'composition_wood_percent'.         │
+│ - **composition_yard_garden_green**: Percentage of yard/garden/green waste in the total waste stream. Look for columns like           │
+│ 'composition_yard_garden_green_waste_percent'.                                                                                        │
+│ ... (prompt truncated, 3 more lines)                                                                                                  │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ℹ️ Llamando a Anthropic (claude-3-haiku-20240307) para mapeo (Intento 1/3)...
+╭─────────────────────────────────────── Respuesta LLM: Uso de Herramienta Detectado ────────────────────────────────────────╮
+│ Tool Name: map_csv_columns_to_concepts                                                                                     │
+│ Parameters (Mapping):                                                                                                      │
+│ {                                                                                                                          │
+│   "municipality": "city_name",                                                                                             │
+│   "country": "country_name",                                                                                               │
+│   "iso3c": "iso3c",                                                                                                        │
+│   "population": "population_population_number_of_people",                                                                  │
+│   "total_waste_tons_year": "total_msw_total_msw_generated_tons_year",                                                      │
+│   "income_level": "income_id",                                                                                             │
+│   "recycling_rate_percent": "waste_treatment_recycling_percent",                                                           │
+│   "collection_coverage_population_percent": "waste_collection_coverage_total_percent_of_population_percent_of_population", │
+│   "primary_collection_mode": "primary_collection_mode_form_of_primary_collection_na",                                      │
+│   "composition_food_organic": "composition_food_organic_waste_percent",                                                    │
+│   "composition_glass": "composition_glass_percent",                                                                        │
+│   "composition_metal": "composition_metal_percent",                                                                        │
+│   "composition_paper_cardboard": "composition_paper_cardboard_percent",                                                    │
+│   "composition_plastic": "composition_plastic_percent",                                                                    │
+│   "composition_rubber_leather": "composition_rubber_leather_percent",                                                      │
+│   "composition_wood": "composition_wood_percent",                                                                          │
+│   "composition_yard_garden_green": "composition_yard_garden_green_waste_percent",                                          │
+│   "composition_other": "composition_other_percent"                                                                         │
+│ }                                                                                                                          │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+✅ Mapeo recibido. Validando...
+ℹ️ Mapeo validado final: {'municipality': 'city_name', 'country': 'country_name', 'iso3c': 'iso3c', 'population': 
+'population_population_number_of_people', 'total_waste_tons_year': 'total_msw_total_msw_generated_tons_year', 'income_level': 
+'income_id', 'recycling_rate_percent': 'waste_treatment_recycling_percent', 'collection_coverage_population_percent': 
+'waste_collection_coverage_total_percent_of_population_percent_of_population', 'primary_collection_mode': 
+'primary_collection_mode_form_of_primary_collection_na', 'composition_food_organic': 'composition_food_organic_waste_percent', 
+'composition_glass': 'composition_glass_percent', 'composition_metal': 'composition_metal_percent', 'composition_paper_cardboard': 
+'composition_paper_cardboard_percent', 'composition_plastic': 'composition_plastic_percent', 'composition_rubber_leather': 
+'composition_rubber_leather_percent', 'composition_wood': 'composition_wood_percent', 'composition_yard_garden_green': 
+'composition_yard_garden_green_waste_percent', 'composition_other': 'composition_other_percent'}
+ℹ️ Columnas originales a usar: ['composition_plastic_percent', 'iso3c', 'waste_treatment_recycling_percent', 
+'composition_food_organic_waste_percent', 'population_population_number_of_people', 
+'waste_collection_coverage_total_percent_of_population_percent_of_population', 'composition_yard_garden_green_waste_percent', 
+'composition_paper_cardboard_percent', 'composition_other_percent', 'composition_glass_percent', 'composition_rubber_leather_percent', 
+'total_msw_total_msw_generated_tons_year', 'city_name', 'composition_wood_percent', 'income_id', 'composition_metal_percent', 
+'primary_collection_mode_form_of_primary_collection_na', 'country_name']
+ℹ️ Iniciando procesamiento v7.1 (Config Driven): city_level_data_0_0.csv
+ℹ️ Leyendo CSV completo con utf-8, columnas mapeadas: ['composition_plastic_percent', 'iso3c', 'waste_treatment_recycling_percent', 
+'composition_food_organic_waste_percent', 'population_population_number_of_people', 
+'waste_collection_coverage_total_percent_of_population_percent_of_population', 'composition_yard_garden_green_waste_percent', 
+'composition_paper_cardboard_percent', 'composition_other_percent', 'composition_glass_percent', 'composition_rubber_leather_percent', 
+'total_msw_total_msw_generated_tons_year', 'city_name', 'composition_wood_percent', 'income_id', 'composition_metal_percent', 
+'primary_collection_mode_form_of_primary_collection_na', 'country_name']
+ℹ️ CSV leído. 367 filas iniciales.
+ℹ️ Columnas renombradas a conceptos estándar: 'city_name'->'municipality', 'country_name'->'country', 'iso3c'->'iso3c', 
+'population_population_number_of_people'->'population', 'total_msw_total_msw_generated_tons_year'->'total_waste_tons_year', 
+'income_id'->'income_level', 'waste_treatment_recycling_percent'->'recycling_rate_percent', 
+'waste_collection_coverage_total_percent_of_population_percent_of_population'->'collection_coverage_population_percent', 
+'primary_collection_mode_form_of_primary_collection_na'->'primary_collection_mode', 
+'composition_food_organic_waste_percent'->'composition_food_organic', 'composition_glass_percent'->'composition_glass', 
+'composition_metal_percent'->'composition_metal', 'composition_paper_cardboard_percent'->'composition_paper_cardboard', 
+'composition_plastic_percent'->'composition_plastic', 'composition_rubber_leather_percent'->'composition_rubber_leather', 
+'composition_wood_percent'->'composition_wood', 'composition_yard_garden_green_waste_percent'->'composition_yard_garden_green', 
+'composition_other_percent'->'composition_other'
+ℹ️ Aplicando corrección de encoding (ftfy)...
+ℹ️   Se corrigieron 25 valores en 'municipality'.
+ℹ️   Se corrigieron 1 valores en 'country'.
+ℹ️ Validando filas basadas en columnas requeridas: ['municipality', 'country', 'iso3c']
+ℹ️ Validando, convirtiendo y aplicando imputación/procesamiento según configuración...
+ℹ️   Intentando imputar 10 NaN en 'population' con MEDIAN...
+ℹ️   Intentando imputar 42 NaN en 'total_waste_tons_year' con MEDIAN...
+ℹ️   Intentando imputar 239 NaN en 'recycling_rate_percent' con MEDIAN...
+ℹ️   Intentando imputar 289 NaN en 'collection_coverage_population_percent' con MEDIAN...
+ℹ️ Aplicando procesamiento personalizado: Recalcular 'composition_other'...
+✅   'composition_other' recalculado para 24 filas.
+⚠️   Cálculo de 'composition_other' falló para 343 filas.
+
+Resumen de Calidad y Procesamiento (Imputación Habilitada)\n
+    Resultados para city_level_data_0_0.csv (Config: config_city.json)    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Métrica                                  ┃                       Valor ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Filas leídas inicialmente                │                         367 │
+│ Filas tras limpieza/validación           │                         367 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ population - Estado General              │                     IMPUTED │
+│   └─ Originales                          │                         357 │
+│   └─ Faltantes Iniciales (NaN)           │                          10 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │  10 (median_country+global) │
+│   └─ Faltantes Finales                   │                           0 │
+│   └─ Media Final                         │                1,611,274.57 │
+│   └─ Mediana Final                       │                  664,046.00 │
+│   └─ Mínimo Final                        │                    6,000.00 │
+│   └─ Máximo Final                        │               20,384,000.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ total_waste_tons_year - Estado General   │                        WARN │
+│   └─ Originales                          │                         325 │
+│   └─ Faltantes Iniciales (NaN)           │                          41 │
+│   └─ Formato Inválido                    │                           1 │
+│   └─ Imputados                           │  42 (median_country+global) │
+│   └─ Faltantes Finales                   │                           0 │
+│   └─ Media Final                         │                  559,970.83 │
+│   └─ Mediana Final                       │                  219,000.00 │
+│   └─ Mínimo Final                        │                      872.35 │
+│   └─ Máximo Final                        │                7,903,000.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ recycling_rate_percent - Estado General  │                     IMPUTED │
+│   └─ Originales                          │                         128 │
+│   └─ Faltantes Iniciales (NaN)           │                         239 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │ 239 (median_country+global) │
+│   └─ Faltantes Finales                   │                           0 │
+│   └─ Media Final                         │                       12.66 │
+│   └─ Mediana Final                       │                       10.00 │
+│   └─ Mínimo Final                        │                        0.00 │
+│   └─ Máximo Final                        │                       72.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ collection_coverage_population_percent - │                     IMPUTED │
+│ Estado General                           │                             │
+│   └─ Originales                          │                          78 │
+│   └─ Faltantes Iniciales (NaN)           │                         289 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │ 289 (median_country+global) │
+│   └─ Faltantes Finales                   │                           0 │
+│   └─ Media Final                         │                       90.06 │
+│   └─ Mediana Final                       │                       95.00 │
+│   └─ Mínimo Final                        │                       12.40 │
+│   └─ Máximo Final                        │                      100.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_food_organic - Estado        │                        WARN │
+│ General                                  │                             │
+│   └─ Originales                          │                         291 │
+│   └─ Faltantes Iniciales (NaN)           │                          76 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                          76 │
+│   └─ Media Final                         │                       45.42 │
+│   └─ Mediana Final                       │                       47.90 │
+│   └─ Mínimo Final                        │                        0.93 │
+│   └─ Máximo Final                        │                       88.80 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_glass - Estado General       │                        WARN │
+│   └─ Originales                          │                         269 │
+│   └─ Faltantes Iniciales (NaN)           │                          98 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                          98 │
+│   └─ Media Final                         │                        4.06 │
+│   └─ Mediana Final                       │                        3.00 │
+│   └─ Mínimo Final                        │                        0.00 │
+│   └─ Máximo Final                        │                       32.58 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_metal - Estado General       │                        WARN │
+│   └─ Originales                          │                         265 │
+│   └─ Faltantes Iniciales (NaN)           │                         102 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                         102 │
+│   └─ Media Final                         │                        2.98 │
+│   └─ Mediana Final                       │                        2.00 │
+│   └─ Mínimo Final                        │                        0.01 │
+│   └─ Máximo Final                        │                       25.70 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_paper_cardboard - Estado     │                        WARN │
+│ General                                  │                             │
+│   └─ Originales                          │                         290 │
+│   └─ Faltantes Iniciales (NaN)           │                          77 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                          77 │
+│   └─ Media Final                         │                       12.69 │
+│   └─ Mediana Final                       │                       11.04 │
+│   └─ Mínimo Final                        │                        0.08 │
+│   └─ Máximo Final                        │                       50.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_plastic - Estado General     │                        WARN │
+│   └─ Originales                          │                         283 │
+│   └─ Faltantes Iniciales (NaN)           │                          84 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                          84 │
+│   └─ Media Final                         │                       11.46 │
+│   └─ Mediana Final                       │                       11.00 │
+│   └─ Mínimo Final                        │                        0.01 │
+│   └─ Máximo Final                        │                       48.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_rubber_leather - Estado      │                        WARN │
+│ General                                  │                             │
+│   └─ Originales                          │                         108 │
+│   └─ Faltantes Iniciales (NaN)           │                         259 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                         259 │
+│   └─ Media Final                         │                        2.13 │
+│   └─ Mediana Final                       │                        1.19 │
+│   └─ Mínimo Final                        │                        0.00 │
+│   └─ Máximo Final                        │                       13.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_wood - Estado General        │                        WARN │
+│   └─ Originales                          │                          98 │
+│   └─ Faltantes Iniciales (NaN)           │                         269 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                         269 │
+│   └─ Media Final                         │                        3.01 │
+│   └─ Mediana Final                       │                        2.00 │
+│   └─ Mínimo Final                        │                        0.00 │
+│   └─ Máximo Final                        │                       26.00 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_yard_garden_green - Estado   │                        WARN │
+│ General                                  │                             │
+│   └─ Originales                          │                          96 │
+│   └─ Faltantes Iniciales (NaN)           │                         271 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                         271 │
+│   └─ Media Final                         │                       10.24 │
+│   └─ Mediana Final                       │                        6.00 │
+│   └─ Mínimo Final                        │                        0.10 │
+│   └─ Máximo Final                        │                       80.80 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ composition_other - Estado General       │                          OK │
+│   └─ Originales                          │                         290 │
+│   └─ Faltantes Iniciales (NaN)           │                          77 │
+│   └─ Formato Inválido                    │                           0 │
+│   └─ Imputados                           │        0 (Skipped (Prefix)) │
+│   └─ Faltantes Finales                   │                          77 │
+│   └─ Media Final                         │                       20.31 │
+│   └─ Mediana Final                       │                       17.00 │
+│   └─ Mínimo Final                        │                        0.50 │
+│   └─ Máximo Final                        │                       88.87 │
+├──────────────────────────────────────────┼─────────────────────────────┤
+│ Estado Recálculo 'composition_other'     │       Éxito: 24, Falló: 343 │
+└──────────────────────────────────────────┴─────────────────────────────┘
+ℹ️ Procesamiento finalizado. 367 filas resultantes.
+ℹ️ Guardando datos procesados en: processed_data/city_data_processed.json (Encoding: UTF-8)
+✅ Archivo JSON limpio y trazable guardado con 367 registros.

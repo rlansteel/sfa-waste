@@ -1,0 +1,35 @@
+{
+    "target_concepts": {
+      "country_iso3c": "El código ISO3 del país al que se refiere la medición. (Columna CSV: iso3c)",
+      "country_name_codebook": "El nombre del país tal como aparece en el codebook (para referencia y validación). (Columna CSV: country_name)",
+      "measurement": "El nombre o tipo específico de la medición o dato reportado. (Columna CSV: measurement)",
+      "units": "Las unidades en las que se expresa la medición. (Columna CSV: units)",
+      "year": "El año al que corresponde la medición o el dato. (Columna CSV: year)",
+      "source": "La fuente original de la información para esta medición. (Columna CSV: source)",
+      "comments": "Comentarios o notas adicionales relevantes para la medición. (Columna CSV: comments)",
+      "region_id_codebook": "ID de la región del país, tal como aparece en el codebook. (Columna CSV: regionID)",
+      "income_id_codebook": "ID del grupo de ingresos del país, tal como aparece en el codebook. (Columna CSV: incomeID)"
+    },
+    "numeric_concepts": [
+      "year"
+    ],
+    "text_concepts": [
+      "country_iso3c",
+      "country_name_codebook",
+      "measurement",
+      "units",
+      "source",
+      "comments",
+      "region_id_codebook",
+      "income_id_codebook"
+    ],
+    "imputation_params": {
+      "enabled": false
+    },
+    "custom_processing": {},
+    "required_concepts": [
+      "country_iso3c",
+      "measurement"
+    ]
+  }
+  

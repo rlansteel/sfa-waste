@@ -1,0 +1,198 @@
+{
+  "id": 82,
+  "country_code_iso3": "GUY",
+  "country_name": "Guyana",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 9812.089844,
+  "population_total": 746556.0,
+  "total_msw_generated_tons_year": 179251.5,
+  "waste_collection_coverage_total_percent_of_population": 89.0,
+  "waste_treatment_recycling_percent": 0.54,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": 61.37,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "No",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 5000.0,
+  "hazardous_waste_tons_year": 741.78,
+  "composition_food_organic": 50.1,
+  "composition_glass": 4.7,
+  "composition_metal": 4.2,
+  "composition_paper_cardboard": 10.7,
+  "composition_plastic": 14.2,
+  "composition_rubber_leather": 1.5,
+  "composition_wood": 2.5,
+  "composition_yard_garden_green": null,
+  "composition_other": 12.1,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "Rubber/leather Includes rubber (0.5 percent) and leather (1 percent) waste; other includes disposable diapers (5.6 percent), textile (5.3 percent), and other unspecified (1.2 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "GSMA. 2015. \"eWaste in Latin America: Statistical analysis and policy recommendations.\" GSMA and UNU-IAS (United Nations University Institute for the Advanced Study of Sustainability). November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "1 (491.1 tonnes/day); includes household and commercial waste; 491.1 tonnes/day number is a weighted average of waste generation in 10 regions; per capita waste generation (0.73 kg/person/day) was measured for the most populous region, Region 4, while remainder used assumptions based on reference values"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "Rubber/leather Includes rubber (0.5 percent) and leather (1 percent) waste; other includes disposable diapers (5.6 percent), textile (5.3 percent), and other unspecified (1.2 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Guyana, Ministry of Communities. n.d. \"Putting Waste in Its Place: A National Integrated Solid Waste Management Strategy for the Cooperative Republic of Guyana, 2017–2030—Part 1: Our Strategy.\" Ministry of Communities, Government of Guyana.",
+      "comments": "UA: Refers to remainder of waste not disposed in landfill or recycled, which is mainly disposed in CLF and open dumps; a small portion is recycled through glass and scrap metal recycling programs"
+    }
+  ]
+}

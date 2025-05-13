@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Residuos - México City</title> <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 2em; color: #333; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: auto; background-color: #ffffff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #1a237e; /* Azul oscuro */ }
+        h1 { border-bottom: 2px solid #c5cae9; padding-bottom: 0.3em; text-align: center; }
+        h2 { margin-top: 1.5em; border-bottom: 1px solid #e8eaf6; padding-bottom: 0.2em;}
+        .data-section { background-color: #e8eaf6; /* Azul muy claro */ border: 1px solid #c5cae9; padding: 1.5em; margin-bottom: 1.5em; border-radius: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; }
+        .data-item { background-color: #ffffff; padding: 0.8em; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .data-label { font-weight: bold; color: #303f9f; /* Azul medio */ display: block; margin-bottom: 0.3em; }
+        .data-value { color: #333; }
+        .llm-analysis { margin-top: 2em; padding: 1.5em; border: 1px dashed #9fa8da; border-radius: 8px; background-color: #f1f3f5; }
+        .llm-analysis h2 { border-bottom: none; margin-bottom: 1em;}
+        .llm-analysis ul { list-style-type: disc; margin-left: 20px; padding-left: 1em; }
+        .llm-analysis li { margin-bottom: 0.6em; }
+        .llm-analysis p { margin-bottom: 0.8em; }
+        .footer { margin-top: 2.5em; font-size: 0.85em; color: #555; text-align: center; border-top: 1px solid #eee; padding-top: 1em;}
+        /* Estilo para N/A */
+        .na-value { color: #888; font-style: italic; }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body { margin: 1em; }
+            .container { padding: 1em; }
+            .data-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Reporte de Gestión de Residuos: México City</h1>
+
+    <div class="data-section">
+        <h2>Información Base (Datos CSV)</h2>
+        <div class="data-item"><span class="data-label">Municipio:</span> <span class="data-value">México City</span></div>
+        <div class="data-item"><span class="data-label">País:</span> <span class="data-value">Mexico</span></div>
+        <div class="data-item"><span class="data-label">Población:</span> <span class="data-value">8,851,080</span></div>
+        <div class="data-item"><span class="data-label">Residuos Totales (Toneladas/Año):</span> <span class="data-value">4,705,945</span></div>
+        <div class="data-item"><span class="data-label">Nivel de Ingresos:</span> <span class="data-value">UMC</span></div>
+        <div class="data-item"><span class="data-label">Tasa de Reciclaje (%):</span> <span class="data-value">14.2%</span></div>
+        <div class="data-item"><span class="data-label">Cobertura Colección (Población %):</span> <span class="data-value"><span class="na-value">N/A</span></span></div>
+        <div class="data-item"><span class="data-label">Modo Colección Primario:</span> <span class="data-value">Curbside collection</span></div>
+        </div>
+        <h2>Waste Composition (%)</h2>
+<table>
+  <thead>
+    <tr><th>Waste Type</th><th>Percentage</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Food/Organic</td><td>49</td></tr>
+    <tr><td>Glass</td><td>2</td></tr>
+    <tr><td>Metal</td><td>1</td></tr>
+    <tr><td>Paper/Cardboard</td><td>9</td></tr>
+    <tr><td>Plastic</td><td>13</td></tr>
+    <tr><td>Other</td><td><span class="na-value">N/A</span></td></tr>
+    </tbody>
+</table>
+
+    <div class="llm-analysis">
+        <h2>Análisis y Hallazgos Web (Resumen LLM)</h2>
+        <h2>Key Initiatives and Programs</h2>
+<ul>
+<li>Implementation of regulations on plastic bags and disposable products, along with promotion of biodegradable plastics (Source: whatdesigncando.com)</li>
+<li>Closure of the Bordo Poniente Landfill in 2011, with plans to generate clean electricity from landfill methane (Source: ndcpartnership.org)</li>
+<li>Digital platform Ecolana connecting consumers, brands, and recycling centers to reduce waste (Source: whatdesigncando.com)</li>
+</ul>
+
+<h2>Identified Challenges</h2>
+<ul>
+<li>Lack of long-term vision in governance affecting infrastructure development for recycling (Source: whatdesigncando.com)</li>
+<li>Insufficient infrastructure and regulations making it difficult to reuse potentially recyclable materials (Source: whatdesigncando.com)</li>
+<li>High proportion of waste ending up in illegal dumpsites, with 20% of total waste disposed of improperly (Source: hollandcircularhotspot.nl)</li>
+</ul>
+
+<h2>Data and Statistics</h2>
+<ul>
+<li>Daily waste generation of 1.37 kilos per person in Mexico City (Source: whatdesigncando.com)</li>
+<li>123 tonnes of plastic waste produced daily in Mexico City, with only 6% being recycled (Source: whatdesigncando.com)</li>
+<li>12,998 tons of municipal solid waste produced daily in Mexico City (Source: circularinnovationlab.com)</li>
+<li>200% increase in construction waste recycling since 2018, reaching 600,000t/year by 2024 (Source: mexicobusiness.news)</li>
+<li>48% of plastic production dedicated to single-use products (Source: whatdesigncando.com)</li>
+</ul>
+
+<h2>Collaborations and Partnerships</h2>
+<ul>
+<li>Bordo Poniente Landfill closure project collaboration between Mexico City, C40 Cities, and the Clinton Climate Initiative (Source: ndcpartnership.org)</li>
+</ul>
+    </div>
+
+    <div class="footer">
+        <p><em>Reporte generado automáticamente el: 2025-05-06 02:35:27 UTC</em></p>
+        <p><em>Fuentes de datos: CSV procesado, Búsquedas web vía Tavily API, Análisis por LLM (claude-3-5-sonnet-20241022).</em></p> </div>
+</div>
+</body>
+</html>

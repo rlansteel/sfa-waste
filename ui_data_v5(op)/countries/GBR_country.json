@@ -1,0 +1,233 @@
+{
+  "id": 69,
+  "country_code_iso3": "GBR",
+  "country_name": "United Kingdom",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 46290.12109,
+  "population_total": 66460344.0,
+  "total_msw_generated_tons_year": 30771140.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 27.25,
+  "waste_treatment_compost_percent": 16.23,
+  "waste_treatment_incineration_percent": 31.38,
+  "waste_treatment_landfill_unspecified_percent": 22.568,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 3584126.0,
+  "hazardous_waste_tons_year": 5755258.0,
+  "composition_food_organic": 16.7,
+  "composition_glass": 2.2,
+  "composition_metal": 3.5,
+  "composition_paper_cardboard": 18.9,
+  "composition_plastic": 20.2,
+  "composition_rubber_leather": null,
+  "composition_wood": 7.6,
+  "composition_yard_garden_green": 2.7,
+  "composition_other": 28.2,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "5; calculated based on composition and biodegradability of MSW-to-landfill in England and Wales, weighted average used; food/organic includes food (15 percent) and other organic (1.7 percent) waste; paper/cardboard includes paper (10.5 percent) and card (8.4 percent) waste; plastic includes plastic film (8.9 percent), dense plastic (11.3 percent) waste; other includes sanitary (2.2 percent), textile and shoe (5.7 percent), e-waste (1.5 percent), hazardous and battery (1.0 percent), carpet, underlay, and furniture (6 percent), other combustible (2.0 percent), brick, plaster, and soil (5.9 percent), other non-combustible (1.6 percent), and fines <10mm (2.5 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2018,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "United Kingdom, DEFRA (Department for Environment, Food, and Rural Affairs). 2017. \"Digest of Waste and Resource Statistics: 2017 Edition.\" Department for Environment, Food, and Rural Affairs (DEFRA), Government of United Kingdom. March.",
+      "comments": "5; calculated based on composition and biodegradability of MSW-to-landfill in England and Wales, weighted average used; food/organic includes food (15 percent) and other organic (1.7 percent) waste; paper/cardboard includes paper (10.5 percent) and card (8.4 percent) waste; plastic includes plastic film (8.9 percent), dense plastic (11.3 percent) waste; other includes sanitary (2.2 percent), textile and shoe (5.7 percent), e-waste (1.5 percent), hazardous and battery (1.0 percent), carpet, underlay, and furniture (6 percent), other combustible (2.0 percent), brick, plaster, and soil (5.9 percent), other non-combustible (1.6 percent), and fines <10mm (2.5 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "3"
+    }
+  ]
+}

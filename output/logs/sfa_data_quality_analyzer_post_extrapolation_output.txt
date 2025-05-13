@@ -1,0 +1,22 @@
+ℹ️ Conectando a la base de datos: output/db/waste_data_clean.db
+✅ Conexión establecida.
+ℹ️ Columna 'data_quality_score' ya existe en 'countries'.
+ℹ️ Columna 'score_details_json' ya existe en 'countries'.
+ℹ️ Columna 'data_quality_score' ya existe en 'cities'.
+ℹ️ Columna 'score_details_json' ya existe en 'cities'.
+
+Procesando Calidad de Datos para Países
+
+Analizando países... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+ℹ️ Actualizando puntajes de calidad en la tabla 'countries'...
+✅ 217 registros actualizados en 'countries'.
+✅ Ranking guardado (con detalles) en: output/quality_analysis_post_extrapolation/ranked_countries_quality.json
+
+Procesando Calidad de Datos para Ciudades
+
+Analizando ciudades... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+ℹ️ Actualizando puntajes de calidad en la tabla 'cities'...
+✅ 367 registros actualizados en 'cities'.
+✅ Ranking guardado (con detalles) en: output/quality_analysis_post_extrapolation/ranked_cities_quality.json
+ℹ️ Análisis de calidad (v3) completado. Resultados en: /Users/rafaellang/Library/Mobile 
+Documents/com~apple~CloudDocs/Python/sfa_waste/output/quality_analysis_post_extrapolation

@@ -1,0 +1,734 @@
+2025-05-12 11:18:29,119 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:18:29,119 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país PER (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país PER (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:18:29,148 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:18:29,148 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:18:29,148 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 261 (URL: https://www.sciencedirect.com/science/article/pii/S2590252023000144)
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 261 (URL: https://www.sciencedirect.com/science/article/pii/S2590252023000144)
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sciencedirect.com/science/article/pii/S2590252023000144 (Intento 1)...
+2025-05-12 11:18:29,149 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sciencedirect.com/science/article/pii/S2590252023000144 (Intento 1)...
+2025-05-12 11:18:30,832 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:30,840 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.sciencedirect.com/science/article/pii/S2590252023000144: {
+  "relevance_score": 60,
+  "justification": "The content snippet focuses on solid waste management in the city of Chiclayo, Peru, but does not provide specific details on municipal solid waste management for Peru as a whole. It mentions some relevant aspects like waste generation, collection, and disposal, but lacks comprehensive data and information on the national level.",
+  "keywords": ["solid waste management", "municipal solid waste", "public space", "urban environmental quality"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:30,840 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.sciencedirect.com/science/article/pii/S2590252023000144: {
+  "relevance_score": 60,
+  "justification": "The content snippet focuses on solid waste management in the city of Chiclayo, Peru, but does not provide specific details on municipal solid waste management for Peru as a whole. It mentions some relevant aspects like waste generation, collection, and disposal, but lacks comprehensive data and information on the national level.",
+  "keywords": ["solid waste management", "municipal solid waste", "public space", "urban environmental quality"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:30,840 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.sciencedirect.com/science/article/pii/S2590252023000144: Score=60
+2025-05-12 11:18:30,840 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.sciencedirect.com/science/article/pii/S2590252023000144: Score=60
+2025-05-12 11:18:30,841 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 261 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:18:30,841 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 261 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:18:31,042 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 262 (URL: https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf)
+2025-05-12 11:18:31,042 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 262 (URL: https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf)
+2025-05-12 11:18:31,042 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf (Intento 1)...
+2025-05-12 11:18:31,042 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf (Intento 1)...
+2025-05-12 11:18:32,355 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:32,356 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste generation, composition, and management in Peru, including data on waste generation, collection, and disposal. It covers key aspects of MSW management for the country.",
+  "keywords": ["municipal waste", "waste generation", "waste composition", "recycling", "organic waste", "landfill"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:32,356 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste generation, composition, and management in Peru, including data on waste generation, collection, and disposal. It covers key aspects of MSW management for the country.",
+  "keywords": ["municipal waste", "waste generation", "waste composition", "recycling", "organic waste", "landfill"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:32,357 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf: Score=80
+2025-05-12 11:18:32,357 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://hollandcircularhotspot.nl/wp-content/uploads/2021/04/Report_Waste_Management_Peru_20210322.pdf: Score=80
+2025-05-12 11:18:32,357 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 262 con measurement 2422 (country)
+2025-05-12 11:18:32,357 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 262 con measurement 2422 (country)
+2025-05-12 11:18:32,360 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=262 y measurement_id=2422 (type=country).
+2025-05-12 11:18:32,360 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 262 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:32,360 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 262 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:32,563 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 263 (URL: https://dicf.unepgrid.ch/peru/pollution)
+2025-05-12 11:18:32,563 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 263 (URL: https://dicf.unepgrid.ch/peru/pollution)
+2025-05-12 11:18:32,564 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://dicf.unepgrid.ch/peru/pollution (Intento 1)...
+2025-05-12 11:18:32,564 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://dicf.unepgrid.ch/peru/pollution (Intento 1)...
+2025-05-12 11:18:33,811 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:33,814 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://dicf.unepgrid.ch/peru/pollution: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste generation, composition, and management in Peru, including data on waste volumes, collection, and disposal methods. This is highly relevant for understanding the MSW aspects of Peru.",
+  "keywords": ["municipal solid waste", "waste generation", "waste composition", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:33,814 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://dicf.unepgrid.ch/peru/pollution: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste generation, composition, and management in Peru, including data on waste volumes, collection, and disposal methods. This is highly relevant for understanding the MSW aspects of Peru.",
+  "keywords": ["municipal solid waste", "waste generation", "waste composition", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:33,814 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://dicf.unepgrid.ch/peru/pollution: Score=80
+2025-05-12 11:18:33,814 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://dicf.unepgrid.ch/peru/pollution: Score=80
+2025-05-12 11:18:33,815 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 263 con measurement 2422 (country)
+2025-05-12 11:18:33,815 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 263 con measurement 2422 (country)
+2025-05-12 11:18:33,816 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=263 y measurement_id=2422 (type=country).
+2025-05-12 11:18:33,817 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 263 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:33,817 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 263 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:34,022 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 285 (URL: https://collections.unu.edu/view/UNU:6341)
+2025-05-12 11:18:34,022 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 285 (URL: https://collections.unu.edu/view/UNU:6341)
+2025-05-12 11:18:34,022 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://collections.unu.edu/view/UNU:6341 (Intento 1)...
+2025-05-12 11:18:34,022 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://collections.unu.edu/view/UNU:6341 (Intento 1)...
+2025-05-12 11:18:35,388 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:35,388 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://collections.unu.edu/view/UNU:6341: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on global e-waste statistics and does not contain any information specific to municipal solid waste management in Peru.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:35,388 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://collections.unu.edu/view/UNU:6341: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on global e-waste statistics and does not contain any information specific to municipal solid waste management in Peru.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:35,388 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://collections.unu.edu/view/UNU:6341: Score=30
+2025-05-12 11:18:35,388 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://collections.unu.edu/view/UNU:6341: Score=30
+2025-05-12 11:18:35,389 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 285 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:35,389 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 285 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:35,591 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 287 (URL: https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx)
+2025-05-12 11:18:35,591 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 287 (URL: https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx)
+2025-05-12 11:18:35,591 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx (Intento 1)...
+2025-05-12 11:18:35,591 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx (Intento 1)...
+2025-05-12 11:18:37,433 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:37,435 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx: {
+  "relevance_score": 25,
+  "justification": "The content snippet is about global e-waste statistics and does not contain any information specific to municipal solid waste management in Peru.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:37,435 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx: {
+  "relevance_score": 25,
+  "justification": "The content snippet is about global e-waste statistics and does not contain any information specific to municipal solid waste management in Peru.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:37,435 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx: Score=25
+2025-05-12 11:18:37,435 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.itu.int/en/ITU-D/Environment/Pages/Toolbox/Global-E-waste-Monitor-2017.aspx: Score=25
+2025-05-12 11:18:37,435 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 287 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:18:37,435 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 287 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:18:37,640 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 288 (URL: https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no)
+2025-05-12 11:18:37,640 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 288 (URL: https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no)
+2025-05-12 11:18:37,640 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no (Intento 1)...
+2025-05-12 11:18:37,640 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no (Intento 1)...
+2025-05-12 11:18:38,896 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:38,898 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Peru, including data on waste generation, collection, and disposal methods. It covers key aspects such as waste composition, collection rates, and treatment/disposal practices, making it highly relevant for understanding MSW management in Peru.",
+  "keywords": ["municipal solid waste", "waste generation", "waste composition", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:38,898 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Peru, including data on waste generation, collection, and disposal methods. It covers key aspects such as waste composition, collection rates, and treatment/disposal practices, making it highly relevant for understanding MSW management in Peru.",
+  "keywords": ["municipal solid waste", "waste generation", "waste composition", "waste collection", "waste disposal"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:38,898 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no: Score=90
+2025-05-12 11:18:38,898 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://sinia.minam.gob.pe/documentos/sexto-informe-nacional-residuos-solidos-gestion-ambito-municipal-no: Score=90
+2025-05-12 11:18:38,899 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 288 con measurement 2431 (country)
+2025-05-12 11:18:38,899 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 288 con measurement 2431 (country)
+2025-05-12 11:18:38,902 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=288 y measurement_id=2431 (type=country).
+2025-05-12 11:18:38,902 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 288 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:38,902 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 288 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:39,108 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 289 (URL: https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595)
+2025-05-12 11:18:39,108 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 289 (URL: https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595)
+2025-05-12 11:18:39,108 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595 (Intento 1)...
+2025-05-12 11:18:39,108 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595 (Intento 1)...
+2025-05-12 11:18:40,632 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:40,636 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595: {
+  "relevance_score": 70,
+  "justification": "The content snippet mentions a 'Sixth National Report on Solid Waste Management' for Peru, which suggests it may contain relevant information on municipal solid waste management aspects for the country.",
+  "keywords": ["solid waste management", "national report", "municipal waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:40,636 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595: {
+  "relevance_score": 70,
+  "justification": "The content snippet mentions a 'Sixth National Report on Solid Waste Management' for Peru, which suggests it may contain relevant information on municipal solid waste management aspects for the country.",
+  "keywords": ["solid waste management", "national report", "municipal waste"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:40,636 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595: Score=70
+2025-05-12 11:18:40,636 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.studocu.com/pe/document/universidad-tecnologica-del-peru/individuo-y-medio-ambiente/sexto-informe-rrss/33577595: Score=70
+2025-05-12 11:18:40,636 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 289 con measurement 2431 (country)
+2025-05-12 11:18:40,636 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 289 con measurement 2431 (country)
+2025-05-12 11:18:40,639 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=289 y measurement_id=2431 (type=country).
+2025-05-12 11:18:40,640 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 289 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:40,640 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 289 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:40,843 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 290 (URL: https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2)
+2025-05-12 11:18:40,843 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 290 (URL: https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2)
+2025-05-12 11:18:40,843 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2 (Intento 1)...
+2025-05-12 11:18:40,843 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2 (Intento 1)...
+2025-05-12 11:18:41,830 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:41,831 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific data on municipal solid waste generation and disposal methods in Peru, which is highly relevant for understanding the country's waste management situation.",
+  "keywords": ["municipal solid waste", "open dumpsites", "sanitary landfills", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:41,831 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific data on municipal solid waste generation and disposal methods in Peru, which is highly relevant for understanding the country's waste management situation.",
+  "keywords": ["municipal solid waste", "open dumpsites", "sanitary landfills", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:41,831 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2: Score=80
+2025-05-12 11:18:41,831 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://cris.pucp.edu.pe/es/publications/environmental-performance-of-peruvian-waste-management-systems-un-2: Score=80
+2025-05-12 11:18:41,831 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 290 con measurement 2431 (country)
+2025-05-12 11:18:41,831 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 290 con measurement 2431 (country)
+2025-05-12 11:18:41,832 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=290 y measurement_id=2431 (type=country).
+2025-05-12 11:18:41,832 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 290 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:41,832 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 290 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:42,032 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 291 (URL: http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf)
+2025-05-12 11:18:42,032 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 291 (URL: http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf)
+2025-05-12 11:18:42,033 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf (Intento 1)...
+2025-05-12 11:18:42,033 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf (Intento 1)...
+2025-05-12 11:18:43,032 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:43,038 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on healthcare waste management in Peru, which is only tangentially related to municipal solid waste management.",
+  "keywords": ["health care waste", "medical waste"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:43,038 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on healthcare waste management in Peru, which is only tangentially related to municipal solid waste management.",
+  "keywords": ["health care waste", "medical waste"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:43,038 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf: Score=30
+2025-05-12 11:18:43,038 - INFO - SFA_ContentAnalyzer - Evaluación LLM para http://www.digesa.minsa.gob.pe/publicaciones/descargas/Plan+Nacional_DEPA.pdf: Score=30
+2025-05-12 11:18:43,038 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 291 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:43,038 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 291 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:43,239 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 292 (URL: https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804)
+2025-05-12 11:18:43,239 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 292 (URL: https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804)
+2025-05-12 11:18:43,239 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804 (Intento 1)...
+2025-05-12 11:18:43,239 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804 (Intento 1)...
+2025-05-12 11:18:44,539 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:44,541 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804: {
+  "relevance_score": 70,
+  "justification": "The content snippet discusses a national plan for solid waste management in health facilities and medical support services in Peru, which is relevant to understanding municipal solid waste management aspects in the country.",
+  "keywords": ["solid waste management", "health facilities", "medical support services"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:44,541 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804: {
+  "relevance_score": 70,
+  "justification": "The content snippet discusses a national plan for solid waste management in health facilities and medical support services in Peru, which is relevant to understanding municipal solid waste management aspects in the country.",
+  "keywords": ["solid waste management", "health facilities", "medical support services"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:44,541 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804: Score=70
+2025-05-12 11:18:44,541 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://pesquisa.bvsalud.org/portal/resource/pt/lil-648804: Score=70
+2025-05-12 11:18:44,541 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 292 con measurement 2432 (country)
+2025-05-12 11:18:44,541 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 292 con measurement 2432 (country)
+2025-05-12 11:18:44,542 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=292 y measurement_id=2432 (type=country).
+2025-05-12 11:18:44,542 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 292 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:44,542 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 292 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:44,745 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:18:44,745 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:18:44,746 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:18:44,746 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 293 (URL: https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf)
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 293 (URL: https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf)
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf (Intento 1)...
+2025-05-12 11:18:44,746 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf (Intento 1)...
+2025-05-12 11:18:45,989 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:45,992 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on solid waste management in healthcare facilities in Peru, which is only tangentially related to municipal solid waste management in Peru.",
+  "keywords": ["solid waste", "health facilities", "waste management"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:45,992 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on solid waste management in healthcare facilities in Peru, which is only tangentially related to municipal solid waste management in Peru.",
+  "keywords": ["solid waste", "health facilities", "waste management"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:45,992 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf: Score=30
+2025-05-12 11:18:45,992 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://cdn.www.gob.pe/uploads/document/file/391221/Plan_nacional_de_gestión_de_residuos_sólidos_en_establecimientos_de_salud_y_servicios_médicos_de_apoyo_2010-201220191017-26355-110z5v6.pdf: Score=30
+2025-05-12 11:18:45,993 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 293 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:45,993 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 293 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:46,197 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 294 (URL: https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024)
+2025-05-12 11:18:46,197 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 294 (URL: https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024)
+2025-05-12 11:18:46,197 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024 (Intento 1)...
+2025-05-12 11:18:46,197 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024 (Intento 1)...
+2025-05-12 11:18:47,369 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:47,371 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on Peru's national plan for integrated solid waste management, including goals, initiatives, and efforts to improve waste collection and recycling at the local government level.",
+  "keywords": ["solid waste management", "waste collection", "recycling", "environmental education", "local governments"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:47,371 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on Peru's national plan for integrated solid waste management, including goals, initiatives, and efforts to improve waste collection and recycling at the local government level.",
+  "keywords": ["solid waste management", "waste collection", "recycling", "environmental education", "local governments"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:47,371 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024: Score=80
+2025-05-12 11:18:47,371 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-de-gestion-integral-de-residuos-solidos-2016-2024: Score=80
+2025-05-12 11:18:47,371 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 294 con measurement 2433 (country)
+2025-05-12 11:18:47,371 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 294 con measurement 2433 (country)
+2025-05-12 11:18:47,372 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=294 y measurement_id=2433 (type=country).
+2025-05-12 11:18:47,373 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 294 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:47,373 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 294 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:47,574 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 295 (URL: https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d)
+2025-05-12 11:18:47,574 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 295 (URL: https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d)
+2025-05-12 11:18:47,574 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d (Intento 1)...
+2025-05-12 11:18:47,574 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d (Intento 1)...
+2025-05-12 11:18:49,245 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:49,248 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about the updated National Solid Waste Management Plan in Peru, which covers key aspects of municipal solid waste management such as policies, regulations, and goals for the country.",
+  "keywords": ["national solid waste management plan", "waste management", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:49,248 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about the updated National Solid Waste Management Plan in Peru, which covers key aspects of municipal solid waste management such as policies, regulations, and goals for the country.",
+  "keywords": ["national solid waste management plan", "waste management", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:49,248 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d: Score=80
+2025-05-12 11:18:49,248 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.lexology.com/library/detail.aspx?g=73cffb95-be33-4cc8-8588-4c0c3524534d: Score=80
+2025-05-12 11:18:49,248 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 295 con measurement 2433 (country)
+2025-05-12 11:18:49,248 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 295 con measurement 2433 (country)
+2025-05-12 11:18:49,251 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=295 y measurement_id=2433 (type=country).
+2025-05-12 11:18:49,252 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 295 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:49,252 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 295 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:49,456 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 296 (URL: https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024)
+2025-05-12 11:18:49,456 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 296 (URL: https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024)
+2025-05-12 11:18:49,457 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024 (Intento 1)...
+2025-05-12 11:18:49,457 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024 (Intento 1)...
+2025-05-12 11:18:50,911 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:50,914 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Peru's national plan for integrated solid waste management, including goals, initiatives, and efforts to improve waste collection, recycling, and infrastructure. This is highly relevant for understanding the municipal solid waste management aspects of Peru.",
+  "keywords": ["solid waste management", "waste collection", "recycling", "waste infrastructure", "environmental policy"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:50,914 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Peru's national plan for integrated solid waste management, including goals, initiatives, and efforts to improve waste collection, recycling, and infrastructure. This is highly relevant for understanding the municipal solid waste management aspects of Peru.",
+  "keywords": ["solid waste management", "waste collection", "recycling", "waste infrastructure", "environmental policy"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:50,914 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024: Score=90
+2025-05-12 11:18:50,914 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.gob.pe/institucion/minam/informes-publicaciones/2634-plan-nacional-degestion-integral-de-residuos-solidos-2016-2024: Score=90
+2025-05-12 11:18:50,914 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 296 con measurement 2433 (country)
+2025-05-12 11:18:50,914 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 296 con measurement 2433 (country)
+2025-05-12 11:18:50,918 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=296 y measurement_id=2433 (type=country).
+2025-05-12 11:18:50,919 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 296 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:50,919 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 296 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:51,124 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 297 (URL: https://sistemas.minam.gob.pe/SigersolMunicipal/)
+2025-05-12 11:18:51,124 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 297 (URL: https://sistemas.minam.gob.pe/SigersolMunicipal/)
+2025-05-12 11:18:51,124 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sistemas.minam.gob.pe/SigersolMunicipal/ (Intento 1)...
+2025-05-12 11:18:51,124 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sistemas.minam.gob.pe/SigersolMunicipal/ (Intento 1)...
+2025-05-12 11:18:52,912 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:52,916 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://sistemas.minam.gob.pe/SigersolMunicipal/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides information about a national-level waste management information system (SIGERSOL) in Peru, which is relevant for understanding municipal solid waste management in the country.",
+  "keywords": ["solid waste management", "municipal waste", "waste information system", "MINAM"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:52,916 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://sistemas.minam.gob.pe/SigersolMunicipal/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides information about a national-level waste management information system (SIGERSOL) in Peru, which is relevant for understanding municipal solid waste management in the country.",
+  "keywords": ["solid waste management", "municipal waste", "waste information system", "MINAM"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:52,916 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://sistemas.minam.gob.pe/SigersolMunicipal/: Score=80
+2025-05-12 11:18:52,916 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://sistemas.minam.gob.pe/SigersolMunicipal/: Score=80
+2025-05-12 11:18:52,916 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 297 con measurement 2434 (country)
+2025-05-12 11:18:52,916 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 297 con measurement 2434 (country)
+2025-05-12 11:18:52,919 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=297 y measurement_id=2434 (type=country).
+2025-05-12 11:18:52,920 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 297 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:52,920 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 297 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:53,125 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 298 (URL: https://sistemas.oefa.gob.pe/sigersol/)
+2025-05-12 11:18:53,125 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 298 (URL: https://sistemas.oefa.gob.pe/sigersol/)
+2025-05-12 11:18:53,125 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sistemas.oefa.gob.pe/sigersol/ (Intento 1)...
+2025-05-12 11:18:53,125 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sistemas.oefa.gob.pe/sigersol/ (Intento 1)...
+2025-05-12 11:18:54,419 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:54,419 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://sistemas.oefa.gob.pe/sigersol/: {
+  "relevance_score": 70,
+  "justification": "The content snippet mentions the National Registry of Recyclers and the Solid Waste Management Route in Peru, which indicates some relevance to municipal solid waste management in Peru, though it lacks specific details.",
+  "keywords": ["recyclers", "solid waste management", "Peru"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:54,419 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://sistemas.oefa.gob.pe/sigersol/: {
+  "relevance_score": 70,
+  "justification": "The content snippet mentions the National Registry of Recyclers and the Solid Waste Management Route in Peru, which indicates some relevance to municipal solid waste management in Peru, though it lacks specific details.",
+  "keywords": ["recyclers", "solid waste management", "Peru"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:54,419 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://sistemas.oefa.gob.pe/sigersol/: Score=70
+2025-05-12 11:18:54,419 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://sistemas.oefa.gob.pe/sigersol/: Score=70
+2025-05-12 11:18:54,419 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 298 con measurement 2434 (country)
+2025-05-12 11:18:54,419 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 298 con measurement 2434 (country)
+2025-05-12 11:18:54,421 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=298 y measurement_id=2434 (type=country).
+2025-05-12 11:18:54,421 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 298 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:54,421 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 298 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:54,623 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 299 (URL: https://sigersol.minam.gob.pe/)
+2025-05-12 11:18:54,623 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 299 (URL: https://sigersol.minam.gob.pe/)
+2025-05-12 11:18:54,623 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sigersol.minam.gob.pe/ (Intento 1)...
+2025-05-12 11:18:54,623 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sigersol.minam.gob.pe/ (Intento 1)...
+2025-05-12 11:18:56,089 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:56,091 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://sigersol.minam.gob.pe/: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides information about a municipal solid waste management information system in Peru, indicating some relevance to understanding MSW management in the country. However, it lacks specific details on waste generation, collection, treatment, and disposal methods.",
+  "keywords": ["solid waste management", "municipal waste", "information system"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:56,091 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://sigersol.minam.gob.pe/: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides information about a municipal solid waste management information system in Peru, indicating some relevance to understanding MSW management in the country. However, it lacks specific details on waste generation, collection, treatment, and disposal methods.",
+  "keywords": ["solid waste management", "municipal waste", "information system"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:56,092 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://sigersol.minam.gob.pe/: Score=70
+2025-05-12 11:18:56,092 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://sigersol.minam.gob.pe/: Score=70
+2025-05-12 11:18:56,092 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 299 con measurement 2434 (country)
+2025-05-12 11:18:56,092 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 299 con measurement 2434 (country)
+2025-05-12 11:18:56,098 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=299 y measurement_id=2434 (type=country).
+2025-05-12 11:18:56,099 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 299 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:56,099 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 299 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:56,304 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 308 (URL: https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf)
+2025-05-12 11:18:56,304 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 308 (URL: https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf)
+2025-05-12 11:18:56,304 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf (Intento 1)...
+2025-05-12 11:18:56,304 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf (Intento 1)...
+2025-05-12 11:18:57,674 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:57,675 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information on municipal solid waste management in Peru, including details on waste generation, collection, and disposal methods. However, it lacks more specific data and details on the challenges, policies, and initiatives related to MSW in Peru.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste disposal", "landfills"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:57,675 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information on municipal solid waste management in Peru, including details on waste generation, collection, and disposal methods. However, it lacks more specific data and details on the challenges, policies, and initiatives related to MSW in Peru.",
+  "keywords": ["municipal solid waste", "waste generation", "waste collection", "waste disposal", "landfills"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:57,675 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf: Score=80
+2025-05-12 11:18:57,675 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/12/oecd-environmental-performance-reviews-peru-2017_g1g834e6/9789264283138-en.pdf: Score=80
+2025-05-12 11:18:57,676 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 308 con measurement 2438 (country)
+2025-05-12 11:18:57,676 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 308 con measurement 2438 (country)
+2025-05-12 11:18:57,676 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=308 y measurement_id=2438 (type=country).
+2025-05-12 11:18:57,676 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 308 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:57,676 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 308 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:57,877 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 316 (URL: https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District)
+2025-05-12 11:18:57,877 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 316 (URL: https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District)
+2025-05-12 11:18:57,877 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District (Intento 1)...
+2025-05-12 11:18:57,877 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District (Intento 1)...
+2025-05-12 11:18:59,148 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:59,151 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on solid waste management in Peru, including data on waste generation, collection, and disposal methods, as well as a specific case study on the District of Santa Rosa in Ayacucho. This information is highly relevant for understanding municipal solid waste management in Peru.",
+  "keywords": ["solid waste management", "waste generation", "waste collection", "waste disposal", "organic waste", "clustering"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:59,151 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on solid waste management in Peru, including data on waste generation, collection, and disposal methods, as well as a specific case study on the District of Santa Rosa in Ayacucho. This information is highly relevant for understanding municipal solid waste management in Peru.",
+  "keywords": ["solid waste management", "waste generation", "waste collection", "waste disposal", "organic waste", "clustering"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:59,151 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District: Score=80
+2025-05-12 11:18:59,151 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.researchgate.net/publication/367539209_Solid_Waste_Management_in_Peru's_Cities_A_Clustering_Approach_for_an_Andean_District: Score=80
+2025-05-12 11:18:59,151 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 316 con measurement 2443 (country)
+2025-05-12 11:18:59,151 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 316 con measurement 2443 (country)
+2025-05-12 11:18:59,154 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=316 y measurement_id=2443 (type=country).
+2025-05-12 11:18:59,155 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 316 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:59,155 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 316 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:59,358 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 326 (URL: https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024)
+2025-05-12 11:18:59,358 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 326 (URL: https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024)
+2025-05-12 11:18:59,358 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024 (Intento 1)...
+2025-05-12 11:18:59,358 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024 (Intento 1)...
+2025-05-12 11:19:00,622 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:00,624 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Peru's national plan for integrated solid waste management, including aspects like waste generation, collection, treatment, and disposal methods, as well as relevant policies and regulations.",
+  "keywords": ["solid waste management", "waste generation", "waste collection", "waste treatment", "waste disposal", "recycling", "composting", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:00,624 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Peru's national plan for integrated solid waste management, including aspects like waste generation, collection, treatment, and disposal methods, as well as relevant policies and regulations.",
+  "keywords": ["solid waste management", "waste generation", "waste collection", "waste treatment", "waste disposal", "recycling", "composting", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:00,624 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024: Score=90
+2025-05-12 11:19:00,624 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://sinia.minam.gob.pe/documentos/plan-nacional-gestion-integral-residuos-solidos-2016-2024: Score=90
+2025-05-12 11:19:00,625 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 326 con measurement 2446 (country)
+2025-05-12 11:19:00,625 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 326 con measurement 2446 (country)
+2025-05-12 11:19:00,628 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=326 y measurement_id=2446 (type=country).
+2025-05-12 11:19:00,628 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 326 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:00,628 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 326 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:00,837 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:19:00,837 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:19:00,838 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:19:00,838 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:19:00,838 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:19:00,838 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 6 hallazgos pendientes de análisis.
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - Seleccionados 6 hallazgos pendientes de análisis.
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 6 hallazgos...
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - Procesando lote de 6 hallazgos...
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 327 (URL: https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/)
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 327 (URL: https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/)
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/ (Intento 1)...
+2025-05-12 11:19:00,841 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/ (Intento 1)...
+2025-05-12 11:19:01,916 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:01,918 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Peru's National Plan for Integrated Solid Waste Management (PLANRES 2016-2024), which is highly relevant for understanding the country's municipal solid waste management aspects.",
+  "keywords": ["solid waste management", "waste prevention", "waste disposal", "waste collection", "recycling"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:01,918 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Peru's National Plan for Integrated Solid Waste Management (PLANRES 2016-2024), which is highly relevant for understanding the country's municipal solid waste management aspects.",
+  "keywords": ["solid waste management", "waste prevention", "waste disposal", "waste collection", "recycling"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:01,918 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/: Score=90
+2025-05-12 11:19:01,918 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.ecolex.org/details/legislation/resolucion-no-191-2016-minam-plan-nacional-de-gestion-integral-de-residuos-solidos-planres-2016-2024-lex-faoc160053/: Score=90
+2025-05-12 11:19:01,918 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 327 con measurement 2446 (country)
+2025-05-12 11:19:01,918 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 327 con measurement 2446 (country)
+2025-05-12 11:19:01,921 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=327 y measurement_id=2446 (type=country).
+2025-05-12 11:19:01,922 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 327 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:01,922 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 327 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:02,124 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 333 (URL: https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf)
+2025-05-12 11:19:02,124 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 333 (URL: https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf)
+2025-05-12 11:19:02,125 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf (Intento 1)...
+2025-05-12 11:19:02,125 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf (Intento 1)...
+2025-05-12 11:19:03,851 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:03,852 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management in Peru, including details on policy development, capacity building, and initiatives related to waste management. However, it lacks specific data on waste generation, composition, collection, and disposal methods.",
+  "keywords": ["solid waste management", "national solid waste law", "local waste plans", "recyclers associations", "waste-friendly culture"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:03,852 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about municipal solid waste management in Peru, including details on policy development, capacity building, and initiatives related to waste management. However, it lacks specific data on waste generation, composition, collection, and disposal methods.",
+  "keywords": ["solid waste management", "national solid waste law", "local waste plans", "recyclers associations", "waste-friendly culture"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:03,853 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf: Score=70
+2025-05-12 11:19:03,853 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.unpei.org/files/sites/default/files/country_factsheets/peru_country_factsheet_180914.pdf: Score=70
+2025-05-12 11:19:03,853 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 333 con measurement 2448 (country)
+2025-05-12 11:19:03,853 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 333 con measurement 2448 (country)
+2025-05-12 11:19:03,854 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=333 y measurement_id=2448 (type=country).
+2025-05-12 11:19:03,854 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 333 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:19:03,854 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 333 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:19:04,055 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 334 (URL: https://www.ctc-n.org/resources/solid-waste-nama-peru)
+2025-05-12 11:19:04,055 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 334 (URL: https://www.ctc-n.org/resources/solid-waste-nama-peru)
+2025-05-12 11:19:04,055 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ctc-n.org/resources/solid-waste-nama-peru (Intento 1)...
+2025-05-12 11:19:04,055 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ctc-n.org/resources/solid-waste-nama-peru (Intento 1)...
+2025-05-12 11:19:05,372 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:05,375 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.ctc-n.org/resources/solid-waste-nama-peru: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on a solid waste NAMA (Nationally Appropriate Mitigation Action) program being developed in Peru, which covers key aspects of municipal solid waste management such as data improvement, stakeholder engagement, GHG inventory, monitoring system, mitigation strategy, and financing options.",
+  "keywords": ["solid waste", "NAMA", "GHG inventory", "mitigation strategy", "financing"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:05,375 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.ctc-n.org/resources/solid-waste-nama-peru: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on a solid waste NAMA (Nationally Appropriate Mitigation Action) program being developed in Peru, which covers key aspects of municipal solid waste management such as data improvement, stakeholder engagement, GHG inventory, monitoring system, mitigation strategy, and financing options.",
+  "keywords": ["solid waste", "NAMA", "GHG inventory", "mitigation strategy", "financing"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:05,375 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.ctc-n.org/resources/solid-waste-nama-peru: Score=90
+2025-05-12 11:19:05,375 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.ctc-n.org/resources/solid-waste-nama-peru: Score=90
+2025-05-12 11:19:05,375 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 334 con measurement 2449 (country)
+2025-05-12 11:19:05,375 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 334 con measurement 2449 (country)
+2025-05-12 11:19:05,379 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=334 y measurement_id=2449 (type=country).
+2025-05-12 11:19:05,379 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 334 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:05,379 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 334 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:19:05,584 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 340 (URL: https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html)
+2025-05-12 11:19:05,584 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 340 (URL: https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html)
+2025-05-12 11:19:05,585 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html (Intento 1)...
+2025-05-12 11:19:05,585 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html (Intento 1)...
+2025-05-12 11:19:06,866 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:06,867 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific details on a waste management project in the Cusco region, including information on the expansion and improvement of integrated solid waste management in several districts. This is highly relevant for understanding municipal solid waste management aspects in Cusco.",
+  "keywords": ["solid waste management", "waste collection", "waste disposal", "Cusco"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:06,867 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific details on a waste management project in the Cusco region, including information on the expansion and improvement of integrated solid waste management in several districts. This is highly relevant for understanding municipal solid waste management aspects in Cusco.",
+  "keywords": ["solid waste management", "waste collection", "waste disposal", "Cusco"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:06,867 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html: Score=80
+2025-05-12 11:19:06,867 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://dokumen.tips/documents/plan-de-inclusin-social-y-apoyo-a-los-segregadores-de-basura-provincia-de-2018.html: Score=80
+2025-05-12 11:19:06,867 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 340 con measurement 356 (city)
+2025-05-12 11:19:06,867 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 340 con measurement 356 (city)
+2025-05-12 11:19:06,868 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=340 y measurement_id=356 (type=city).
+2025-05-12 11:19:06,868 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 340 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:06,868 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 340 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:07,074 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 341 (URL: https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf)
+2025-05-12 11:19:07,074 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 341 (URL: https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf)
+2025-05-12 11:19:07,074 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf (Intento 1)...
+2025-05-12 11:19:07,074 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf (Intento 1)...
+2025-05-12 11:19:09,231 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:09,235 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on a municipal solid waste management project in the Urubamba province of the Cusco region in Peru, including plans for a semi-mechanized landfill and pilot waste treatment plant. This is highly relevant for understanding the municipal solid waste management aspects of Cusco.",
+  "keywords": ["municipal solid waste", "landfill", "waste treatment", "segregation", "recycling"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:09,235 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on a municipal solid waste management project in the Urubamba province of the Cusco region in Peru, including plans for a semi-mechanized landfill and pilot waste treatment plant. This is highly relevant for understanding the municipal solid waste management aspects of Cusco.",
+  "keywords": ["municipal solid waste", "landfill", "waste treatment", "segregation", "recycling"],
+  "mentions_entity": true
+}
+2025-05-12 11:19:09,236 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf: Score=80
+2025-05-12 11:19:09,236 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://copesco.gob.pe/wp-content/uploads/2018/12/PLAN-DE-INCLUSION-Urumbamba-V.3-amce-coreeciones.pdf: Score=80
+2025-05-12 11:19:09,236 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 341 con measurement 356 (city)
+2025-05-12 11:19:09,236 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 341 con measurement 356 (city)
+2025-05-12 11:19:09,238 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=341 y measurement_id=356 (type=city).
+2025-05-12 11:19:09,238 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 341 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:09,238 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 341 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:19:09,443 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 342 (URL: https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians)
+2025-05-12 11:19:09,443 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 342 (URL: https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians)
+2025-05-12 11:19:09,443 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians (Intento 1)...
+2025-05-12 11:19:09,443 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians (Intento 1)...
+2025-05-12 11:19:11,210 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:19:11,212 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Cusco, Peru. It discusses general topics like sanitation, disaster prevention, and tourism, but does not provide any details on waste generation, collection, treatment, or disposal in Cusco.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:11,212 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Cusco, Peru. It discusses general topics like sanitation, disaster prevention, and tourism, but does not provide any details on waste generation, collection, treatment, or disposal in Cusco.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:19:11,212 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians: Score=30
+2025-05-12 11:19:11,212 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.worldbank.org/en/news/press-release/2013/11/27/World-Bank-Improvements-in-sanitation-disaster-prevention-and-tourism-to-benefit-more-than-one-million-peruvians: Score=30
+2025-05-12 11:19:11,213 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 342 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:11,213 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 342 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:19:11,421 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 6 actualizaciones del lote realizado.
+2025-05-12 11:19:11,421 - INFO - SFA_ContentAnalyzer - Commit de 6 actualizaciones del lote realizado.
+2025-05-12 11:19:11,421 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:19:11,421 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: PER (límite: 10)...
+2025-05-12 11:19:11,421 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:19:11,421 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['PER', 'PER', 10]
+2025-05-12 11:19:11,422 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:19:11,422 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:19:11,422 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país PER.
+2025-05-12 11:19:11,422 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país PER.
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país PER ---
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país PER ---
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 26
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 26
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 20
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 20
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:19:11,423 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

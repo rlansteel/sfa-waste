@@ -1,0 +1,42 @@
+{
+  "query": "waste management Guadalajara Mexico",
+  "retrieval_timestamp_utc": "2025-05-01T19:11:01.252923",
+  "report_count": 5,
+  "reports": [
+    {
+      "title": "Guadalajara, Mexico - Hotspot Cities Project",
+      "url": "https://hotspotcitiesproject.com/cities/guadalajara.html",
+      "content": "A 2002 study reveals that waste in Guadalajara was managed by a private company, which relied on partnerships with neighboring towns for disposal; the city of",
+      "score": 0.8891543,
+      "source": "hotspotcitiesproject.com"
+    },
+    {
+      "title": "The municipalities of Guadalajara and Antalya exchange on waste ...",
+      "url": "https://medcities.org/the-municipalities-of-guadalajara-and-antalya-exchange-on-waste-management-through-2-webinars/",
+      "content": "Two webinars were organized on Thursday 12 and Friday 13 December to enable an exchange of experiences between the cities of Guadalajara (Mexico) and Antalya (Türkiye). These one-hour sessions, focusing on the best practices implemented by both cities in waste management, were held within the framework of the project MetroResilience Guadalajara, funded by the European Union through the Partnership for Sustainable Cities call. [...] The MetroResilience Guadalaraja project is implemented by the Metropolitan Area of ​​Guadalajara (AMG), through the Institute for Planning and Management of the Development of the Metropolitan Area of ​​Guadalajara (IMEPLAN) and the Barcelona  Metropolitan Area (AMB). It aims to reinforce the metropolitan governance of the metropolitan area of Guadalajara in urban resilience and management of solid waste. One of the activities planned in the project consists in the implementation of nine urban [...] green points to better sort waste and raise awareness among citizens about the importance of good waste management. During the first session, Guadalajara presented the developments of this activity.",
+      "score": 0.8724455,
+      "source": "medcities.org"
+    },
+    {
+      "title": "The environmental impact of municipal waste management",
+      "url": "https://www.researchgate.net/publication/223760239_The_environmental_impact_of_municipal_waste_management_The_case_of_Guadalajara_metro_area",
+      "content": "Municipal solid waste in Guadalajara, Mexico, is separated and recycled by mostly unregulated groups known as scavengers, while collection",
+      "score": 0.843393,
+      "source": "researchgate.net"
+    },
+    {
+      "title": "(PDF) THE MANAGEMENT OF URBAN SOLID WASTE IN MEXICO",
+      "url": "https://www.researchgate.net/publication/360908850_THE_MANAGEMENT_OF_URBAN_SOLID_WASTE_IN_MEXICO_A_CASE_STUDY_FROM_AN_ORGANIZATIONAL_PERSPECTIVE",
+      "content": "In Guadalajara, Jalisco, waste management is hindered by administrative inefficiencies, and there is no evidence of specific tariffs for",
+      "score": 0.8215175,
+      "source": "researchgate.net"
+    },
+    {
+      "title": "Mexico - Waste Management and Carbon Offset Project",
+      "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/322311468120543017/mexico-waste-management-and-carbon-offset-project-social-impact-assessment",
+      "content": "Out of the three sub-projects for the Waste Management and Carbon Offset Project for Mexico, only the Guadalajara site had social issues and needed a social",
+      "score": 0.7961819,
+      "source": "worldbank.org"
+    }
+  ]
+}

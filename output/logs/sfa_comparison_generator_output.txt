@@ -1,0 +1,15 @@
+
+SFA5: Advanced Comparison & Grouping - Quantile Clustering (v2)
+
+ℹ️ Connecting to database: output/db/waste_data_clean.db
+✅ Successfully connected to the database.
+ℹ️ Loading data from database...
+✅ Loaded 217 countries and 367 cities.
+ℹ️ Assigning quantile-based clusters for Country...
+✅ Clustering for Country completed.
+ℹ️ Assigning quantile-based clusters for City...
+✅ Clustering for City completed.
+✅ Clustering results saved to: output/quality_analysis_clean/entity_clusters_clean.json
+
+SFA5 Processing Complete.
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Residuos - Monterrey</title> <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 2em; color: #333; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: auto; background-color: #ffffff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #1a237e; /* Azul oscuro */ }
+        h1 { border-bottom: 2px solid #c5cae9; padding-bottom: 0.3em; text-align: center; }
+        h2 { margin-top: 1.5em; border-bottom: 1px solid #e8eaf6; padding-bottom: 0.2em;}
+        .data-section { background-color: #e8eaf6; /* Azul muy claro */ border: 1px solid #c5cae9; padding: 1.5em; margin-bottom: 1.5em; border-radius: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; }
+        .data-item { background-color: #ffffff; padding: 0.8em; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .data-label { font-weight: bold; color: #303f9f; /* Azul medio */ display: block; margin-bottom: 0.3em; }
+        .data-value { color: #333; }
+        .llm-analysis { margin-top: 2em; padding: 1.5em; border: 1px dashed #9fa8da; border-radius: 8px; background-color: #f1f3f5; }
+        .llm-analysis h2 { border-bottom: none; margin-bottom: 1em;}
+        .llm-analysis ul { list-style-type: disc; margin-left: 20px; padding-left: 1em; }
+        .llm-analysis li { margin-bottom: 0.6em; }
+        .llm-analysis p { margin-bottom: 0.8em; }
+        .footer { margin-top: 2.5em; font-size: 0.85em; color: #555; text-align: center; border-top: 1px solid #eee; padding-top: 1em;}
+        /* Estilo para N/A */
+        .na-value { color: #888; font-style: italic; }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body { margin: 1em; }
+            .container { padding: 1em; }
+            .data-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Reporte de Gestión de Residuos: Monterrey</h1>
+
+    <div class="data-section">
+        <h2>Información Base (Datos CSV)</h2>
+        <div class="data-item"><span class="data-label">Municipio:</span> <span class="data-value">Monterrey</span></div>
+        <div class="data-item"><span class="data-label">País:</span> <span class="data-value">Mexico</span></div>
+        <div class="data-item"><span class="data-label">Población:</span> <span class="data-value">1,109,171</span></div>
+        <div class="data-item"><span class="data-label">Residuos Totales (Toneladas/Año):</span> <span class="data-value">430,158</span></div>
+        <div class="data-item"><span class="data-label">Nivel de Ingresos:</span> <span class="data-value">UMC</span></div>
+        <div class="data-item"><span class="data-label">Tasa de Reciclaje (%):</span> <span class="data-value">11.1%</span></div>
+        <div class="data-item"><span class="data-label">Cobertura Colección (Población %):</span> <span class="data-value"><span class="na-value">N/A</span></span></div>
+        <div class="data-item"><span class="data-label">Modo Colección Primario:</span> <span class="data-value">Door-to-door collection</span></div>
+        </div>
+        <h2>Waste Composition (%)</h2>
+<table>
+  <thead>
+    <tr><th>Waste Type</th><th>Percentage</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Food/Organic</td><td>31</td></tr>
+    <tr><td>Glass</td><td>3</td></tr>
+    <tr><td>Metal</td><td>1</td></tr>
+    <tr><td>Paper/Cardboard</td><td>7</td></tr>
+    <tr><td>Plastic</td><td>16</td></tr>
+    <tr><td>Other</td><td>39</td></tr>
+    </tbody>
+</table>
+
+    <div class="llm-analysis">
+        <h2>Análisis y Hallazgos Web (Resumen LLM)</h2>
+        <h2>Key Initiatives and Programs</h2>
+<ul>
+<li>Comprehensive recycling program including drop-off centers and curbside collection systems (Source: mexicohistorico.com)</li>
+<li>Monterrey Waste Management and Carbon Offset Project implementation (Source: worldbank.org)</li>
+<li>"Arroyo Vivo" project focusing on trash removal, recycling, and restoration of Arroyo Seco river areas (Source: tecscience.tec.mx)</li>
+<li>Landfill gas collection system implementation at Monterrey II landfill site (Source: wbkyotofunds.org)</li>
+</ul>
+
+<h2>Data and Statistics</h2>
+<ul>
+<li>Administrative and Support and Waste Management services GDP reached $298B MX in Q4 2024, showing a 7.03% quarterly increase and 2.36% annual growth (Source: economia.gob.mx)</li>
+<li>Monterrey II landfill encompasses a total area of 162 hectares (Source: wbkyotofunds.org)</li>
+<li>Seven landfill cells were closed by 2007 (cells 99-05), with two cells (07 and 08) remaining operational (Source: wbkyotofunds.org)</li>
+</ul>
+
+<h2>Collaborations and Partnerships</h2>
+<ul>
+<li>Project collaboration with international experts including Colombian architect Alejandro Echeverri and researcher Rob Roggema for urban regenerative design (Source: tecscience.tec.mx)</li>
+</ul>
+    </div>
+
+    <div class="footer">
+        <p><em>Reporte generado automáticamente el: 2025-05-06 02:35:43 UTC</em></p>
+        <p><em>Fuentes de datos: CSV procesado, Búsquedas web vía Tavily API, Análisis por LLM (claude-3-5-sonnet-20241022).</em></p> </div>
+</div>
+</body>
+</html>

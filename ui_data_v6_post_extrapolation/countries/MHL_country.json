@@ -1,0 +1,215 @@
+{
+  "id": 127,
+  "country_code_iso3": "MHL",
+  "country_name": "Marshall Islands",
+  "region": "EAS",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 3628.895264,
+  "population_total": 52793.0,
+  "total_msw_generated_tons_year": 8614.0,
+  "waste_collection_coverage_total_percent_of_population": 49.0,
+  "waste_treatment_recycling_percent": 30.8,
+  "waste_treatment_compost_percent": 6.0,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": null,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 8.0,
+  "composition_glass": 2.0,
+  "composition_metal": 6.0,
+  "composition_paper_cardboard": 11.0,
+  "composition_plastic": 13.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": 29.0,
+  "composition_other": 31.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "missing_unimputed",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "not_found",
+  "longitude_geo_status": "not_found",
+  "data_quality_score": 84.07,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 21, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 14.6, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 20, \"measurements_with_source\": 21, \"measurements_with_comments\": 21, \"raw_score\": 342.6, \"max_potential_score\": 407.51, \"final_normalized_score\": 84.07, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 7/9): 0.0 pts.\\n- Mediciones (21 \\u00fanicas): Disp=28.0, Detalle/Rec=14.6 pts.\\n-> Puntaje Bruto: 342.6 / 407.51 => Normalizado: 84.07\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "1; 3; other includes textile (3 percent), disposable diapers (13 percent), and other unspecified (15 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ENVIRON Australia Pty Ltd. 2014f. \"Baseline Study of the Pacific Hazardous Waste Management Project - Healthcare Waste: Republic of Marshall Islands.\" (SPREP) Secretariat of the Pacific Regional Environment Programme. July. Accessed May 25, 2017. https://www.sprep.org/attachments/Publications/WMPC/PacWaste_HCW_Baseline_Report_RMI_v1.1.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Pattle Delamore Partners Ltd. 2005. \"Assessment of Status and Options for Solid Waste Management on Majuro Atoll.\" Prepared by Tristan Bellingham. SPREP (Secretariat of the Pacific Regional Environment Programme). June 30. Accessed May 10, 2017. https://www.sprep.org/attachments/pacwaste/A02753600R001Final_Rev2_with_Appendices.pdf.",
+      "comments": "8 (23.6 tonnes/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Marshall Islands. 2012. \"National Waste Management Strategy 2012–2016 and Action Plan.\" Draft. Government of the Marshall Islands.",
+      "comments": "1; 3; other includes textile (3 percent), disposable diapers (13 percent), and other unspecified (15 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2007,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

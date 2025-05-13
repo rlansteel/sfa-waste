@@ -1,0 +1,243 @@
+{
+  "id": 126,
+  "country_code_iso3": "MEX",
+  "country_name": "Mexico",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 19332.07422,
+  "population_total": 125890952.0,
+  "total_msw_generated_tons_year": 53100000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 5.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 21.0,
+  "waste_treatment_sanitary_landfill_percent": 74.5,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 957900.0,
+  "hazardous_waste_tons_year": 18172.49,
+  "composition_food_organic": 52.4,
+  "composition_glass": 5.9,
+  "composition_metal": 3.4,
+  "composition_paper_cardboard": 13.8,
+  "composition_plastic": 10.9,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 12.1,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 74.55,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 98.5, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 19, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 13.3, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 19, \"measurements_with_source\": 19, \"measurements_with_comments\": 19, \"raw_score\": 303.8, \"max_potential_score\": 407.51, \"final_normalized_score\": 74.55, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 98.5, Presentes: 6/9): 0.0 pts.\\n- Mediciones (19 \\u00fanicas): Disp=28.0, Detalle/Rec=13.3 pts.\\n-> Puntaje Bruto: 303.8 / 407.51 => Normalizado: 74.55\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Mexican Chamber of the Construction Industry. n.d. \"Waste Management Plan for Construction and Demolition.\" [Cámara Mexicana de la Industria de la Construcción. \"Plan de Manejo de Residuos de La Construcción y la Demolición\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ITU (International Telecommunication Union). 2015. \"Sustainable Waste Management of Electrical and Electronic Devices in Latin America\" [\"Gestión Sostenible de Residuos de Aparatos Eléctricos y Electrónicos en América Latina\"]. ITU, Basel Convention, CRBAS-Basel Regional Center for South America, UNESCO, WHO, UNIDO, WIPO, ECLAC 2015 [UIT, Convenio de Basilea, CRBAS-Centro Regional Basilea para América del Sur, UNESCO, OMS, ONUDI, OMPI, CEPAL 2015]. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Anon. 2015a. \"Electronic Reporting System of the Basel Convention: Mexico (Year: 2015).\" http://ers.basel.int/ERS-Extended/FeedbackServer/fsadmin.aspx?fscontrol=respondentReportandsurveyid=66andvoterid=48371andreadonly=1andnomenu=1.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Anon. 2015a. \"Electronic Reporting System of the Basel Convention: Mexico (Year: 2015).\" http://ers.basel.int/ERS-Extended/FeedbackServer/fsadmin.aspx?fscontrol=respondentReportandsurveyid=66andvoterid=48371andreadonly=1andnomenu=1.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Mexico, SEMARNAT (Secretariat of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretariat of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Mexico, SEMARNAT (Secretary of Environment and Natural Resources). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information [Dirección General de Estadística e Información Ambiental], Secretary of Environment and Natural Resources [Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2013,
+      "source": "Mexico, SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales). 2016. \"Report on the Situation of the Environment in Mexico\" [\"Informe de la Situación del Medio Ambiente en México\"]. General Directorate of Environmental Statistics and Information, Secretariat of Environment and Natural Resources [Dirección General de Estadística e Información Ambiental, Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)], Government of Mexico. October.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {
+    "entity_name": "Mexico",
+    "country": "Mexico",
+    "iso3": "MEX",
+    "overall_summary": "Mexico generates a significant amount of municipal solid waste, estimated at around 53 million tons per year, with a relatively low recycling rate of 5%. The country faces major challenges in waste management, including a lack of adequate infrastructure, proliferation of open dumpsites, and limited public awareness about proper waste disposal.",
+    "generation_context": {
+      "scale_and_rate": "With a population of over 125 million and an upper-middle income status, Mexico generates a substantial amount of municipal solid waste, estimated at around 0.94 kg per capita per day. However, the generation rate appears to be increasing, driven by factors like population growth and changing consumption patterns.",
+      "contributing_factors_trends": "Rapid urbanization, economic development, population growth, and changing consumption patterns are contributing to the increasing generation of waste in Mexico. The tourism industry and industrial activities are also likely significant contributors to the waste stream."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream in Mexico is predominantly composed of organic waste (52.4%), followed by paper/cardboard (13.8%), plastics (10.9%), glass (5.9%), metals (3.4%), and other materials (12.1%).",
+      "data_notes": "The composition data is based on the structured database information provided."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "While the database does not provide specific collection coverage data, it is mentioned that the predominant approach is basic waste collection and disposal. Both formal and informal sectors are likely involved in collection activities, but details on their roles are not provided in the sources.",
+      "key_challenges": "No specific information found in sources regarding key challenges in waste collection and transport."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the database, the dominant waste treatment methods in Mexico are sanitary landfilling (74.5%) and open dumping (21%). Recycling accounts for only 5% of waste treatment. Some web findings also mention the prevalence of open dumpsites and the lack of proper disposal facilities.",
+      "infrastructure_highlights": "No specific information found in sources regarding key waste treatment or disposal infrastructure facilities.",
+      "key_challenges": "The proliferation of open dumpsites, lack of adequate landfill capacity, and limited adoption of advanced waste treatment technologies are mentioned as key challenges in waste treatment and disposal."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "The recycling rate in Mexico is relatively low at 5%, according to the database. No specific recycling or recovery targets are mentioned in the web findings.",
+      "programs_mentioned": "Some web findings mention efforts to promote recycling and circular economy initiatives, but no specific programs are detailed.",
+      "informal_sector_role": "The web findings highlight the significant role played by the informal sector in waste collection and recycling activities in Mexico, but do not provide further details."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "The database indicates that Mexico has national laws related to waste management. However, the web findings do not provide specific details on local or regional waste management plans or regulations.",
+      "governance_issues": "Limited funding, lack of technical and administrative capacity, and the need for more robust laws and enforcement are mentioned as governance challenges in waste management."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Existence of national waste management laws and regulations"
+      ],
+      "weaknesses_or_challenges": [
+        "Low recycling rates and limited adoption of advanced waste treatment technologies",
+        "Proliferation of open dumpsites and inadequate disposal infrastructure",
+        "Increasing waste generation driven by population growth and changing consumption patterns"
+      ],
+      "recent_developments_or_outlook": "No specific information found in sources regarding recent developments or future outlook for waste management in Mexico."
+    }
+  }
+}

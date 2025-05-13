@@ -1,0 +1,263 @@
+{
+  "id": 190,
+  "country_code_iso3": "THA",
+  "country_name": "Thailand",
+  "region": "EAS",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 16301.53809,
+  "population_total": 68657600.0,
+  "total_msw_generated_tons_year": 26853366.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 19.1,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": 0.4,
+  "waste_treatment_landfill_unspecified_percent": 27.0,
+  "waste_treatment_open_dump_percent": 53.5,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 384233.0,
+  "hazardous_waste_tons_year": 3445000.0,
+  "composition_food_organic": 65.52,
+  "composition_glass": 3.04,
+  "composition_metal": 1.85,
+  "composition_paper_cardboard": 7.6,
+  "composition_plastic": 17.59,
+  "composition_rubber_leather": 0.46,
+  "composition_wood": 0.8,
+  "composition_yard_garden_green": null,
+  "composition_other": 4.74,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 101.6, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 101.6, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "Other includes textile (1.35 percent), disposable diapers (3.22 percent), and other unspecified (0.17 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2004,
+      "source": "Modak, Prasad, Agamuthu Pariatamby, Jeffrey Seadon, Perinaz Bhada-Tata, Guilberto Borongan, Nang Sian Thawn, Ma. Bernadeth Lim. 2017. \"Asia Waste Management Outlook\". Edited by P. Modak. United Nations Environment Programme (UNEP), Asian Institute of Technology (AIT), and International Solid Waste Association (ISWA).",
+      "comments": "HW includes industry, municipal, and infectious hazardous wastes; HCW refers to infectious waste generated"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2005,
+      "source": "Kofoworola, Oyeshola Femi and Shabbir H. Gheewala. 2009. \"Estimation of construction waste generation and management in Thailand.\" Waste management (2009) 731-738.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Thailand, PCD (Pollution Control Department). 2015. Thailand State of Pollution Report 2015. Pollution Control Department, Ministry of Natural Resources and Environment, Government of Thailand. PCD No. 06-062. Accessed April 1, 2016. http://infofile.pcd.go.th/mgt/PollutionReport2015_en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Thailand, PCD (Pollution Control Department). 2015. Thailand State of Pollution Report 2015. Pollution Control Department, Ministry of Natural Resources and Environment, Government of Thailand. PCD No. 06-062. Accessed April 1, 2016. http://infofile.pcd.go.th/mgt/PollutionReport2015_en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Thailand, PCD (Pollution Control Department). 2015. Thailand State of Pollution Report 2015. Pollution Control Department, Ministry of Natural Resources and Environment, Government of Thailand. PCD No. 06-062. Accessed April 1, 2016. http://infofile.pcd.go.th/mgt/PollutionReport2015_en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Thailand, PCD (Pollution Control Department). 2015. Thailand State of Pollution Report 2015. Pollution Control Department, Ministry of Natural Resources and Environment, Government of Thailand. PCD No. 06-062. Accessed April 1, 2016. http://infofile.pcd.go.th/mgt/PollutionReport2015_en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Thailand, PCD (Pollution Control Department). 2015. Thailand State of Pollution Report 2015. PCD No. 06-062. Pollution Control Department, Ministry of Natural Resources and Environment, Government of Thailand. Accessed April 1, 2016. http://infofile.pcd.go.th/mgt/PollutionReport2015_en.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2009,
+      "source": "Kaosol, Thaniya. 2009. \"Sustainable solutions for municipal solid waste management in Thailand.\" World academy of science, engineering and technology, Thailand. Accessed April 2, 2017. http://waset.org/publications/6576/sustainable-solutions-for-municipal-solid-waste- management-in-thailand. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Intharathirat, R., and P. A. Salam. 2015. \"Valorization of MSW-to-energy in Thailand: Status, Challenges and Prospects.\" Waste Biomass Valor 7: 31–57. doi:10.1007/s12649-015-9422-z.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Intharathirat, R., and P. A. Salam. 2015. \"Valorization of MSW-to-energy in Thailand: Status, Challenges and Prospects.\" Waste Biomass Valor 7: 31–57. doi:10.1007/s12649-015-9422-z.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Intharathirat, R., and P. A. Salam. 2015. \"Valorization of MSW-to-energy in Thailand: Status, Challenges and Prospects.\" Waste Biomass Valor 7: 31–57. doi:10.1007/s12649-015-9422-z.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Salam, P. A. 2015. \"Economic Potential of Biomass Utilization: Case of Thailand.\" Paper presented at the Sixth Regional 3R Forum in Asia and the Pacific, Maldives, August 16–19.",
+      "comments": "Other includes textile (1.35 percent), disposable diapers (3.22 percent), and other unspecified (0.17 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Intharathirat, R., and P. A. Salam. 2015. \"Valorization of MSW-to-energy in Thailand: Status, Challenges and Prospects.\" Waste Biomass Valor 7: 31–57. doi:10.1007/s12649-015-9422-z.",
+      "comments": "nan"
+    }
+  ]
+}

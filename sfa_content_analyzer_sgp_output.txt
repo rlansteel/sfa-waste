@@ -1,0 +1,463 @@
+2025-05-12 11:17:15,550 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:17:15,550 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:17:15,583 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:17:15,583 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:17:15,584 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:17:15,584 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:17:15,585 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país SGP (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:17:15,585 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país SGP (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:17:15,585 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: SGP (límite: 10)...
+2025-05-12 11:17:15,585 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: SGP (límite: 10)...
+2025-05-12 11:17:15,585 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['SGP', 'SGP', 10]
+2025-05-12 11:17:15,585 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['SGP', 'SGP', 10]
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 130 (URL: https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling)
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 130 (URL: https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling)
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling (Intento 1)...
+2025-05-12 11:17:15,587 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling (Intento 1)...
+2025-05-12 11:17:17,231 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:17,241 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on various aspects of municipal solid waste management in Singapore, including waste generation data, collection methods, treatment and disposal methods, and specific policies and initiatives related to waste management.",
+  "keywords": ["waste generation", "waste composition", "waste collection", "waste treatment", "waste disposal", "recycling", "incineration", "landfill", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:17,241 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on various aspects of municipal solid waste management in Singapore, including waste generation data, collection methods, treatment and disposal methods, and specific policies and initiatives related to waste management.",
+  "keywords": ["waste generation", "waste composition", "waste collection", "waste treatment", "waste disposal", "recycling", "incineration", "landfill", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:17,242 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling: Score=90
+2025-05-12 11:17:17,242 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling: Score=90
+2025-05-12 11:17:17,242 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 130 con measurement 526 (country)
+2025-05-12 11:17:17,242 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 130 con measurement 526 (country)
+2025-05-12 11:17:17,257 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=130 y measurement_id=526 (type=country).
+2025-05-12 11:17:17,257 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 130 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:17:17,257 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 130 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:17:17,462 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 131 (URL: https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up)
+2025-05-12 11:17:17,462 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 131 (URL: https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up)
+2025-05-12 11:17:17,463 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up (Intento 1)...
+2025-05-12 11:17:17,463 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up (Intento 1)...
+2025-05-12 11:17:18,813 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:18,814 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on overall waste generation and recycling rates in Singapore, which are key aspects of municipal solid waste management. It includes specific data points and trends that are useful for understanding the current state of MSW in Singapore.",
+  "keywords": ["waste generation", "recycling rate", "solid waste", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:18,814 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on overall waste generation and recycling rates in Singapore, which are key aspects of municipal solid waste management. It includes specific data points and trends that are useful for understanding the current state of MSW in Singapore.",
+  "keywords": ["waste generation", "recycling rate", "solid waste", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:18,815 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up: Score=80
+2025-05-12 11:17:18,815 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.nea.gov.sg/media/news/news/index/overall-waste-generation-and-recycling-rates-increased-in-2021-as-economic-activity-picked-up: Score=80
+2025-05-12 11:17:18,815 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 131 con measurement 526 (country)
+2025-05-12 11:17:18,815 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 131 con measurement 526 (country)
+2025-05-12 11:17:18,817 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=131 y measurement_id=526 (type=country).
+2025-05-12 11:17:18,818 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 131 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:18,818 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 131 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:19,022 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 132 (URL: https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf)
+2025-05-12 11:17:19,022 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 132 (URL: https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf)
+2025-05-12 11:17:19,022 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf (Intento 1)...
+2025-05-12 11:17:19,022 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf (Intento 1)...
+2025-05-12 11:17:20,496 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:20,497 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about solid waste management in Singapore, including details on waste minimization, recycling, and waste disposal. However, it lacks specific data on waste generation, composition, and collection methods.",
+  "keywords": ["solid waste management", "waste minimization", "recycling", "waste disposal"],
+  "mentions_entity": false
+}
+2025-05-12 11:17:20,497 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about solid waste management in Singapore, including details on waste minimization, recycling, and waste disposal. However, it lacks specific data on waste generation, composition, and collection methods.",
+  "keywords": ["solid waste management", "waste minimization", "recycling", "waste disposal"],
+  "mentions_entity": false
+}
+2025-05-12 11:17:20,497 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf: Score=70
+2025-05-12 11:17:20,497 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.nea.gov.sg/docs/default-source/resource/publications/environmental-protection-division-annual-report/epd-annual-report-2017.pdf: Score=70
+2025-05-12 11:17:20,497 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 132 con measurement 526 (country)
+2025-05-12 11:17:20,497 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 132 con measurement 526 (country)
+2025-05-12 11:17:20,498 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=132 y measurement_id=526 (type=country).
+2025-05-12 11:17:20,499 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 132 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:17:20,499 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 132 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:17:20,702 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 160 (URL: https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources)
+2025-05-12 11:17:20,702 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 160 (URL: https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources)
+2025-05-12 11:17:20,702 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources (Intento 1)...
+2025-05-12 11:17:20,702 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources (Intento 1)...
+2025-05-12 11:17:21,992 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:21,994 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not mention anything specific about municipal solid waste management in Singapore. It appears to be a global report on e-waste, which is only one component of municipal solid waste.",
+  "keywords": ["e-waste", "waste quantities", "waste flows"],
+  "mentions_entity": false
+}
+2025-05-12 11:17:21,994 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not mention anything specific about municipal solid waste management in Singapore. It appears to be a global report on e-waste, which is only one component of municipal solid waste.",
+  "keywords": ["e-waste", "waste quantities", "waste flows"],
+  "mentions_entity": false
+}
+2025-05-12 11:17:21,994 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources: Score=30
+2025-05-12 11:17:21,994 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://research-portal.uu.nl/en/publications/the-global-e-waste-monitor-2017-quantities-flows-and-resources: Score=30
+2025-05-12 11:17:21,994 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 160 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:17:21,994 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 160 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:17:22,196 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 161 (URL: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf)
+2025-05-12 11:17:22,196 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 161 (URL: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf)
+2025-05-12 11:17:22,196 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf (Intento 1)...
+2025-05-12 11:17:22,196 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf (Intento 1)...
+2025-05-12 11:17:23,816 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:23,818 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not mention anything specific to municipal solid waste management in Singapore. It appears to be about global e-waste, which is only tangentially related to municipal solid waste.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:23,818 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not mention anything specific to municipal solid waste management in Singapore. It appears to be about global e-waste, which is only tangentially related to municipal solid waste.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:23,818 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf: Score=20
+2025-05-12 11:17:23,818 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/Global-E-waste+Monitor+2017+-+Executive+Summary.pdf: Score=20
+2025-05-12 11:17:23,818 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 161 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:17:23,818 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 161 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:17:24,024 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 162 (URL: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF)
+2025-05-12 11:17:24,024 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 162 (URL: https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF)
+2025-05-12 11:17:24,024 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF (Intento 1)...
+2025-05-12 11:17:24,024 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF (Intento 1)...
+2025-05-12 11:17:25,090 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:25,091 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Singapore. It appears to be a general reference to a global e-waste report, which is only tangentially related to the requested topic.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:25,091 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF: {
+  "relevance_score": 20,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Singapore. It appears to be a general reference to a global e-waste report, which is only tangentially related to the requested topic.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:25,091 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF: Score=20
+2025-05-12 11:17:25,091 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.itu.int/en/ITU-D/Climate-Change/Documents/GEM+2017/GEM2017_Executive+Summary_E.PDF: Score=20
+2025-05-12 11:17:25,091 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 162 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:17:25,091 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 162 preparada para actualizar (Status: evaluated_irrelevant, Score: 20).
+2025-05-12 11:17:25,292 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 163 (URL: https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html)
+2025-05-12 11:17:25,292 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 163 (URL: https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html)
+2025-05-12 11:17:25,292 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html (Intento 1)...
+2025-05-12 11:17:25,292 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html (Intento 1)...
+2025-05-12 11:17:26,414 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:26,414 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on the current state of municipal solid waste management in Singapore, including details on waste generation, treatment and disposal methods, and initiatives to address climate change impacts.",
+  "keywords": ["municipal solid waste", "waste generation", "waste treatment", "waste disposal", "climate change"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:26,414 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on the current state of municipal solid waste management in Singapore, including details on waste generation, treatment and disposal methods, and initiatives to address climate change impacts.",
+  "keywords": ["municipal solid waste", "waste generation", "waste treatment", "waste disposal", "climate change"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:26,414 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html: Score=80
+2025-05-12 11:17:26,414 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.wtert.net/paper/4238/Current-State-of-Waste-Management-in-Singapore.html: Score=80
+2025-05-12 11:17:26,415 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 163 con measurement 537 (country)
+2025-05-12 11:17:26,415 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 163 con measurement 537 (country)
+2025-05-12 11:17:26,416 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=163 y measurement_id=537 (type=country).
+2025-05-12 11:17:26,416 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 163 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:26,416 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 163 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:26,622 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 164 (URL: https://www.unep.org/indicator-1242)
+2025-05-12 11:17:26,622 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 164 (URL: https://www.unep.org/indicator-1242)
+2025-05-12 11:17:26,622 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.unep.org/indicator-1242 (Intento 1)...
+2025-05-12 11:17:26,622 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.unep.org/indicator-1242 (Intento 1)...
+2025-05-12 11:17:27,633 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:27,634 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.unep.org/indicator-1242: {
+  "relevance_score": 25,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Singapore. It appears to be a general overview of a UN indicator related to hazardous waste, which is only tangentially related to the given topic.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:27,634 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.unep.org/indicator-1242: {
+  "relevance_score": 25,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Singapore. It appears to be a general overview of a UN indicator related to hazardous waste, which is only tangentially related to the given topic.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:27,634 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.unep.org/indicator-1242: Score=25
+2025-05-12 11:17:27,634 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.unep.org/indicator-1242: Score=25
+2025-05-12 11:17:27,634 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 164 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:17:27,634 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 164 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:17:27,839 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 165 (URL: https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure)
+2025-05-12 11:17:27,839 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 165 (URL: https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure)
+2025-05-12 11:17:27,839 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure (Intento 1)...
+2025-05-12 11:17:27,839 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure (Intento 1)...
+2025-05-12 11:17:29,691 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:29,698 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on the solid waste management infrastructure and facilities in Singapore, including the Tuas Marine Transfer Station, Semakau Landfill, and Waste-To-Energy Incineration Plants. It covers key aspects of municipal solid waste management such as waste disposal, recycling, and waste-to-energy processes.",
+  "keywords": ["solid waste management", "waste disposal", "recycling", "waste-to-energy", "landfill", "incineration"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:29,698 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on the solid waste management infrastructure and facilities in Singapore, including the Tuas Marine Transfer Station, Semakau Landfill, and Waste-To-Energy Incineration Plants. It covers key aspects of municipal solid waste management such as waste disposal, recycling, and waste-to-energy processes.",
+  "keywords": ["solid waste management", "waste disposal", "recycling", "waste-to-energy", "landfill", "incineration"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:29,698 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure: Score=90
+2025-05-12 11:17:29,698 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.nea.gov.sg/our-services/waste-management/waste-management-infrastructure/solid-waste-management-infrastructure: Score=90
+2025-05-12 11:17:29,698 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 165 con measurement 537 (country)
+2025-05-12 11:17:29,698 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 165 con measurement 537 (country)
+2025-05-12 11:17:29,700 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=165 y measurement_id=537 (type=country).
+2025-05-12 11:17:29,700 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 165 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:17:29,700 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 165 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:17:29,905 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 166 (URL: https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore)
+2025-05-12 11:17:29,905 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 166 (URL: https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore)
+2025-05-12 11:17:29,905 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore (Intento 1)...
+2025-05-12 11:17:29,905 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore (Intento 1)...
+2025-05-12 11:17:31,347 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:31,349 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Singapore's municipal solid waste management, including specific targets for increasing recycling rates and reducing waste-to-landfill per capita, as well as mentioning the country's Zero Waste Masterplan and circular economy efforts.",
+  "keywords": ["recycling rate", "waste-to-landfill", "zero waste", "circular economy"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:31,349 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on Singapore's municipal solid waste management, including specific targets for increasing recycling rates and reducing waste-to-landfill per capita, as well as mentioning the country's Zero Waste Masterplan and circular economy efforts.",
+  "keywords": ["recycling rate", "waste-to-landfill", "zero waste", "circular economy"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:31,349 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore: Score=90
+2025-05-12 11:17:31,349 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore: Score=90
+2025-05-12 11:17:31,349 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 166 con measurement 538 (country)
+2025-05-12 11:17:31,349 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 166 con measurement 538 (country)
+2025-05-12 11:17:31,351 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=166 y measurement_id=538 (type=country).
+2025-05-12 11:17:31,351 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 166 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:17:31,351 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 166 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:17:31,557 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:17:31,557 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:17:31,557 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: SGP (límite: 10)...
+2025-05-12 11:17:31,557 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: SGP (límite: 10)...
+2025-05-12 11:17:31,557 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['SGP', 'SGP', 10]
+2025-05-12 11:17:31,557 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['SGP', 'SGP', 10]
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 6 hallazgos pendientes de análisis.
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - Seleccionados 6 hallazgos pendientes de análisis.
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 6 hallazgos...
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - Procesando lote de 6 hallazgos...
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 167 (URL: https://www.sg101.gov.sg/infrastructure/case-studies/wm/)
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 167 (URL: https://www.sg101.gov.sg/infrastructure/case-studies/wm/)
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sg101.gov.sg/infrastructure/case-studies/wm/ (Intento 1)...
+2025-05-12 11:17:31,562 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sg101.gov.sg/infrastructure/case-studies/wm/ (Intento 1)...
+2025-05-12 11:17:33,013 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:33,014 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.sg101.gov.sg/infrastructure/case-studies/wm/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about waste management in Singapore, including data on total waste generation and the existence of policies and regulations. However, it lacks detailed information on specific waste composition, collection methods, treatment and disposal practices, and challenges faced in Singapore's municipal solid waste management.",
+  "keywords": ["solid waste", "waste generation", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:33,014 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.sg101.gov.sg/infrastructure/case-studies/wm/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides some relevant information about waste management in Singapore, including data on total waste generation and the existence of policies and regulations. However, it lacks detailed information on specific waste composition, collection methods, treatment and disposal practices, and challenges faced in Singapore's municipal solid waste management.",
+  "keywords": ["solid waste", "waste generation", "policies", "regulations"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:33,014 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.sg101.gov.sg/infrastructure/case-studies/wm/: Score=80
+2025-05-12 11:17:33,014 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.sg101.gov.sg/infrastructure/case-studies/wm/: Score=80
+2025-05-12 11:17:33,014 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 167 con measurement 538 (country)
+2025-05-12 11:17:33,014 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 167 con measurement 538 (country)
+2025-05-12 11:17:33,014 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=167 y measurement_id=538 (type=country).
+2025-05-12 11:17:33,015 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 167 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:33,015 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 167 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:33,218 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 169 (URL: https://www.singstat.gov.sg/find-data/sdg/goal-11)
+2025-05-12 11:17:33,218 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 169 (URL: https://www.singstat.gov.sg/find-data/sdg/goal-11)
+2025-05-12 11:17:33,218 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.singstat.gov.sg/find-data/sdg/goal-11 (Intento 1)...
+2025-05-12 11:17:33,218 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.singstat.gov.sg/find-data/sdg/goal-11 (Intento 1)...
+2025-05-12 11:17:34,510 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:34,512 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.singstat.gov.sg/find-data/sdg/goal-11: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific information about municipal solid waste management in Singapore. It is a general page about the Sustainable Development Goals, which only briefly mentions waste-related topics.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:34,512 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.singstat.gov.sg/find-data/sdg/goal-11: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not provide any specific information about municipal solid waste management in Singapore. It is a general page about the Sustainable Development Goals, which only briefly mentions waste-related topics.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:34,512 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.singstat.gov.sg/find-data/sdg/goal-11: Score=40
+2025-05-12 11:17:34,512 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.singstat.gov.sg/find-data/sdg/goal-11: Score=40
+2025-05-12 11:17:34,513 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 169 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:17:34,513 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 169 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:17:34,713 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 170 (URL: https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management)
+2025-05-12 11:17:34,713 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 170 (URL: https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management)
+2025-05-12 11:17:34,714 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management (Intento 1)...
+2025-05-12 11:17:34,714 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management (Intento 1)...
+2025-05-12 11:17:35,909 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:35,910 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on municipal solid waste management in Singapore, including data on waste generation, recycling, and landfill capacity, as well as the government's efforts to become a zero-waste nation.",
+  "keywords": ["waste generation", "recycling", "landfill capacity", "zero-waste", "energy savings"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:35,910 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information on municipal solid waste management in Singapore, including data on waste generation, recycling, and landfill capacity, as well as the government's efforts to become a zero-waste nation.",
+  "keywords": ["waste generation", "recycling", "landfill capacity", "zero-waste", "energy savings"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:35,910 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management: Score=80
+2025-05-12 11:17:35,910 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.kaggle.com/datasets/kingabzpro/singapore-waste-management: Score=80
+2025-05-12 11:17:35,910 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 170 con measurement 539 (country)
+2025-05-12 11:17:35,910 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 170 con measurement 539 (country)
+2025-05-12 11:17:35,911 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=170 y measurement_id=539 (type=country).
+2025-05-12 11:17:35,911 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 170 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:35,911 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 170 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:36,116 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 171 (URL: https://unstats.un.org/UNSD/envstats/qindicators)
+2025-05-12 11:17:36,116 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 171 (URL: https://unstats.un.org/UNSD/envstats/qindicators)
+2025-05-12 11:17:36,116 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://unstats.un.org/UNSD/envstats/qindicators (Intento 1)...
+2025-05-12 11:17:36,116 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://unstats.un.org/UNSD/envstats/qindicators (Intento 1)...
+2025-05-12 11:17:37,642 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:37,644 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://unstats.un.org/UNSD/envstats/qindicators: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any specific information about municipal solid waste management in Singapore. It appears to be a general overview of the United Nations Statistics Division's environment statistics program.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:37,644 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://unstats.un.org/UNSD/envstats/qindicators: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any specific information about municipal solid waste management in Singapore. It appears to be a general overview of the United Nations Statistics Division's environment statistics program.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:37,645 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://unstats.un.org/UNSD/envstats/qindicators: Score=30
+2025-05-12 11:17:37,645 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://unstats.un.org/UNSD/envstats/qindicators: Score=30
+2025-05-12 11:17:37,645 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 171 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:17:37,645 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 171 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:17:37,851 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 181 (URL: https://portal.issn.org/resource/ISSN/1793-4524)
+2025-05-12 11:17:37,851 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 181 (URL: https://portal.issn.org/resource/ISSN/1793-4524)
+2025-05-12 11:17:37,851 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://portal.issn.org/resource/ISSN/1793-4524 (Intento 1)...
+2025-05-12 11:17:37,851 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://portal.issn.org/resource/ISSN/1793-4524 (Intento 1)...
+2025-05-12 11:17:38,907 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:38,908 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://portal.issn.org/resource/ISSN/1793-4524: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about environmental statistics in Singapore, but does not specifically mention municipal solid waste management aspects like waste generation, collection, treatment, or disposal methods.",
+  "keywords": ["environmental statistics"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:38,908 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://portal.issn.org/resource/ISSN/1793-4524: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about environmental statistics in Singapore, but does not specifically mention municipal solid waste management aspects like waste generation, collection, treatment, or disposal methods.",
+  "keywords": ["environmental statistics"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:38,909 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://portal.issn.org/resource/ISSN/1793-4524: Score=70
+2025-05-12 11:17:38,909 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://portal.issn.org/resource/ISSN/1793-4524: Score=70
+2025-05-12 11:17:38,909 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 181 con measurement 543 (country)
+2025-05-12 11:17:38,909 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 181 con measurement 543 (country)
+2025-05-12 11:17:38,910 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=181 y measurement_id=543 (type=country).
+2025-05-12 11:17:38,911 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 181 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:17:38,911 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 181 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:17:39,116 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 182 (URL: https://scic.sg/media/attachments/2024/10/22/2-nea.pdf)
+2025-05-12 11:17:39,116 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 182 (URL: https://scic.sg/media/attachments/2024/10/22/2-nea.pdf)
+2025-05-12 11:17:39,116 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://scic.sg/media/attachments/2024/10/22/2-nea.pdf (Intento 1)...
+2025-05-12 11:17:39,116 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://scic.sg/media/attachments/2024/10/22/2-nea.pdf (Intento 1)...
+2025-05-12 11:17:40,633 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:40,636 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://scic.sg/media/attachments/2024/10/22/2-nea.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet focuses on climate change and energy efficiency in Singapore, with only a brief mention of solid waste management. It does not provide detailed information on municipal solid waste generation, collection, treatment, or disposal for Singapore.",
+  "keywords": [],
+  "mentions_entity": true
+}
+2025-05-12 11:17:40,636 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://scic.sg/media/attachments/2024/10/22/2-nea.pdf: {
+  "relevance_score": 40,
+  "justification": "The content snippet focuses on climate change and energy efficiency in Singapore, with only a brief mention of solid waste management. It does not provide detailed information on municipal solid waste generation, collection, treatment, or disposal for Singapore.",
+  "keywords": [],
+  "mentions_entity": true
+}
+2025-05-12 11:17:40,636 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://scic.sg/media/attachments/2024/10/22/2-nea.pdf: Score=40
+2025-05-12 11:17:40,636 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://scic.sg/media/attachments/2024/10/22/2-nea.pdf: Score=40
+2025-05-12 11:17:40,637 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 182 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:17:40,637 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 182 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:17:40,843 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 6 actualizaciones del lote realizado.
+2025-05-12 11:17:40,843 - INFO - SFA_ContentAnalyzer - Commit de 6 actualizaciones del lote realizado.
+2025-05-12 11:17:40,843 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: SGP (límite: 10)...
+2025-05-12 11:17:40,843 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: SGP (límite: 10)...
+2025-05-12 11:17:40,843 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['SGP', 'SGP', 10]
+2025-05-12 11:17:40,843 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['SGP', 'SGP', 10]
+2025-05-12 11:17:40,844 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:17:40,844 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:17:40,844 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país SGP.
+2025-05-12 11:17:40,844 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país SGP.
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país SGP ---
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país SGP ---
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 16
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 16
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 9
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 9
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:17:40,845 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

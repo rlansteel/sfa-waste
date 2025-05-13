@@ -1,0 +1,172 @@
+{
+  "id": 150,
+  "country_code_iso3": "OMN",
+  "country_name": "Oman",
+  "region": "MEA",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 30535.83398,
+  "population_total": 4933850.0,
+  "total_msw_generated_tons_year": 3307951.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 26.21,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": 0.69,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 0.0,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 73.0,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": null,
+  "hazardous_waste_tons_year": 1399444.87,
+  "composition_food_organic": 34.64,
+  "composition_glass": 3.11,
+  "composition_metal": 3.65,
+  "composition_paper_cardboard": 14.54,
+  "composition_plastic": 25.66,
+  "composition_rubber_leather": null,
+  "composition_wood": 2.56,
+  "composition_yard_garden_green": 3.13,
+  "composition_other": 12.71,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "missing_unimputed",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "Food/organic reported as parks and biowaste; paper/cardboard includes paper (5 percent) and carton (10 percent) waste; glass includes glass and metals; other includes textile (6 percent) and other unspecified (18 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2022,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by Mohammed al-Harthy at ISWA Energy Recovery WG Meeting, May 25, West Palm Beach, Florida.",
+      "comments": "Since it only represents a portion of our incomplete survey, the amount is indeed too low. As a result, we delete this amount and will let you know once the survey is complete."
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by Mohammed al-Harthy at ISWA Energy Recovery WG Meeting, May 25, West Palm Beach, Florida.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by Mohammed al-Harthy at ISWA Energy Recovery WG Meeting, May 25, West Palm Beach, Florida.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2022,
+      "source": "NSCI website (screenshot taken)",
+      "comments": "10 years ago, waste management data were not accurate and some were not measured because there were few waste management facilities (landfills and transfer stations) and there was absence of weighbridge systems that measure and capture all waste quantities, which make it challenging to compare current waste generation data records with historical data."
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2022,
+      "source": "Ouda, Omar. 2017. Civil and Environmental Consultant. Personal communication.",
+      "comments": "In 2009, a significant milestone was achieved with the issuance of Royal Decree No. 46/2009, Sultanate of Oman committed to driving sustainable waste management practices in line with international standards. Working within this framework, assigned operating companies has undertaken several key initiatives to enhance waste management in Oman: 1. Infrastructure Development: Recognizing the importance of proper waste disposal, focusing on establishing the necessary infrastructure. This has involved the closure of all open dumpsites and the establishment of Engineered Landfills. 2. Restructuring Municipal Waste Collection Services: To optimize waste collection processes, Oman has implemented a comprehensive restructuring of municipal waste collection services. This has resulted in improved efficiency and effectiveness in waste collection and transportation to designated facilities. 3. Public Awareness Improvement: Oman has placed great emphasis on raising public awareness about waste management. Through targeted campaigns and educational initiatives, they aim to enhance public understanding and participation in waste reduction, proper segregation, and recycling practices. 4. Expansion into Industrial and Healthcare Waste Management: Starting in 2018, Oman expanded its scope to include the management of industrial and healthcare waste. This expansion ensures the safe and responsible handling, transportation, and disposal of these specialized waste streams."
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Ouda, Omar. 2017. Civil and Environmental Consultant. Personal communication.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Be'ah (Oman Environmental Service Holding Company S.A.O.C). 2016. \"Transformation of Waste Management in Oman.\" Paper presented by M. al-Harthy at ISWA Energy Recovery WG meeting, West Palm Beach, Florida, May 25.",
+      "comments": "Food/organic reported as parks and biowaste; paper/cardboard includes paper (5 percent) and carton (10 percent) waste; glass includes glass and metals; other includes textile (6 percent) and other unspecified (18 percent) waste"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "entity_id": "SGP",
+    "entity_type": "country",
+    "profile_generation_timestamp_utc": "2025-05-12T17:20:03.708840+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.1-ProfileJSON_Granular",
+    "generation_mode": "granular_sections"
+  },
+  "waste_profile": {
+    "entity_name": "Singapore",
+    "country": "Singapore",
+    "iso3": "SGP",
+    "overall_summary": "Singapore, a highly urbanized city-state with limited land area, generated around 1.87 million tons of municipal solid waste in the year covered by the data. With a high GDP per capita and population density, waste generation is likely influenced by factors like commercial/industrial activity and packaging waste. Singapore has achieved 100% waste collection coverage and implemented a comprehensive waste management system focused on recycling (61%), incineration (37%), and landfilling (2%). Key infrastructure includes waste-to-energy plants and the Semakau offshore landfill nearing capacity. Singapore aims to become a 'zero-waste nation' through initiatives like the 'Towards Zero Waste' plan and has national laws/agencies governing waste management.",
+    "generation_context": {
+      "scale_and_rate": "Singapore generated around 1.87 million tons of municipal solid waste in the year covered by the data, with a high GDP per capita of over $97,000 USD. The per capita waste generation rate is not directly stated but can be calculated as around 0.33 tons per person per year based on the total population. Some reports suggest Singapore's overall waste generation and recycling rates increased in 2021 as economic activity picked up after the COVID-19 pandemic.",
+      "contributing_factors_trends": "As a highly urbanized city-state with limited land area, Singapore's waste generation is likely influenced by factors such as population density, tourism, and commercial/industrial activity. The data shows a relatively high percentage of waste coming from non-organic materials like metals, plastics, and paper/cardboard, indicating impacts from packaging, construction, and other urban waste streams. With no specific information on recent trends, population and economic growth may be contributing to gradually increasing waste volumes over time."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream composition in Singapore is predominantly organic (10.51%), followed by metal (19.12%), paper/cardboard (14.86%), plastic (10.58%), other (32.3%), wood (5.5%), rubber/leather (1.96%), glass (0.93%), and yard/garden green (4.26%).",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "According to the structured data, Singapore has 100% waste collection coverage for its total population. Some reports suggest that Singapore has a comprehensive and efficient waste collection system managed by the National Environment Agency (NEA). The collection methods likely involve formal sector services with door-to-door collection from households and businesses.",
+      "key_challenges": "No specific information found in sources regarding key challenges in waste collection and transport for Singapore."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the data, the dominant waste treatment methods in Singapore are recycling (61%), incineration (37%), and landfilling (2%). Some reports suggest Singapore has a comprehensive solid waste management infrastructure, including waste-to-energy incineration plants, a semakau offshore landfill, and an extensive recycling system.",
+      "infrastructure_highlights": "Key infrastructure highlighted includes the Semakau Landfill, which some reports indicate will run out of space by 2035 at the current rate, as well as waste-to-energy incineration plants that help reduce the need for landfilling by recovering energy from combustible waste.",
+      "key_challenges": "A major challenge appears to be the limited land area for waste disposal facilities like landfills, with the Semakau Landfill nearing capacity. Additionally, increasing waste generation rates as economic activity grows may strain existing infrastructure and require expansion of recycling, incineration, and other treatment methods."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Singapore has a recycling rate of 61% and an incineration rate of 37%. No specific targets were mentioned in the web findings.",
+      "programs_mentioned": "Some programs and initiatives mentioned in the web findings include the National Environment Agency's (NEA) 'Towards Zero Waste' initiative, the Sustainable and Resource Efficient Singapore plan, and various 3R (Reduce, Reuse, Recycle) programs. However, no specific details on these programs were provided.",
+      "informal_sector_role": "No specific information found in sources."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "Singapore has a national law and agency for waste management according to the structured data. Some reports suggest Singapore has implemented policies and plans to work towards becoming a 'zero-waste nation' and address rising waste disposal rates, as the Semakau Landfill is projected to run out of space by 2035. The National Environment Agency (NEA) is the national agency responsible for waste management policies and infrastructure.",
+      "governance_issues": "No specific information found in sources."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "100% waste collection coverage for total population",
+        "Comprehensive solid waste management infrastructure and system in place",
+        "High recycling rate of 61%",
+        "Waste-to-energy incineration helps reduce landfilling needs",
+        "National policies, laws, and agencies focused on sustainable waste management"
+      ],
+      "weaknesses_or_challenges": [
+        "Limited land area constrains expansion of landfill capacity",
+        "Semakau Landfill projected to run out of space by 2035",
+        "Increasing waste volumes from economic/population growth may strain existing infrastructure",
+        "Relatively high percentage of non-organic waste (e.g. plastics, metals) from urban waste streams"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 170,
+      "data_quality_score": 96.98
+    },
+    "web_finding_ids": [
+      130,
+      165,
+      166,
+      131,
+      163,
+      167,
+      170,
+      132,
+      181
+    ]
+  }
+}

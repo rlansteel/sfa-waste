@@ -1,0 +1,511 @@
+2025-05-12 11:17:53,674 - INFO - SFA_ContentAnalyzer - [main:261] - Nivel de logging: DEBUG
+2025-05-12 11:17:53,674 - INFO - SFA_ContentAnalyzer - Nivel de logging: DEBUG
+2025-05-12 11:17:53,699 - INFO - SFA_ContentAnalyzer - [create_db_connection:55] - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:17:53,699 - INFO - SFA_ContentAnalyzer - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:17:53,700 - INFO - SFA_ContentAnalyzer - [create_db_connection:62] - Conexión a BD establecida.
+2025-05-12 11:17:53,700 - INFO - SFA_ContentAnalyzer - Conexión a BD establecida.
+2025-05-12 11:17:53,700 - INFO - SFA_ContentAnalyzer - [main:282] - --- Iniciando Análisis de Contenido para país DNK (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:17:53,700 - INFO - SFA_ContentAnalyzer - --- Iniciando Análisis de Contenido para país DNK (Modelo: claude-3-haiku-20240307, Límite Total: Ninguno) ---
+2025-05-12 11:17:53,700 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: DNK (límite: 10)...
+2025-05-12 11:17:53,700 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: DNK (límite: 10)...
+2025-05-12 11:17:53,700 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['DNK', 'DNK', 10]
+2025-05-12 11:17:53,700 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['DNK', 'DNK', 10]
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - Seleccionados 10 hallazgos pendientes de análisis.
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 10 hallazgos...
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - Procesando lote de 10 hallazgos...
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 183 (URL: https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2)
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 183 (URL: https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2)
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2 (Intento 1)...
+2025-05-12 11:17:53,703 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2 (Intento 1)...
+2025-05-12 11:17:55,313 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:55,323 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2: {
+  "relevance_score": 80,
+  "justification": "The content snippet mentions municipal solid waste composition in Denmark, which is directly relevant to understanding MSW management aspects for the country.",
+  "keywords": ["municipal solid waste", "composition", "resources", "consumption"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:55,323 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2: {
+  "relevance_score": 80,
+  "justification": "The content snippet mentions municipal solid waste composition in Denmark, which is directly relevant to understanding MSW management aspects for the country.",
+  "keywords": ["municipal solid waste", "composition", "resources", "consumption"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:55,323 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2: Score=80
+2025-05-12 11:17:55,323 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://orbit.dtu.dk/en/publications/composition-of-municipal-solid-waste-in-denmark-2: Score=80
+2025-05-12 11:17:55,323 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 183 con measurement 1039 (country)
+2025-05-12 11:17:55,323 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 183 con measurement 1039 (country)
+2025-05-12 11:17:55,335 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=183 y measurement_id=1039 (type=country).
+2025-05-12 11:17:55,336 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 183 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:55,336 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 183 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:55,541 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 184 (URL: https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark)
+2025-05-12 11:17:55,541 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 184 (URL: https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark)
+2025-05-12 11:17:55,541 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark (Intento 1)...
+2025-05-12 11:17:55,541 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark (Intento 1)...
+2025-05-12 11:17:57,110 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:57,112 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific information about the composition of municipal solid waste in Denmark, which is highly relevant for understanding municipal solid waste management in the country.",
+  "keywords": ["municipal solid waste", "waste composition", "Denmark"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:57,112 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific information about the composition of municipal solid waste in Denmark, which is highly relevant for understanding municipal solid waste management in the country.",
+  "keywords": ["municipal solid waste", "waste composition", "Denmark"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:57,112 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark: Score=80
+2025-05-12 11:17:57,112 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://orbit.dtu.dk/en/projects/composition-of-municipal-solid-waste-in-denmark: Score=80
+2025-05-12 11:17:57,112 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 184 con measurement 1039 (country)
+2025-05-12 11:17:57,112 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 184 con measurement 1039 (country)
+2025-05-12 11:17:57,115 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=184 y measurement_id=1039 (type=country).
+2025-05-12 11:17:57,115 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 184 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:57,115 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 184 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:17:57,321 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 185 (URL: https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649)
+2025-05-12 11:17:57,321 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 185 (URL: https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649)
+2025-05-12 11:17:57,321 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649 (Intento 1)...
+2025-05-12 11:17:57,321 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649 (Intento 1)...
+2025-05-12 11:17:58,397 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:58,398 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649: {
+  "relevance_score": 85,
+  "justification": "The content snippet provides specific information on the composition of municipal solid waste in Denmark, which is highly relevant for understanding the municipal solid waste management aspects of the country.",
+  "keywords": ["municipal solid waste", "waste composition", "Denmark"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:58,398 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649: {
+  "relevance_score": 85,
+  "justification": "The content snippet provides specific information on the composition of municipal solid waste in Denmark, which is highly relevant for understanding the municipal solid waste management aspects of the country.",
+  "keywords": ["municipal solid waste", "waste composition", "Denmark"],
+  "mentions_entity": true
+}
+2025-05-12 11:17:58,399 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649: Score=85
+2025-05-12 11:17:58,399 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.semanticscholar.org/paper/Composition-of-municipal-solid-waste-in-Denmark-of-Edjabou/8ef029d8db8c9ae7a3efd18ba02f2c75fa6dc649: Score=85
+2025-05-12 11:17:58,399 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 185 con measurement 1039 (country)
+2025-05-12 11:17:58,399 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 185 con measurement 1039 (country)
+2025-05-12 11:17:58,401 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=185 y measurement_id=1039 (type=country).
+2025-05-12 11:17:58,401 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 185 preparada para actualizar (Status: evaluated_relevant, Score: 85).
+2025-05-12 11:17:58,401 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 185 preparada para actualizar (Status: evaluated_relevant, Score: 85).
+2025-05-12 11:17:58,607 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 210 (URL: https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics)
+2025-05-12 11:17:58,607 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 210 (URL: https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics)
+2025-05-12 11:17:58,612 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics (Intento 1)...
+2025-05-12 11:17:58,612 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics (Intento 1)...
+2025-05-12 11:17:59,917 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:17:59,919 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Denmark. It provides general information about waste generation and treatment statistics in Europe, but does not mention Denmark or provide any details about its MSW system.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:59,919 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Denmark. It provides general information about waste generation and treatment statistics in Europe, but does not mention Denmark or provide any details about its MSW system.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:17:59,919 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics: Score=30
+2025-05-12 11:17:59,919 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-statistics: Score=30
+2025-05-12 11:17:59,919 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 210 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:17:59,919 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 210 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:00,124 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 211 (URL: https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste)
+2025-05-12 11:18:00,124 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 211 (URL: https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste)
+2025-05-12 11:18:00,124 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste (Intento 1)...
+2025-05-12 11:18:00,124 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste (Intento 1)...
+2025-05-12 11:18:01,294 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:01,295 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not contain any specific information about municipal solid waste management in Denmark. It provides general information about waste generation data at the European level, but does not go into details about Denmark's waste management practices, policies, or challenges.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:01,295 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste: {
+  "relevance_score": 40,
+  "justification": "The content snippet does not contain any specific information about municipal solid waste management in Denmark. It provides general information about waste generation data at the European level, but does not go into details about Denmark's waste management practices, policies, or challenges.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:01,295 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste: Score=40
+2025-05-12 11:18:01,295 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/data-and-maps/data/external/generation-of-waste-by-waste: Score=40
+2025-05-12 11:18:01,295 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 211 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:18:01,295 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 211 preparada para actualizar (Status: evaluated_irrelevant, Score: 40).
+2025-05-12 11:18:01,500 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 212 (URL: https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en)
+2025-05-12 11:18:01,500 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 212 (URL: https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en)
+2025-05-12 11:18:01,501 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en (Intento 1)...
+2025-05-12 11:18:01,501 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en (Intento 1)...
+2025-05-12 11:18:02,505 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:02,507 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en: {
+  "relevance_score": 60,
+  "justification": "The content snippet provides some general information about waste generation by category and NACE activity, but does not specifically mention Denmark or provide details about municipal solid waste management in Denmark.",
+  "keywords": ["waste generation", "waste category", "NACE activity"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:02,507 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en: {
+  "relevance_score": 60,
+  "justification": "The content snippet provides some general information about waste generation by category and NACE activity, but does not specifically mention Denmark or provide details about municipal solid waste management in Denmark.",
+  "keywords": ["waste generation", "waste category", "NACE activity"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:02,507 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en: Score=60
+2025-05-12 11:18:02,507 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://data.europa.eu/data/datasets/5xkbv10t6va8j1gkuva25q?locale=en: Score=60
+2025-05-12 11:18:02,508 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 212 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:18:02,508 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 212 preparada para actualizar (Status: evaluated_irrelevant, Score: 60).
+2025-05-12 11:18:02,713 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 225 (URL: https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file)
+2025-05-12 11:18:02,713 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 225 (URL: https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file)
+2025-05-12 11:18:02,713 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file (Intento 1)...
+2025-05-12 11:18:02,713 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file (Intento 1)...
+2025-05-12 11:18:04,481 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:04,482 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed and relevant information on various aspects of municipal solid waste management in Denmark, including waste generation trends, recycling rates, and policy targets.",
+  "keywords": ["waste generation", "recycling rate", "municipal waste", "packaging waste", "landfill", "waste prevention", "waste treatment"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:04,482 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed and relevant information on various aspects of municipal solid waste management in Denmark, including waste generation trends, recycling rates, and policy targets.",
+  "keywords": ["waste generation", "recycling rate", "municipal waste", "packaging waste", "landfill", "waste prevention", "waste treatment"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:04,482 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file: Score=90
+2025-05-12 11:18:04,482 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/en/topics/in-depth/waste-and-recycling/municipal-and-packaging-waste-management-country-profiles-2025/dk-municipal-waste-factsheet.pdf/@@download/file: Score=90
+2025-05-12 11:18:04,482 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 225 con measurement 1053 (country)
+2025-05-12 11:18:04,482 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 225 con measurement 1053 (country)
+2025-05-12 11:18:04,485 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=225 y measurement_id=1053 (type=country).
+2025-05-12 11:18:04,485 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 225 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:04,485 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 225 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:04,689 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 226 (URL: https://symsites.eu/denmark-waste-management/)
+2025-05-12 11:18:04,689 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 226 (URL: https://symsites.eu/denmark-waste-management/)
+2025-05-12 11:18:04,690 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://symsites.eu/denmark-waste-management/ (Intento 1)...
+2025-05-12 11:18:04,690 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://symsites.eu/denmark-waste-management/ (Intento 1)...
+2025-05-12 11:18:06,547 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:06,548 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://symsites.eu/denmark-waste-management/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Denmark, including data on waste generation, collection, and treatment methods. It discusses the country's high reliance on waste incineration and the challenges it faces in transitioning to a more sustainable waste management system.",
+  "keywords": ["municipal solid waste", "waste generation", "waste incineration", "recycling", "landfilling", "path dependency"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:06,548 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://symsites.eu/denmark-waste-management/: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Denmark, including data on waste generation, collection, and treatment methods. It discusses the country's high reliance on waste incineration and the challenges it faces in transitioning to a more sustainable waste management system.",
+  "keywords": ["municipal solid waste", "waste generation", "waste incineration", "recycling", "landfilling", "path dependency"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:06,548 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://symsites.eu/denmark-waste-management/: Score=80
+2025-05-12 11:18:06,548 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://symsites.eu/denmark-waste-management/: Score=80
+2025-05-12 11:18:06,548 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 226 con measurement 1053 (country)
+2025-05-12 11:18:06,548 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 226 con measurement 1053 (country)
+2025-05-12 11:18:06,549 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=226 y measurement_id=1053 (type=country).
+2025-05-12 11:18:06,549 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 226 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:06,549 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 226 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:06,755 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 227 (URL: https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics)
+2025-05-12 11:18:06,755 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 227 (URL: https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics)
+2025-05-12 11:18:06,755 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics (Intento 1)...
+2025-05-12 11:18:06,755 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics (Intento 1)...
+2025-05-12 11:18:08,077 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:08,078 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on municipal waste statistics for the European Union as a whole, and does not provide any specific information about municipal solid waste management in Denmark.",
+  "keywords": ["municipal waste", "waste generation", "waste treatment", "recycling"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:08,078 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics: {
+  "relevance_score": 30,
+  "justification": "The content snippet is focused on municipal waste statistics for the European Union as a whole, and does not provide any specific information about municipal solid waste management in Denmark.",
+  "keywords": ["municipal waste", "waste generation", "waste treatment", "recycling"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:08,078 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics: Score=30
+2025-05-12 11:18:08,078 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://ec.europa.eu/eurostat/statistics-explained/index.php/Municipal_waste_statistics: Score=30
+2025-05-12 11:18:08,078 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 227 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:08,078 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 227 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:08,283 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 228 (URL: https://www.eea.europa.eu/publications/many-eu-member-states/denmark)
+2025-05-12 11:18:08,283 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 228 (URL: https://www.eea.europa.eu/publications/many-eu-member-states/denmark)
+2025-05-12 11:18:08,284 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/publications/many-eu-member-states/denmark (Intento 1)...
+2025-05-12 11:18:08,284 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/publications/many-eu-member-states/denmark (Intento 1)...
+2025-05-12 11:18:09,486 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:09,487 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/publications/many-eu-member-states/denmark: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Denmark, including data on waste generation, collection methods, treatment and disposal, as well as relevant policies and regulations. It covers multiple key aspects of MSW management for the country.",
+  "keywords": ["municipal waste", "recycling", "landfill", "incineration", "separate collection", "extended producer responsibility"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:09,487 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/publications/many-eu-member-states/denmark: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on municipal solid waste management in Denmark, including data on waste generation, collection methods, treatment and disposal, as well as relevant policies and regulations. It covers multiple key aspects of MSW management for the country.",
+  "keywords": ["municipal waste", "recycling", "landfill", "incineration", "separate collection", "extended producer responsibility"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:09,487 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/publications/many-eu-member-states/denmark: Score=90
+2025-05-12 11:18:09,487 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/publications/many-eu-member-states/denmark: Score=90
+2025-05-12 11:18:09,487 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 228 con measurement 1054 (country)
+2025-05-12 11:18:09,487 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 228 con measurement 1054 (country)
+2025-05-12 11:18:09,490 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=228 y measurement_id=1054 (type=country).
+2025-05-12 11:18:09,490 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 228 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:09,490 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 228 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:09,691 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:18:09,691 - INFO - SFA_ContentAnalyzer - Commit de 10 actualizaciones del lote realizado.
+2025-05-12 11:18:09,692 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: DNK (límite: 10)...
+2025-05-12 11:18:09,692 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: DNK (límite: 10)...
+2025-05-12 11:18:09,692 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['DNK', 'DNK', 10]
+2025-05-12 11:18:09,692 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['DNK', 'DNK', 10]
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 8 hallazgos pendientes de análisis.
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - Seleccionados 8 hallazgos pendientes de análisis.
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - [main:291] - Procesando lote de 8 hallazgos...
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - Procesando lote de 8 hallazgos...
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 229 (URL: https://cirkulaer.dk/files/media/document/big-data_final_report.pdf)
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 229 (URL: https://cirkulaer.dk/files/media/document/big-data_final_report.pdf)
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cirkulaer.dk/files/media/document/big-data_final_report.pdf (Intento 1)...
+2025-05-12 11:18:09,694 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://cirkulaer.dk/files/media/document/big-data_final_report.pdf (Intento 1)...
+2025-05-12 11:18:12,030 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:12,034 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://cirkulaer.dk/files/media/document/big-data_final_report.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about the challenges and opportunities associated with implementing big data analytics in Denmark's waste management sector. It mentions specific aspects like waste generation data, recycling rates, and the need for improved data collection and management systems.",
+  "keywords": ["waste generation", "recycling rate", "data collection", "data management", "big data"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:12,034 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://cirkulaer.dk/files/media/document/big-data_final_report.pdf: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides relevant information about the challenges and opportunities associated with implementing big data analytics in Denmark's waste management sector. It mentions specific aspects like waste generation data, recycling rates, and the need for improved data collection and management systems.",
+  "keywords": ["waste generation", "recycling rate", "data collection", "data management", "big data"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:12,034 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://cirkulaer.dk/files/media/document/big-data_final_report.pdf: Score=80
+2025-05-12 11:18:12,034 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://cirkulaer.dk/files/media/document/big-data_final_report.pdf: Score=80
+2025-05-12 11:18:12,034 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 229 con measurement 1054 (country)
+2025-05-12 11:18:12,034 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 229 con measurement 1054 (country)
+2025-05-12 11:18:12,037 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=229 y measurement_id=1054 (type=country).
+2025-05-12 11:18:12,038 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 229 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:12,038 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 229 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:12,243 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 230 (URL: https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste)
+2025-05-12 11:18:12,243 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 230 (URL: https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste)
+2025-05-12 11:18:12,243 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste (Intento 1)...
+2025-05-12 11:18:12,243 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste (Intento 1)...
+2025-05-12 11:18:13,358 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:13,359 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific data on municipal waste generation in Denmark, including total waste and waste composition. This information is highly relevant for understanding municipal solid waste management in Denmark.",
+  "keywords": ["municipal waste", "waste generation", "waste composition"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:13,359 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides specific data on municipal waste generation in Denmark, including total waste and waste composition. This information is highly relevant for understanding municipal solid waste management in Denmark.",
+  "keywords": ["municipal waste", "waste generation", "waste composition"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:13,359 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste: Score=80
+2025-05-12 11:18:13,359 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.ceicdata.com/en/denmark/environmental-municipal-waste-generation-oecd-member-annual/municipal-waste-generated-by-type-household-and-similar-waste: Score=80
+2025-05-12 11:18:13,359 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 230 con measurement 1054 (country)
+2025-05-12 11:18:13,359 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 230 con measurement 1054 (country)
+2025-05-12 11:18:13,360 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=230 y measurement_id=1054 (type=country).
+2025-05-12 11:18:13,360 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 230 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:13,360 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 230 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:13,565 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 255 (URL: https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management)
+2025-05-12 11:18:13,565 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 255 (URL: https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management)
+2025-05-12 11:18:13,565 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management (Intento 1)...
+2025-05-12 11:18:13,565 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management (Intento 1)...
+2025-05-12 11:18:15,246 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:15,246 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on various aspects of municipal solid waste management in Denmark, including waste generation data, recycling rates, landfilling, and environmental benefits. It covers key MSW management indicators and trends, making it highly relevant for understanding Denmark's MSW management.",
+  "keywords": ["municipal solid waste", "recycling", "landfilling", "waste generation", "environmental benefits"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:15,246 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management: {
+  "relevance_score": 90,
+  "justification": "The content snippet provides detailed information on various aspects of municipal solid waste management in Denmark, including waste generation data, recycling rates, landfilling, and environmental benefits. It covers key MSW management indicators and trends, making it highly relevant for understanding Denmark's MSW management.",
+  "keywords": ["municipal solid waste", "recycling", "landfilling", "waste generation", "environmental benefits"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:15,247 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management: Score=90
+2025-05-12 11:18:15,247 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.eea.europa.eu/publications/managing-municipal-solid-waste/denmark-municipal-waste-management: Score=90
+2025-05-12 11:18:15,247 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 255 con measurement 1063 (country)
+2025-05-12 11:18:15,247 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 255 con measurement 1063 (country)
+2025-05-12 11:18:15,247 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=255 y measurement_id=1063 (type=country).
+2025-05-12 11:18:15,248 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 255 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:15,248 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 255 preparada para actualizar (Status: evaluated_relevant, Score: 90).
+2025-05-12 11:18:15,453 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 256 (URL: https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en)
+2025-05-12 11:18:15,453 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 256 (URL: https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en)
+2025-05-12 11:18:15,453 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en (Intento 1)...
+2025-05-12 11:18:15,453 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en (Intento 1)...
+2025-05-12 11:18:16,960 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:16,962 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on Denmark's waste management strategy, including its focus on recycling, the composition of the working group analyzing the strategy, and some high-level recommendations. This suggests the content is highly relevant for understanding municipal solid waste management in Denmark.",
+  "keywords": ["recycling", "waste management strategy", "working group", "recommendations"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:16,962 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en: {
+  "relevance_score": 80,
+  "justification": "The content snippet provides detailed information on Denmark's waste management strategy, including its focus on recycling, the composition of the working group analyzing the strategy, and some high-level recommendations. This suggests the content is highly relevant for understanding municipal solid waste management in Denmark.",
+  "keywords": ["recycling", "waste management strategy", "working group", "recommendations"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:16,962 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en: Score=80
+2025-05-12 11:18:16,962 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://tekno.dk/project/the-danish-waste-management-strategy/?lang=en: Score=80
+2025-05-12 11:18:16,963 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 256 con measurement 1063 (country)
+2025-05-12 11:18:16,963 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 256 con measurement 1063 (country)
+2025-05-12 11:18:16,966 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=256 y measurement_id=1063 (type=country).
+2025-05-12 11:18:16,967 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 256 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:16,967 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 256 preparada para actualizar (Status: evaluated_relevant, Score: 80).
+2025-05-12 11:18:17,172 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 257 (URL: https://www.sciencedirect.com/science/article/pii/S0956053X16302835)
+2025-05-12 11:18:17,172 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 257 (URL: https://www.sciencedirect.com/science/article/pii/S0956053X16302835)
+2025-05-12 11:18:17,173 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sciencedirect.com/science/article/pii/S0956053X16302835 (Intento 1)...
+2025-05-12 11:18:17,173 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://www.sciencedirect.com/science/article/pii/S0956053X16302835 (Intento 1)...
+2025-05-12 11:18:18,776 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:18,777 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://www.sciencedirect.com/science/article/pii/S0956053X16302835: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about waste management in Denmark, including the abundance and distribution of engineered nanomaterials in different waste fractions. However, it lacks detailed data on overall municipal solid waste generation, collection, and treatment methods.",
+  "keywords": ["nano-enabled consumer products", "engineered nanomaterials", "waste fractions", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:18,777 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://www.sciencedirect.com/science/article/pii/S0956053X16302835: {
+  "relevance_score": 70,
+  "justification": "The content snippet provides some relevant information about waste management in Denmark, including the abundance and distribution of engineered nanomaterials in different waste fractions. However, it lacks detailed data on overall municipal solid waste generation, collection, and treatment methods.",
+  "keywords": ["nano-enabled consumer products", "engineered nanomaterials", "waste fractions", "waste management"],
+  "mentions_entity": true
+}
+2025-05-12 11:18:18,777 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://www.sciencedirect.com/science/article/pii/S0956053X16302835: Score=70
+2025-05-12 11:18:18,777 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://www.sciencedirect.com/science/article/pii/S0956053X16302835: Score=70
+2025-05-12 11:18:18,777 - DEBUG - SFA_ContentAnalyzer - [main:323] - Intentando enlazar finding 257 con measurement 1063 (country)
+2025-05-12 11:18:18,777 - DEBUG - SFA_ContentAnalyzer - Intentando enlazar finding 257 con measurement 1063 (country)
+2025-05-12 11:18:18,778 - INFO - SFA_ManageWebFindingsDB - Nuevo enlace creado entre finding_id=257 y measurement_id=1063 (type=country).
+2025-05-12 11:18:18,778 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 257 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:18,778 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 257 preparada para actualizar (Status: evaluated_relevant, Score: 70).
+2025-05-12 11:18:18,984 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 258 (URL: https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection)
+2025-05-12 11:18:18,984 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 258 (URL: https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection)
+2025-05-12 11:18:18,984 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection (Intento 1)...
+2025-05-12 11:18:18,984 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection (Intento 1)...
+2025-05-12 11:18:20,260 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:20,262 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection: {
+  "relevance_score": 25,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Copenhagen. It appears to be a generic factsheet on separate waste collection, without any details about the city.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:20,262 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection: {
+  "relevance_score": 25,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Copenhagen. It appears to be a generic factsheet on separate waste collection, without any details about the city.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:20,262 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection: Score=25
+2025-05-12 11:18:20,262 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://paperzz.com/doc/7204314/capital-factsheet-on-separate-collection: Score=25
+2025-05-12 11:18:20,264 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 258 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:18:20,264 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 258 preparada para actualizar (Status: evaluated_irrelevant, Score: 25).
+2025-05-12 11:18:20,464 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 259 (URL: https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/)
+2025-05-12 11:18:20,464 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 259 (URL: https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/)
+2025-05-12 11:18:20,465 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/ (Intento 1)...
+2025-05-12 11:18:20,465 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/ (Intento 1)...
+2025-05-12 11:18:21,560 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:21,562 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Copenhagen. It discusses the European Commission's recommendations for mandatory source-segregated collection of biowaste, but does not provide any details about Copenhagen's waste management practices or policies.",
+  "keywords": ["biowaste", "source segregation", "separate collection"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:21,562 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Copenhagen. It discusses the European Commission's recommendations for mandatory source-segregated collection of biowaste, but does not provide any details about Copenhagen's waste management practices or policies.",
+  "keywords": ["biowaste", "source segregation", "separate collection"],
+  "mentions_entity": false
+}
+2025-05-12 11:18:21,563 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/: Score=30
+2025-05-12 11:18:21,563 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://bbia.org.uk/european-commission-recommends-mandatory-source-segregated-collection-of-biowaste/: Score=30
+2025-05-12 11:18:21,563 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 259 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:21,563 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 259 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:21,768 - INFO - SFA_ContentAnalyzer - [main:300] - Analizando Finding ID: 260 (URL: https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search)
+2025-05-12 11:18:21,768 - INFO - SFA_ContentAnalyzer - Analizando Finding ID: 260 (URL: https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search)
+2025-05-12 11:18:21,769 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:173] - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search (Intento 1)...
+2025-05-12 11:18:21,769 - INFO - SFA_ContentAnalyzer - Llamando a LLM (claude-3-haiku-20240307) para evaluar https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search (Intento 1)...
+2025-05-12 11:18:22,713 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:18:22,714 - DEBUG - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:184] - Respuesta cruda del LLM para https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Copenhagen. It appears to be a general assessment of separate collection schemes across EU capital cities, without any details about Copenhagen.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:22,714 - DEBUG - SFA_ContentAnalyzer - Respuesta cruda del LLM para https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search: {
+  "relevance_score": 30,
+  "justification": "The content snippet does not contain any information specific to municipal solid waste management in Copenhagen. It appears to be a general assessment of separate collection schemes across EU capital cities, without any details about Copenhagen.",
+  "keywords": [],
+  "mentions_entity": false
+}
+2025-05-12 11:18:22,714 - INFO - SFA_ContentAnalyzer - [evaluate_relevance_with_llm:199] - Evaluación LLM para https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search: Score=30
+2025-05-12 11:18:22,714 - INFO - SFA_ContentAnalyzer - Evaluación LLM para https://op.europa.eu/en/publication-detail/-/publication/2c93de42-a2fa-11e5-b528-01aa75ed71a1/language-en/format-PDF/source-search: Score=30
+2025-05-12 11:18:22,715 - DEBUG - SFA_ContentAnalyzer - [update_finding_in_db:239] - Evaluación para finding_id 260 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:22,715 - DEBUG - SFA_ContentAnalyzer - Evaluación para finding_id 260 preparada para actualizar (Status: evaluated_irrelevant, Score: 30).
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - [main:338] - Commit de 8 actualizaciones del lote realizado.
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - Commit de 8 actualizaciones del lote realizado.
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:88] - Filtrando hallazgos para País ISO3: DNK (límite: 10)...
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - Filtrando hallazgos para País ISO3: DNK (límite: 10)...
+2025-05-12 11:18:22,922 - DEBUG - SFA_ContentAnalyzer - [select_findings_for_analysis:98] - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['DNK', 'DNK', 10]
+2025-05-12 11:18:22,922 - DEBUG - SFA_ContentAnalyzer - SQL para seleccionar hallazgos: SELECT wf.id AS finding_id, wf.entity_id, wf.entity_type, wf.seed_measurement_id,
+wf.finding_url, wf.title, wf.snippet_or_summary AS text_content,
+COALESCE(c.municipality, co.country_name, 'Unknown Entity') AS entity_name,
+COALESCE(c.country, co.country_name, 'Unknown Country Context') AS country_context
+FROM web_findings wf
+LEFT JOIN cities c ON wf.entity_id = c.id AND wf.entity_type = 'city'
+LEFT JOIN countries co ON wf.entity_id = co.id AND wf.entity_type = 'country'
+WHERE wf.processing_status = 'content_retrieved_pending_analysis'
+AND ( (wf.entity_type = 'city' AND c.iso3c = ?) OR (wf.entity_type = 'country' AND co.country_code_iso3 = ?) )
+ORDER BY wf.id LIMIT ? con params: ['DNK', 'DNK', 10]
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - [select_findings_for_analysis:105] - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - Seleccionados 0 hallazgos pendientes de análisis.
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - [main:288] - No hay más hallazgos pendientes de análisis para país DNK.
+2025-05-12 11:18:22,922 - INFO - SFA_ContentAnalyzer - No hay más hallazgos pendientes de análisis para país DNK.
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - [main:352] - Conexión a la base de datos cerrada.
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - Conexión a la base de datos cerrada.
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - [main:354] - --- Análisis de Contenido Completado para país DNK ---
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - --- Análisis de Contenido Completado para país DNK ---
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - [main:355] - Total procesados en esta ejecución: 18
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - Total procesados en esta ejecución: 18
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - [main:356] - Total marcados como relevantes (score >= 70): 11
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - Total marcados como relevantes (score >= 70): 11
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - [main:357] - Total de errores de evaluación LLM: 0
+2025-05-12 11:18:22,923 - INFO - SFA_ContentAnalyzer - Total de errores de evaluación LLM: 0

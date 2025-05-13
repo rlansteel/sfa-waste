@@ -1,0 +1,28 @@
+ℹ️ Conectando a la base de datos: output/waste_data.db
+✅ Conexión establecida y claves foráneas habilitadas.
+ℹ️ Creando/Verificando tablas...
+✅ Tablas verificadas/creadas.
+ℹ️ DIAGNÓSTICO: Total de países en tabla 'countries' después de la carga: 217
+ℹ️ Leyendo datos de ciudades desde: output/processed_cities_final.json
+✅ Leídos 65 registros de ciudades del JSON.
+⚠️ Claves JSON de ciudad ignoradas (no existen en tabla 'cities'): {'year', 'treatment_pct_landfill_status', 'composition_sum_pct_status',
+'original_wfd_id_status', 'collection_pct_formal_status', 'collection_pct_informal_status', 'waste_gen_rate_kg_cap_day_status', 
+'treatment_pct_recycling_composting_status', 'treatment_pct_thermal_status', 'year_status'}
+ℹ️ Iniciando UPSERT en tabla 'cities' (Columnas: ['collection_pct_formal', 'collection_pct_informal', 'composition_food_organic', 
+'composition_food_organic_status', 'composition_glass', 'composition_glass_status', 'composition_metal', 'composition_metal_status', 
+'composition_other', 'composition_other_status', 'composition_paper_cardboard', 'composition_paper_cardboard_status', 
+'composition_plastic', 'composition_plastic_status', 'composition_sum_flag', 'composition_sum_pct', 'country', 'iso3c', 'municipality', 
+'original_wfd_id', 'population', 'population_status', 'treatment_pct_landfill', 'treatment_pct_recycling_composting', 
+'treatment_pct_thermal', 'waste_gen_rate_kg_cap_day'])...
+✅ UPSERT/IGNORE en tabla 'cities' completado.
+ℹ️ Registros procesados (insertados o actualizados): 65
+ℹ️ DIAGNÓSTICO: Total de ciudades en tabla 'cities' después de la operación: 431
+ℹ️ Iniciando fetch_city_id_map...
+✅ Mapa de 431 IDs de ciudades creado a partir de 431 filas procesadas.
+ℹ️ Leyendo datos del codebook de ciudades desde: output/processed_measurements_final.json
+✅ Leídos 6534 registros del codebook de ciudades JSON.
+ℹ️ Iniciando INSERT OR IGNORE en tabla 'city_measurements' (Columnas: ['city_id', 'comments', 'measurement', 'source', 'units', 
+'value_text', 'year'])...
+✅ Inserción en tabla 'city_measurements' completada.
+ℹ️ Registros insertados: 6534
+ℹ️ Conexión a la base de datos 'output/waste_data.db' cerrada.

@@ -1,0 +1,236 @@
+{
+  "id": 22,
+  "country_code_iso3": "BIH",
+  "country_name": "Bosnia and Herzegovina",
+  "region": "ECS",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 12671.00781,
+  "population_total": 3535961.0,
+  "total_msw_generated_tons_year": 1248718.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 0.00097,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 41.75,
+  "waste_treatment_sanitary_landfill_percent": 24.12,
+  "waste_treatment_controlled_landfill_percent": 8.55,
+  "national_law_exists": "No",
+  "national_agency_exists": "No",
+  "e_waste_tons_year": 1409.0,
+  "hazardous_waste_tons_year": 8408.0,
+  "composition_food_organic": null,
+  "composition_glass": null,
+  "composition_metal": null,
+  "composition_paper_cardboard": 4.9,
+  "composition_plastic": null,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": 2.4,
+  "composition_other": 92.7,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "missing_unimputed",
+  "composition_glass_status": "missing_unimputed",
+  "composition_metal_status": "missing_unimputed",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "missing_unimputed",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"3/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 3/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_other_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20. http://www.bhas.ba/saopstenja/2016/KOM_2015_001_01_BA.pdf.",
+      "comments": "Paper/cardboard represents separately collected waste; other includes mixed municipal (90.9 percent) and packaging (1.8 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20. http://www.bhas.ba/saopstenja/2016/KOM_2015_001_01_BA.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20. http://www.bhas.ba/saopstenja/2016/KOM_2015_001_01_BA.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Bosnia and Herzegovina. 2014. \"First release: Generated construction and demolition waste.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina. 2014. \"First release: Waste from production activities. Agency for Statistics.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Bosnia and Herzegovina. 2014. \"First release: Waste from production activities. Agency for Statistics.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Bosnia and Herzegovina. 2014. \"First release: Waste from production activities. Agency for Statistics.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2009,
+      "source": "Bosnia and Herzegovina. 2012. State of the Environment Report. p. 108",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20. http://www.bhas.ba/saopstenja/2016/KOM_2015_001_01_BA.pdf.",
+      "comments": "6; and percent of population using municipal services across various municipalities"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20. http://www.bhas.ba/saopstenja/2016/KOM_2015_001_01_BA.pdf.",
+      "comments": "Paper/cardboard represents separately collected waste; other includes mixed municipal (90.9 percent) and packaging (1.8 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bosnia and Herzegovina, BHAS (Agency for Statistics of Bosnia and Herzegovina). 2016. \"First Release: Environment—Public Transportation and Disposal of Municipal Waste.\" Agency for Statistics of Bosnia and Herzegovina (BHAS), Bosnia and Herzegovina. Sarajevo, October 20.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "CLF: Reported as controlled landfill because there is no landfill gas management; Other: Refers to uncollected waste"
+    }
+  ],
+  "ai_profile_data": {}
+}

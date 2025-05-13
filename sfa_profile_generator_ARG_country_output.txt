@@ -1,0 +1,54 @@
+2025-05-12 11:44:50,103 - INFO - SFA_ProfileGenerator - Conectando a la base de datos: output/db/waste_data_clean.db
+2025-05-12 11:44:50,105 - INFO - SFA_ProfileGenerator - Conexión a BD establecida.
+2025-05-12 11:44:50,105 - INFO - SFA_ProfileGenerator - Buscando datos base para country con identificador: ARG
+2025-05-12 11:44:50,106 - INFO - SFA_ProfileGenerator - Datos base encontrados para country ARG.
+2025-05-12 11:44:50,106 - INFO - SFA_ProfileGenerator - Buscando hallazgos web relevantes para country_id: 7
+2025-05-12 11:44:50,108 - INFO - SFA_ProfileGenerator - Encontrados 6 hallazgos web relevantes.
+╭────────────────────────────────────────────── Prompt Enviado a LLM (Generación Perfil) ───────────────────────────────────────────────╮
+│ You are an expert environmental analyst tasked with synthesizing information to create a structured waste management profile for      │
+│ **Argentina, Argentina**.                                                                                                             │
+│                                                                                                                                       │
+│ Use the provided structured data from our database and the relevant web findings (snippets/summaries) to generate a comprehensive     │
+│ profile. Focus on **synthesis and analysis**, connecting information from both sources where possible, rather than just listing       │
+│ facts.                                                                                                                                │
+│                                                                                                                                       │
+│ **1. Structured Database Data (Key Fields):**                                                                                         │
+│ ```json                                                                                                                               │
+│ {                                                                                                                                     │
+│   "country_code_iso3": "ARG",                                                                                                         │
+│   "country_name": "Argentina",                                                                                                        │
+│   "region": "LCN",                                                                                                                    │
+│   "income_group_wb": "HIC",                                                                                                           │
+│   "gdp_per_capita_usd": 23550.09961,                                                                                                  │
+│   "population_total": 42981516.0,                                                                                                     │
+│   "total_msw_generated_tons_year": 17910550.0,                                                                                        │
+│   "waste_collection_coverage_total_percent_of_population": 89.91,                                                                     │
+│   "waste_treatment_recycling_percent": 6.0,                                                                                           │
+│   "waste_treatment_open_dump_percent": 22.6,                                                                                          │
+│   "waste_treatment_sanitary_landfill_percent": 62.5,                                                                                  │
+│   "waste_treatment_controlled_landfill_percent": 8.9,                                                                                 │
+│   "national_law_exists": "Yes",                                                                                                       │
+│   "e_waste_tons_year": 291700.0,                                                                                                      │
+│   "hazardous_waste_tons_year": 310044.0,                                                                                              │
+│   "composition_food_organic": 38.74,                                                                                                  │
+│   "composition_glass": 3.16,                                                                                                          │
+│   "composition_metal": 1.84,                                                                                                          │
+│   "composition_paper_cardboard": 13.96,                                                                                               │
+│   "composition_plastic": 14.61,                                                                                                       │
+│   "composition_rubber_leather": 1.26,                                                                                                 │
+│   "composition_wood": 1.09,                                                                                                           │
+│   "composition_yard_garden_green": 9.95,                                                                                              │
+│   "composition_other": 15.36,                                                                                                         │
+│   "latitude": -31.2526068,                                                                                                            │
+│   "longitude": -64.2465659,                                                                                                           │
+│   "data_quality_score": 100.0,                                                                                                        │
+│   "data_quality_summary": "Resumen C\u...                                                                                             │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+2025-05-12 11:44:50,109 - INFO - SFA_ProfileGenerator - Llamando a LLM (claude-3-sonnet-20240229) para generar perfil (Intento 1)...
+/Users/rafaellang/Library/Mobile Documents/com~apple~CloudDocs/Python/sfa_waste/sfa_profile_generator.py:249: DeprecationWarning: The model 'claude-3-sonnet-20240229' is deprecated and will reach end-of-life on July 21st, 2025.
+Please migrate to a newer model. Visit https://docs.anthropic.com/en/docs/resources/model-deprecations for more information.
+  message = llm_client.messages.create(
+2025-05-12 11:45:04,323 - INFO - httpx - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-12 11:45:04,336 - INFO - SFA_ProfileGenerator - Perfil JSON generado y parseado exitosamente.
+2025-05-12 11:45:04,337 - INFO - SFA_ProfileGenerator - Perfil JSON guardado exitosamente en: output/profiles_sfa3_refined/argentina_country_profile.json
+2025-05-12 11:45:04,338 - INFO - SFA_ProfileGenerator - Conexión a la base de datos cerrada.

@@ -1,0 +1,200 @@
+{
+  "id": 149,
+  "country_code_iso3": "NZL",
+  "country_name": "New Zealand",
+  "region": "EAS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 41857.47656,
+  "population_total": 4692700.0,
+  "total_msw_generated_tons_year": 3405000.0,
+  "waste_collection_coverage_total_percent_of_population": 97.0,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": 100.0,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 95000.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 28.0,
+  "composition_glass": 4.0,
+  "composition_metal": 4.5,
+  "composition_paper_cardboard": 7.0,
+  "composition_plastic": 8.0,
+  "composition_rubber_leather": 1.0,
+  "composition_wood": 11.0,
+  "composition_yard_garden_green": null,
+  "composition_other": 37.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.5, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.5, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "Metal includes ferrous (4 percent) and non-ferrous (0.5 percent) metal waste; rubber/leather includes rubber waste only; other includes disposable diapers and sanitary waste (3 percent), rubble (16 percent), textile (4 percent), and potentially hazardous (14 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2014. \"New Zealand Non-Municipal Landfill Database.\" Tonkin and Taylor Ltd. January. TandT Ref: 29310/ ver5.",
+      "comments": "CandD waste reported as over 3 million tonnes/year; AW calculated based on the amount produced from dairy, livestock, arable, viticulture, and small farms"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 1997,
+      "source": "New Zealand, MFE (Ministry for the Environment). n.d. \"Waste generation and disposal in New Zealand.\" In The State of New Zealand's Environment 1997, chapter 3: Production and Consumption Patterns. http://www.mfe.govt.nz/publications/environmental-reporting/state-new-zealand%E2%80%99s-environment-1997-chapter-three-production-3.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_industrial_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2000,
+      "source": "IPCC (Intergovernmental Panel on Climate Change). 2006. \"2006 IPCC Guidelines for National Greenhouse Gas Inventories.\" Volume 5: Waste. Chapter 2: Waste Generation, Composition and Management Data. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "OECD (Organisation for Economic Co-operation and Development). 2018. \"Municipal waste, Generation and Treatment.\" OECD.Stat, Organisation for Economic Co-operation and Development (OECD). https://stats.oecd.org/Index.aspx?DataSetCode=MUNW. March 2018.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2006,
+      "source": "Stats NZ. 2008. \"Measuring New Zealand's Progress Using a Sustainable Development Approach: 2008.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2006,
+      "source": "Stats NZ. 2008. \"Measuring New Zealand's Progress Using a Sustainable Development Approach: 2008.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2006,
+      "source": "Stats NZ. 2008. \"Measuring New Zealand's Progress Using a Sustainable Development Approach: 2008.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2006,
+      "source": "Stats NZ. 2008. \"Measuring New Zealand's Progress Using a Sustainable Development Approach: 2008.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "UNSD (United Nations Statistics Division). 2016b. \"Environmental Indicators: Waste. Municipal Waste Treated.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2008,
+      "source": "New Zealand, MFE (Ministry for the Environment). 2009. \"Environmental Report Card: Solid Waste Composition.\" Ministry for the Environment (MFE), Government of New Zealand. July.",
+      "comments": "Metal includes ferrous (4 percent) and non-ferrous (0.5 percent) metal waste; rubber/leather includes rubber waste only; other includes disposable diapers and sanitary waste (3 percent), rubble (16 percent), textile (4 percent), and potentially hazardous (14 percent) waste"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": 81,
+  "country_code_iso3": "GUM",
+  "country_name": "Guam",
+  "region": "EAS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 59074.94141,
+  "population_total": 159973.0,
+  "total_msw_generated_tons_year": 141500.0,
+  "waste_collection_coverage_total_percent_of_population": 100.0,
+  "waste_treatment_recycling_percent": 17.85,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": 64.0,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": null,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 27.3,
+  "composition_glass": 4.6,
+  "composition_metal": 9.0,
+  "composition_paper_cardboard": 28.5,
+  "composition_plastic": 12.4,
+  "composition_rubber_leather": 3.1,
+  "composition_wood": 6.4,
+  "composition_yard_garden_green": null,
+  "composition_other": 8.7,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "missing_unimputed",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 73.62,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 300.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.62, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 300.0 / 407.51 => Normalizado: 73.62\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "9; other includes textile (5.3 percent) and other unspecified (3.4 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Guam. 2013a. \"Volume I: Guam Zero Waste Plan. Reaching for Zero: A Blueprint for Zero Waste in Guam.\" Government of Guam. June.",
+      "comments": "8 (Reported as a range of 129,000-154,000 tonnes/year (average used))"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2016,
+      "source": "SPREP (Secretariat of the Pacific Regional Environment Programme). 2016. \"Cleaner Pacific 2025: Pacific Regional Waste and Pollution Management Strategy, 2016–2025.\" Secretariat of the Pacific Regional Environment Programme, Apia, Samoa. https://sustainabledevelopment.un.org/content/documents/commitments/1326_7636_commitment_cleaner-pacific-strategy-2025.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2012,
+      "source": "Guam. 2013b. \"Volume 2: Guam Zero Waste Plan. Reaching for Zero: Technical Memoranda and White Papers.\" Government of Guam. June. https://issuu.com/guamepa/docs/guam_zero_waste_plan__final__-_volu_5a845ef47a1857.",
+      "comments": "9; other includes textile (5.3 percent) and other unspecified (3.4 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Guam. 2013a. \"Volume I: Guam Zero Waste Plan. Reaching for Zero: A Blueprint for Zero Waste in Guam.\" Government of Guam. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Guam. 2013a. \"Volume I: Guam Zero Waste Plan. Reaching for Zero: A Blueprint for Zero Waste in Guam.\" Government of Guam. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "SLF: Calculated based on amount disposed in Layon Landfill and amount of waste generated"
+    }
+  ],
+  "ai_profile_data": {}
+}

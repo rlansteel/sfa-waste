@@ -1,0 +1,173 @@
+{
+  "id": 199,
+  "country_code_iso3": "TWN",
+  "country_name": "nan",
+  "region": "EAS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 57362.92578,
+  "population_total": 23434000.0,
+  "total_msw_generated_tons_year": 7336000.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": 64.2,
+  "waste_treatment_landfill_unspecified_percent": 34.8,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 14036.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 23.34,
+  "composition_glass": 4.11,
+  "composition_metal": 3.07,
+  "composition_paper_cardboard": 30.01,
+  "composition_plastic": 20.23,
+  "composition_rubber_leather": 0.6,
+  "composition_wood": null,
+  "composition_yard_garden_green": 4.43,
+  "composition_other": 14.11,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_invalid_name",
+  "longitude_geo_status": "error_invalid_name",
+  "data_quality_score": 64.66,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 99.9, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 15, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 10.5, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 15, \"measurements_with_source\": 15, \"measurements_with_comments\": 15, \"raw_score\": 263.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.66, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 225.0 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing; waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 99.9, Presentes: 8/9): 0.0 pts.\\n- Mediciones (15 \\u00fanicas): Disp=28.0, Detalle/Rec=10.5 pts.\\n-> Puntaje Bruto: 263.5 / 407.51 => Normalizado: 64.66\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "tonnes/year",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "Other includes textile (3.65 percent), ceramics/china (0.48 percent), stone/sand (0.98 percent), and other unspecified (9 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2003,
+      "source": "Song, Qingbin, Jinhui Li, and Xianlai Zeng. 2014. \"Minimizing the increasing solid waste through zero waste strategy.\" Journal of Cleaner Production 104 (2015) 199-210.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Chen, K. 2016. \"Taiwan: The World's Geniuses of Garbage Disposal.\" Wall Street Journal, May 17. https://www.wsj.com/articles/taiwan-the-worlds-geniuses-of-garbage-disposal-1463519134.",
+      "comments": "28 percent of total waste (26,200,000 tonnes/year) comprises MSW; remaining is industrial waste"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "tonnes/year",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2002,
+      "source": "Tsai W.T. and Y.H. Chou. 2006. \"An overview of renewable energy utilization from municipal solid waste (MSW) incineration in Taiwan.\" Renewable and Sustainable Energy Reviews 10 (2006) 491–502. doi:10.1016/j.rser.2004.09.006.",
+      "comments": "Other includes textile (3.65 percent), ceramics/china (0.48 percent), stone/sand (0.98 percent), and other unspecified (9 percent) waste"
+    }
+  ],
+  "ai_profile_data": {}
+}

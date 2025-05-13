@@ -1,0 +1,193 @@
+{
+  "id": 55,
+  "country_code_iso3": "DOM",
+  "country_name": "Dominican Republic",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 15328.35254,
+  "population_total": 10528394.0,
+  "total_msw_generated_tons_year": 4063910.0,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 8.2,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 72.5758314,
+  "waste_treatment_sanitary_landfill_percent": 0.1,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "No",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 57000.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 51.0,
+  "composition_glass": 6.0,
+  "composition_metal": 3.0,
+  "composition_paper_cardboard": 16.0,
+  "composition_plastic": 10.0,
+  "composition_rubber_leather": null,
+  "composition_wood": 4.0,
+  "composition_yard_garden_green": null,
+  "composition_other": 10.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 64.42,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"7/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 262.5, \"max_potential_score\": 407.51, \"final_normalized_score\": 64.42, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 7/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 262.5 / 407.51 => Normalizado: 64.42\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "Other includes textile (4 percent), tetrapack (2 percent), disposable diapers (1 percent), and other unspecified (3 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "GSMA. 2015. \"eWaste in Latin America: Statistical analysis and policy recommendations.\" GSMA and UNU-IAS (United Nations University Institute for the Advanced Study of Sustainability). November.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Dominican Republic, Ministry of the Environment and Natural Resources. 2017. \"Policy for Integrated Municipal Solid Waste Management\" [\"Política para la Gestión Integral de los Residuos Sólidos Municipales\"]. Draft report. Ministry of the Environment and Natural Resources [Ministerio de Medio Ambiente y Recursos Naturales], Government of the Dominican Republic.",
+      "comments": "8 (11,134 tonnes/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2010,
+      "source": "Dominican Republic, Ministry of Economy Planning and Development. 2012. \"IX National Population and Housing Census 2010: Characteristics of Housing and Household\". National Statistics Office. [Ministerio de Economía Planificación y Desarrollo - OFICINA NACIONAL DE ESTADÍSTICA - Santo Domingo. \"IX Censo Nacional de Población y Vivienda 2010: Características de la Vivienda y del Hogar- Volumen II\"]. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of households",
+      "year": 2010,
+      "source": "Dominican Republic, Ministry of Economy Planning and Development. 2012. \"IX National Population and Housing Census 2010: Characteristics of Housing and Household\". National Statistics Office. [Ministerio de Economía Planificación y Desarrollo - OFICINA NACIONAL DE ESTADÍSTICA - Santo Domingo. \"IX Censo Nacional de Población y Vivienda 2010: Características de la Vivienda y del Hogar- Volumen II\"]. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of households",
+      "year": 2010,
+      "source": "Dominican Republic, Ministry of Economy Planning and Development. 2012. \"IX National Population and Housing Census 2010: Characteristics of Housing and Household\". National Statistics Office. [Ministerio de Economía Planificación y Desarrollo - OFICINA NACIONAL DE ESTADÍSTICA - Santo Domingo. \"IX Censo Nacional de Población y Vivienda 2010: Características de la Vivienda y del Hogar- Volumen II\"]. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2010,
+      "source": "Dominican Republic, Ministry of Economy Planning and Development. 2012. \"IX National Population and Housing Census 2010: Characteristics of Housing and Household\". National Statistics Office. [Ministerio de Economía Planificación y Desarrollo - OFICINA NACIONAL DE ESTADÍSTICA - Santo Domingo. \"IX Censo Nacional de Población y Vivienda 2010: Características de la Vivienda y del Hogar- Volumen II\"]. ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Dominican Republic, Ministry of Environment and Natural Resources. 2014. \"Policy for the Integral Management of Municipal Solid Waste\" [República Dominicana, Ministerio de Medio Ambiente y Recursos Naturales. 2014. \"Politica para la Gestion Integral de los Residuos Solidos Municipales\"]. ISBN: 978-9945-8885-3-9.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "CEDAF (Center for Agricultural and Forest Development). 2015. \"The 3Rs: Reduce, Reuse, Recycle\" [\"Las 3Rs: Reducir, Reusar, Reciclar\"]. Center for Agricultural and Forest Development [Centro para el Desarrollo Agropecuario y Forestal (CEDAF)]. Santo Domingo.",
+      "comments": "Other includes textile (4 percent), tetrapack (2 percent), disposable diapers (1 percent), and other unspecified (3 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Dominican Republic, Ministry of Environment and Natural Resources. 2014. \"Policy for the Integral Management of Municipal Solid Waste\" [República Dominicana, Ministerio de Medio Ambiente y Recursos Naturales. 2014. \"Politica para la Gestion Integral de los Residuos Solidos Municipales\"]. ISBN: 978-9945-8885-3-9.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Dominican Republic, Ministry of Environment and Natural Resources and Ministry of Economy. 2017. Personal communication through interviews.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "nan",
+      "comments": "OD: Calculated based on the sum of other treatment/disposal options subtracted from total waste generated; SLF: 16; Estimated based on the amount of waste taken to one sanitary landfill in Las Placetas, San Jose de las Matas; RE: Includes all exported recyclables (metals, paper, carton, plastics, and glass); does not include items recycled in country; Other: Calculated based on the amount of waste from HH without collection services compared to total waste generation"
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "id": 54,
+  "country_code_iso3": "DNK",
+  "country_name": "Denmark",
+  "region": "ECS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 57821.19922,
+  "population_total": 5818553.0,
+  "total_msw_generated_tons_year": 4910858.5,
+  "waste_collection_coverage_total_percent_of_population": null,
+  "waste_treatment_recycling_percent": 27.27,
+  "waste_treatment_compost_percent": 18.99,
+  "waste_treatment_incineration_percent": 52.59,
+  "waste_treatment_landfill_unspecified_percent": 1.13,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 168614.0,
+  "hazardous_waste_tons_year": 1718394.0,
+  "composition_food_organic": 12.78,
+  "composition_glass": 5.78,
+  "composition_metal": 6.29,
+  "composition_paper_cardboard": 11.57,
+  "composition_plastic": 1.61,
+  "composition_rubber_leather": 0.0,
+  "composition_wood": 7.65,
+  "composition_yard_garden_green": 30.46,
+  "composition_other": 23.86,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "missing_unimputed",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 88.44,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 0.0, \"waste_collection_coverage_total_percent_of_population_status\": \"missing\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 52.5, \"composition_status\": \"consistent_strict\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"9/9\", \"measurements_unique_count\": 25, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 17.4, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 24, \"measurements_with_source\": 25, \"measurements_with_comments\": 25, \"raw_score\": 360.4, \"max_potential_score\": 407.51, \"final_normalized_score\": 88.44, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_collection_coverage_total_percent_of_population: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (consistent_strict, Suma: 100.0, Presentes: 9/9): 52.5 pts.\\n- Mediciones (25 \\u00fanicas): Disp=28.0, Detalle/Rec=17.4 pts.\\n-> Puntaje Bruto: 360.4 / 407.51 => Normalizado: 88.44\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "5; data from source-separated and residual (non source-separated) household waste studies"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_agricultural_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "1; 2; 4"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017a. \"Generation of waste by waste category, hazardousness and NACE Rev. 2 activity [env_wasgen].\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2019,
+      "source": "Eurostat. 2021. \"Municipal waste statistics: Statistics Explained.\" Accessed March 26, 2021.  https://ec.europa.eu/eurostat/statistics-explained/pdfscache/10360.pdf.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of waste",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "Denmark, MST (Environmental Protection Agency). 2017. Waste Statistics 2015. Environmental Project no. 1955, Environmental Protection Agency [Miljøstyrelsen (MST)], Government of Denmark. Copenhagen, August. /// Edjabou, M. E. 2016. \"Composition of Municipal Solid Waste in Denmark.\" PhD thesis, Department of Environmental Engineering, Technical University of Denmark, Kongens Lyngby, Denmark. June.",
+      "comments": "5; data from source-separated and residual (non source-separated) household waste studies"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Eurostat. 2017b. \"Municipal Waste by Waste Operations [env_wasmun].\" Accessed April 25, 2017. http://ec.europa.eu/eurostat/web/waste/transboundary-waste-shipments/key-waste-streams/municipal-waste.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "3"
+    }
+  ],
+  "ai_profile_data": {
+    "entity_name": "Denmark",
+    "country": "Denmark",
+    "iso3": "DNK",
+    "overall_summary": "Denmark generates a high amount of municipal solid waste, around 4.9 million tons per year or 786 kg per capita as of 2021, which is among the highest levels in the EU. The waste stream is composed mainly of yard/garden waste, food/organic waste, paper/cardboard, metals, glass, wood, plastics, and other materials. Denmark has a well-established waste management infrastructure, with incineration, recycling, and composting as the dominant treatment methods. While Denmark appears on track to meet various EU recycling and landfill diversion targets, it faces challenges in reducing its high per capita waste generation and potential over-reliance on incineration.",
+    "generation_context": {
+      "scale_and_rate": "Denmark generates a high amount of municipal solid waste, around 4.9 million tons per year or 786 kg per capita as of 2021, which is among the highest levels in the EU against an average of 530 kg per capita. According to some reports, the total waste generation increased until 2018 but has decreased slightly since then, suggesting a potential decoupling from economic growth.",
+      "contributing_factors_trends": "The high waste generation in Denmark can be attributed to factors like high consumption levels associated with its status as a high-income country, as well as contributions from industries and tourism. However, with increasing urbanization and population growth, residential and commercial waste generation is expected to rise further. Some reports note that Denmark faces challenges in transitioning towards sustainability despite having an advanced waste management infrastructure."
+    },
+    "waste_stream_composition": {
+      "summary": "The municipal solid waste stream in Denmark is predominantly composed of yard/garden green waste (30.46%), followed by food/organic waste (12.78%), paper/cardboard (11.57%), metal (6.29%), glass (5.78%), wood (7.65%), plastic (1.61%), and other materials (23.86%). Rubber and leather make up 0% of the waste stream.",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "According to the structured data, no specific information on waste collection coverage was provided for Denmark. However, some reports suggest Denmark has a well-established waste management infrastructure with high recycling rates. Collection likely involves formal municipal services covering most of the population. Some findings mention roles for both the formal and informal repair/reuse sectors in waste management.",
+      "key_challenges": "While Denmark appears to have comprehensive waste collection systems, a few potential challenges were inferred from the findings: high per capita waste generation rates compared to other EU countries, managing large volumes of waste despite advanced infrastructure, and dealing with path dependencies favoring incineration over increased recycling and reuse pathways."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the structured data, the dominant waste treatment methods in Denmark are incineration (52.59%), recycling (27.27%), and composting (18.99%). Some reports suggest Denmark is on track to meet the 2035 landfill target and the 2025 municipal waste recycling targets. While a well-established waste management infrastructure is in place, Denmark faces challenges in reducing high waste generation levels, which are among the highest in the EU.",
+      "infrastructure_highlights": "Denmark has historically been able to significantly reduce landfilling through investments in incineration plants and recycling facilities. However, some reports indicate a potential path dependency on waste incineration that may hinder further progress towards a circular economy.",
+      "key_challenges": "Key challenges mentioned in the findings include Denmark's high per capita waste generation rates compared to other EU countries, reducing dependency on incineration to enable more recycling and re-use, and strengthening household plastic waste recycling streams."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Denmark has a recycling rate of 27.27%, a composting rate of 18.99%, and an incineration rate of 52.59%. Some reports suggest Denmark is on track to meet the 2035 landfill target, the 2025 municipal waste recycling target, and the 2025 packaging waste recycling targets for most materials except plastic packaging.",
+      "programs_mentioned": "The Danish Government's Action Plan for Circular Economy constitutes the national plan for waste prevention and management from 2021 to 2032. A new Danish project also aims to strengthen household plastic waste recycling.",
+      "informal_sector_role": "No specific information found in sources regarding the role of the informal waste sector in Denmark."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "Denmark has a national law and agency focused on waste management, according to the structured data. Some reports suggest Denmark has integrated its waste prevention program into its Circular Economy Action Plan - National Plan for Prevention and Management of Waste 2020-2032. This plan outlines Denmark's strategy for waste management and recycling until 2032. The European Environment Agency has published country profiles analyzing Denmark's progress towards EU waste targets, indicating Denmark is considered on track to meet various recycling and landfill diversion targets.",
+      "governance_issues": "No specific governance issues were mentioned in the provided sources."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Advanced waste management infrastructure with high recycling rates",
+        "Integrated national plan for waste prevention and circular economy (2020-2032)",
+        "On track to meet EU targets for recycling and landfill diversion"
+      ],
+      "weaknesses_or_challenges": [
+        "High per capita waste generation compared to other EU countries",
+        "Potential path dependency favoring incineration over increased recycling and reuse",
+        "Managing large volumes of waste despite advanced infrastructure",
+        "Strengthening household plastic waste recycling streams"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  }
+}

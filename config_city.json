@@ -1,0 +1,68 @@
+{
+    "target_concepts": {
+      "municipality": "The primary name of the city, municipality, or administrative area.",
+      "country": "The name of the country the municipality belongs to.",
+      "iso3c": "The 3-letter ISO code for the country (e.g., MEX, AFG).",
+      "population": "A numerical value representing the population count.",
+      "total_waste_tons_year": "A numerical value representing the total waste generated per year, preferably in tons.",
+      "income_level": "A category indicating the income level of the city/region (e.g., UMC, LMC, HIC). Often found in columns like 'income_id'.",
+      "recycling_rate_percent": "A numerical percentage indicating the rate of waste recycling. Look for columns like 'waste_treatment_recycling_percent'.",
+      "collection_coverage_population_percent": "A numerical percentage indicating the proportion of the population served by waste collection services. Look for columns like 'waste_collection_coverage_total_percent_of_population_percent_of_population'.",
+      "primary_collection_mode": "The main method used for waste collection (e.g., 'Curbside collection', 'Door-to-door collection'). Look for columns like 'primary_collection_mode_form_of_primary_collection_na'.",
+      "composition_food_organic": "Percentage of food/organic waste in the total waste stream. Look for columns like 'composition_food_organic_waste_percent'.",
+      "composition_glass": "Percentage of glass waste in the total waste stream. Look for columns like 'composition_glass_percent'.",
+      "composition_metal": "Percentage of metal waste in the total waste stream. Look for columns like 'composition_metal_percent'.",
+      "composition_paper_cardboard": "Percentage of paper/cardboard waste in the total waste stream. Look for columns like 'composition_paper_cardboard_percent'.",
+      "composition_plastic": "Percentage of plastic waste in the total waste stream. Look for columns like 'composition_plastic_percent'.",
+      "composition_rubber_leather": "Percentage of rubber/leather waste in the total waste stream. Look for columns like 'composition_rubber_leather_percent'.",
+      "composition_wood": "Percentage of wood waste in the total waste stream. Look for columns like 'composition_wood_percent'.",
+      "composition_yard_garden_green": "Percentage of yard/garden/green waste in the total waste stream. Look for columns like 'composition_yard_garden_green_waste_percent'.",
+      "composition_other": "Percentage of other/miscellaneous waste in the total waste stream. Look for columns like 'composition_other_percent'."
+    },
+    "numeric_concepts": [
+      "population",
+      "total_waste_tons_year",
+      "recycling_rate_percent",
+      "collection_coverage_population_percent",
+      "composition_food_organic",
+      "composition_glass",
+      "composition_metal",
+      "composition_paper_cardboard",
+      "composition_plastic",
+      "composition_rubber_leather",
+      "composition_wood",
+      "composition_yard_garden_green",
+      "composition_other"
+    ],
+    "text_concepts": [
+      "municipality",
+      "country",
+      "iso3c",
+      "income_level",
+      "primary_collection_mode"
+    ],
+    "imputation_params": { 
+      "enabled": false,
+      "method": "median",
+      "group_keys": ["country", "income_level"],
+      "skip_imputation_for_prefixes": ["composition_"]
+    },
+    "custom_processing": {
+      "recalculate_composition_other": {
+        "enabled": true,
+        "specific_keys": [
+          "composition_food_organic",
+          "composition_glass",
+          "composition_metal",
+          "composition_paper_cardboard",
+          "composition_plastic",
+          "composition_rubber_leather",
+          "composition_wood",
+          "composition_yard_garden_green"
+        ],
+        "other_key": "composition_other"
+      }
+    },
+    "required_concepts": ["municipality", "country", "iso3c"]
+  }
+  

@@ -1,0 +1,745 @@
+{
+  "id": 422,
+  "municipality": "Kalaroa",
+  "iso3c": "BGD",
+  "country": "Bangladesh",
+  "population": 30777.0,
+  "total_waste_tons_year": null,
+  "income_level": null,
+  "recycling_rate_percent": null,
+  "collection_coverage_population_percent": null,
+  "primary_collection_mode": null,
+  "composition_food_organic": 2.663,
+  "composition_glass": 0.0,
+  "composition_metal": 2.103,
+  "composition_paper_cardboard": 10.041,
+  "composition_plastic": 1.373,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 83.82,
+  "composition_calculation_status": null,
+  "municipality_status": null,
+  "country_status": null,
+  "iso3c_status": null,
+  "population_status": "original",
+  "total_waste_tons_year_status": null,
+  "income_level_status": null,
+  "recycling_rate_percent_status": null,
+  "collection_coverage_population_percent_status": null,
+  "primary_collection_mode_status": null,
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": null,
+  "composition_wood_status": null,
+  "composition_yard_garden_green_status": null,
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 90.91,
+  "score_details_json": "{\"methodology\": \"WFD\", \"municipality_score\": 37.5, \"municipality_status\": \"original\", \"iso3c_score\": 37.5, \"iso3c_status\": \"original\", \"country_score\": 37.5, \"country_status\": \"original\", \"population_score\": 37.5, \"population_status\": \"original\", \"waste_gen_rate_kg_cap_day_score\": 37.5, \"waste_gen_rate_kg_cap_day_status\": \"original\", \"collection_pct_formal_score\": 37.5, \"collection_pct_formal_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_calc_status_db\": \"N/A\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 98, \"measurements_availability_score\": 28.0, \"measurements_availability_weight_factor\": 1.0, \"measurements_details_score\": 49.3, \"measurements_recency_bonus_applied\": true, \"measurements_with_year\": 98, \"measurements_with_source\": 98, \"measurements_with_comments\": 0, \"raw_score\": 302.3, \"max_potential_score\": 332.51, \"final_normalized_score\": 90.91, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Ciudad):\\n Metodolog\\u00eda Detectada: WFD\\n- Completitud Core (6 campos, WFD): 225.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9, CalcStat: N/A): 0.0 pts.\\n- Mediciones (98 \\u00fanicas): Disp=28.0 (WFactor:1.00), Detalle/Rec=49.3 pts.\\n-> Puntaje Bruto: 302.3 / 332.51 => Normalizado: 90.91\"}",
+  "original_wfd_id": 54.0,
+  "waste_gen_rate_kg_cap_day": 0.24,
+  "collection_pct_formal": 1.0,
+  "collection_pct_informal": 1.61,
+  "treatment_pct_recycling_composting": 0.0,
+  "treatment_pct_thermal": 0.0,
+  "treatment_pct_landfill": 0.0,
+  "composition_sum_pct": 100.0,
+  "composition_sum_flag": "False",
+  "data_source_methodology": "WFD",
+  "measurements_data": [
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_energy_recovery_food_and_organic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_5_1",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_energy_recovery_glass_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_5_4",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_energy_recovery_metal_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_5_5",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_energy_recovery_other_waste_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_5_6",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_energy_recovery_paper_and_cardboard_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_5_2",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_energy_recovery_plastic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_5_3",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_recycling_composting_food_and_organic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_6_1",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_recycling_composting_glass_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_6_4",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_recycling_composting_metal_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_6_5",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_recycling_composting_other_waste_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_6_6",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_recycling_composting_paper_and_cardboard_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_6_2",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_formally_treated_recycling_composting_plastic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_6_3",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_informally_treated_recycling_composting_food_and_organic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_7_1",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_informally_treated_recycling_composting_glass_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_7_4",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_informally_treated_recycling_composting_metal_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_7_5",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_informally_treated_recycling_composting_other_waste_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_7_6",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_informally_treated_recycling_composting_paper_and_cardboard_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_7_2",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_collected_informally_treated_recycling_composting_plastic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_7_3",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_generated_food_and_organic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_4_1",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_generated_glass_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_4_4",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_generated_metal_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_4_5",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_generated_other_waste_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_4_6",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_generated_paper_and_cardboard_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_4_2",
+      "comments": null
+    },
+    {
+      "measurement": "amount_of_waste_generated_plastic_tonnes_per_day",
+      "units": "t/d",
+      "year": 2023,
+      "source": "q_4_3",
+      "comments": null
+    },
+    {
+      "measurement": "aspects_of_citizen_involvement_public_awareness_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_12_2",
+      "comments": null
+    },
+    {
+      "measurement": "aspects_of_citizen_involvement_user_satisfaction_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_12_1",
+      "comments": null
+    },
+    {
+      "measurement": "aspects_of_inclusiveness_and_political_framework_integration_of_informal_sector_and_private_sector_s",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_13_1",
+      "comments": null
+    },
+    {
+      "measurement": "aspects_of_inclusiveness_and_political_framework_policy_making_and_planning_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_13_2",
+      "comments": null
+    },
+    {
+      "measurement": "average_msw_generation_rate_kg_per_capita_per_day",
+      "units": "kg/cap/day",
+      "year": 2023,
+      "source": "q_2",
+      "comments": null
+    },
+    {
+      "measurement": "chronic_climate_change_impacts_changes_in_precipitation_patterns_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_20_2",
+      "comments": null
+    },
+    {
+      "measurement": "chronic_climate_change_impacts_changes_in_temperature_patterns_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_20_3",
+      "comments": null
+    },
+    {
+      "measurement": "chronic_climate_change_impacts_sea_level_rise_resilience_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_20_1",
+      "comments": null
+    },
+    {
+      "measurement": "chronic_climate_change_impacts_water_scarcity_resilience_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_20_4",
+      "comments": null
+    },
+    {
+      "measurement": "circular_economy_circular_business_models_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_21_2",
+      "comments": null
+    },
+    {
+      "measurement": "circular_economy_product_design_and_material_choice_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_21_3",
+      "comments": null
+    },
+    {
+      "measurement": "circular_economy_waste_hierarchy_implementation_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_21_1",
+      "comments": null
+    },
+    {
+      "measurement": "climate_change_and_resilience_ghg_emission_reduction_measures_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_18_2",
+      "comments": null
+    },
+    {
+      "measurement": "climate_change_and_resilience_resource_recovery_measures_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_18_3",
+      "comments": null
+    },
+    {
+      "measurement": "climate_change_and_resilience_waste_prevention_and_reduction_measures_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_18_1",
+      "comments": null
+    },
+    {
+      "measurement": "environmental_aspects_air_and_odour_pollution_control_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_17_1",
+      "comments": null
+    },
+    {
+      "measurement": "environmental_aspects_noise_pollution_control_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_17_3",
+      "comments": null
+    },
+    {
+      "measurement": "environmental_aspects_visual_impact_control_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_17_4",
+      "comments": null
+    },
+    {
+      "measurement": "environmental_aspects_water_and_soil_pollution_control_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_17_2",
+      "comments": null
+    },
+    {
+      "measurement": "extreme_weather_events_drought_resilience_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_19_2",
+      "comments": null
+    },
+    {
+      "measurement": "extreme_weather_events_heat_wave_resilience_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_19_4",
+      "comments": null
+    },
+    {
+      "measurement": "extreme_weather_events_heavy_rainfall_flood_resilience_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_19_1",
+      "comments": null
+    },
+    {
+      "measurement": "extreme_weather_events_high_wind_speed_resilience_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_19_3",
+      "comments": null
+    },
+    {
+      "measurement": "financial_aspects_budget_security_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_11_2",
+      "comments": null
+    },
+    {
+      "measurement": "financial_aspects_cost_coverage_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_11_1",
+      "comments": null
+    },
+    {
+      "measurement": "health_and_safety_aspects_public_health_and_safety_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_16_2",
+      "comments": null
+    },
+    {
+      "measurement": "health_and_safety_aspects_worker_health_and_safety_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_16_1",
+      "comments": null
+    },
+    {
+      "measurement": "pct_of_waste_collected_by_the_formal_service_chain_incl_treatment_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_8_1",
+      "comments": null
+    },
+    {
+      "measurement": "pct_of_waste_collected_by_the_informal_service_chain_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_8_2",
+      "comments": null
+    },
+    {
+      "measurement": "policy_and_legal_aspects_legal_and_institutional_framework_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_14_1",
+      "comments": null
+    },
+    {
+      "measurement": "policy_and_legal_aspects_local_enforcement_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_14_3",
+      "comments": null
+    },
+    {
+      "measurement": "policy_and_legal_aspects_national_targets_and_objectives_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_14_2",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_pct_landfill_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_9_3_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_pct_recycled_composted_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_9_1_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_pct_thermal_treatment_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_9_2_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_10_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_11_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_12_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_13_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_14_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_15_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_16_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_17_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_18_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_19_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_1_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_20_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_21_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_3_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_4_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_5_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_6_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_7_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "reliability_score_reliability_score",
+      "units": "Score 0-1",
+      "year": 2023,
+      "source": "q_8_reliability",
+      "comments": null
+    },
+    {
+      "measurement": "solid_waste_management_and_administration_emergency_response_planning_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_15_5",
+      "comments": null
+    },
+    {
+      "measurement": "solid_waste_management_and_administration_financial_management_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_15_2",
+      "comments": null
+    },
+    {
+      "measurement": "solid_waste_management_and_administration_human_resources_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_15_3",
+      "comments": null
+    },
+    {
+      "measurement": "solid_waste_management_and_administration_institutional_capacity_and_responsibilities_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_15_1",
+      "comments": null
+    },
+    {
+      "measurement": "solid_waste_management_and_administration_monitoring_and_data_management_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_15_4",
+      "comments": null
+    },
+    {
+      "measurement": "solid_waste_management_and_administration_stakeholder_consultation_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_15_6",
+      "comments": null
+    },
+    {
+      "measurement": "total_population_served_by_the_msw_management_system",
+      "units": "Number",
+      "year": 2023,
+      "source": "q_1",
+      "comments": null
+    },
+    {
+      "measurement": "waste_composition_percentage_of_food_and_organic_waste_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_3_1",
+      "comments": null
+    },
+    {
+      "measurement": "waste_composition_percentage_of_glass_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_3_4",
+      "comments": null
+    },
+    {
+      "measurement": "waste_composition_percentage_of_metal_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_3_5",
+      "comments": null
+    },
+    {
+      "measurement": "waste_composition_percentage_of_other_waste_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_3_6",
+      "comments": null
+    },
+    {
+      "measurement": "waste_composition_percentage_of_paper_and_cardboard_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_3_2",
+      "comments": null
+    },
+    {
+      "measurement": "waste_composition_percentage_of_plastic_percent",
+      "units": "%",
+      "year": 2023,
+      "source": "q_3_3",
+      "comments": null
+    },
+    {
+      "measurement": "waste_management_system_and_collection_service_hardware_and_equipment_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_10_3",
+      "comments": null
+    },
+    {
+      "measurement": "waste_management_system_and_collection_service_management_and_operation_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_10_4",
+      "comments": null
+    },
+    {
+      "measurement": "waste_management_system_and_collection_service_service_providers_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_10_2",
+      "comments": null
+    },
+    {
+      "measurement": "waste_management_system_and_collection_service_user_interface_and_orientation_score_1_7",
+      "units": "Score 1-7",
+      "year": 2023,
+      "source": "q_10_1",
+      "comments": null
+    },
+    {
+      "measurement": "waste_treatment_and_disposal_formally_managed_pct_landfill",
+      "units": "% of formally collected",
+      "year": 2023,
+      "source": "q_9_3",
+      "comments": null
+    },
+    {
+      "measurement": "waste_treatment_and_disposal_formally_managed_pct_recycled_composted",
+      "units": "% of formally collected",
+      "year": 2023,
+      "source": "q_9_1",
+      "comments": null
+    },
+    {
+      "measurement": "waste_treatment_and_disposal_formally_managed_pct_thermal_treatment",
+      "units": "% of formally collected",
+      "year": 2023,
+      "source": "q_9_2",
+      "comments": null
+    }
+  ],
+  "ai_profile_data": {}
+}

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del País - Visor de Datos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src='https://cdn.plot.ly/plotly-2.32.0.min.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; 
+        }
+        .data-card {
+            background-color: white;
+            border-radius: 0.5rem; 
+            padding: 1.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+            margin-bottom: 1.5rem; 
+        }
+        .data-card h1, .data-card h2, .data-card h3 {
+            color: #1e3a8a; 
+        }
+        .section-title {
+            border-bottom: 2px solid #0ea5e9; 
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #0369a1; 
+        }
+        .measurement-item, .ai-profile-subsection { 
+            border-bottom: 1px solid #e5e7eb; 
+            padding-bottom: 0.75rem; 
+            margin-bottom: 0.75rem; 
+        }
+        .measurement-item:last-child, .ai-profile-subsection:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .data-label { font-weight: 600; color: #4b5563; }
+        .data-value { color: #1f2937; }
+        .data-status {
+            font-size: 0.75rem; 
+            font-style: italic;
+            margin-left: 0.5rem; 
+            padding: 0.1rem 0.4rem;
+            border-radius: 0.25rem; 
+            background-color: #f3f4f6; 
+            border: 1px solid #e5e7eb; 
+        }
+        .status-original { color: #059669; border-color: #6ee7b7; background-color: #d1fae5;}
+        .status-missing_unimputed { color: #b91c1c; border-color: #fca5a5; background-color: #fee2e2;}
+        .status-missing_column { color: #78350f; border-color: #fdba74; background-color: #fffbeb;}
+        .status-imputed, .status-imputed_median_country_global { color: #0284c7; border-color: #7dd3fc; background-color: #e0f2fe; }
+        .status-recalculated_other, .status-recalculated { color: #581c87; border-color: #c084fc; background-color: #f3e8ff; }
+        .status-failed_missing_specifics { color: #b91c1c; border-color: #fca5a5; background-color: #fee2e2; }
+        .status-invalid_format { color: #b45309; border-color: #fcd34d; background-color: #fef9c3;}
+        .status-extrapolated_by_sfa5 { color: #7c3aed; border-color: #a78bfa; background-color: #ede9fe; } /* Morado para extrapolado */
+
+        .quality-score-display { font-size: 0.9rem; padding: 0.2rem 0.5rem; border-radius: 0.375rem; font-weight: 500; display: inline-block; margin-top: 0.25rem;}
+        .score-high { background-color: #d1fae5; color: #065f46; border: 1px solid #6ee7b7;}
+        .score-medium { background-color: #fef3c7; color: #92400e; border: 1px solid #fcd34d;}
+        .score-low { background-color: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;}
+
+        details > summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: #1d4ed8; 
+            margin-top: 0.75rem; 
+            padding: 0.5rem;
+            background-color: #eff6ff; 
+            border-radius: 0.375rem; 
+            border: 1px solid #bfdbfe; 
+            display: inline-block;
+        }
+        details > summary:hover { background-color: #dbeafe; }
+        details[open] > summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+        details > pre, .ai-profile-content { 
+            margin-top: 0;
+            padding: 1rem;
+            background-color: #f9fafb; 
+            border: 1px solid #e5e7eb; 
+            border-top: none;
+            border-bottom-left-radius: 0.375rem;
+            border-bottom-right-radius: 0.375rem;
+            font-size: 0.875rem; 
+            line-height: 1.6;
+            color: #374151; 
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .ai-profile-content p { margin-bottom: 0.5rem; }
+        .ai-profile-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 0.5rem;}
+        .ai-profile-content strong { font-weight: 600; color: #111827; }
+        .ai-profile-subsection h3 {
+            font-size: 1.1rem; 
+            font-weight: 600;
+            color: #1e40af; 
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px dotted #93c5fd; 
+        }
+        .no-profile-data, .no-chart-data { 
+            font-style: italic;
+            color: #6b7280; 
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #loading, #error-message { text-align: center; padding: 2rem; font-size: 1.2rem; color: #555; }
+        #error-message { color: red; }
+        #city-list a:hover { background-color: #f0f9ff; }
+        .chart-container { 
+            max-width: 400px;
+            margin: 1.5rem auto 0 auto;
+            position: relative;
+            height: auto;
+        }
+         #no-treatment-data, #no-composition-data-chartjs { 
+             display: none;
+             text-align: center;
+             color: #6b7280; 
+             margin-top: 1rem;
+             font-style: italic;
+         }
+        #compositionPlotlyChartContainer {
+            width: 100%;
+            min-height: 450px; 
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="container mx-auto max-w-5xl">
+        <header class="mb-8 flex justify-between items-center">
+            <h1 id="country-name-header" class="text-3xl md:text-4xl font-bold text-sky-700">Detalles del País</h1>
+            <a href="index.html" class="text-sky-600 hover:text-sky-800 hover:underline">&larr; Volver al Mapa</a>
+        </header>
+
+        <div id="loading">Cargando datos del país...</div>
+        <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md relative" role="alert"></div>
+
+        <div id="country-details" class="hidden space-y-6">
+            <section class="data-card">
+                <h2 class="text-2xl section-title">Información General</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+                    <div><span class="data-label">Nombre:</span> <span id="country-name" class="data-value"></span><span id="country-name-status" class="data-status"></span></div>
+                    <div><span class="data-label">Código ISO3:</span> <span id="country-iso3" class="data-value"></span><span id="country-iso3-status" class="data-status"></span></div>
+                    <div><span class="data-label">Región:</span> <span id="country-region" class="data-value"></span><span id="country-region-status" class="data-status"></span></div>
+                    <div><span class="data-label">Grupo de Ingresos (BM):</span> <span id="country-income" class="data-value"></span><span id="country-income-status" class="data-status"></span></div>
+                    <div><span class="data-label">Población Total:</span> <span id="country-population" class="data-value"></span><span id="country-population-status" class="data-status"></span></div>
+                    <div><span class="data-label">PIB per cápita (USD):</span> <span id="country-gdp" class="data-value"></span><span id="country-gdp-status" class="data-status"></span></div>
+                    <div><span class="data-label">Ley Nacional de Residuos:</span> <span id="national-law" class="data-value"></span><span id="national-law-status" class="data-status"></span></div>
+                    <div><span class="data-label">Agencia Nacional de Residuos:</span> <span id="national-agency" class="data-value"></span><span id="national-agency-status" class="data-status"></span></div>
+                    <div class="md:col-span-2"><span class="data-label">Puntaje de Calidad de Datos:</span> <span id="country-quality-score" class="data-value"></span></div>
+                </div>
+                 <details id="country-score-summary-details" class="mt-4">
+                    <summary>Ver Resumen del Cálculo del Puntaje</summary>
+                    <pre id="country-score-calculation-summary">Cargando resumen...</pre>
+                </details>
+            </section>
+
+            <section id="ai-profile-section" class="data-card">
+                <h2 class="text-2xl section-title">Perfil Analítico IA</h2>
+                <div id="ai-profile-container">
+                    <p class="no-profile-data">Cargando perfil analítico...</p>
+                </div>
+            </section>
+
+            <section class="data-card">
+                <h2 class="text-2xl section-title">Gestión de Residuos Sólidos Municipales (RSU)</h2>
+                 <div class="chart-container">
+                    <canvas id="treatmentChart"></canvas>
+                 </div>
+                 <div id="no-treatment-data">Datos de métodos de tratamiento no disponibles.</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 mt-6 border-t pt-4">
+                    <div><span class="data-label">Generación Total RSU (Ton/año):</span> <span id="msw-generated" class="data-value"></span><span id="msw-generated-status" class="data-status"></span></div>
+                    <div><span class="data-label">Cobertura Colección (% Pob):</span> <span id="collection-coverage" class="data-value"></span><span id="collection-coverage-status" class="data-status"></span></div>
+                    <div><span class="data-label">Reciclaje (%):</span> <span id="treatment-recycling" class="data-value"></span><span id="treatment-recycling-status" class="data-status"></span></div>
+                    <div><span class="data-label">Compostaje (%):</span> <span id="treatment-compost" class="data-value"></span><span id="treatment-compost-status" class="data-status"></span></div>
+                    <div><span class="data-label">Incineración (%):</span> <span id="treatment-incineration" class="data-value"></span><span id="treatment-incineration-status" class="data-status"></span></div>
+                    <div><span class="data-label">Vertedero Sanitario (%):</span> <span id="treatment-sanitary-lf" class="data-value"></span><span id="treatment-sanitary-lf-status" class="data-status"></span></div>
+                    <div><span class="data-label">Vertedero Controlado (%):</span> <span id="treatment-controlled-lf" class="data-value"></span><span id="treatment-controlled-lf-status" class="data-status"></span></div>
+                    <div><span class="data-label">Vertedero No Especificado (%):</span> <span id="treatment-unspecified-lf" class="data-value"></span><span id="treatment-unspecified-lf-status" class="data-status"></span></div>
+                    <div><span class="data-label">Vertedero Clandestino/Abierto (%):</span> <span id="treatment-open-dump" class="data-value"></span><span id="treatment-open-dump-status" class="data-status"></span></div>
+                </div>
+            </section>
+
+             <section class="data-card">
+                <h2 class="text-2xl section-title">Composición Promedio de Residuos (%)</h2>
+                 <div id="compositionPlotlyChartContainer">
+                    <p id="no-composition-data-plotly" class="no-chart-data" style="display: none;">Datos de composición no disponibles para el gráfico.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-3 mt-6 border-t pt-4">
+                    <div><span class="data-label">Orgánicos/Comida:</span> <span id="comp-food" class="data-value"></span><span id="comp-food-status" class="data-status"></span></div>
+                    <div><span class="data-label">Papel/Cartón:</span> <span id="comp-paper" class="data-value"></span><span id="comp-paper-status" class="data-status"></span></div>
+                    <div><span class="data-label">Plástico:</span> <span id="comp-plastic" class="data-value"></span><span id="comp-plastic-status" class="data-status"></span></div>
+                    <div><span class="data-label">Vidrio:</span> <span id="comp-glass" class="data-value"></span><span id="comp-glass-status" class="data-status"></span></div>
+                    <div><span class="data-label">Metal:</span> <span id="comp-metal" class="data-value"></span><span id="comp-metal-status" class="data-status"></span></div>
+                    <div><span class="data-label">Madera:</span> <span id="comp-wood" class="data-value"></span><span id="comp-wood-status" class="data-status"></span></div>
+                    <div><span class="data-label">Caucho/Cuero:</span> <span id="comp-rubber" class="data-value"></span><span id="comp-rubber-status" class="data-status"></span></div>
+                    <div><span class="data-label">Jardín/Verde:</span> <span id="comp-yard" class="data-value"></span><span id="comp-yard-status" class="data-status"></span></div>
+                    <div><span class="data-label font-semibold">Otros:</span> <span id="comp-other" class="data-value font-semibold"></span><span id="comp-other-status" class="data-status"></span></div>
+                </div>
+            </section>
+
+            <section class="data-card">
+                <h2 class="text-2xl section-title">Residuos Especiales (Ton/año)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                    <div><span class="data-label">E-Waste (Electrónicos):</span> <span id="special-ewaste" class="data-value"></span><span id="special-ewaste-status" class="data-status"></span></div>
+                    <div><span class="data-label">Peligrosos:</span> <span id="special-hazardous" class="data-value"></span><span id="special-hazardous-status" class="data-status"></span></div>
+                </div>
+            </section>
+
+            <section id="measurements-data-section" class="data-card" style="display: none;">
+                <h2 class="text-2xl section-title">Detalles Adicionales de Mediciones (Codebook)</h2>
+                <div id="measurements-list" class="space-y-3">
+                    </div>
+            </section>
+            <section id="cities-list-section" class="data-card" style="display: none;">
+                <h2 class="text-2xl section-title">Ciudades en este Conjunto de Datos</h2>
+                <ul id="city-list" class="space-y-1 mt-4 list-disc list-inside">
+                    </ul>
+                <div id="no-cities" class="hidden text-gray-500 italic mt-2">No hay datos de ciudades disponibles para este país en el índice.</div>
+            </section>
+        </div>
+
+        <footer class="text-center text-gray-500 mt-12 text-sm">
+            Visor de Datos de Gestión de Residuos
+        </footer>
+    </div>
+
+    <script>
+        // --- Funciones auxiliares (getQualityScoreClass, displayDataWithStatus, sanitizeFilenameForJS, createTreatmentChart) ---
+        function getQualityScoreClass(score) {
+            if (score === null || score === undefined || isNaN(parseFloat(score))) return '';
+            const numericScore = parseFloat(score);
+            if (numericScore >= 75) return 'score-high';
+            if (numericScore >= 50) return 'score-medium';
+            return 'score-low';
+        }
+
+        function displayDataWithStatus(dataObject, dataKey, elementId, unit = '', decimals = 2) {
+            const value = dataObject ? dataObject[dataKey] : undefined;
+            let statusKey = `${dataKey}_status`;
+            if (dataObject && !dataObject.hasOwnProperty(statusKey)) {
+                const baseKey = dataKey.replace(/_percent$/, '').replace(/_tons_year$/, '').replace(/_usd$/, '');
+                if (dataKey === 'country_code_iso3' && dataObject.hasOwnProperty('country_code_iso3_status')) { statusKey = 'country_code_iso3_status'; }
+                else if (dataKey === 'iso3c' && dataObject.hasOwnProperty('iso3c_status')) { statusKey = 'iso3c_status'; }
+                else if (dataObject.hasOwnProperty(`${baseKey}_status`)) { statusKey = `${baseKey}_status`; }
+            }
+            const statusValue = dataObject ? dataObject[statusKey] : undefined;
+            const valueElement = document.getElementById(elementId);
+            const statusElement = document.getElementById(`${elementId}-status`);
+
+            if (valueElement) {
+                valueElement.className = 'data-value';
+                if (value !== null && value !== undefined && String(value).toLowerCase() !== 'nan' && String(value).trim() !== '') {
+                    if (typeof value === 'number') {
+                        if (elementId === 'country-quality-score' || elementId === 'city-quality-score' || elementId === 'context-country-quality-score') {
+                             valueElement.textContent = parseFloat(value).toFixed(1);
+                             valueElement.className = `quality-score-display ${getQualityScoreClass(value)}`;
+                        } else if (Math.abs(value) >= 1000 || unit === '%' || Number.isInteger(value)) {
+                             valueElement.textContent = value.toLocaleString('es-ES', { maximumFractionDigits: decimals }) + unit;
+                        } else {
+                             valueElement.textContent = parseFloat(value.toFixed(decimals)) + unit;
+                        }
+                    } else {
+                         valueElement.textContent = String(value) + unit;
+                    }
+                } else {
+                    valueElement.textContent = 'N/A';
+                }
+            } else { console.warn(`Elemento con ID '${elementId}' no encontrado.`); }
+
+            if (statusElement) {
+                if (statusValue && String(statusValue).toLowerCase() !== 'nan') {
+                    statusElement.textContent = String(statusValue).replace(/_/g, ' ');
+                    statusElement.className = 'data-status';
+                    statusElement.classList.add(`status-${String(statusValue).toLowerCase().replace(/\+/g, '_')}`);
+                } else {
+                    statusElement.textContent = ''; statusElement.className = 'data-status';
+                }
+            }
+        }
+
+        function sanitizeFilenameForJS(name) {
+           if (typeof name !== 'string') name = String(name);
+            let sanitized = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            sanitized = sanitized.replace(/[^a-zA-Z0-9_-]/g, '_');
+            sanitized = sanitized.replace(/_+/g, '_').replace(/^_|_$/g, '');
+            return sanitized.substring(0, 100).toLowerCase() || 'unnamed';
+        }
+
+        let treatmentChartInstance = null; 
+        function createTreatmentChart(countryData) {
+            const ctx = document.getElementById('treatmentChart')?.getContext('2d');
+            const noDataElement = document.getElementById('no-treatment-data');
+            if (!ctx || !noDataElement) {
+                if(noDataElement) noDataElement.style.display = 'block';
+                if(ctx && ctx.canvas.parentNode) ctx.canvas.parentNode.style.display = 'none';
+                return;
+            }
+            const treatmentKeys = [ 'waste_treatment_recycling_percent', 'waste_treatment_compost_percent', 'waste_treatment_incineration_percent', 'waste_treatment_sanitary_landfill_percent', 'waste_treatment_controlled_landfill_percent', 'waste_treatment_landfill_unspecified_percent', 'waste_treatment_open_dump_percent' ];
+            const labels = [ 'Reciclaje', 'Compostaje', 'Incineración', 'Vert. Sanitario', 'Vert. Controlado', 'Vert. No Especif.', 'Vert. Abierto' ];
+            const backgroundColors = [ '#34D399', '#FBBF24', '#F87171', '#A5B4FC', '#7DD3FC', '#9CA3AF', '#EF4444' ];
+            const dataValues = treatmentKeys.map(key => parseFloat(countryData[key]) || 0);
+            const filteredData = dataValues.map((value, index) => ({ label: labels[index], value: value, color: backgroundColors[index] })).filter(item => item.value > 0.01);
+            if (filteredData.length > 0) {
+                noDataElement.style.display = 'none';
+                if(ctx.canvas.parentNode) ctx.canvas.parentNode.style.display = 'block';
+                if (treatmentChartInstance) treatmentChartInstance.destroy();
+                treatmentChartInstance = new Chart(ctx, { type: 'doughnut', data: { labels: filteredData.map(item => item.label), datasets: [{ label: 'Tratamiento (%)', data: filteredData.map(item => item.value), backgroundColor: filteredData.map(item => item.color), borderColor: '#fff', borderWidth: 2, hoverOffset: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: {padding: 15, boxWidth:12} }, title: { display: false }, tooltip: { callbacks: { label: context => `${context.label}: ${context.parsed.toFixed(1)}%` } } }, cutout: '60%' } });
+            } else {
+                noDataElement.style.display = 'block';
+                if(ctx.canvas.parentNode) ctx.canvas.parentNode.style.display = 'none';
+            }
+        }
+
+        function displayMeasurementsData(measurements) {
+            const measurementsListDiv = document.getElementById('measurements-list');
+            const measurementsSectionDiv = document.getElementById('measurements-data-section');
+            if (!measurements || measurements.length === 0) {
+                measurementsListDiv.innerHTML = '<p class="text-gray-600 text-sm italic">No hay datos de mediciones adicionales (codebook) disponibles para este país.</p>';
+                measurementsSectionDiv.style.display = 'block'; return;
+            }
+            measurementsSectionDiv.style.display = 'block'; measurementsListDiv.innerHTML = '';
+            measurements.forEach(item => {
+                const measurementDiv = document.createElement('div');
+                measurementDiv.classList.add('measurement-item', 'p-3', 'bg-gray-50', 'rounded-md', 'text-sm');
+                let content = `<h3 class="text-md font-semibold text-blue-700 mb-1">${item.measurement || 'Medición Desconocida'}</h3>`;
+                if (item.units && String(item.units).toLowerCase() !== 'nan') content += `<p><strong>Unidades:</strong> ${item.units}</p>`;
+                if (item.year && String(item.year).toLowerCase() !== 'nan') content += `<p><strong>Año:</strong> ${item.year}</p>`;
+                if (item.source && String(item.source).toLowerCase() !== 'nan') {
+                    let sourceText = item.source; if (sourceText.length > 150) { sourceText = sourceText.substring(0, 147) + "..."; }
+                    if (item.source.startsWith('http://') || item.source.startsWith('https://')) { content += `<p><strong>Fuente:</strong> <a href="${item.source}" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">${sourceText}</a></p>`; }
+                    else { content += `<p><strong>Fuente:</strong> ${sourceText}</p>`; }
+                }
+                if (item.comments && String(item.comments).toLowerCase() !== 'nan') content += `<p class="mt-1"><strong>Comentarios:</strong> <span class="text-gray-700">${item.comments}</span></p>`;
+                measurementDiv.innerHTML = content; measurementsListDiv.appendChild(measurementDiv);
+            });
+        }
+        
+        function displayAiProfileData(profileData) {
+            const container = document.getElementById('ai-profile-container');
+            if (!container) return;
+
+            if (!profileData || Object.keys(profileData).length === 0) {
+                container.innerHTML = '<p class="no-profile-data">Perfil analítico IA no disponible para esta entidad.</p>';
+                return;
+            }
+
+            let htmlContent = '';
+            const sectionTitles = { 
+                overall_summary: "Resumen General", generation_context: "Contexto de Generación de Residuos",
+                waste_stream_composition: "Composición del Flujo de Residuos", collection_and_transport: "Recolección y Transporte",
+                treatment_and_disposal: "Tratamiento y Disposición Final", recycling_and_recovery_initiatives: "Iniciativas de Reciclaje y Recuperación",
+                policy_and_governance: "Política y Gobernanza", overall_assessment: "Evaluación General"
+            };
+            const mainSectionOrder = [
+                "overall_summary", "generation_context", "waste_stream_composition",
+                "collection_and_transport", "treatment_and_disposal",
+                "recycling_and_recovery_initiatives", "policy_and_governance", "overall_assessment"
+            ];
+            const subSectionTitles = { 
+                scale_and_rate: "Escala y Tasa de Generación", contributing_factors_trends: "Factores Contribuyentes y Tendencias",
+                summary: "Resumen de Composición", data_notes: "Notas sobre Datos de Composición",
+                coverage_and_methods: "Cobertura y Métodos", key_challenges: "Desafíos Clave",
+                dominant_methods_summary: "Resumen de Métodos Dominantes", infrastructure_highlights: "Infraestructura Destacada",
+                rates_and_targets: "Tasas y Objetivos", programs_mentioned: "Programas Mencionados",
+                informal_sector_role: "Rol del Sector Informal", regulatory_framework: "Marco Regulatorio",
+                governance_issues: "Problemas de Gobernanza", strengths: "Fortalezas",
+                weaknesses_or_challenges: "Debilidades o Desafíos", recent_developments_or_outlook: "Desarrollos Recientes o Perspectivas"
+            };
+
+            for (const sectionKey of mainSectionOrder) {
+                if (profileData.hasOwnProperty(sectionKey)) {
+                    const sectionData = profileData[sectionKey];
+                    const sectionTitle = sectionTitles[sectionKey] || sectionKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    htmlContent += `<div class="ai-profile-subsection"><h3>${sectionTitle}</h3><div class="ai-profile-content">`;
+                    if (typeof sectionData === 'string') {
+                        htmlContent += `<p>${sectionData.replace(/\n/g, '<br>')}</p>`;
+                    } else if (typeof sectionData === 'object' && sectionData !== null) {
+                        for (const subKey in sectionData) {
+                            if (sectionData.hasOwnProperty(subKey)) {
+                                const subData = sectionData[subKey];
+                                const subTitle = subSectionTitles[subKey] || subKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                                htmlContent += `<strong>${subTitle}:</strong> `;
+                                if (Array.isArray(subData)) {
+                                    if (subData.length > 0) {
+                                        htmlContent += `<ul>`;
+                                        subData.forEach(item => { htmlContent += `<li>${String(item).replace(/\n/g, '<br>')}</li>`; });
+                                        htmlContent += `</ul>`;
+                                    } else { htmlContent += `<p class="no-profile-data">No disponible.</p>`; }
+                                } else if (typeof subData === 'string' && subData.trim() !== '') {
+                                    htmlContent += `<p>${subData.replace(/\n/g, '<br>')}</p>`;
+                                } else { htmlContent += `<p class="no-profile-data">No disponible.</p>`; }
+                            }
+                        }
+                    }
+                    htmlContent += `</div></div>`;
+                }
+            }
+            container.innerHTML = htmlContent;
+        }
+        
+        function createPlotlyCompositionChart(countryData) {
+            const containerId = 'compositionPlotlyChartContainer';
+            const noDataMsgElement = document.getElementById('no-composition-data-plotly');
+            const chartContainer = document.getElementById(containerId);
+
+            if (!chartContainer || !noDataMsgElement) {
+                console.warn("Elementos DOM para gráfico Plotly de composición no encontrados.");
+                return;
+            }
+
+            const compositionKeys = [
+                'composition_food_organic', 'composition_paper_cardboard', 'composition_plastic',
+                'composition_glass', 'composition_metal', 'composition_wood',
+                'composition_rubber_leather', 'composition_yard_garden_green', 'composition_other'
+            ];
+            const labelsFriendly = [
+                'Orgánico/Comida', 'Papel/Cartón', 'Plástico', 'Vidrio', 'Metal', 'Madera',
+                'Caucho/Cuero', 'Residuos Verdes', 'Otros'
+            ];
+            
+            let values = [];
+            let labels = [];
+
+            compositionKeys.forEach((key, index) => {
+                const value = parseFloat(countryData[key]);
+                if (!isNaN(value) && value > 0) {
+                    values.push(value);
+                    labels.push(labelsFriendly[index]);
+                }
+            });
+
+            if (values.length > 0) {
+                noDataMsgElement.style.display = 'none';
+                chartContainer.style.display = 'block';
+
+                const data = [{
+                    values: values,
+                    labels: labels,
+                    type: 'pie',
+                    hole: .4, 
+                    textinfo: "label+percent", 
+                    textposition: 'inside',
+                    insidetextorientation: 'radial',
+                    hoverinfo: 'label+percent+value',
+                    marker: {
+                        colors: ['#8BC34A', '#FFC107', '#2196F3', '#9E9E9E', '#FF5722', '#795548', '#607D8B', '#4CAF50', '#F44336']
+                    }
+                }];
+
+                const layout = {
+                    title: {
+                        text: 'Composición Detallada de Residuos (%)',
+                        font: { size: 16, color: '#1e3a8a'},
+                        y: 0.95 
+                    },
+                    height: 450,
+                    showlegend: true,
+                    legend: {
+                        x: 1, 
+                        xanchor: 'right', 
+                        y: 0.5,
+                        bgcolor: 'rgba(255,255,255,0.5)',
+                        bordercolor: '#e5e7eb',
+                        borderwidth: 1
+                    },
+                    margin: { t: 60, b: 40, l: 40, r: 40 } 
+                };
+
+                Plotly.newPlot(containerId, data, layout, {responsive: true});
+
+            } else {
+                noDataMsgElement.style.display = 'block';
+                chartContainer.innerHTML = ''; 
+                chartContainer.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const iso3 = params.get('iso3');
+            const loadingElement = document.getElementById('loading');
+            const errorElement = document.getElementById('error-message');
+            const detailsElement = document.getElementById('country-details');
+            const cityListElement = document.getElementById('city-list');
+            const noCitiesElement = document.getElementById('no-cities');
+            const scoreSummaryElement = document.getElementById('country-score-calculation-summary');
+            // ACTUALIZACIÓN: Ruta al directorio de datos de la UI
+            const UI_DATA_DIR = './output/ui_data/'; // MODIFICADO AQUÍ
+
+            if (!iso3) { 
+                console.error("ISO3 no encontrado en la URL.");
+                loadingElement.style.display = 'none';
+                errorElement.textContent = 'Error: No se especificó el código ISO3 del país en la URL.';
+                errorElement.classList.remove('hidden');
+                detailsElement.classList.add('hidden');
+                return;
+            }
+
+            const countryDataPath = `${UI_DATA_DIR}countries/${iso3.toUpperCase()}_country.json`;
+            const indexDataPath = `${UI_DATA_DIR}index.json`;
+
+            Promise.all([
+                fetch(countryDataPath).then(res => {
+                    if (!res.ok) return Promise.reject(new Error(`Error ${res.status} cargando ${countryDataPath}`));
+                    return res.json();
+                }),
+                fetch(indexDataPath).then(res => {
+                    if (!res.ok) return Promise.reject(new Error(`Error ${res.status} cargando ${indexDataPath}`));
+                    return res.json();
+                })
+            ])
+            .then(([countryData, indexData]) => {
+                loadingElement.style.display = 'none';
+                detailsElement.classList.remove('hidden');
+                errorElement.classList.add('hidden');
+
+                document.title = `${countryData.country_name || 'País'} - Detalles`;
+                displayDataWithStatus(countryData, 'country_name', 'country-name-header');
+                displayDataWithStatus(countryData, 'country_name', 'country-name');
+                displayDataWithStatus(countryData, 'country_code_iso3', 'country-iso3');
+                displayDataWithStatus(countryData, 'region', 'country-region');
+                displayDataWithStatus(countryData, 'income_group_wb', 'country-income');
+                displayDataWithStatus(countryData, 'population_total', 'country-population', '', 0);
+                displayDataWithStatus(countryData, 'gdp_per_capita_usd', 'country-gdp', ' USD');
+                displayDataWithStatus(countryData, 'national_law_exists', 'national-law');
+                displayDataWithStatus(countryData, 'national_agency_exists', 'national-agency');
+                displayDataWithStatus(countryData, 'total_msw_generated_tons_year', 'msw-generated', ' Ton/año');
+                displayDataWithStatus(countryData, 'waste_collection_coverage_total_percent_of_population', 'collection-coverage', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_recycling_percent', 'treatment-recycling', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_compost_percent', 'treatment-compost', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_incineration_percent', 'treatment-incineration', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_sanitary_landfill_percent', 'treatment-sanitary-lf', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_controlled_landfill_percent', 'treatment-controlled-lf', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_landfill_unspecified_percent', 'treatment-unspecified-lf', '%');
+                displayDataWithStatus(countryData, 'waste_treatment_open_dump_percent', 'treatment-open-dump', '%');
+                displayDataWithStatus(countryData, 'data_quality_score', 'country-quality-score');
+
+
+                if (scoreSummaryElement && countryData.score_details_json) {
+                    try {
+                        const scoreDetails = JSON.parse(countryData.score_details_json);
+                        scoreSummaryElement.textContent = scoreDetails?.calculation_summary || "Resumen no disponible.";
+                    } catch (e) {
+                        console.error("Error al parsear score_details_json:", e);
+                        scoreSummaryElement.textContent = "Error al cargar el resumen del cálculo.";
+                    }
+                } else if (scoreSummaryElement) {
+                    scoreSummaryElement.textContent = "Resumen del cálculo no encontrado en los datos.";
+                }
+
+                if (countryData.ai_profile_data) {
+                    displayAiProfileData(countryData.ai_profile_data);
+                } else {
+                    const aiContainer = document.getElementById('ai-profile-container');
+                    if (aiContainer) aiContainer.innerHTML = '<p class="no-profile-data">Perfil analítico IA no disponible para este país.</p>';
+                }
+                
+                createTreatmentChart(countryData); 
+                createPlotlyCompositionChart(countryData);
+                displayDataWithStatus(countryData, 'composition_food_organic', 'comp-food', '%');
+                displayDataWithStatus(countryData, 'composition_paper_cardboard', 'comp-paper', '%');
+                displayDataWithStatus(countryData, 'composition_plastic', 'comp-plastic', '%');
+                displayDataWithStatus(countryData, 'composition_glass', 'comp-glass', '%');
+                displayDataWithStatus(countryData, 'composition_metal', 'comp-metal', '%');
+                displayDataWithStatus(countryData, 'composition_wood', 'comp-wood', '%');
+                displayDataWithStatus(countryData, 'composition_rubber_leather', 'comp-rubber', '%');
+                displayDataWithStatus(countryData, 'composition_yard_garden_green', 'comp-yard', '%');
+                displayDataWithStatus(countryData, 'composition_other', 'comp-other', '%');
+
+                displayDataWithStatus(countryData, 'e_waste_tons_year', 'special-ewaste', ' Ton/año');
+                displayDataWithStatus(countryData, 'hazardous_waste_tons_year', 'special-hazardous', ' Ton/año');
+
+                if (countryData.measurements_data) {
+                    displayMeasurementsData(countryData.measurements_data);
+                } else {
+                    displayMeasurementsData([]);
+                }
+
+                const citiesSectionDiv = document.getElementById('cities-list-section');
+                if (indexData && Array.isArray(indexData.countries)) {
+                    const countryInfoFromIndex = indexData.countries.find(c => c.iso3 === iso3);
+                    if (countryInfoFromIndex && countryInfoFromIndex.cities && countryInfoFromIndex.cities.length > 0) {
+                        citiesSectionDiv.style.display = 'block';
+                        noCitiesElement.classList.add('hidden');
+                        cityListElement.innerHTML = '';
+                        countryInfoFromIndex.cities.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+                        countryInfoFromIndex.cities.forEach(cityObject => {
+                            const listItem = document.createElement('li');
+                            const link = document.createElement('a');
+                            link.href = `city_view.html?city=${encodeURIComponent(cityObject.name)}&iso3=${iso3}`;
+                            link.textContent = cityObject.name;
+                            link.className = 'text-sky-600 hover:text-sky-800 hover:underline';
+                            listItem.appendChild(link);
+                            cityListElement.appendChild(listItem);
+                        });
+                    } else {
+                        citiesSectionDiv.style.display = 'block';
+                        noCitiesElement.classList.remove('hidden');
+                        cityListElement.innerHTML = '';
+                    }
+                } else {
+                     console.error("Estructura de indexData inesperada.");
+                     citiesSectionDiv.style.display = 'block';
+                     noCitiesElement.textContent = "Error al cargar lista de ciudades.";
+                     noCitiesElement.classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                loadingElement.style.display = 'none';
+                console.error(`ERROR en Promise.all o fetch: ${error.message}`, error);
+                errorElement.textContent = `Error al cargar los datos: ${error.message}. Asegúrate de que los archivos JSON existan en '${UI_DATA_DIR}'.`;
+                errorElement.classList.remove('hidden');
+                detailsElement.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

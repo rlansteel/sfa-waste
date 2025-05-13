@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "entity_id": "SGP",
+    "entity_type": "country",
+    "profile_generation_timestamp_utc": "2025-05-12T21:52:46.909099+00:00",
+    "llm_model_used": "claude-3-sonnet-20240229",
+    "sfa3_version": "3.1-ProfileJSON_Granular",
+    "generation_mode": "granular_sections"
+  },
+  "waste_profile": {
+    "entity_name": "Singapore",
+    "country": "Singapore",
+    "iso3": "SGP",
+    "overall_summary": "Singapore has achieved a relatively high municipal solid waste recycling rate of 61% through comprehensive policies, modern infrastructure like waste-to-energy incineration plants, and the integration of both formal and informal recycling networks. However, the country faces challenges in further reducing waste generation, extending the limited capacity of its sole landfill site, and increasing recycling rates beyond current levels.",
+    "generation_context": {
+      "scale_and_rate": "Singapore generated around 1.87 million tons of municipal solid waste in the year covered by the data, with a per capita rate of around 328 kg per person. Some reports suggest Singapore's waste generation has increased over recent decades due to economic and population growth.",
+      "contributing_factors_trends": "Key factors contributing to Singapore's waste generation include its high population density, affluent consumer economy, and role as a global trade and tourism hub. With continued urbanization and economic growth, waste generation is expected to rise further, though the government aims to decouple waste from GDP growth through its Zero Waste Masterplan."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream composition in Singapore is predominantly other (32.3%), followed by metal (19.12%), paper/cardboard (14.86%), plastic (10.58%), food/organic (10.51%), rubber/leather (1.96%), glass (0.93%), and yard/garden green (4.26%).",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "According to national data, Singapore has 100% waste collection coverage for its total population. Public waste collectors (PWCs) appointed by the National Environment Agency (NEA) typically travel fixed routes on a routine schedule to collect waste, though some reports suggest exploring more dynamic routing optimization and sensor technologies. The informal recycling sector, known as 'karang guni', also plays a role in collection alongside the formal PWC system.",
+      "key_challenges": "Some key challenges mentioned or inferred include inefficiencies from static collection routes and schedules regardless of actual bin fill levels, lack of visibility into real-time collection needs, and the need to better integrate informal recycling networks with formal municipal systems."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the data, the dominant waste treatment methods in Singapore are recycling (61%), incineration (37%), and landfilling (2%). Some reports suggest Singapore has achieved a high recycling rate through effective policies and infrastructure. The country has invested in modern waste-to-energy incineration plants to minimize landfilling of waste.",
+      "infrastructure_highlights": "Key waste management infrastructure highlighted includes the Semakau Landfill, Singapore's only remaining landfill which is projected to be filled by 2035 at current rates. Singapore also operates several large waste-to-energy incineration plants and materials recovery facilities for sorting and recycling various waste streams.",
+      "key_challenges": "Extending the lifespan of Semakau Landfill is a major challenge as it has limited remaining capacity. Increasing the recycling rate to reduce waste sent for incineration or landfilling is another key focus area. Some reports indicate contamination of recyclables is an issue that hinders higher recycling rates."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Singapore has a waste treatment recycling rate of 61% and a composting rate of null. Some reports suggest Singapore has set a goal of reducing waste sent to landfills by 30% by 2030 and achieving net zero carbon emissions by mid-century.",
+      "programs_mentioned": "Web findings mention the National Recycling Programme, Zero Waste Masterplan, and initiatives like the Plastic Bag Charge, Bring Your Own (BYO) container/bag campaigns, and Pay-As-You-Throw/Save-As-You-Reduce schemes using RFID tracking.",
+      "informal_sector_role": "The informal recycling sector, traditionally known as the 'karang guni' trade, plays an important role in domestic recycling according to some findings. A mobile app called 'Honk!' was developed to support these small-scale recycling entrepreneurs and increase recycling rates."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "According to web findings, Singapore has a comprehensive regulatory framework for waste management. The National Environment Agency (NEA) is the national agency responsible for waste management policies and regulations. Some key points from the findings: Singapore has a national law governing waste management. The government has laid out plans like the Zero Waste Masterplan and a goal to reduce waste sent to landfills by 30% by 2030 as part of implementing a circular economy model. The NEA appoints public waste collectors and regulates waste collection, treatment, and disposal methods like incineration and landfilling. Some reports suggest Singapore is enhancing policies like extended producer responsibility schemes to drive waste reduction and recycling.",
+      "governance_issues": "No specific governance issues were mentioned in the provided sources regarding funding or administration of waste management policies and programs."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "100% waste collection coverage",
+        "Well-established regulatory framework and national agency for waste management",
+        "High recycling rate of 61% achieved through effective policies and programs",
+        "Investment in modern waste treatment infrastructure like incineration plants",
+        "Integration of informal 'karang guni' recycling networks"
+      ],
+      "weaknesses_or_challenges": [
+        "Increasing waste generation driven by economic and population growth",
+        "Limited remaining capacity at Semakau Landfill, projected to be filled by 2035",
+        "Need to further increase recycling rates and reduce contamination of recyclables",
+        "Inefficiencies in static waste collection routes and lack of real-time monitoring"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  },
+  "sources_consulted": {
+    "database_record": {
+      "entity_db_id": 170,
+      "data_quality_score": 96.98
+    },
+    "web_finding_ids": [
+      647,
+      649,
+      655,
+      659,
+      130,
+      165,
+      166,
+      643,
+      646,
+      656,
+      662,
+      665,
+      672,
+      686,
+      652,
+      131,
+      163,
+      167,
+      170,
+      645,
+      650,
+      654,
+      658,
+      669,
+      681,
+      689,
+      661,
+      132,
+      181,
+      644,
+      648,
+      653,
+      678,
+      682
+    ]
+  }
+}

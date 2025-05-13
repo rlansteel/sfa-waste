@@ -1,0 +1,60 @@
+ℹ️ Conectando a la base de datos: output/waste_data.db
+✅ Conexión establecida y claves foráneas habilitadas.
+⚠️ Opción --drop-tables activada. Eliminando tablas existentes...
+⚠️ Eliminando tabla 'city_measurements'...
+⚠️ Eliminando tabla 'country_measurements'...
+⚠️ Eliminando tabla 'cities'...
+⚠️ Eliminando tabla 'countries'...
+✅ Tablas eliminadas.
+ℹ️ Creando/Verificando tablas...
+✅ Tablas verificadas/creadas.
+ℹ️ Leyendo datos de países desde: processed_data/country_data_processed.json
+✅ Leídos 217 registros de países del JSON.
+ℹ️ Iniciando inserción en tabla 'countries'...
+✅ Inserción en tabla 'countries' completada.
+ℹ️ Registros insertados: 217
+ℹ️ DIAGNÓSTICO: Total de países en tabla 'countries' después de la carga: 217
+✅ DIAGNÓSTICO: 'ZWE' encontrado en tabla 'countries': {'country_code_iso3': 'ZWE', 'country_name': 'Zimbabwe'}
+ℹ️ Leyendo datos de ciudades desde: processed_data/city_data_processed.json
+✅ Leídos 367 registros de ciudades del JSON.
+ℹ️ Iniciando inserción en tabla 'cities'...
+✅ Inserción en tabla 'cities' completada.
+ℹ️ Registros insertados: 367
+ℹ️ DIAGNÓSTICO: Total de ciudades en tabla 'cities' después de la carga: 367
+ℹ️ Leyendo datos del codebook de países desde: processed_data/country_codebook_processed.json
+✅ Leídos 3776 registros del codebook de países JSON.
+ℹ️ Iniciando inserción en tabla 'country_measurements'...
+⚠️ Error de integridad insertando registro en 'country_measurements': FOREIGN KEY constraint failed. Registro: {'measurement': 
+'composition_other_percent', 'units': '%', 'year': 2010.0, 'source': 'GIZ and SWEEP-Net. 2010b. "Country Report on the Solid Waste 
+Management in Syria." Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ) and Regional Solid Waste Exchange of Information
+and Expertise Network in Mashreq and Maghreb Countries (SWEEP-Net), on behalf of the German Federal Ministry for Economic Cooperation and
+Development (BMZ). July.', 'comments': 'nan', 'year_status': 'original', 'region_id_codebook': 'MEA', 'country_iso3c': 'p', 
+'country_name_codebook': 'nan', 'income_id_codebook': 'LMC'}
+⚠️ Error de integridad insertando registro en 'country_measurements': FOREIGN KEY constraint failed. Registro: {'measurement': 
+'waste_treatment_other_percent', 'units': '%', 'year': 2010.0, 'source': 'GIZ and SWEEP-Net. 2010b. "Country Report on the Solid Waste 
+Management in Syria." Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ) and Regional Solid Waste Exchange of Information
+and Expertise Network in Mashreq and Maghreb Countries (SWEEP-Net), on behalf of the German Federal Ministry for Economic Cooperation and
+Development (BMZ). July.', 'comments': 'nan', 'year_status': 'original', 'region_id_codebook': 'MEA', 'country_iso3c': 'p', 
+'country_name_codebook': 'nan', 'income_id_codebook': 'LMC'}
+✅ Inserción en tabla 'country_measurements' completada.
+ℹ️ Registros insertados: 3774
+⚠️ Registros omitidos/con error: 2
+ℹ️ Iniciando fetch_city_id_map...
+ℹ️ DIAGNÓSTICO (fetch_city_id_map): Total de filas en 'cities' ANTES del filtro WHERE: 367
+ℹ️ DIAGNÓSTICO (fetch_city_id_map): Ejecutando consulta: SELECT id, municipality, iso3c FROM cities WHERE municipality IS NOT NULL AND 
+iso3c IS NOT NULL
+ℹ️ DIAGNÓSTICO (fetch_city_id_map): Número de filas DEVUELTAS por la consulta (DESPUÉS del filtro WHERE): 367
+ℹ️   DIAGNÓSTICO (fetch_city_id_map): Procesando fila para mapa: id=1, municipality='Jalalabad', iso3c='AFG'
+ℹ️   DIAGNÓSTICO (fetch_city_id_map): Procesando fila para mapa: id=2, municipality='Kandahar', iso3c='AFG'
+ℹ️   DIAGNÓSTICO (fetch_city_id_map): Procesando fila para mapa: id=3, municipality='Mazar-E-Sharif', iso3c='AFG'
+ℹ️   DIAGNÓSTICO (fetch_city_id_map): Procesando fila para mapa: id=4, municipality='Kabul', iso3c='AFG'
+ℹ️   DIAGNÓSTICO (fetch_city_id_map): Procesando fila para mapa: id=5, municipality='Hirat ', iso3c='AFG'
+✅ Mapa de 367 IDs de ciudades creado a partir de 367 filas procesadas.
+ℹ️ Leyendo datos del codebook de ciudades desde: processed_data/city_codebook_processed.json
+✅ Leídos 684 registros del codebook de ciudades JSON.
+⚠️   DIAGNÓSTICO (city_codebook_load): No se encontró ID para ciudad 'Limerick' (País: IRL). Clave de búsqueda: ('limerick', 'irl')
+⚠️ Total de 1 registros de codebook de ciudades omitidos (falta nombre/ISO o ID de ciudad no encontrado).
+ℹ️ Iniciando inserción en tabla 'city_measurements'...
+✅ Inserción en tabla 'city_measurements' completada.
+ℹ️ Registros insertados: 683
+ℹ️ Conexión a la base de datos 'output/waste_data.db' cerrada.

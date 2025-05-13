@@ -1,0 +1,270 @@
+{
+  "id": 153,
+  "country_code_iso3": "PER",
+  "country_name": "Peru",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 11877.08398,
+  "population_total": 30973354.0,
+  "total_msw_generated_tons_year": 8356711.13,
+  "waste_collection_coverage_total_percent_of_population": 82.93,
+  "waste_treatment_recycling_percent": 4.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 56.39,
+  "waste_treatment_sanitary_landfill_percent": 24.03,
+  "waste_treatment_controlled_landfill_percent": 15.58,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 182000.0,
+  "hazardous_waste_tons_year": 660180.1793,
+  "composition_food_organic": 50.43,
+  "composition_glass": 3.05,
+  "composition_metal": 2.64,
+  "composition_paper_cardboard": 7.44,
+  "composition_plastic": 10.52,
+  "composition_rubber_leather": 1.25,
+  "composition_wood": null,
+  "composition_yard_garden_green": 2.97,
+  "composition_other": 21.7,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": null,
+  "longitude_geo_status": null,
+  "data_quality_score": 73.62,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"8/9\", \"measurements_unique_count\": 0, \"measurements_availability_score\": 0.0, \"measurements_details_score\": 0, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 0, \"measurements_with_source\": 0, \"measurements_with_comments\": 0, \"raw_score\": 300.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 73.62, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 8/9): 0.0 pts.\\n- Mediciones (0 \\u00fanicas): Disp=0.0, Detalle/Rec=0 pts.\\n-> Puntaje Bruto: 300.0 / 407.51 => Normalizado: 73.62\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "Other includes inert (8.07 percent), sanitary (6.89 percent), medical (0.55 percent), battery (0.47 percent), textile (1.61 percent), styrofoam (0.78 percent), and unaccounted for (3.33 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Solid Waste Report on Municipal and Non-Municipal Municipal Management 2013.\" [Peru, Ministerio del Ambiente. 2014. \"Sexto Informe Nacional de Residuos Solidos de la Gestion del Ambito Municipal y No Municipal\"]. Lima, December.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2009,
+      "source": "Peru, Ministry of Health. 2010. \"National Solid Waste Management Plan in Health Establishments and Supportive Medical Services 2010-2012.\"General Directorate of Environmental Health, Ministry of Health, Government of Peru. [Dirección General de Salud Ambiental, Ministerio de Salud. 2010. \"Plan Nacional de Gestión de Residuos Sólidos en Establecimientos de Salud y Servicios Médicos de Apoyo 2010-2012\"]. Lima.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Peru, Ministry of Environment. 2016. \"National Plan for Integrated Solid Waste Management, 2016–2024\" [\"Plan Nacional de Gestión Integral de Residuos Sólidos, 2016–2024\"]. Ministry of Environment [Ministerio del Ambiente], Government of Peru. /// Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "Calculated from urban (7,497,482 tonnes/year) and rural (859,229.13 tonnes/year) waste generation; urban value reported in Plan Nacional as 64 percent (4,798,388 tonnes/year) generated by HH and 26 percent (1,949,345 tonnes/year) by non-HH sources; rural value is calculated by World Bank team using an estimate of 0.35 kg/person/day based on reporting for all urban districts multiplied by the rural population in Peru in 2014"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "SIGERSOL (Information System for Solid Waste Management). n.d. [Sistema de Informacion para la Gestion de Residuos Solidos].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "SIGERSOL (Information System for Solid Waste Management). n.d. [Sistema de Informacion para la Gestion de Residuos Solidos].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "SIGERSOL (Information System for Solid Waste Management). n.d. [Sistema de Informacion para la Gestion de Residuos Solidos].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "SIGERSOL (Information System for Solid Waste Management). n.d. [Sistema de Informacion para la Gestion de Residuos Solidos].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs.\" [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs.\" [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs.\" [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs.\" [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs\". [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs\". [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs\". [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of households",
+      "year": 2014,
+      "source": "Peru, INEI (National Institute of Statistics and Information). 2015. \"National Survey of Strategic Programs\". [Instituto Nacional de Estadistica e Informativa. 2015. \"Encuesta Nacional de Programas Estrategicas 2011- 2014\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Peru, Ministry of Environment. 2016. \"National Plan for Integrated Solid Waste Management, 2016–2024\" [\"Plan Nacional de Gestión Integral de Residuos Sólidos, 2016–2024\"]. Ministry of Environment [Ministerio del Ambiente], Government of Peru.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Peru, Ministry of Environment. 2016. \"National Plan for Integrated Solid Waste Management, 2016–2024\" [\"Plan Nacional de Gestión Integral de Residuos Sólidos, 2016–2024\"]. Ministry of Environment [Ministerio del Ambiente], Government of Peru.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2013,
+      "source": "Peru, Ministry of Environment. 2014. \"Sixth National Report on Municipal and Non-Municipal Management of Solid Waste\" [\"Sexto informe nacional de residuos sólidos de la gestión del ámbito municipal y no municipal 2013\"]. Ministry of Environment, Government of Peru. Lima, December.",
+      "comments": "Other includes inert (8.07 percent), sanitary (6.89 percent), medical (0.55 percent), battery (0.47 percent), textile (1.61 percent), styrofoam (0.78 percent), and unaccounted for (3.33 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2012,
+      "source": "Peru, Ministry of Environment. 2013. \"Report: \"Solid Waste Diagnostics in Peru, Solid Waste NAMA Program.\" [Peru,  Ministerio del Ambiente. 2013. \"Informe: \"Diagnostico de los residuos solidos en Peru, Programa NAMA de Residuos Solidos.\"]",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Peru, Ministry of Environment. 2016. \"National Plan for Integrated Solid Waste Management, 2016–2024\" [\"Plan Nacional de Gestión Integral de Residuos Sólidos, 2016–2024\"]. Ministry of Environment [Ministerio del Ambiente], Government of Peru.",
+      "comments": "nan"
+    }
+  ]
+}

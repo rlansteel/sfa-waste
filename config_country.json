@@ -1,0 +1,79 @@
+{
+    "target_concepts": {
+      "country_name": "Full name of the country. (Look for column: country_name)",
+      "country_code_iso3": "The 3-letter ISO code (e.g., MEX, USA, BRA). (Look for column: iso3c)",
+      "region": "World Bank region the country belongs to (e.g., LCN, SAS). (Look for column: region_id)",
+      "income_group_wb": "World Bank income classification (e.g., UMC, HIC). (Look for column: income_id)",
+      "gdp_per_capita_usd": "GDP per capita in current US dollars. (Look for column: gdp)",
+      "population_total": "Total population count. (Look for column: population_population_number_of_people)",
+      "total_msw_generated_tons_year": "Total Municipal Solid Waste generated per year in tons. (Look for column: total_msw_total_msw_generated_tons_year)",
+      "waste_collection_coverage_total_percent_of_population": "Percentage of population covered by waste collection services. (Look for column: waste_collection_coverage_total_percent_of_population)",
+      "waste_treatment_recycling_percent": "Percentage of waste treated by recycling. (Look for column: waste_treatment_recycling_percent)",
+      "waste_treatment_compost_percent": "Percentage of waste treated by composting. (Look for column: waste_treatment_compost_percent)",
+      "waste_treatment_incineration_percent": "Percentage of waste treated by incineration. (Look for column: waste_treatment_incineration_percent)",
+      "waste_treatment_landfill_unspecified_percent": "Percentage of waste sent to unspecified landfills. (Look for column: waste_treatment_landfill_unspecified_percent)",
+      "waste_treatment_open_dump_percent": "Percentage of waste sent to open dumps. (Look for column: waste_treatment_open_dump_percent)",
+      "waste_treatment_sanitary_landfill_percent": "Percentage of waste sent to sanitary landfills (with gas system). (Look for column: waste_treatment_sanitary_landfill_landfill_gas_system_percent)",
+      "waste_treatment_controlled_landfill_percent": "Percentage of waste sent to controlled landfills. (Look for column: waste_treatment_controlled_landfill_percent)",
+      "national_law_exists": "Indicates if a national law governing solid waste management exists. (Look for column: other_information_national_law_governing_solid_waste_management_in_the_country)",
+      "national_agency_exists": "Indicates if a national agency enforces solid waste laws. (Look for column: other_information_national_agency_to_enforce_solid_waste_laws_and_regulations)",
+      "e_waste_tons_year": "Annual generation of e-waste in tons. (Look for column: special_waste_e_waste_tons_year)",
+      "hazardous_waste_tons_year": "Annual generation of hazardous waste in tons. (Look for column: special_waste_hazardous_waste_tons_year)",
+      "composition_food_organic": "Percentage of food/organic waste. (Look for column: composition_food_organic_waste_percent)",
+      "composition_glass": "Percentage of glass waste. (Look for column: composition_glass_percent)",
+      "composition_metal": "Percentage of metal waste. (Look for column: composition_metal_percent)",
+      "composition_paper_cardboard": "Percentage of paper/cardboard waste. (Look for column: composition_paper_cardboard_percent)",
+      "composition_plastic": "Percentage of plastic waste. (Look for column: composition_plastic_percent)",
+      "composition_rubber_leather": "Percentage of rubber/leather waste. (Look for column: composition_rubber_leather_percent)",
+      "composition_wood": "Percentage of wood waste. (Look for column: composition_wood_percent)",
+      "composition_yard_garden_green": "Percentage of yard/garden/green waste. (Look for column: composition_yard_garden_green_waste_percent)",
+      "composition_other": "Percentage of other/miscellaneous waste. (Look for column: composition_other_percent)"
+    },
+    "numeric_concepts": [
+      "gdp_per_capita_usd",
+      "population_total",
+      "total_msw_generated_tons_year",
+      "waste_collection_coverage_total_percent_of_population",
+      "waste_treatment_recycling_percent",
+      "waste_treatment_compost_percent",
+      "waste_treatment_incineration_percent",
+      "waste_treatment_landfill_unspecified_percent",
+      "waste_treatment_open_dump_percent",
+      "waste_treatment_sanitary_landfill_percent",
+      "waste_treatment_controlled_landfill_percent",
+      "e_waste_tons_year",
+      "hazardous_waste_tons_year",
+      "composition_food_organic", 
+      "composition_glass", 
+      "composition_metal", 
+      "composition_paper_cardboard", 
+      "composition_plastic", 
+      "composition_rubber_leather", 
+      "composition_wood", 
+      "composition_yard_garden_green", 
+      "composition_other" 
+    ],
+    "text_concepts": [
+      "country_name",
+      "country_code_iso3",
+      "region",
+      "income_group_wb",
+      "national_law_exists",
+      "national_agency_exists"
+    ],
+    "imputation_params": {
+      "enabled": false,
+      "method": "median",
+      "group_keys": [],
+      "skip_imputation_for_prefixes": [] 
+    },
+    "custom_processing": {
+      "recalculate_composition_other": {
+        "enabled": false 
+      }
+    },
+    "required_concepts": [
+      "country_code_iso3"
+    ]
+  }
+  

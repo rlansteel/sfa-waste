@@ -1,0 +1,290 @@
+{
+  "id": 7,
+  "country_code_iso3": "ARG",
+  "country_name": "Argentina",
+  "region": "LCN",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 23550.09961,
+  "population_total": 42981516.0,
+  "total_msw_generated_tons_year": 17910550.0,
+  "waste_collection_coverage_total_percent_of_population": 89.91,
+  "waste_treatment_recycling_percent": 6.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 22.6,
+  "waste_treatment_sanitary_landfill_percent": 62.5,
+  "waste_treatment_controlled_landfill_percent": 8.9,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 291700.0,
+  "hazardous_waste_tons_year": 310044.0,
+  "composition_food_organic": 38.74,
+  "composition_glass": 3.16,
+  "composition_metal": 1.84,
+  "composition_paper_cardboard": 13.96,
+  "composition_plastic": 14.61,
+  "composition_rubber_leather": 1.26,
+  "composition_wood": 1.09,
+  "composition_yard_garden_green": 9.95,
+  "composition_other": 15.36,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": -31.2526068,
+  "longitude": -64.2465659,
+  "latitude_geo_status": "found",
+  "longitude_geo_status": "found",
+  "data_quality_score": 100.0,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 20.0, \"geocoding_status\": \"found\", \"composition_score\": 52.5, \"composition_status\": \"consistent_strict\", \"composition_sum_actual\": 99.97, \"composition_fields_present\": \"9/9\", \"measurements_unique_count\": 25, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 17.5, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 25, \"measurements_with_source\": 25, \"measurements_with_comments\": 25, \"raw_score\": 418.0, \"max_potential_score\": 407.51, \"final_normalized_score\": 100, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (found): 20.0 pts.\\n- Composici\\u00f3n (consistent_strict, Suma: 99.97, Presentes: 9/9): 52.5 pts.\\n- Mediciones (25 \\u00fanicas): Disp=28.0, Detalle/Rec=17.5 pts.\\n-> Puntaje Bruto: 418.0 / 407.51 => Normalizado: 100\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "Other includes fabric, disposable diapers, battery, household hazardous, and CandD waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ITU (International Telecommunication Union). 2015. \"Sustainable Waste Management of Electrical and Electronic Devices in Latin America\" [\"Gestión Sostenible de Residuos de Aparatos Eléctricos y Electrónicos en América Latina\"]. ITU, Basel Convention, CRBAS-Basel Regional Center for South America, UNESCO, WHO, UNIDO, WIPO, ECLAC 2015 [UIT, Convenio de Basilea, CRBAS-Centro Regional Basilea para América del Sur, UNESCO, OMS, ONUDI, OMPI, CEPAL 2015]. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ERS Basel 2014. 2014a. \"Electronic Reporting System of the Basel Convention: Argentina.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "8 (49.07 tonnes/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "World Bank. 2015b. \"Assessment of the Integrated Management of Municipal Solid Waste in Argentina: Collection, Generation and Analysis of Data: Collection, Sweeping, Transfer, Treatment and Final Disposal of Municipal Solid Waste\" [Diagnóstico de la Gestión Integral de Residuos Sólidos Urbanos en la Argentina: Recopilación, generación y análisis de datos: Recolección, barrido, transferencia, tratamiento y disposición final de Residuos Sólidos Urbanos]. World Bank: Washington, DC.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Argentina SIDSA (System of Indicators of Sustainable Development). 2015. \"System of Indicators of Sustainable Development, Argentina.\" 8th Edition. [SIDSA (Sistema de Indicadores de Desarrollo Sostenible). 2015. \"Sistema de Indicadores de Desarrollo Sostenible, Argentina\". Octava Edición.] ISBN 978-987-29340-8-8.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Argentina SIDSA (System of Indicators of Sustainable Development). 2015. \"System of Indicators of Sustainable Development, Argentina.\" 8th Edition. [SIDSA (Sistema de Indicadores de Desarrollo Sostenible). 2015. \"Sistema de Indicadores de Desarrollo Sostenible, Argentina\". Octava Edición.] ISBN 978-987-29340-8-8.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2015,
+      "source": "De Luca, M., N. Giorgi, and M. de los Ángeles Lungo. 2015. \"Study on the Strategy and Feasibility of Municipal Solid Waste (MSW) Management for the Republic of Argentina\" [\"Estudio de estrategia y factibilidad de la gestión de residuos sólidos urbanos (RSU) para la República Argentina\"]. Institute for Sanitary Engineering, Faculty of Engineering, University of Buenos Aires. August.",
+      "comments": "Other includes fabric, disposable diapers, battery, household hazardous, and CandD waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Argentina SIDSA (System of Indicators of Sustainable Development). 2015. \"System of Indicators of Sustainable Development, Argentina.\" 8th Edition. [SIDSA (Sistema de Indicadores de Desarrollo Sostenible). 2015. \"Sistema de Indicadores de Desarrollo Sostenible, Argentina\". Octava Edición.] ISBN 978-987-29340-8-8.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Argentina SIDSA (System of Indicators of Sustainable Development). 2015. \"System of Indicators of Sustainable Development, Argentina.\" 8th Edition. [SIDSA (Sistema de Indicadores de Desarrollo Sostenible). 2015. \"Sistema de Indicadores de Desarrollo Sostenible, Argentina\". Octava Edición.] ISBN 978-987-29340-8-8.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {
+    "entity_name": "Argentina",
+    "country": "Argentina",
+    "iso3": "ARG",
+    "overall_summary": "Argentina generates significant municipal solid waste, estimated at 17.9 million tons annually or around 0.42 tons per capita. The waste stream is predominantly organic, followed by plastics, paper/cardboard, and other materials. While waste collection coverage is relatively high at 89.91%, many municipalities face resource constraints for proper management. Sanitary landfilling is the dominant disposal method, but open dumping persists. The recycling rate is low at 6.0%. Argentina has national solid waste laws and strategies, but implementation has faced challenges. The informal recycling sector plays an important role, with initiatives aiming to promote social inclusion of informal waste pickers. Recent developments include securing $450 million in financing to strengthen integrated waste management over the next four years.",
+    "generation_context": {
+      "scale_and_rate": "Argentina generates a significant amount of municipal solid waste (MSW), with an estimated 17.9 million tons generated annually. This translates to approximately 0.42 tons per capita per year. Some reports suggest the generation rate has been increasing in recent years, likely driven by factors such as population growth and economic development.",
+      "contributing_factors_trends": "Argentina's waste generation is influenced by factors like population growth, urbanization, tourism, and industrial activity. The country's large urban centers, such as the Buenos Aires metropolitan area, contribute substantially to the waste stream. Additionally, Argentina's thriving tourism industry, particularly in destinations like Patagonia and Iguazú Falls, can strain local waste management systems during peak seasons. Industrial sectors like agriculture, mining, and manufacturing also generate significant waste streams. While specific data is limited, these contributing factors are expected to continue driving waste generation upwards in the coming years."
+    },
+    "waste_stream_composition": {
+      "summary": "Predominantly organic (38.74%), followed by plastics (14.61%), paper/cardboard (13.96%), other (15.36%), glass (3.16%), yard/garden green (9.95%), metal (1.84%), rubber/leather (1.26%), and wood (1.09%).",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "According to the structured data, Argentina has a relatively high waste collection coverage of 89.91% of the total population. Some reports suggest the presence of an informal recycling sector that plays a role in waste collection, particularly for recyclable materials. The primary methods for municipal solid waste collection likely involve formal municipal services as well as informal waste pickers. However, specific details on collection methods are not provided in the available sources.",
+      "key_challenges": "While collection coverage appears high nationally, some key challenges can be inferred from the web findings: 1) Many municipalities, especially smaller ones, lack adequate technical and financial resources for proper waste collection and separation at source. 2) There are concerns around the working conditions and lack of social protections for informal waste pickers involved in collection activities. 3) Coordinating and formalizing the role of the informal sector in an inclusive waste management system remains a challenge."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the structured data, the dominant waste treatment and disposal methods in Argentina are sanitary landfilling (62.5%), open dumping (22.6%), and controlled landfilling (8.9%). Some reports suggest efforts are underway to close and remediate open dumpsites, with a $450 million international financing package secured to strengthen integrated solid waste management over the next four years, including increasing proper waste disposal, recovery, and valorization with a social inclusion approach.",
+      "infrastructure_highlights": "The data indicates Argentina has installed waste treatment capacity, though specific facility details are limited. Some national reports mention the existence of waste transfer stations in major urban areas.",
+      "key_challenges": "Key challenges highlighted include a lack of resources and technical/financial capacity at the municipal level for proper waste management like separate collection streams. Achieving the goals and targets of Argentina's National Strategy for Integrated Solid Waste Management has been identified as an ongoing issue by national audits. Informal waste picking remains prevalent, though efforts aim to promote social inclusion and formalization of this sector."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, the waste treatment recycling rate in Argentina is 6.0%. No specific recycling or composting targets were found in the web findings.",
+      "programs_mentioned": "Some programs and initiatives mentioned in the web findings include: Argentina Recicla program and Sistemas Locales de Reciclado (Local Recycling Systems) which aim to organize municipal recycling activities and promote social inclusion of informal waste pickers. A collaboration between Recycle Organics and the Climate and Clean Air Coalition to develop policies for organic waste recovery in Argentina was also mentioned.",
+      "informal_sector_role": "The web findings indicate that the informal recycling sector, comprised of informal waste pickers or 'recuperadores urbanos', plays an important role in waste recovery and recycling in Argentina. Some initiatives like the Sistemas Locales de Reciclado aim to formalize and promote social inclusion of these informal workers."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "Argentina has a national law (Law 25.916) that exists for solid waste management. According to some reports, the country also has a National Strategy for Integrated Solid Waste Management, but many of its objectives and goals have not been met. The Ministry of Environment and Sustainable Development recently secured $450 million in international financing over 4 years to strengthen urban solid waste management, including initiating works and equipment to increase proper waste disposal, improve recovery and valorization with a social inclusion approach, and contribute to the closure and remediation of open dumps. At the local level, some municipalities are implementing Local Recycling Systems to organize existing recycling activities through co-management between municipalities and production units, promoting social inclusion of informal waste pickers.",
+      "governance_issues": "Some governance challenges mentioned include: many municipalities lacking the technical and financial capacity to implement proper waste management practices like separate collection; the need for increased funding and resources to adequately manage waste at the municipal level; and the persistence of open dumpsites despite national goals to close and remediate them, suggesting difficulties in implementing policies and strategies."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "Relatively high waste collection coverage of 89.91% nationally",
+        "Existence of national solid waste laws and strategies",
+        "Recognition of the role of the informal recycling sector and initiatives for social inclusion",
+        "Recent financing secured to improve integrated waste management"
+      ],
+      "weaknesses_or_challenges": [
+        "Lack of resources and technical/financial capacity at the municipal level for proper waste management",
+        "Persistence of open dumping despite goals to close and remediate dumpsites",
+        "Low recycling rate of 6.0%",
+        "Difficulties in implementing national policies and strategies effectively",
+        "Concerns around working conditions and lack of social protections for informal waste pickers"
+      ],
+      "recent_developments_or_outlook": "Argentina secured a $450 million international financing package over 4 years to strengthen integrated urban solid waste management, including increasing proper waste disposal, improving recovery and valorization with a social inclusion approach, and contributing to the closure and remediation of open dumpsites."
+    }
+  }
+}

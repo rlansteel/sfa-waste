@@ -1,0 +1,264 @@
+{
+  "id": 26,
+  "country_code_iso3": "BOL",
+  "country_name": "Bolivia",
+  "region": "LCN",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 7984.413574,
+  "population_total": 10724705.0,
+  "total_msw_generated_tons_year": 2219052.0,
+  "waste_collection_coverage_total_percent_of_population": 57.6,
+  "waste_treatment_recycling_percent": 12.11,
+  "waste_treatment_compost_percent": 0.4,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 55.52,
+  "waste_treatment_sanitary_landfill_percent": 31.93,
+  "waste_treatment_controlled_landfill_percent": 0.04,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 35392.0,
+  "hazardous_waste_tons_year": 545183.0,
+  "composition_food_organic": 55.1969112,
+  "composition_glass": 2.903474903,
+  "composition_metal": 2.501930502,
+  "composition_paper_cardboard": 6.501930502,
+  "composition_plastic": 10.19305019,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 22.7027027,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 85.3,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 28, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 19.6, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 28, \"measurements_with_source\": 28, \"measurements_with_comments\": 28, \"raw_score\": 347.6, \"max_potential_score\": 407.51, \"final_normalized_score\": 85.3, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (28 \\u00fanicas): Disp=28.0, Detalle/Rec=19.6 pts.\\n-> Puntaje Bruto: 347.6 / 407.51 => Normalizado: 85.3\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "Data from 22 cities; other includes sanitary diapers, infectious, battery, and CandD waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Swiss Contact. 2009. \"Electronic Waste Diagnostics in Bolivia\" [\"Diagnóstico de Residuos Electrónicos en Bolivia\"]. Swiss Contact, Delfin Consultora, CAINTEC. April.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Bolivia, Ministry of Environment and Water. 2011. \"Diagnosis of Solid Waste Management in Bolivia.\" [Bolivia, MINISTERIO DE MEDIO AMBIENTE Y AGUA. 2011. \"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. La Paz. ISBN: 4-1-271-10 P.O.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Bolivia, Ministry of Environment and Water. 2011. \"Diagnosis of Solid Waste Management in Bolivia.\" [Bolivia, MINISTERIO DE MEDIO AMBIENTE Y AGUA. 2011. \"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. La Paz. ISBN: 4-1-271-10 P.O.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bolivia, DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "Includes domestic waste and waste from public areas and markets; excludes slaughterhouse and hospital waste (together totaling 144,155.6 tonnes/year); data estimated based on population from census projections and per capita generation estimates from in-country studies in sample cities and reference values in the region for cities of similar size and rural areas"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_rural_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_urban_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Bolivia, DGGIRS (General Directorate of Integrated Solid Waste Management). 2010. \"Assessment of Solid Waste Management in Bolivia\" [\"Diagnóstico de la Gestión de Residuos Sólidos en Bolivia\"]. General Directorate of Integrated Solid Waste Management [Dirección General de Gestión Integral de Residuos Sólidos (DGGIRS)], Sub-Ministry of Potable Water and Basic Sanitation [Viceministerio de Agua Potable y Saneamiento Básico (VAPSB)], Ministry of Environment and Water [Ministerio de Medio Ambiente y Agua (MMAyA)], Government of Bolivia. La Paz.",
+      "comments": "Data from 22 cities; other includes sanitary diapers, infectious, battery, and CandD waste"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Bolivia, MMAyA/VAPSB/DGGIRS. 2016. \"National Infrastructure Program for Solid Waste Management, 2017–2020\" [\"Programa Nacional de Infraestructuras en Gestión Integral de Residuos Sólidos, 2017–2020\"]. General Directorate of Integrated Solid Waste Management, Sub-Ministry of Potable Water and Basic Sanitation, Ministry of Environment and Water [Dirección General de Gestión Integral de Residuos Sólidos, Viceministerio de Agua Potable y Saneamiento Básico, Ministerio de Medio Ambiente y Agua], Government of Bolivia.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

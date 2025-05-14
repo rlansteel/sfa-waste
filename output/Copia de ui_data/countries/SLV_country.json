@@ -1,0 +1,201 @@
+{
+  "id": 173,
+  "country_code_iso3": "SLV",
+  "country_name": "El Salvador",
+  "region": "LCN",
+  "income_group_wb": "LMC",
+  "gdp_per_capita_usd": 7328.713379,
+  "population_total": 6164626.0,
+  "total_msw_generated_tons_year": 1648996.18,
+  "waste_collection_coverage_total_percent_of_population": 78.8,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 13.8,
+  "waste_treatment_sanitary_landfill_percent": 78.2,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 30100.0,
+  "hazardous_waste_tons_year": 16465.0,
+  "composition_food_organic": 65.0,
+  "composition_glass": 4.0,
+  "composition_metal": 2.0,
+  "composition_paper_cardboard": 12.0,
+  "composition_plastic": 10.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 7.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 74.53,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 19, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 13.2, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 18, \"measurements_with_source\": 19, \"measurements_with_comments\": 19, \"raw_score\": 303.7, \"max_potential_score\": 407.51, \"final_normalized_score\": 74.53, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (19 \\u00fanicas): Disp=28.0, Detalle/Rec=13.2 pts.\\n-> Puntaje Bruto: 303.7 / 407.51 => Normalizado: 74.53\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Other includes textile (2 percent) and other inorganic (5 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ITU (International Telecommunication Union). 2015. \"Sustainable Waste Management of Electrical and Electronic Devices in Latin America\" [\"Gestión Sostenible de Residuos de Aparatos Eléctricos y Electrónicos en América Latina\"]. ITU, Basel Convention, CRBAS-Basel Regional Center for South America, UNESCO, WHO, UNIDO, WIPO, ECLAC 2015 [UIT, Convenio de Basilea, CRBAS-Centro Regional Basilea para América del Sur, UNESCO, OMS, ONUDI, OMPI, CEPAL 2015]. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ERS Basel 2014. 2014b. \"Electronic Reporting System of the Basel Convention: El Salvador.\"",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "2 (urban, 0.89 kg/person/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2011,
+      "source": "UNSD (United Nations Statistics Division). 2016c. \"Environmental Indicators and Selected Time Series: Composition of Municipal Waste (Latest Year).\" United Nations Statistics Division (UNSD), United Nations. September. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "Other includes textile (2 percent) and other inorganic (5 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": null,
+      "source": "nan",
+      "comments": "Other: Includes opening burning (7.3 percent) and waste disposed as cattle feed, dumped in waterways, etc."
+    }
+  ],
+  "ai_profile_data": {}
+}

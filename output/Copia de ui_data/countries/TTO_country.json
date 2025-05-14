@@ -1,0 +1,201 @@
+{
+  "id": 195,
+  "country_code_iso3": "TTO",
+  "country_name": "Trinidad and Tobago",
+  "region": "LCN",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 28910.9082,
+  "population_total": 1328100.0,
+  "total_msw_generated_tons_year": 727874.0,
+  "waste_collection_coverage_total_percent_of_population": 94.31,
+  "waste_treatment_recycling_percent": null,
+  "waste_treatment_compost_percent": 0.8,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 84.0,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": 12.0,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 71.07,
+  "hazardous_waste_tons_year": 123914.1,
+  "composition_food_organic": 27.15,
+  "composition_glass": 10.15,
+  "composition_metal": 3.74,
+  "composition_paper_cardboard": 22.6,
+  "composition_plastic": 19.17,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 17.19,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "missing_unimputed",
+  "waste_treatment_compost_percent_status": "original",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "not_found",
+  "longitude_geo_status": "not_found",
+  "data_quality_score": 74.55,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 0.0, \"waste_treatment_recycling_percent_status\": \"missing\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 19, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 13.3, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 19, \"measurements_with_source\": 19, \"measurements_with_comments\": 19, \"raw_score\": 303.8, \"max_potential_score\": 407.51, \"final_normalized_score\": 74.55, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 262.5 pts.\\n  (Detalles: waste_treatment_recycling_percent: missing)\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (19 \\u00fanicas): Disp=28.0, Detalle/Rec=13.3 pts.\\n-> Puntaje Bruto: 303.8 / 407.51 => Normalizado: 74.55\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "3; sampled at landfills; paper/cardboard includes paper (18.77 percent) and corrugated cardboard (3.83 percent) waste; includes ferrous (2.33 percent) and non-ferrous (1.41 percent) metal waste; other includes beverage containers (0.92 percent), textiles and clothing (7.82 percent), household hazardous (5.24 percent), CandD (0.5 percent), and other unspecified (2.71 percent) waste"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2008,
+      "source": "Trinidad and Tobago EMA (Environmental Management Authority). n.d. \"State of The Environment Report 2011.\" ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "UNSD (United Nations Statistics Division). 2017. \"Hazardous waste generated.\" UNSD Environmental Indicators. United Nations Statistics Division (UNSD), United Nations. https://unstats.un.org/unsd/envstats/qindicators.cshtml",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_medical_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2008,
+      "source": "Trinidad and Tobago EMA (Environmental Management Authority). n.d. \"State of The Environment Report 2011.\" ",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "Value is an extrapolated number from 2009 (650,000 tonnes) which used estimates of waste going into major landfills and assumed an amount for the rest of the landfills. \"Of this figure, about one third of the waste was generated from institutional, commercial and industrial (ICI) sources whilst the majority of two thirds from household sources. Based on Trinidad's population, it is further estimated that 0.54 tonnes of waste is generated per capita per year amounting to 1.50 kilograms per person per day.\""
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "Trinidad and Tobago, Ministry of Planning and Sustainable Development, CSO (Central Statistical Office). 2012. \"Trinidad and Tobago 2011 Population and Housing Census Demographic Report\".",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "Trinidad and Tobago, Ministry of Planning and Sustainable Development, CSO (Central Statistical Office). 2012. \"Trinidad and Tobago 2011 Population and Housing Census Demographic Report\".",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "Trinidad and Tobago, Ministry of Planning and Sustainable Development, CSO (Central Statistical Office). 2012. \"Trinidad and Tobago 2011 Population and Housing Census Demographic Report\".",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2011,
+      "source": "Trinidad and Tobago, Ministry of Planning and Sustainable Development, CSO (Central Statistical Office). 2012. \"Trinidad and Tobago 2011 Population and Housing Census Demographic Report\".",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_compost_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2010,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "3; sampled at landfills; paper/cardboard includes paper (18.77 percent) and corrugated cardboard (3.83 percent) waste; includes ferrous (2.33 percent) and non-ferrous (1.41 percent) metal waste; other includes beverage containers (0.92 percent), textiles and clothing (7.82 percent), household hazardous (5.24 percent), CandD (0.5 percent), and other unspecified (2.71 percent) waste"
+    },
+    {
+      "measurement": "waste_treatment_unaccounted_for_percent",
+      "units": "tonnes/year",
+      "year": 2011,
+      "source": "Trinidad and Tobago, EMA (Environmental Management Authority). n.d. \"State of the Environment Report, 2011.\" Environmental Management Authority (EMA), Government of Trinidad and Tobago.",
+      "comments": "All values calculated based on National Census 2011; CM: 1.17 percent of HH waste is composted by HH and HH waste makes up 2/3 of all waste generation; UA: 4.5 percent of HH waste waste is not collected nor composted, includes waterways (0.05 percent) and burning (2.22 percent)"
+    }
+  ],
+  "ai_profile_data": {}
+}

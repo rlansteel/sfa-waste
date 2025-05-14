@@ -1,8 +1,8 @@
 {
   "metadata": {
     "description": "Índice de datos de gestión de residuos para la UI.",
-    "version": "v7.4_sprint5_final_profile_fix",
-    "generated_at": "2025-05-12T22:32:10.814175+00:00"
+    "version": "v7.7_sprint8_enhance_top_generators_v2",
+    "generated_at": "2025-05-13T20:11:27.026707+00:00"
   },
   "regions": [
     "EAS",
@@ -32,6 +32,11 @@
       "data_quality_score": 59.83,
       "waste_per_capita_kg_day": 0.4449620040763696,
       "gdp_per_capita_usd": 2057.062256,
+      "gdp_total_usd": 71289615369.92819,
+      "total_msw_total_tonnes": 5628525.37,
+      "population_total": 34656032.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 5,
@@ -92,6 +97,11 @@
       "data_quality_score": 74.38,
       "waste_per_capita_kg_day": 1.043835596280544,
       "gdp_per_capita_usd": 13724.05859,
+      "gdp_total_usd": 39171084511.05069,
+      "total_msw_total_tonnes": 1087446.75,
+      "population_total": 2854191.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 60.0,
       "cities": [
         {
           "id": 7,
@@ -125,6 +135,11 @@
       "data_quality_score": 75.92,
       "waste_per_capita_kg_day": 0.8352044706139755,
       "gdp_per_capita_usd": 11826.16504,
+      "gdp_total_usd": 480213872574.8221,
+      "total_msw_total_tonnes": 12378740.0,
+      "population_total": 40606052.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 83,
@@ -158,6 +173,11 @@
       "data_quality_score": 74.21,
       "waste_per_capita_kg_day": 0.9357362542491772,
       "gdp_per_capita_usd": 11113.44238,
+      "gdp_total_usd": 617896282.88562,
+      "total_msw_total_tonnes": 18989.49,
+      "population_total": 55599.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 16,
@@ -182,6 +202,11 @@
       "data_quality_score": 73.84,
       "waste_per_capita_kg_day": 1.429173723211925,
       "gdp_per_capita_usd": 43711.80078,
+      "gdp_total_usd": 3603207450.09618,
+      "total_msw_total_tonnes": 43000.0,
+      "population_total": 82431.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -196,6 +221,11 @@
       "data_quality_score": 73.69,
       "waste_per_capita_kg_day": 0.46,
       "gdp_per_capita_usd": 8036.69043,
+      "gdp_total_usd": 201689988534.84448,
+      "total_msw_total_tonnes": 4213643.585,
+      "population_total": 25096150.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 23.1,
       "cities": [
         {
           "id": 6,
@@ -220,6 +250,11 @@
       "data_quality_score": 74.21,
       "waste_per_capita_kg_day": 0.8658516026322908,
       "gdp_per_capita_usd": 17965.50195,
+      "gdp_total_usd": 1738647382.21515,
+      "total_msw_total_tonnes": 30585.0,
+      "population_total": 96777.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 98.61,
       "cities": []
     },
     {
@@ -234,6 +269,11 @@
       "data_quality_score": 100.0,
       "waste_per_capita_kg_day": 1.1416535424204208,
       "gdp_per_capita_usd": 23550.09961,
+      "gdp_total_usd": 1012218983188.8088,
+      "total_msw_total_tonnes": 17910550.0,
+      "population_total": 42981516.0,
+      "waste_treatment_recycling_percent": 6.0,
+      "waste_collection_coverage_total_percent_of_population": 89.91,
       "cities": [
         {
           "id": 13,
@@ -276,6 +316,11 @@
       "data_quality_score": 66.21,
       "waste_per_capita_kg_day": 0.464568059644958,
       "gdp_per_capita_usd": 11019.83887,
+      "gdp_total_usd": 32026076120.7714,
+      "total_msw_total_tonnes": 492800.0,
+      "population_total": 2906220.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 15,
@@ -309,6 +354,11 @@
       "data_quality_score": 67.85,
       "waste_per_capita_kg_day": 2.34,
       "gdp_per_capita_usd": 35563.3125,
+      "gdp_total_usd": 3669671526.9375,
+      "total_msw_total_tonnes": 88132.0167,
+      "population_total": 103187.0,
+      "waste_treatment_recycling_percent": 11.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -323,6 +373,11 @@
       "data_quality_score": 73.86,
       "waste_per_capita_kg_day": 1.5368920243016615,
       "gdp_per_capita_usd": 47784.17969,
+      "gdp_total_usd": 1136754001698.1453,
+      "total_msw_total_tonnes": 13345000.0,
+      "population_total": 23789338.0,
+      "waste_treatment_recycling_percent": 42.1,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 19,
@@ -365,6 +420,11 @@
       "data_quality_score": 75.21,
       "waste_per_capita_kg_day": 1.610958936207072,
       "gdp_per_capita_usd": 56029.61328,
+      "gdp_total_usd": 497378631070.6497,
+      "total_msw_total_tonnes": 5219715.5,
+      "population_total": 8877067.0,
+      "waste_treatment_recycling_percent": 25.66,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 20,
@@ -389,6 +449,11 @@
       "data_quality_score": 74.89,
       "waste_per_capita_kg_day": 0.8320105408916043,
       "gdp_per_capita_usd": 14853.91016,
+      "gdp_total_usd": 143330444317.20456,
+      "total_msw_total_tonnes": 2930349.0,
+      "population_total": 9649341.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 56.0,
       "cities": [
         {
           "id": 21,
@@ -413,6 +478,11 @@
       "data_quality_score": 63.63,
       "waste_per_capita_kg_day": 1.8697430739298535,
       "gdp_per_capita_usd": 35400.08203,
+      "gdp_total_usd": 13694096932.321138,
+      "total_msw_total_tonnes": 264000.0,
+      "population_total": 386838.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -427,6 +497,11 @@
       "data_quality_score": 73.86,
       "waste_per_capita_kg_day": 1.8300000000961192,
       "gdp_per_capita_usd": 47937.77734,
+      "gdp_total_usd": 68319530069.42514,
+      "total_msw_total_tonnes": 951942.9695,
+      "population_total": 1425171.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 39,
@@ -451,6 +526,11 @@
       "data_quality_score": 66.35,
       "waste_per_capita_kg_day": 0.2599999949965144,
       "gdp_per_capita_usd": 3195.737061,
+      "gdp_total_usd": 497662724259.6224,
+      "total_msw_total_tonnes": 14778497.33,
+      "population_total": 155727056.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 33,
@@ -511,6 +591,11 @@
       "data_quality_score": 83.9,
       "waste_per_capita_kg_day": 1.7068592877919133,
       "gdp_per_capita_usd": 15444.74609,
+      "gdp_total_usd": 4333811197.60009,
+      "total_msw_total_tonnes": 174815.4444,
+      "population_total": 280601.0,
+      "waste_treatment_recycling_percent": 9.0,
+      "waste_collection_coverage_total_percent_of_population": 90.0,
       "cities": []
     },
     {
@@ -525,6 +610,11 @@
       "data_quality_score": 85.13,
       "waste_per_capita_kg_day": 1.2356693250032744,
       "gdp_per_capita_usd": 18307.51953,
+      "gdp_total_usd": 173731330252.2005,
+      "total_msw_total_tonnes": 4280000.0,
+      "population_total": 9489616.0,
+      "waste_treatment_recycling_percent": 16.0,
+      "waste_collection_coverage_total_percent_of_population": 93.2,
       "cities": [
         {
           "id": 43,
@@ -558,6 +648,11 @@
       "data_quality_score": 75.38,
       "waste_per_capita_kg_day": 1.1369863431192324,
       "gdp_per_capita_usd": 51914.91406,
+      "gdp_total_usd": 596193728385.3134,
+      "total_msw_total_tonnes": 4765883.0,
+      "population_total": 11484055.0,
+      "waste_treatment_recycling_percent": 34.303,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 26,
@@ -591,6 +686,11 @@
       "data_quality_score": 74.03,
       "waste_per_capita_kg_day": 0.773057324486206,
       "gdp_per_capita_usd": 7259.024414,
+      "gdp_total_usd": 2608080363.6572323,
+      "total_msw_total_tonnes": 101378.8303,
+      "population_total": 359288.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 85.2,
       "cities": [
         {
           "id": 45,
@@ -624,6 +724,11 @@
       "data_quality_score": 73.32,
       "waste_per_capita_kg_day": 0.3403399855672957,
       "gdp_per_capita_usd": 2227.352295,
+      "gdp_total_usd": 12298911490.496086,
+      "total_msw_total_tonnes": 685936.01,
+      "population_total": 5521763.0,
+      "waste_treatment_recycling_percent": 25.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 29,
@@ -657,6 +762,11 @@
       "data_quality_score": 83.41,
       "waste_per_capita_kg_day": 3.4670442644306205,
       "gdp_per_capita_usd": 80982.36719,
+      "gdp_total_usd": 5247495429.17762,
+      "total_msw_total_tonnes": 82000.0,
+      "population_total": 64798.0,
+      "waste_treatment_recycling_percent": 2.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -671,6 +781,11 @@
       "data_quality_score": 74.38,
       "waste_per_capita_kg_day": 0.44394271556630827,
       "gdp_per_capita_usd": 6743.016113,
+      "gdp_total_usd": 4632168862.954254,
+      "total_msw_total_tonnes": 111314.05,
+      "population_total": 686958.0,
+      "waste_treatment_recycling_percent": 0.86,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 50,
@@ -704,6 +819,11 @@
       "data_quality_score": 85.3,
       "waste_per_capita_kg_day": 0.5668775523940235,
       "gdp_per_capita_usd": 7984.413574,
+      "gdp_total_usd": 85630480179.14568,
+      "total_msw_total_tonnes": 2219052.0,
+      "population_total": 10724705.0,
+      "waste_treatment_recycling_percent": 12.11,
+      "waste_collection_coverage_total_percent_of_population": 57.6,
       "cities": [
         {
           "id": 46,
@@ -728,6 +848,11 @@
       "data_quality_score": 75.38,
       "waste_per_capita_kg_day": 0.9675291117406136,
       "gdp_per_capita_usd": 12671.00781,
+      "gdp_total_usd": 44804189446.85541,
+      "total_msw_total_tonnes": 1248718.0,
+      "population_total": 3535961.0,
+      "waste_treatment_recycling_percent": 0.00097,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 40,
@@ -761,6 +886,11 @@
       "data_quality_score": 74.18,
       "waste_per_capita_kg_day": 0.28671058243255965,
       "gdp_per_capita_usd": 14126.38965,
+      "gdp_total_usd": 28462782208.5369,
+      "total_msw_total_tonnes": 210854.4426,
+      "population_total": 2014866.0,
+      "waste_treatment_recycling_percent": 1.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 52,
@@ -785,6 +915,11 @@
       "data_quality_score": 84.76,
       "waste_per_capita_kg_day": 1.0390134311022845,
       "gdp_per_capita_usd": 14596.24609,
+      "gdp_total_usd": 3043242810524.9565,
+      "total_msw_total_tonnes": 79069584.0,
+      "population_total": 208494896.0,
+      "waste_treatment_recycling_percent": 1.4,
+      "waste_collection_coverage_total_percent_of_population": 91.3,
       "cities": [
         {
           "id": 47,
@@ -827,6 +962,11 @@
       "data_quality_score": 73.84,
       "waste_per_capita_kg_day": 2.8,
       "gdp_per_capita_usd": 24215.88281,
+      "gdp_total_usd": 499936900.61245,
+      "total_msw_total_tonnes": 21099.19,
+      "population_total": 20645.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 97.2,
       "cities": []
     },
     {
@@ -841,6 +981,11 @@
       "data_quality_score": 77.69,
       "waste_per_capita_kg_day": 1.4,
       "gdp_per_capita_usd": 60865.98828,
+      "gdp_total_usd": 25758242776.14288,
+      "total_msw_total_tonnes": 216253.156,
+      "population_total": 423196.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -855,6 +1000,11 @@
       "data_quality_score": 88.44,
       "waste_per_capita_kg_day": 1.1150684701410074,
       "gdp_per_capita_usd": 22279.36133,
+      "gdp_total_usd": 156513337679.6192,
+      "total_msw_total_tonnes": 2859190.0,
+      "population_total": 7025037.0,
+      "waste_treatment_recycling_percent": 19.03,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 38,
@@ -888,6 +1038,11 @@
       "data_quality_score": 84.27,
       "waste_per_capita_kg_day": 0.3895769959748866,
       "gdp_per_capita_usd": 1925.331177,
+      "gdp_total_usd": 34868949022.12445,
+      "total_msw_total_tonnes": 2575251.11,
+      "population_total": 18110624.0,
+      "waste_treatment_recycling_percent": 12.0,
+      "waste_collection_coverage_total_percent_of_population": 9.6,
       "cities": [
         {
           "id": 30,
@@ -921,6 +1076,11 @@
       "data_quality_score": 63.63,
       "waste_per_capita_kg_day": 0.7607740807672679,
       "gdp_per_capita_usd": 839.7785034,
+      "gdp_total_usd": 5661424725.387835,
+      "total_msw_total_tonnes": 1872016.0,
+      "population_total": 6741569.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 25,
@@ -972,6 +1132,11 @@
       "data_quality_score": 72.66,
       "waste_per_capita_kg_day": 0.7065743611346842,
       "gdp_per_capita_usd": 6353.783203,
+      "gdp_total_usd": 3265711136.894737,
+      "total_msw_total_tonnes": 132555.0,
+      "population_total": 513979.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 70.6,
       "cities": []
     },
     {
@@ -986,6 +1151,11 @@
       "data_quality_score": 65.15,
       "waste_per_capita_kg_day": 0.1953770331355232,
       "gdp_per_capita_usd": 3364.278809,
+      "gdp_total_usd": 51375195193.68911,
+      "total_msw_total_tonnes": 1089000.0,
+      "population_total": 15270790.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 200,
@@ -1010,6 +1180,11 @@
       "data_quality_score": 83.41,
       "waste_per_capita_kg_day": 0.4137749773436387,
       "gdp_per_capita_usd": 3262.763672,
+      "gdp_total_usd": 70657483455.94916,
+      "total_msw_total_tonnes": 3270616.59,
+      "population_total": 21655716.0,
+      "waste_treatment_recycling_percent": 0.4,
+      "waste_collection_coverage_total_percent_of_population": 61.6,
       "cities": [
         {
           "id": 64,
@@ -1061,6 +1236,11 @@
       "data_quality_score": 83.92,
       "waste_per_capita_kg_day": 1.934907279111325,
       "gdp_per_capita_usd": 47672.07813,
+      "gdp_total_usd": 1694483232104.7854,
+      "total_msw_total_tonnes": 25103034.0,
+      "population_total": 35544564.0,
+      "waste_treatment_recycling_percent": 20.59,
+      "waste_collection_coverage_total_percent_of_population": 99.0,
       "cities": [
         {
           "id": 54,
@@ -1103,6 +1283,11 @@
       "data_quality_score": 73.32,
       "waste_per_capita_kg_day": 2.7780633009503752,
       "gdp_per_capita_usd": 66207.44531,
+      "gdp_total_usd": 3917626953.88332,
+      "total_msw_total_tonnes": 60000.0,
+      "population_total": 59172.0,
+      "waste_treatment_recycling_percent": 21.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1117,6 +1302,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.6710581076812167,
       "gdp_per_capita_usd": 822.6104736,
+      "gdp_total_usd": 3714408751.609651,
+      "total_msw_total_tonnes": 1105983.0,
+      "population_total": 4515392.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1131,6 +1321,11 @@
       "data_quality_score": 63.63,
       "waste_per_capita_kg_day": 0.31318372181978243,
       "gdp_per_capita_usd": 1732.691284,
+      "gdp_total_usd": 20596851296.547367,
+      "total_msw_total_tonnes": 1358850.53,
+      "population_total": 11887202.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1145,6 +1340,11 @@
       "data_quality_score": 70.18,
       "waste_per_capita_kg_day": 2.979363181579509,
       "gdp_per_capita_usd": 46672.59375,
+      "gdp_total_usd": 7679555248.21875,
+      "total_msw_total_tonnes": 178933.0,
+      "population_total": 164541.0,
+      "waste_treatment_recycling_percent": 28.43020231,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1159,6 +1359,11 @@
       "data_quality_score": 75.04,
       "waste_per_capita_kg_day": 1.0609261151111216,
       "gdp_per_capita_usd": 20361.71484,
+      "gdp_total_usd": 342676298920.3193,
+      "total_msw_total_tonnes": 6517000.0,
+      "population_total": 16829442.0,
+      "waste_treatment_recycling_percent": 0.37,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 58,
@@ -1183,6 +1388,11 @@
       "data_quality_score": 75.92,
       "waste_per_capita_kg_day": 0.7731257395500788,
       "gdp_per_capita_usd": 16092.30078,
+      "gdp_total_usd": 22530026479469.438,
+      "total_msw_total_tonnes": 395081376.0,
+      "population_total": 1400050048.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 94.0,
       "cities": [
         {
           "id": 59,
@@ -1207,6 +1417,11 @@
       "data_quality_score": 89.86,
       "waste_per_capita_kg_day": 0.7173110197487222,
       "gdp_per_capita_usd": 12523.00684,
+      "gdp_total_usd": 581150770325.4723,
+      "total_msw_total_tonnes": 12150120.0,
+      "population_total": 46406648.0,
+      "waste_treatment_recycling_percent": 17.2,
+      "waste_collection_coverage_total_percent_of_population": 80.6,
       "cities": [
         {
           "id": 67,
@@ -1249,6 +1464,11 @@
       "data_quality_score": 63.8,
       "waste_per_capita_kg_day": 0.32073962848009174,
       "gdp_per_capita_usd": 2959.540039,
+      "gdp_total_usd": 2300817455.279536,
+      "total_msw_total_tonnes": 91013.0,
+      "population_total": 777424.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 70,
@@ -1273,6 +1493,11 @@
       "data_quality_score": 67.85,
       "waste_per_capita_kg_day": 0.5005525052454468,
       "gdp_per_capita_usd": 1055.572998,
+      "gdp_total_usd": 83111756017.6237,
+      "total_msw_total_tonnes": 14385226.02,
+      "population_total": 78736152.0,
+      "waste_treatment_recycling_percent": 4.9,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 65,
@@ -1297,6 +1522,11 @@
       "data_quality_score": 67.85,
       "waste_per_capita_kg_day": 0.4667400854751918,
       "gdp_per_capita_usd": 4899.57959,
+      "gdp_total_usd": 12976570841.17213,
+      "total_msw_total_tonnes": 451200.0,
+      "population_total": 2648507.0,
+      "waste_treatment_recycling_percent": 26.2,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 66,
@@ -1321,6 +1551,11 @@
       "data_quality_score": 83.58,
       "waste_per_capita_kg_day": 0.840764465089883,
       "gdp_per_capita_usd": 18168.71484,
+      "gdp_total_usd": 86439023504.91301,
+      "total_msw_total_tonnes": 1460000.0,
+      "population_total": 4757575.0,
+      "waste_treatment_recycling_percent": 1.26,
+      "waste_collection_coverage_total_percent_of_population": 90.4,
       "cities": [
         {
           "id": 72,
@@ -1354,6 +1589,11 @@
       "data_quality_score": 75.07,
       "waste_per_capita_kg_day": 1.2191780821917808,
       "gdp_per_capita_usd": 28829.35547,
+      "gdp_total_usd": 117263403374.22499,
+      "total_msw_total_tonnes": 1810037.5,
+      "population_total": 4067500.0,
+      "waste_treatment_recycling_percent": 16.32,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 127,
@@ -1387,6 +1627,11 @@
       "data_quality_score": 84.78,
       "waste_per_capita_kg_day": 0.6526400015649639,
       "gdp_per_capita_usd": 12984.71094,
+      "gdp_total_usd": 146775108251.23578,
+      "total_msw_total_tonnes": 2692691.98,
+      "population_total": 11303687.0,
+      "waste_treatment_recycling_percent": 9.49,
+      "waste_collection_coverage_total_percent_of_population": 76.9,
       "cities": [
         {
           "id": 73,
@@ -1411,6 +1656,11 @@
       "data_quality_score": 67.85,
       "waste_per_capita_kg_day": 0.44,
       "gdp_per_capita_usd": 27503.78906,
+      "gdp_total_usd": 4230687840.7873197,
+      "total_msw_total_tonnes": 24703.8132,
+      "population_total": 153822.0,
+      "waste_treatment_recycling_percent": 2.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1425,6 +1675,11 @@
       "data_quality_score": 75.07,
       "waste_per_capita_kg_day": 1.7589040524435553,
       "gdp_per_capita_usd": 39544.68359,
+      "gdp_total_usd": 47397269133.884254,
+      "total_msw_total_tonnes": 769485.125,
+      "population_total": 1198575.0,
+      "waste_treatment_recycling_percent": 13.31,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 75,
@@ -1458,6 +1713,11 @@
       "data_quality_score": 75.21,
       "waste_per_capita_kg_day": 1.36986301369863,
       "gdp_per_capita_usd": 40836.32813,
+      "gdp_total_usd": 435711737775.6142,
+      "total_msw_total_tonnes": 5334854.5,
+      "population_total": 10669709.0,
+      "waste_treatment_recycling_percent": 25.5,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 76,
@@ -1491,6 +1751,11 @@
       "data_quality_score": 69.0,
       "waste_per_capita_kg_day": 0.5963637295033561,
       "gdp_per_capita_usd": 3660.902832,
+      "gdp_total_usd": 74687294095.37222,
+      "total_msw_total_tonnes": 4440814.27,
+      "population_total": 20401332.0,
+      "waste_treatment_recycling_percent": 3.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 60,
@@ -1515,6 +1780,11 @@
       "data_quality_score": 88.44,
       "waste_per_capita_kg_day": 2.3123286578836817,
       "gdp_per_capita_usd": 57821.19922,
+      "gdp_total_usd": 336435712185.12866,
+      "total_msw_total_tonnes": 4910858.5,
+      "population_total": 5818553.0,
+      "waste_treatment_recycling_percent": 27.27,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 81,
@@ -1539,6 +1809,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.42220864350424814,
       "gdp_per_capita_usd": 6596.775391,
+      "gdp_total_usd": 4922652329.047411,
+      "total_msw_total_tonnes": 114997.249,
+      "population_total": 746221.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 80,
@@ -1563,6 +1838,11 @@
       "data_quality_score": 73.86,
       "waste_per_capita_kg_day": 0.498599863770529,
       "gdp_per_capita_usd": 11708.63965,
+      "gdp_total_usd": 847705510.66,
+      "total_msw_total_tonnes": 13176.0,
+      "population_total": 72400.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 94.0,
       "cities": []
     },
     {
@@ -1577,6 +1857,11 @@
       "data_quality_score": 74.38,
       "waste_per_capita_kg_day": 1.0575212135868015,
       "gdp_per_capita_usd": 15328.35254,
+      "gdp_total_usd": 161382934912.02075,
+      "total_msw_total_tonnes": 4063910.0,
+      "population_total": 10528394.0,
+      "waste_treatment_recycling_percent": 8.2,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 82,
@@ -1601,6 +1886,11 @@
       "data_quality_score": 76.27,
       "waste_per_capita_kg_day": 0.8989455171670945,
       "gdp_per_capita_usd": 11896.37695,
+      "gdp_total_usd": 192059487347.5176,
+      "total_msw_total_tonnes": 5297211.143,
+      "population_total": 16144368.0,
+      "waste_treatment_recycling_percent": 12.9,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 85,
@@ -1625,6 +1915,11 @@
       "data_quality_score": 75.75,
       "waste_per_capita_kg_day": 0.655188626365733,
       "gdp_per_capita_usd": 10301.10742,
+      "gdp_total_usd": 904573782955.9596,
+      "total_msw_total_tonnes": 21000000.0,
+      "population_total": 87813256.0,
+      "waste_treatment_recycling_percent": 12.5,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 86,
@@ -1649,6 +1944,11 @@
       "data_quality_score": 74.53,
       "waste_per_capita_kg_day": 0.7328583686057609,
       "gdp_per_capita_usd": 7328.713379,
+      "gdp_total_usd": 45178777042.731255,
+      "total_msw_total_tonnes": 1648996.18,
+      "population_total": 6164626.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 78.8,
       "cities": [
         {
           "id": 307,
@@ -1673,6 +1973,11 @@
       "data_quality_score": 56.37,
       "waste_per_capita_kg_day": 0.44509542971154586,
       "gdp_per_capita_usd": 24827.07227,
+      "gdp_total_usd": 30326020507.082302,
+      "total_msw_total_tonnes": 198443.06,
+      "population_total": 1221490.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 118,
@@ -1697,6 +2002,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.44509542055366075,
       "gdp_per_capita_usd": 1714.552368,
+      "gdp_total_usd": 7672090335.56592,
+      "total_msw_total_tonnes": 726957.37,
+      "population_total": 4474690.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1711,6 +2021,11 @@
       "data_quality_score": 75.21,
       "waste_per_capita_kg_day": 1.0109589222836963,
       "gdp_per_capita_usd": 36956.28516,
+      "gdp_total_usd": 49025838330.404396,
+      "total_msw_total_tonnes": 489511.7188,
+      "population_total": 1326590.0,
+      "waste_treatment_recycling_percent": 24.74,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 89,
@@ -1744,6 +2059,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.4450954190411181,
       "gdp_per_capita_usd": 8321.106445,
+      "gdp_total_usd": 11176061424.066608,
+      "total_msw_total_tonnes": 218199.47,
+      "population_total": 1343098.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1758,6 +2078,11 @@
       "data_quality_score": 64.64,
       "waste_per_capita_kg_day": 0.1792080017471652,
       "gdp_per_capita_usd": 1779.083984,
+      "gdp_total_usd": 177682511664.7195,
+      "total_msw_total_tonnes": 6532786.97,
+      "population_total": 99873032.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 93,
@@ -1881,6 +2206,11 @@
       "data_quality_score": 67.85,
       "waste_per_capita_kg_day": 3.421712617649418,
       "gdp_per_capita_usd": 44402.87891,
+      "gdp_total_usd": 2168725411.72222,
+      "total_msw_total_tonnes": 61000.0,
+      "population_total": 48842.0,
+      "waste_treatment_recycling_percent": 67.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -1895,6 +2225,11 @@
       "data_quality_score": 73.84,
       "waste_per_capita_kg_day": 0.598413075519614,
       "gdp_per_capita_usd": 10787.68555,
+      "gdp_total_usd": 9353851112.8073,
+      "total_msw_total_tonnes": 189389.594,
+      "population_total": 867086.0,
+      "waste_treatment_recycling_percent": 5.45,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 106,
@@ -1919,6 +2254,11 @@
       "data_quality_score": 75.21,
       "waste_per_capita_kg_day": 1.5506849444106219,
       "gdp_per_capita_usd": 48814.30859,
+      "gdp_total_usd": 269470311109.69727,
+      "total_msw_total_tonnes": 3124497.75,
+      "population_total": 5520314.0,
+      "waste_treatment_recycling_percent": 28.12,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 103,
@@ -1961,6 +2301,11 @@
       "data_quality_score": 79.95,
       "waste_per_capita_kg_day": 1.5013699192300618,
       "gdp_per_capita_usd": 46110.18359,
+      "gdp_total_usd": 3092143747204.838,
+      "total_msw_total_tonnes": 36748820.0,
+      "population_total": 67059888.0,
+      "waste_treatment_recycling_percent": 22.26,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 107,
@@ -1994,6 +2339,11 @@
       "data_quality_score": 83.73,
       "waste_per_capita_kg_day": 1.4723893935077845,
       "gdp_per_capita_usd": 60955.72656,
+      "gdp_total_usd": 16673097974.503681,
+      "total_msw_total_tonnes": 147000.0,
+      "population_total": 273528.0,
+      "waste_treatment_recycling_percent": 39.0,
+      "waste_collection_coverage_total_percent_of_population": 51.0,
       "cities": []
     },
     {
@@ -2008,6 +2358,11 @@
       "data_quality_score": 73.69,
       "waste_per_capita_kg_day": 0.6006011174376814,
       "gdp_per_capita_usd": 18514.65234,
+      "gdp_total_usd": 20109448948.61058,
+      "total_msw_total_tonnes": 238102.31,
+      "population_total": 1086137.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 23.6,
       "cities": [
         {
           "id": 110,
@@ -2032,6 +2387,11 @@
       "data_quality_score": 63.46,
       "waste_per_capita_kg_day": 0.4041441921195508,
       "gdp_per_capita_usd": 2180.855713,
+      "gdp_total_usd": 2859862958.386837,
+      "total_msw_total_tonnes": 193440.54,
+      "population_total": 1311349.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 117,
@@ -2056,6 +2416,11 @@
       "data_quality_score": 73.52,
       "waste_per_capita_kg_day": 0.5896480648671836,
       "gdp_per_capita_usd": 12605.13965,
+      "gdp_total_usd": 46854564593.015,
+      "total_msw_total_tonnes": 800000.0,
+      "population_total": 3717100.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 60.0,
       "cities": [
         {
           "id": 113,
@@ -2080,6 +2445,11 @@
       "data_quality_score": 75.21,
       "waste_per_capita_kg_day": 1.6684931770497458,
       "gdp_per_capita_usd": 53784.78125,
+      "gdp_total_usd": 4471279462700.0,
+      "total_msw_total_tonnes": 50627876.0,
+      "population_total": 83132800.0,
+      "waste_treatment_recycling_percent": 47.83,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 79,
@@ -2113,6 +2483,11 @@
       "data_quality_score": 63.63,
       "waste_per_capita_kg_day": 0.4500000208576224,
       "gdp_per_capita_usd": 3092.596924,
+      "gdp_total_usd": 66620747677.58339,
+      "total_msw_total_tonnes": 3538274.978,
+      "population_total": 21542008.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 114,
@@ -2146,6 +2521,11 @@
       "data_quality_score": 63.97,
       "waste_per_capita_kg_day": 1.381474439178335,
       "gdp_per_capita_usd": 43711.80078,
+      "gdp_total_usd": 1469721877.6259398,
+      "total_msw_total_tonnes": 16954.0,
+      "population_total": 33623.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -2160,6 +2540,11 @@
       "data_quality_score": 76.44,
       "waste_per_capita_kg_day": 1.4356163800658728,
       "gdp_per_capita_usd": 30465.44922,
+      "gdp_total_usd": 326477563716.1688,
+      "total_msw_total_tonnes": 5615352.5,
+      "population_total": 10716322.0,
+      "waste_treatment_recycling_percent": 19.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 119,
@@ -2193,6 +2578,11 @@
       "data_quality_score": 64.15,
       "waste_per_capita_kg_day": 2.40728057938429,
       "gdp_per_capita_usd": 43948.5625,
+      "gdp_total_usd": 2500892949.0625,
+      "total_msw_total_tonnes": 50000.0,
+      "population_total": 56905.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -2207,6 +2597,11 @@
       "data_quality_score": 65.18,
       "waste_per_capita_kg_day": 0.7671605323194607,
       "gdp_per_capita_usd": 13207.71191,
+      "gdp_total_usd": 1393162659.97871,
+      "total_msw_total_tonnes": 29536.11394,
+      "population_total": 105481.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -2221,6 +2616,11 @@
       "data_quality_score": 84.76,
       "waste_per_capita_kg_day": 2.4233541464916724,
       "gdp_per_capita_usd": 59074.94141,
+      "gdp_total_usd": 9450395602.18193,
+      "total_msw_total_tonnes": 141500.0,
+      "population_total": 159973.0,
+      "waste_treatment_recycling_percent": 17.85,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -2235,6 +2635,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 0.4647129969951628,
       "gdp_per_capita_usd": 8125.364746,
+      "gdp_total_usd": 132056913633.46803,
+      "total_msw_total_tonnes": 2756740.971,
+      "population_total": 16252429.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 77.7,
       "cities": [
         {
           "id": 122,
@@ -2277,6 +2682,11 @@
       "data_quality_score": 73.15,
       "waste_per_capita_kg_day": 0.2010897197755054,
       "gdp_per_capita_usd": 1622.776855,
+      "gdp_total_usd": 13197317157.68396,
+      "total_msw_total_tonnes": 596911.0,
+      "population_total": 8132552.0,
+      "waste_treatment_recycling_percent": 5.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 116,
@@ -2301,6 +2711,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.4479962683947541,
       "gdp_per_capita_usd": 1800.068604,
+      "gdp_total_usd": 3187068265.1657043,
+      "total_msw_total_tonnes": 289514.0,
+      "population_total": 1770526.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -2315,6 +2730,11 @@
       "data_quality_score": 83.75,
       "waste_per_capita_kg_day": 0.6578207127127771,
       "gdp_per_capita_usd": 9812.089844,
+      "gdp_total_usd": 7325274545.577264,
+      "total_msw_total_tonnes": 179251.5,
+      "population_total": 746556.0,
+      "waste_treatment_recycling_percent": 0.54,
+      "waste_collection_coverage_total_percent_of_population": 89.0,
       "cities": []
     },
     {
@@ -2329,6 +2749,11 @@
       "data_quality_score": 66.21,
       "waste_per_capita_kg_day": 0.5834026029263005,
       "gdp_per_capita_usd": 2952.618652,
+      "gdp_total_usd": 32028040692.873768,
+      "total_msw_total_tonnes": 2309852.455,
+      "population_total": 10847334.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 128,
@@ -2353,6 +2778,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 0.6500000000751609,
       "gdp_per_capita_usd": 5395.61377,
+      "gdp_total_usd": 49169510669.378586,
+      "total_msw_total_tonnes": 2162027.696,
+      "population_total": 9112867.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 64.6,
       "cities": [
         {
           "id": 125,
@@ -2386,6 +2816,11 @@
       "data_quality_score": 83.75,
       "waste_per_capita_kg_day": 2.13,
       "gdp_per_capita_usd": 57215.96875,
+      "gdp_total_usd": 418002702896.875,
+      "total_msw_total_tonnes": 5679816.465,
+      "population_total": 7305700.0,
+      "waste_treatment_recycling_percent": 34.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -2400,6 +2835,11 @@
       "data_quality_score": 75.04,
       "waste_per_capita_kg_day": 1.0602739689572307,
       "gdp_per_capita_usd": 32643.49023,
+      "gdp_total_usd": 318925234729.09827,
+      "total_msw_total_tonnes": 3780970.25,
+      "population_total": 9769949.0,
+      "waste_treatment_recycling_percent": 25.94,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 130,
@@ -2433,6 +2873,11 @@
       "data_quality_score": 84.1,
       "waste_per_capita_kg_day": 1.7972603242354857,
       "gdp_per_capita_usd": 55274.1875,
+      "gdp_total_usd": 18981155987.5,
+      "total_msw_total_tonnes": 225270.4063,
+      "population_total": 343400.0,
+      "waste_treatment_recycling_percent": 55.81,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -2447,6 +2892,11 @@
       "data_quality_score": 73.35,
       "waste_per_capita_kg_day": 0.38433856848329023,
       "gdp_per_capita_usd": 6496.807617,
+      "gdp_total_usd": 8787694663385.51,
+      "total_msw_total_tonnes": 189750000.0,
+      "population_total": 1352617344.0,
+      "waste_treatment_recycling_percent": 5.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 159,
@@ -2885,6 +3335,11 @@
       "data_quality_score": 84.1,
       "waste_per_capita_kg_day": 0.6841040347542712,
       "gdp_per_capita_usd": 10531.19824,
+      "gdp_total_usd": 2749858630663.9976,
+      "total_msw_total_tonnes": 65200000.0,
+      "population_total": 261115456.0,
+      "waste_treatment_recycling_percent": 7.0,
+      "waste_collection_coverage_total_percent_of_population": 45.0,
       "cities": [
         {
           "id": 131,
@@ -2909,6 +3364,11 @@
       "data_quality_score": 86.45,
       "waste_per_capita_kg_day": 0.6103833127480524,
       "gdp_per_capita_usd": 14535.8623,
+      "gdp_total_usd": 1166901581062.7153,
+      "total_msw_total_tonnes": 17885000.0,
+      "population_total": 80277424.0,
+      "waste_treatment_recycling_percent": 5.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 181,
@@ -2933,6 +3393,11 @@
       "data_quality_score": 82.97,
       "waste_per_capita_kg_day": 0.9967978423092395,
       "gdp_per_capita_usd": 10310.67969,
+      "gdp_total_usd": 372376878324.7891,
+      "total_msw_total_tonnes": 13140000.0,
+      "population_total": 36115648.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 76.0,
       "cities": [
         {
           "id": 182,
@@ -2957,6 +3422,11 @@
       "data_quality_score": 80.64,
       "waste_per_capita_kg_day": 1.6383561823957953,
       "gdp_per_capita_usd": 83388.71875,
+      "gdp_total_usd": 405879244991.375,
+      "total_msw_total_tonnes": 2910655.0,
+      "population_total": 4867316.0,
+      "waste_treatment_recycling_percent": 33.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 180,
@@ -2981,6 +3451,11 @@
       "data_quality_score": 73.0,
       "waste_per_capita_kg_day": 1.7149282483804766,
       "gdp_per_capita_usd": 44203.62109,
+      "gdp_total_usd": 3569840235.60731,
+      "total_msw_total_tonnes": 50551.0,
+      "population_total": 80759.0,
+      "waste_treatment_recycling_percent": 50.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 132,
@@ -3005,6 +3480,11 @@
       "data_quality_score": 73.69,
       "waste_per_capita_kg_day": 1.765434845401034,
       "gdp_per_capita_usd": 37687.74609,
+      "gdp_total_usd": 315827081008.809,
+      "total_msw_total_tonnes": 5400000.0,
+      "population_total": 8380100.0,
+      "waste_treatment_recycling_percent": 25.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 183,
@@ -3038,6 +3518,11 @@
       "data_quality_score": 75.24,
       "waste_per_capita_kg_day": 1.3671232602273526,
       "gdp_per_capita_usd": 42419.72266,
+      "gdp_total_usd": 2557798815440.1934,
+      "total_msw_total_tonnes": 30088400.0,
+      "population_total": 60297396.0,
+      "waste_treatment_recycling_percent": 25.9,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 186,
@@ -3071,6 +3556,11 @@
       "data_quality_score": 76.76,
       "waste_per_capita_kg_day": 1.0,
       "gdp_per_capita_usd": 9550.810547,
+      "gdp_total_usd": 27519275723.651184,
+      "total_msw_total_tonnes": 1051694.575,
+      "population_total": 2881355.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 76.0,
       "cities": []
     },
     {
@@ -3085,6 +3575,11 @@
       "data_quality_score": 85.13,
       "waste_per_capita_kg_day": 0.9250132356142422,
       "gdp_per_capita_usd": 41309.95703,
+      "gdp_total_usd": 5226911849284.4,
+      "total_msw_total_tonnes": 42720000.0,
+      "population_total": 126529104.0,
+      "waste_treatment_recycling_percent": 4.9,
+      "waste_collection_coverage_total_percent_of_population": 99.9,
       "cities": [
         {
           "id": 192,
@@ -3154,6 +3649,11 @@
       "data_quality_score": 75.41,
       "waste_per_capita_kg_day": 0.8238578818590043,
       "gdp_per_capita_usd": 10413.17578,
+      "gdp_total_usd": 87610879550.70192,
+      "total_msw_total_tonnes": 2529997.0,
+      "population_total": 8413464.0,
+      "waste_treatment_recycling_percent": 7.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 187,
@@ -3178,6 +3678,11 @@
       "data_quality_score": 84.07,
       "waste_per_capita_kg_day": 0.7602935259632602,
       "gdp_per_capita_usd": 22702.58008,
+      "gdp_total_usd": 381208648017.2339,
+      "total_msw_total_tonnes": 4659740.0,
+      "population_total": 16791424.0,
+      "waste_treatment_recycling_percent": 2.92,
+      "waste_collection_coverage_total_percent_of_population": 77.0,
       "cities": [
         {
           "id": 194,
@@ -3211,6 +3716,11 @@
       "data_quality_score": 83.9,
       "waste_per_capita_kg_day": 0.37071298688731263,
       "gdp_per_capita_usd": 3329.854492,
+      "gdp_total_usd": 137689989382.0828,
+      "total_msw_total_tonnes": 5595099.0,
+      "population_total": 41350152.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": 40.0,
       "cities": [
         {
           "id": 196,
@@ -3244,6 +3754,11 @@
       "data_quality_score": 74.72,
       "waste_per_capita_kg_day": 0.8555749814240133,
       "gdp_per_capita_usd": 2249.768555,
+      "gdp_total_usd": 257362273.849225,
+      "total_msw_total_tonnes": 35723.8275,
+      "population_total": 114395.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 54.0,
       "cities": [
         {
           "id": 201,
@@ -3268,6 +3783,11 @@
       "data_quality_score": 83.41,
       "waste_per_capita_kg_day": 1.0858101094395392,
       "gdp_per_capita_usd": 42105.28125,
+      "gdp_total_usd": 2172911754725.25,
+      "total_msw_total_tonnes": 20452776.0,
+      "population_total": 51606632.0,
+      "waste_treatment_recycling_percent": 58.0,
+      "waste_collection_coverage_total_percent_of_population": 99.92,
       "cities": [
         {
           "id": 202,
@@ -3292,6 +3812,11 @@
       "data_quality_score": 76.1,
       "waste_per_capita_kg_day": 0.4850552795758275,
       "gdp_per_capita_usd": 9723.561523,
+      "gdp_total_usd": 17519913152.1414,
+      "total_msw_total_tonnes": 319000.0,
+      "population_total": 1801800.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 39.0,
       "cities": [
         {
           "id": 349,
@@ -3325,6 +3850,11 @@
       "data_quality_score": 74.72,
       "waste_per_capita_kg_day": 1.5991954018435133,
       "gdp_per_capita_usd": 58810.30078,
+      "gdp_total_usd": 176318162993.40472,
+      "total_msw_total_tonnes": 1750000.0,
+      "population_total": 2998083.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 203,
@@ -3349,6 +3879,11 @@
       "data_quality_score": 62.13,
       "waste_per_capita_kg_day": 0.5120342772753227,
       "gdp_per_capita_usd": 4805.141113,
+      "gdp_total_usd": 28623745096.029697,
+      "total_msw_total_tonnes": 1113300.0,
+      "population_total": 5956900.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 199,
@@ -3382,6 +3917,11 @@
       "data_quality_score": 85.03,
       "waste_per_capita_kg_day": 0.14467502450733863,
       "gdp_per_capita_usd": 6543.666992,
+      "gdp_total_usd": 43606780893.67727,
+      "total_msw_total_tonnes": 351900.0,
+      "population_total": 6663967.0,
+      "waste_treatment_recycling_percent": 10.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 204,
@@ -3406,6 +3946,11 @@
       "data_quality_score": 75.21,
       "waste_per_capita_kg_day": 1.2027397317566775,
       "gdp_per_capita_usd": 30982.17383,
+      "gdp_total_usd": 59262361298.11187,
+      "total_msw_total_tonnes": 839714.375,
+      "population_total": 1912789.0,
+      "waste_treatment_recycling_percent": 21.23,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 217,
@@ -3439,6 +3984,11 @@
       "data_quality_score": 75.24,
       "waste_per_capita_kg_day": 0.9974590049666295,
       "gdp_per_capita_usd": 16966.74023,
+      "gdp_total_usd": 95069379229.21417,
+      "total_msw_total_tonnes": 2040000.0,
+      "population_total": 5603279.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 205,
@@ -3472,6 +4022,11 @@
       "data_quality_score": 74.38,
       "waste_per_capita_kg_day": 0.10238385581779601,
       "gdp_per_capita_usd": 1978.608398,
+      "gdp_total_usd": 3889275340.8294764,
+      "total_msw_total_tonnes": 73457.0,
+      "population_total": 1965662.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 20.0,
       "cities": []
     },
     {
@@ -3486,6 +4041,11 @@
       "data_quality_score": 56.37,
       "waste_per_capita_kg_day": 0.44022603044665853,
       "gdp_per_capita_usd": 1333.422241,
+      "gdp_total_usd": 4684221659.920612,
+      "total_msw_total_tonnes": 564466.7,
+      "population_total": 3512932.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 207,
@@ -3510,6 +4070,11 @@
       "data_quality_score": 63.97,
       "waste_per_capita_kg_day": 0.9500000001105887,
       "gdp_per_capita_usd": 8479.946289,
+      "gdp_total_usd": 52520555820.86778,
+      "total_msw_total_tonnes": 2147596.472,
+      "population_total": 6193501.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 208,
@@ -3534,6 +4099,11 @@
       "data_quality_score": 83.73,
       "waste_per_capita_kg_day": 2.427631911866961,
       "gdp_per_capita_usd": 45726.98828,
+      "gdp_total_usd": 1671092786.6926,
+      "total_msw_total_tonnes": 32382.0,
+      "population_total": 36545.0,
+      "waste_treatment_recycling_percent": 64.6,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -3548,6 +4118,11 @@
       "data_quality_score": 76.61,
       "waste_per_capita_kg_day": 1.293150691813156,
       "gdp_per_capita_usd": 37278.30469,
+      "gdp_total_usd": 103888819755.49835,
+      "total_msw_total_tonnes": 1315390.375,
+      "population_total": 2786844.0,
+      "waste_treatment_recycling_percent": 22.92,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 216,
@@ -3581,6 +4156,11 @@
       "data_quality_score": 75.04,
       "waste_per_capita_kg_day": 2.1671233495463933,
       "gdp_per_capita_usd": 114323.4063,
+      "gdp_total_usd": 70868622271.7448,
+      "total_msw_total_tonnes": 490337.75,
+      "population_total": 619896.0,
+      "waste_treatment_recycling_percent": 28.37,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -3595,6 +4175,11 @@
       "data_quality_score": 83.73,
       "waste_per_capita_kg_day": 1.6914625163502366,
       "gdp_per_capita_usd": 117335.5859,
+      "gdp_total_usd": 71828973613.64531,
+      "total_msw_total_tonnes": 377942.0,
+      "population_total": 612167.0,
+      "waste_treatment_recycling_percent": 20.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -3609,6 +4194,11 @@
       "data_quality_score": 98.01,
       "waste_per_capita_kg_day": 0.8246575566067681,
       "gdp_per_capita_usd": 16147.72949,
+      "gdp_total_usd": 33635042323.031418,
+      "total_msw_total_tonnes": 626970.375,
+      "population_total": 2082958.0,
+      "waste_treatment_recycling_percent": 0.18,
+      "waste_collection_coverage_total_percent_of_population": 73.0,
       "cities": [
         {
           "id": 232,
@@ -3642,6 +4232,11 @@
       "data_quality_score": 72.83,
       "waste_per_capita_kg_day": 0.41476414444589466,
       "gdp_per_capita_usd": 1565.866943,
+      "gdp_total_usd": 38981556037.594536,
+      "total_msw_total_tonnes": 3768759.16,
+      "population_total": 24894552.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 17.7,
       "cities": [
         {
           "id": 224,
@@ -3666,6 +4261,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.2144963968389653,
       "gdp_per_capita_usd": 999.4413452,
+      "gdp_total_usd": 16567886097.258144,
+      "total_msw_total_tonnes": 1297844.48,
+      "population_total": 16577147.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 244,
@@ -3699,6 +4299,11 @@
       "data_quality_score": 80.15,
       "waste_per_capita_kg_day": 1.1766898628080653,
       "gdp_per_capita_usd": 23906.26563,
+      "gdp_total_usd": 722638979963.8901,
+      "total_msw_total_tonnes": 12982685.0,
+      "population_total": 30228016.0,
+      "waste_treatment_recycling_percent": 17.5,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 246,
@@ -3723,6 +4328,11 @@
       "data_quality_score": 74.89,
       "waste_per_capita_kg_day": 1.4162274946927238,
       "gdp_per_capita_usd": 17284.60938,
+      "gdp_total_usd": 7072222627.74894,
+      "total_msw_total_tonnes": 211505.78,
+      "population_total": 409163.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 38.2,
       "cities": [
         {
           "id": 226,
@@ -3765,6 +4375,11 @@
       "data_quality_score": 63.63,
       "waste_per_capita_kg_day": 0.3316005379983247,
       "gdp_per_capita_usd": 2007.80603,
+      "gdp_total_usd": 32138288546.2201,
+      "total_msw_total_tonnes": 1937354.44,
+      "population_total": 16006670.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 234,
@@ -3798,6 +4413,11 @@
       "data_quality_score": 75.07,
       "waste_per_capita_kg_day": 1.901369892991622,
       "gdp_per_capita_usd": 43707.53906,
+      "gdp_total_usd": 21969725631.126183,
+      "total_msw_total_tonnes": 348841.1875,
+      "population_total": 502653.0,
+      "waste_treatment_recycling_percent": 6.69,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -3812,6 +4432,11 @@
       "data_quality_score": 84.07,
       "waste_per_capita_kg_day": 0.44702896217301535,
       "gdp_per_capita_usd": 3628.895264,
+      "gdp_total_usd": 191580267.67235202,
+      "total_msw_total_tonnes": 8614.0,
+      "population_total": 52793.0,
+      "waste_treatment_recycling_percent": 30.8,
+      "waste_collection_coverage_total_percent_of_population": 49.0,
       "cities": [
         {
           "id": 231,
@@ -3836,6 +4461,11 @@
       "data_quality_score": 74.72,
       "waste_per_capita_kg_day": 0.35474428125651863,
       "gdp_per_capita_usd": 4783.635742,
+      "gdp_total_usd": 16772804598.545698,
+      "total_msw_total_tonnes": 454000.0,
+      "population_total": 3506288.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 243,
@@ -3860,6 +4490,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 0.9497630736865766,
       "gdp_per_capita_usd": 20646.93359,
+      "gdp_total_usd": 26086843123.75807,
+      "total_msw_total_tonnes": 438000.0,
+      "population_total": 1263473.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 98.0,
       "cities": []
     },
     {
@@ -3874,6 +4509,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 1.1555989508665763,
       "gdp_per_capita_usd": 19332.07422,
+      "gdp_total_usd": 2433733227690.457,
+      "total_msw_total_tonnes": 53100000.0,
+      "population_total": 125890952.0,
+      "waste_treatment_recycling_percent": 5.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 229,
@@ -3916,6 +4556,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 0.679848744210649,
       "gdp_per_capita_usd": 3440.064209,
+      "gdp_total_usd": 360990017.899833,
+      "total_msw_total_tonnes": 26039.57,
+      "population_total": 104937.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 8.0,
       "cities": [
         {
           "id": 109,
@@ -3940,6 +4585,11 @@
       "data_quality_score": 74.01,
       "waste_per_capita_kg_day": 3.0689549277270056,
       "gdp_per_capita_usd": 10360.83008,
+      "gdp_total_usd": 36823509073.968636,
+      "total_msw_total_tonnes": 3981200.0,
+      "population_total": 3554108.0,
+      "waste_treatment_recycling_percent": 15.32,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 223,
@@ -3973,6 +4623,11 @@
       "data_quality_score": 82.7,
       "waste_per_capita_kg_day": 3.335558247367175,
       "gdp_per_capita_usd": 43711.80078,
+      "gdp_total_usd": 1651562968.87074,
+      "total_msw_total_tonnes": 46000.0,
+      "population_total": 37783.0,
+      "waste_treatment_recycling_percent": 5.4,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -3987,6 +4642,11 @@
       "data_quality_score": 65.5,
       "waste_per_capita_kg_day": 2.624433747875917,
       "gdp_per_capita_usd": 10940.41504,
+      "gdp_total_usd": 33120990611.26592,
+      "total_msw_total_tonnes": 2900000.0,
+      "population_total": 3027398.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 240,
@@ -4011,6 +4671,11 @@
       "data_quality_score": 84.78,
       "waste_per_capita_kg_day": 1.4520548055282911,
       "gdp_per_capita_usd": 20752.62109,
+      "gdp_total_usd": 12912841162.96743,
+      "total_msw_total_tonnes": 329780.3125,
+      "population_total": 622227.0,
+      "waste_treatment_recycling_percent": 5.42,
+      "waste_collection_coverage_total_percent_of_population": 75.9,
       "cities": [
         {
           "id": 239,
@@ -4044,6 +4709,11 @@
       "data_quality_score": 75.24,
       "waste_per_capita_kg_day": 0.5470178617138846,
       "gdp_per_capita_usd": 6915.103027,
+      "gdp_total_usd": 237313058888.82816,
+      "total_msw_total_tonnes": 6852000.0,
+      "population_total": 34318080.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 221,
@@ -4086,6 +4756,11 @@
       "data_quality_score": 73.35,
       "waste_per_capita_kg_day": 0.25169847566057063,
       "gdp_per_capita_usd": 1217.09021,
+      "gdp_total_usd": 33119923722.98022,
+      "total_msw_total_tonnes": 2500000.0,
+      "population_total": 27212382.0,
+      "waste_treatment_recycling_percent": 1.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 242,
@@ -4110,6 +4785,11 @@
       "data_quality_score": 73.05,
       "waste_per_capita_kg_day": 0.2779999879297546,
       "gdp_per_capita_usd": 1093.788086,
+      "gdp_total_usd": 50418669341.8419,
+      "total_msw_total_tonnes": 4677306.529,
+      "population_total": 46095464.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 60.0,
       "cities": [
         {
           "id": 236,
@@ -4143,6 +4823,11 @@
       "data_quality_score": 69.0,
       "waste_per_capita_kg_day": 0.4508812745316271,
       "gdp_per_capita_usd": 6152.987305,
+      "gdp_total_usd": 9598555595.015814,
+      "total_msw_total_tonnes": 256729.0,
+      "population_total": 1559983.0,
+      "waste_treatment_recycling_percent": 4.5,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 247,
@@ -4167,6 +4852,11 @@
       "data_quality_score": 74.21,
       "waste_per_capita_kg_day": 1.3,
       "gdp_per_capita_usd": 11167.31934,
+      "gdp_total_usd": 145722350.06766,
+      "total_msw_total_tonnes": 6191.7505,
+      "population_total": 13049.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -4181,6 +4871,11 @@
       "data_quality_score": 66.72,
       "waste_per_capita_kg_day": 0.16722050158738705,
       "gdp_per_capita_usd": 2902.249268,
+      "gdp_total_usd": 84115228821.6109,
+      "total_msw_total_tonnes": 1768977.49,
+      "population_total": 28982772.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 266,
@@ -4304,6 +4999,11 @@
       "data_quality_score": 74.89,
       "waste_per_capita_kg_day": 1.391780853530913,
       "gdp_per_capita_usd": 56849.375,
+      "gdp_total_usd": 985361689468.75,
+      "total_msw_total_tonnes": 8805088.0,
+      "population_total": 17332850.0,
+      "waste_treatment_recycling_percent": 24.61,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 256,
@@ -4337,6 +5037,11 @@
       "data_quality_score": 74.38,
       "waste_per_capita_kg_day": 1.065905035971223,
       "gdp_per_capita_usd": 57330.20313,
+      "gdp_total_usd": 15937796470.140001,
+      "total_msw_total_tonnes": 108157.384,
+      "population_total": 278000.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 67.0,
       "cities": []
     },
     {
@@ -4351,6 +5056,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 1.9879317073939675,
       "gdp_per_capita_usd": 41857.47656,
+      "gdp_total_usd": 196424580253.112,
+      "total_msw_total_tonnes": 3405000.0,
+      "population_total": 4692700.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 97.0,
       "cities": [
         {
           "id": 272,
@@ -4384,6 +5094,11 @@
       "data_quality_score": 73.18,
       "waste_per_capita_kg_day": 0.7299999998328772,
       "gdp_per_capita_usd": 4611.840332,
+      "gdp_total_usd": 26461462345.244034,
+      "total_msw_total_tonnes": 1528816.293,
+      "population_total": 5737723.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 92.3,
       "cities": [
         {
           "id": 255,
@@ -4417,6 +5132,11 @@
       "data_quality_score": 73.69,
       "waste_per_capita_kg_day": 0.5780500010460943,
       "gdp_per_capita_usd": 1038.224121,
+      "gdp_total_usd": 9180408540.892214,
+      "total_msw_total_tonnes": 1865645.67,
+      "population_total": 8842415.0,
+      "waste_treatment_recycling_percent": 4.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 248,
@@ -4441,6 +5161,11 @@
       "data_quality_score": 63.8,
       "waste_per_capita_kg_day": 0.49000001583482544,
       "gdp_per_capita_usd": 4690.379395,
+      "gdp_total_usd": 724204784853.5635,
+      "total_msw_total_tonnes": 27614830.07,
+      "population_total": 154402176.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 253,
@@ -4501,6 +5226,11 @@
       "data_quality_score": 73.15,
       "waste_per_capita_kg_day": 1.66106484565845,
       "gdp_per_capita_usd": 60955.72656,
+      "gdp_total_usd": 3293803640.39616,
+      "total_msw_total_tonnes": 32761.4145,
+      "population_total": 54036.0,
+      "waste_treatment_recycling_percent": 36.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 241,
@@ -4525,6 +5255,11 @@
       "data_quality_score": 84.76,
       "waste_per_capita_kg_day": 2.1260273736944835,
       "gdp_per_capita_usd": 64962.26172,
+      "gdp_total_usd": 347411419603.3411,
+      "total_msw_total_tonnes": 4149967.25,
+      "population_total": 5347896.0,
+      "waste_treatment_recycling_percent": 26.16,
+      "waste_collection_coverage_total_percent_of_population": 99.0,
       "cities": [
         {
           "id": 258,
@@ -4558,6 +5293,11 @@
       "data_quality_score": 73.94,
       "waste_per_capita_kg_day": 1.8368777834864851,
       "gdp_per_capita_usd": 30535.83398,
+      "gdp_total_usd": 150659224482.223,
+      "total_msw_total_tonnes": 3307951.0,
+      "population_total": 4933850.0,
+      "waste_treatment_recycling_percent": 26.21,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 274,
@@ -4582,6 +5322,11 @@
       "data_quality_score": 88.81,
       "waste_per_capita_kg_day": 0.43619284752160004,
       "gdp_per_capita_usd": 4571.414551,
+      "gdp_total_usd": 883213163204.521,
+      "total_msw_total_tonnes": 30760000.0,
+      "population_total": 193203472.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 275,
@@ -4624,6 +5369,11 @@
       "data_quality_score": 74.72,
       "waste_per_capita_kg_day": 1.201074268706692,
       "gdp_per_capita_usd": 18275.02539,
+      "gdp_total_usd": 392967870.96116996,
+      "total_msw_total_tonnes": 9426.7455,
+      "population_total": 21503.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 77.0,
       "cities": [
         {
           "id": 284,
@@ -4648,6 +5398,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 1.016211154701819,
       "gdp_per_capita_usd": 28436.35938,
+      "gdp_total_usd": 112870991032.70563,
+      "total_msw_total_tonnes": 1472262.215,
+      "population_total": 3969249.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 84.9,
       "cities": [
         {
           "id": 280,
@@ -4690,6 +5445,11 @@
       "data_quality_score": 74.03,
       "waste_per_capita_kg_day": 0.353249352244455,
       "gdp_per_capita_usd": 3912.381104,
+      "gdp_total_usd": 30343586680.68664,
+      "total_msw_total_tonnes": 1000000.0,
+      "population_total": 7755785.0,
+      "waste_treatment_recycling_percent": 2.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 285,
@@ -4714,6 +5474,11 @@
       "data_quality_score": 72.83,
       "waste_per_capita_kg_day": 0.7504302183087764,
       "gdp_per_capita_usd": 11810.42773,
+      "gdp_total_usd": 78410835140.36987,
+      "total_msw_total_tonnes": 1818501.365,
+      "population_total": 6639119.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 46.6,
       "cities": [
         {
           "id": 290,
@@ -4756,6 +5521,11 @@
       "data_quality_score": 85.47,
       "waste_per_capita_kg_day": 0.739186947151457,
       "gdp_per_capita_usd": 11877.08398,
+      "gdp_total_usd": 367873126600.2689,
+      "total_msw_total_tonnes": 8356711.13,
+      "population_total": 30973354.0,
+      "waste_treatment_recycling_percent": 4.0,
+      "waste_collection_coverage_total_percent_of_population": 82.93,
       "cities": [
         {
           "id": 281,
@@ -4780,6 +5550,11 @@
       "data_quality_score": 79.78,
       "waste_per_capita_kg_day": 0.3879923837563496,
       "gdp_per_capita_usd": 7705.04541,
+      "gdp_total_usd": 796087017691.3718,
+      "total_msw_total_tonnes": 14631922.9,
+      "population_total": 103320224.0,
+      "waste_treatment_recycling_percent": 28.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 282,
@@ -4813,6 +5588,11 @@
       "data_quality_score": 75.07,
       "waste_per_capita_kg_day": 0.9205479457827064,
       "gdp_per_capita_usd": 33221.54297,
+      "gdp_total_usd": 1261450955756.3699,
+      "total_msw_total_tonnes": 12758213.0,
+      "population_total": 37970872.0,
+      "waste_treatment_recycling_percent": 26.39,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 287,
@@ -4846,6 +5626,11 @@
       "data_quality_score": 75.24,
       "waste_per_capita_kg_day": 1.4054794731308065,
       "gdp_per_capita_usd": 34961.94531,
+      "gdp_total_usd": 359038795519.5843,
+      "total_msw_total_tonnes": 5268211.0,
+      "population_total": 10269417.0,
+      "waste_treatment_recycling_percent": 16.23,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 289,
@@ -4879,6 +5664,11 @@
       "data_quality_score": 73.67,
       "waste_per_capita_kg_day": 3.2901448249171827,
       "gdp_per_capita_usd": 34311.03125,
+      "gdp_total_usd": 119168421827.90625,
+      "total_msw_total_tonnes": 4170953.0,
+      "population_total": 3473181.0,
+      "waste_treatment_recycling_percent": 14.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -4893,6 +5683,11 @@
       "data_quality_score": 85.3,
       "waste_per_capita_kg_day": 1.3,
       "gdp_per_capita_usd": 96261.66406,
+      "gdp_total_usd": 203070526127.72607,
+      "total_msw_total_tonnes": 1000990.016,
+      "population_total": 2109568.0,
+      "waste_treatment_recycling_percent": 3.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 294,
@@ -4917,6 +5712,11 @@
       "data_quality_score": 75.24,
       "waste_per_capita_kg_day": 0.7671233131484402,
       "gdp_per_capita_usd": 29983.55664,
+      "gdp_total_usd": 580378033378.6521,
+      "total_msw_total_tonnes": 5419832.5,
+      "population_total": 19356544.0,
+      "waste_treatment_recycling_percent": 5.67,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 296,
@@ -4950,6 +5750,11 @@
       "data_quality_score": 73.5,
       "waste_per_capita_kg_day": 1.1479164325714308,
       "gdp_per_capita_usd": 26012.84961,
+      "gdp_total_usd": 3725083765739.3447,
+      "total_msw_total_tonnes": 60000000.0,
+      "population_total": 143201680.0,
+      "waste_treatment_recycling_percent": 4.5,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 299,
@@ -4992,6 +5797,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 1.0080642445241184,
       "gdp_per_capita_usd": 1950.528076,
+      "gdp_total_usd": 23245433949.95461,
+      "total_msw_total_tonnes": 4384969.0,
+      "population_total": 11917508.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 300,
@@ -5025,6 +5835,11 @@
       "data_quality_score": 84.93,
       "waste_per_capita_kg_day": 0.4,
       "gdp_per_capita_usd": 6210.983398,
+      "gdp_total_usd": 1165584199.38567,
+      "total_msw_total_tonnes": 27399.09,
+      "population_total": 187665.0,
+      "waste_treatment_recycling_percent": 36.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 348,
@@ -5049,6 +5864,11 @@
       "data_quality_score": 73.32,
       "waste_per_capita_kg_day": 1.4171586244682461,
       "gdp_per_capita_usd": 58806.19922,
+      "gdp_total_usd": 1952542232.7016602,
+      "total_msw_total_tonnes": 17174.68,
+      "population_total": 33203.0,
+      "waste_treatment_recycling_percent": 45.05,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -5063,6 +5883,11 @@
       "data_quality_score": 84.93,
       "waste_per_capita_kg_day": 1.3999999996527284,
       "gdp_per_capita_usd": 48921.23047,
+      "gdp_total_usd": 1543814314598.9778,
+      "total_msw_total_tonnes": 16125700.58,
+      "population_total": 31557144.0,
+      "waste_treatment_recycling_percent": 15.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 302,
@@ -5096,6 +5921,11 @@
       "data_quality_score": 75.9,
       "waste_per_capita_kg_day": 0.4362586553231868,
       "gdp_per_capita_usd": 3067.662598,
+      "gdp_total_usd": 47277631842.61317,
+      "total_msw_total_tonnes": 2454059.25,
+      "population_total": 15411614.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 21.4,
       "cities": [
         {
           "id": 304,
@@ -5120,6 +5950,11 @@
       "data_quality_score": 84.95,
       "waste_per_capita_kg_day": 0.9260273775357535,
       "gdp_per_capita_usd": 18351.27344,
+      "gdp_total_usd": 127449135258.964,
+      "total_msw_total_tonnes": 2347401.5,
+      "population_total": 6944975.0,
+      "waste_treatment_recycling_percent": 0.76,
+      "waste_collection_coverage_total_percent_of_population": 70.0,
       "cities": [
         {
           "id": 309,
@@ -5153,6 +5988,11 @@
       "data_quality_score": 63.97,
       "waste_per_capita_kg_day": 1.4892681937767516,
       "gdp_per_capita_usd": 23302.95313,
+      "gdp_total_usd": 2057720670.2383902,
+      "total_msw_total_tonnes": 48000.0,
+      "population_total": 88303.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -5167,6 +6007,11 @@
       "data_quality_score": 57.52,
       "waste_per_capita_kg_day": 0.3073410076237277,
       "gdp_per_capita_usd": 1237.630249,
+      "gdp_total_usd": 6732331077.334055,
+      "total_msw_total_tonnes": 610222.09,
+      "population_total": 5439695.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 306,
@@ -5191,6 +6036,11 @@
       "data_quality_score": 96.98,
       "waste_per_capita_kg_day": 0.8982550794643518,
       "gdp_per_capita_usd": 97341.46875,
+      "gdp_total_usd": 555196801162.5,
+      "total_msw_total_tonnes": 1870000.0,
+      "population_total": 5703600.0,
+      "waste_treatment_recycling_percent": 61.0,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -5205,6 +6055,11 @@
       "data_quality_score": 54.26,
       "waste_per_capita_kg_day": null,
       "gdp_per_capita_usd": null,
+      "gdp_total_usd": null,
+      "total_msw_total_tonnes": null,
+      "population_total": 37685.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -5219,6 +6074,11 @@
       "data_quality_score": 75.07,
       "waste_per_capita_kg_day": 1.153424666073799,
       "gdp_per_capita_usd": 31965.76172,
+      "gdp_total_usd": 174343597921.48557,
+      "total_msw_total_tonnes": 2296164.75,
+      "population_total": 5454073.0,
+      "waste_treatment_recycling_percent": 7.62,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 313,
@@ -5252,6 +6112,11 @@
       "data_quality_score": 73.86,
       "waste_per_capita_kg_day": 1.3808218731946684,
       "gdp_per_capita_usd": 39037.93359,
+      "gdp_total_usd": 81509097287.50613,
+      "total_msw_total_tonnes": 1052324.75,
+      "population_total": 2087946.0,
+      "waste_treatment_recycling_percent": 46.44,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 314,
@@ -5276,6 +6141,11 @@
       "data_quality_score": 74.89,
       "waste_per_capita_kg_day": 0.8750000001215468,
       "gdp_per_capita_usd": 2596.452881,
+      "gdp_total_usd": 1463134952.3309531,
+      "total_msw_total_tonnes": 179971.9644,
+      "population_total": 563513.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 12.0,
       "cities": [
         {
           "id": 305,
@@ -5300,6 +6170,11 @@
       "data_quality_score": 56.37,
       "waste_per_capita_kg_day": 0.44509541966321015,
       "gdp_per_capita_usd": 1862.614136,
+      "gdp_total_usd": 26668901748.791454,
+      "total_msw_total_tonnes": 2326099.17,
+      "population_total": 14317996.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 308,
@@ -5324,6 +6199,11 @@
       "data_quality_score": 74.72,
       "waste_per_capita_kg_day": 0.9775449482620462,
       "gdp_per_capita_usd": 12666.60742,
+      "gdp_total_usd": 655235292542.1324,
+      "total_msw_total_tonnes": 18457232.0,
+      "population_total": 51729344.0,
+      "waste_treatment_recycling_percent": 28.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 355,
@@ -5384,6 +6264,11 @@
       "data_quality_score": 56.37,
       "waste_per_capita_kg_day": 0.6570644667854156,
       "gdp_per_capita_usd": 1795.991943,
+      "gdp_total_usd": 20074681982.96307,
+      "total_msw_total_tonnes": 2680681.0,
+      "population_total": 11177490.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 311,
@@ -5408,6 +6293,11 @@
       "data_quality_score": 75.07,
       "waste_per_capita_kg_day": 1.3041096309429154,
       "gdp_per_capita_usd": 40985.55859,
+      "gdp_total_usd": 1929468124918.5403,
+      "total_msw_total_tonnes": 22408548.0,
+      "population_total": 47076780.0,
+      "waste_treatment_recycling_percent": 16.84,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 88,
@@ -5441,6 +6331,11 @@
       "data_quality_score": 78.94,
       "waste_per_capita_kg_day": 0.34004621987454603,
       "gdp_per_capita_usd": 12287.47266,
+      "gdp_total_usd": 260531282809.97998,
+      "total_msw_total_tonnes": 2631650.0,
+      "population_total": 21203000.0,
+      "waste_treatment_recycling_percent": 12.79,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 214,
@@ -5510,6 +6405,11 @@
       "data_quality_score": 73.69,
       "waste_per_capita_kg_day": 1.6599515925212667,
       "gdp_per_capita_usd": 25569.35742,
+      "gdp_total_usd": 1388109275.61696,
+      "total_msw_total_tonnes": 32892.14,
+      "population_total": 54288.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 95.0,
       "cities": []
     },
     {
@@ -5524,6 +6424,11 @@
       "data_quality_score": 75.38,
       "waste_per_capita_kg_day": 1.2,
       "gdp_per_capita_usd": 14029.98242,
+      "gdp_total_usd": 2486197064.71852,
+      "total_msw_total_tonnes": 77616.228,
+      "population_total": 177206.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": []
     },
     {
@@ -5538,6 +6443,11 @@
       "data_quality_score": 56.37,
       "waste_per_capita_kg_day": 1.36986301369863,
       "gdp_per_capita_usd": 30385.89453,
+      "gdp_total_usd": 940716908.7542701,
+      "total_msw_total_tonnes": 15479.5,
+      "population_total": 30959.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -5552,6 +6462,11 @@
       "data_quality_score": 66.38,
       "waste_per_capita_kg_day": 0.79,
       "gdp_per_capita_usd": 11971.99316,
+      "gdp_total_usd": 1310394511.3278,
+      "total_msw_total_tonnes": 31561.34925,
+      "population_total": 109455.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -5566,6 +6481,11 @@
       "data_quality_score": 64.15,
       "waste_per_capita_kg_day": 0.2007089883770787,
       "gdp_per_capita_usd": 4191.823242,
+      "gdp_total_usd": 162004763059.46057,
+      "total_msw_total_tonnes": 2831291.0,
+      "population_total": 38647804.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -5580,6 +6500,11 @@
       "data_quality_score": 75.9,
       "waste_per_capita_kg_day": 0.4094192772137776,
       "gdp_per_capita_usd": 16953.80273,
+      "gdp_total_usd": 8919446477.66119,
+      "total_msw_total_tonnes": 78619.79915,
+      "population_total": 526103.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 79.5,
       "cities": []
     },
     {
@@ -5594,6 +6519,11 @@
       "data_quality_score": 74.72,
       "waste_per_capita_kg_day": 1.2301370137373788,
       "gdp_per_capita_usd": 52608.71094,
+      "gdp_total_usd": 541104423763.9558,
+      "total_msw_total_tonnes": 4618168.5,
+      "population_total": 10285453.0,
+      "waste_treatment_recycling_percent": 32.37,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 315,
@@ -5627,6 +6557,11 @@
       "data_quality_score": 83.75,
       "waste_per_capita_kg_day": 1.9424657892095354,
       "gdp_per_capita_usd": 68394.28906,
+      "gdp_total_usd": 586469538448.9379,
+      "total_msw_total_tonnes": 6079556.0,
+      "population_total": 8574832.0,
+      "waste_treatment_recycling_percent": 32.0,
+      "waste_collection_coverage_total_percent_of_population": 99.0,
       "cities": [
         {
           "id": 56,
@@ -5660,6 +6595,11 @@
       "data_quality_score": 84.61,
       "waste_per_capita_kg_day": 0.5920206992328062,
       "gdp_per_capita_usd": 8587.050781,
+      "gdp_total_usd": 178824405112.84064,
+      "total_msw_total_tonnes": 4500000.0,
+      "population_total": 20824892.0,
+      "waste_treatment_recycling_percent": 2.5,
+      "waste_collection_coverage_total_percent_of_population": 74.0,
       "cities": [
         {
           "id": 317,
@@ -5684,6 +6624,11 @@
       "data_quality_score": 71.34,
       "waste_per_capita_kg_day": 0.36650528583229636,
       "gdp_per_capita_usd": 3720.786865,
+      "gdp_total_usd": 711660020.52109,
+      "total_msw_total_tonnes": 25586.5,
+      "population_total": 191266.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 48.4,
       "cities": []
     },
     {
@@ -5698,6 +6643,11 @@
       "data_quality_score": 71.34,
       "waste_per_capita_kg_day": 0.5988139734456824,
       "gdp_per_capita_usd": 2616.475586,
+      "gdp_total_usd": 21397037595.471073,
+      "total_msw_total_tonnes": 1787400.0,
+      "population_total": 8177809.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 38.25,
       "cities": [
         {
           "id": 320,
@@ -5731,6 +6681,11 @@
       "data_quality_score": 62.13,
       "waste_per_capita_kg_day": 0.5178254533919292,
       "gdp_per_capita_usd": 2128.553955,
+      "gdp_total_usd": 104475805259.04918,
+      "total_msw_total_tonnes": 9276995.0,
+      "population_total": 49082996.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 332,
@@ -5773,6 +6728,11 @@
       "data_quality_score": 76.1,
       "waste_per_capita_kg_day": 1.07156186282982,
       "gdp_per_capita_usd": 16301.53809,
+      "gdp_total_usd": 1119224481567.984,
+      "total_msw_total_tonnes": 26853366.0,
+      "population_total": 68657600.0,
+      "waste_treatment_recycling_percent": 19.1,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 319,
@@ -5797,6 +6757,11 @@
       "data_quality_score": 63.97,
       "waste_per_capita_kg_day": 0.1379396234327103,
       "gdp_per_capita_usd": 3344.57373,
+      "gdp_total_usd": 4243163698.61283,
+      "total_msw_total_tonnes": 63875.0,
+      "population_total": 1268671.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 323,
@@ -5821,6 +6786,11 @@
       "data_quality_score": 73.52,
       "waste_per_capita_kg_day": 0.4203175150131238,
       "gdp_per_capita_usd": 1404.132935,
+      "gdp_total_usd": 10150357635.815525,
+      "total_msw_total_tonnes": 1109030.45,
+      "population_total": 7228915.0,
+      "waste_treatment_recycling_percent": 2.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 318,
@@ -5845,6 +6815,11 @@
       "data_quality_score": 75.56,
       "waste_per_capita_kg_day": 0.45,
       "gdp_per_capita_usd": 5636.418457,
+      "gdp_total_usd": 591547753.480607,
+      "total_msw_total_tonnes": 17238.20175,
+      "population_total": 104951.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 71.0,
       "cities": [
         {
           "id": 324,
@@ -5878,6 +6853,11 @@
       "data_quality_score": 74.55,
       "waste_per_capita_kg_day": 1.5015249924446603,
       "gdp_per_capita_usd": 28910.9082,
+      "gdp_total_usd": 38396577180.420006,
+      "total_msw_total_tonnes": 727874.0,
+      "population_total": 1328100.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 94.31,
       "cities": []
     },
     {
@@ -5892,6 +6872,11 @@
       "data_quality_score": 85.47,
       "waste_per_capita_kg_day": 0.6637940903651217,
       "gdp_per_capita_usd": 10505.2627,
+      "gdp_total_usd": 117069681044.63159,
+      "total_msw_total_tonnes": 2700000.0,
+      "population_total": 11143908.0,
+      "waste_treatment_recycling_percent": 4.0,
+      "waste_collection_coverage_total_percent_of_population": 65.0,
       "cities": [
         {
           "id": 327,
@@ -5934,6 +6919,11 @@
       "data_quality_score": 65.18,
       "waste_per_capita_kg_day": 1.161643796735334,
       "gdp_per_capita_usd": 28289.08789,
+      "gdp_total_usd": 2360147739652.95,
+      "total_msw_total_tonnes": 35374156.0,
+      "population_total": 83429616.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 330,
@@ -5967,6 +6957,11 @@
       "data_quality_score": 64.15,
       "waste_per_capita_kg_day": 0.25527251271200313,
       "gdp_per_capita_usd": 11471.18652,
+      "gdp_total_usd": 61557564384.98604,
+      "total_msw_total_tonnes": 500000.0,
+      "population_total": 5366277.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 322,
@@ -5991,6 +6986,11 @@
       "data_quality_score": 54.08,
       "waste_per_capita_kg_day": null,
       "gdp_per_capita_usd": 28174.48242,
+      "gdp_total_usd": 983289436.4580001,
+      "total_msw_total_tonnes": null,
+      "population_total": 34900.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -6005,6 +7005,11 @@
       "data_quality_score": 84.24,
       "waste_per_capita_kg_day": 0.9849598990718212,
       "gdp_per_capita_usd": 3793.127686,
+      "gdp_total_usd": 42092337.931541994,
+      "total_msw_total_tonnes": 3989.4865,
+      "population_total": 11097.0,
+      "waste_treatment_recycling_percent": 15.0,
+      "waste_collection_coverage_total_percent_of_population": 47.0,
       "cities": [
         {
           "id": 331,
@@ -6029,6 +7034,11 @@
       "data_quality_score": 74.03,
       "waste_per_capita_kg_day": 0.55,
       "gdp_per_capita_usd": 1972.301758,
+      "gdp_total_usd": 69215263645.03319,
+      "total_msw_total_tonnes": 7045049.836,
+      "population_total": 35093648.0,
+      "waste_treatment_recycling_percent": 6.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 335,
@@ -6053,6 +7063,11 @@
       "data_quality_score": 83.92,
       "waste_per_capita_kg_day": 0.9278814115880958,
       "gdp_per_capita_usd": 11534.6377,
+      "gdp_total_usd": 519112263357.47876,
+      "total_msw_total_tonnes": 15242025.0,
+      "population_total": 45004644.0,
+      "waste_treatment_recycling_percent": 3.2,
+      "waste_collection_coverage_total_percent_of_population": 75.86,
       "cities": [
         {
           "id": 337,
@@ -6086,6 +7101,11 @@
       "data_quality_score": 74.38,
       "waste_per_capita_kg_day": 1.5752381052286009,
       "gdp_per_capita_usd": 67119.13281,
+      "gdp_total_usd": 655789433574.9564,
+      "total_msw_total_tonnes": 5617682.0,
+      "population_total": 9770529.0,
+      "waste_treatment_recycling_percent": 20.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 9,
@@ -6119,6 +7139,11 @@
       "data_quality_score": 80.32,
       "waste_per_capita_kg_day": 1.268493180695618,
       "gdp_per_capita_usd": 46290.12109,
+      "gdp_total_usd": 3076457371443.055,
+      "total_msw_total_tonnes": 30771140.0,
+      "population_total": 66460344.0,
+      "waste_treatment_recycling_percent": 27.25,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 112,
@@ -6152,6 +7177,11 @@
       "data_quality_score": 100.0,
       "waste_per_capita_kg_day": 2.224274173811497,
       "gdp_per_capita_usd": 61498.37109,
+      "gdp_total_usd": 20090748367483.92,
+      "total_msw_total_tonnes": 265224528.0,
+      "population_total": 326687488.0,
+      "waste_treatment_recycling_percent": 34.6,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 341,
@@ -6194,6 +7224,11 @@
       "data_quality_score": 84.24,
       "waste_per_capita_kg_day": 1.0060861706186892,
       "gdp_per_capita_usd": 20588.39258,
+      "gdp_total_usd": 70650139734.68416,
+      "total_msw_total_tonnes": 1260139.509,
+      "population_total": 3431552.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": 98.0,
       "cities": [
         {
           "id": 338,
@@ -6218,6 +7253,11 @@
       "data_quality_score": 64.12,
       "waste_per_capita_kg_day": 0.36806341364553696,
       "gdp_per_capita_usd": 5164.274414,
+      "gdp_total_usd": 153763688539.643,
+      "total_msw_total_tonnes": 4000000.0,
+      "population_total": 29774500.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 342,
@@ -6251,6 +7291,11 @@
       "data_quality_score": 84.24,
       "waste_per_capita_kg_day": 0.7115280212424464,
       "gdp_per_capita_usd": 3061.787354,
+      "gdp_total_usd": 827913424.096308,
+      "total_msw_total_tonnes": 70225.489,
+      "population_total": 270402.0,
+      "waste_treatment_recycling_percent": 37.0,
+      "waste_collection_coverage_total_percent_of_population": 12.0,
       "cities": [
         {
           "id": 347,
@@ -6275,6 +7320,11 @@
       "data_quality_score": 72.49,
       "waste_per_capita_kg_day": 0.896262144951273,
       "gdp_per_capita_usd": 14269.67383,
+      "gdp_total_usd": 426564501374.0964,
+      "total_msw_total_tonnes": 9779093.14,
+      "population_total": 29893080.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 100.0,
       "cities": [
         {
           "id": 344,
@@ -6299,6 +7349,11 @@
       "data_quality_score": 85.45,
       "waste_per_capita_kg_day": 0.301613334557885,
       "gdp_per_capita_usd": 5089.411133,
+      "gdp_total_usd": 442435212961.8779,
+      "total_msw_total_tonnes": 9570300.0,
+      "population_total": 86932496.0,
+      "waste_treatment_recycling_percent": 23.0,
+      "waste_collection_coverage_total_percent_of_population": 72.0,
       "cities": [
         {
           "id": 345,
@@ -6332,6 +7387,11 @@
       "data_quality_score": 63.46,
       "waste_per_capita_kg_day": 3.794239800099246,
       "gdp_per_capita_usd": 30436.56445,
+      "gdp_total_usd": 3219701533.7788,
+      "total_msw_total_tonnes": 146500.0,
+      "population_total": 105784.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     },
     {
@@ -6346,6 +7406,11 @@
       "data_quality_score": 85.99,
       "waste_per_capita_kg_day": 0.9389901062566146,
       "gdp_per_capita_usd": 5985.683105,
+      "gdp_total_usd": 24223466943.307606,
+      "total_msw_total_tonnes": 1387000.0,
+      "population_total": 4046901.0,
+      "waste_treatment_recycling_percent": 0.5,
+      "waste_collection_coverage_total_percent_of_population": 91.5,
       "cities": [
         {
           "id": 293,
@@ -6370,6 +7435,11 @@
       "data_quality_score": 97.15,
       "waste_per_capita_kg_day": 0.48040384999345337,
       "gdp_per_capita_usd": 8269.671875,
+      "gdp_total_usd": 228112382170.4375,
+      "total_msw_total_tonnes": 4836820.0,
+      "population_total": 27584212.0,
+      "waste_treatment_recycling_percent": 8.0,
+      "waste_collection_coverage_total_percent_of_population": 20.0,
       "cities": [
         {
           "id": 351,
@@ -6394,6 +7464,11 @@
       "data_quality_score": 73.18,
       "waste_per_capita_kg_day": 0.500950715597757,
       "gdp_per_capita_usd": 3201.289307,
+      "gdp_total_usd": 45665610849.76409,
+      "total_msw_total_tonnes": 2608268.0,
+      "population_total": 14264756.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": 20.0,
       "cities": [
         {
           "id": 358,
@@ -6427,6 +7502,11 @@
       "data_quality_score": 74.01,
       "waste_per_capita_kg_day": 0.31774051791194635,
       "gdp_per_capita_usd": 3190.506592,
+      "gdp_total_usd": 39883007415.9608,
+      "total_msw_total_tonnes": 1449752.0,
+      "population_total": 12500525.0,
+      "waste_treatment_recycling_percent": 16.0,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": [
         {
           "id": 362,
@@ -6523,6 +7603,11 @@
       "data_quality_score": 64.66,
       "waste_per_capita_kg_day": 0.8576696311763379,
       "gdp_per_capita_usd": 57362.92578,
+      "gdp_total_usd": 1344242802728.52,
+      "total_msw_total_tonnes": 7336000.0,
+      "population_total": 23434000.0,
+      "waste_treatment_recycling_percent": null,
+      "waste_collection_coverage_total_percent_of_population": null,
       "cities": []
     }
   ]

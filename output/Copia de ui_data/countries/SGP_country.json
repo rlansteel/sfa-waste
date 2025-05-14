@@ -1,0 +1,262 @@
+{
+  "id": 170,
+  "country_code_iso3": "SGP",
+  "country_name": "Singapore",
+  "region": "EAS",
+  "income_group_wb": "HIC",
+  "gdp_per_capita_usd": 97341.46875,
+  "population_total": 5703600.0,
+  "total_msw_generated_tons_year": 1870000.0,
+  "waste_collection_coverage_total_percent_of_population": 100.0,
+  "waste_treatment_recycling_percent": 61.0,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": 37.0,
+  "waste_treatment_landfill_unspecified_percent": 2.0,
+  "waste_treatment_open_dump_percent": null,
+  "waste_treatment_sanitary_landfill_percent": null,
+  "waste_treatment_controlled_landfill_percent": null,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "Yes",
+  "e_waste_tons_year": 100000.0,
+  "hazardous_waste_tons_year": 446870.0,
+  "composition_food_organic": 10.51,
+  "composition_glass": 0.93,
+  "composition_metal": 19.12,
+  "composition_paper_cardboard": 14.86,
+  "composition_plastic": 10.58,
+  "composition_rubber_leather": 1.96,
+  "composition_wood": 5.5,
+  "composition_yard_garden_green": 4.26,
+  "composition_other": 32.3,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "original",
+  "waste_treatment_landfill_unspecified_percent_status": "original",
+  "waste_treatment_open_dump_percent_status": "missing_unimputed",
+  "waste_treatment_sanitary_landfill_percent_status": "missing_unimputed",
+  "waste_treatment_controlled_landfill_percent_status": "missing_unimputed",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "original",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "original",
+  "composition_wood_status": "original",
+  "composition_yard_garden_green_status": "original",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 96.98,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 52.5, \"composition_status\": \"consistent_strict\", \"composition_sum_actual\": 100.02, \"composition_fields_present\": \"9/9\", \"measurements_unique_count\": 21, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 14.7, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 21, \"measurements_with_source\": 21, \"measurements_with_comments\": 21, \"raw_score\": 395.2, \"max_potential_score\": 407.51, \"final_normalized_score\": 96.98, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (consistent_strict, Suma: 100.02, Presentes: 9/9): 52.5 pts.\\n- Mediciones (21 \\u00fanicas): Disp=28.0, Detalle/Rec=14.7 pts.\\n-> Puntaje Bruto: 395.2 / 407.51 => Normalizado: 96.98\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "5; yard/garden/green reported as horticultural waste; metal includes ferrous (17.9 percent) and non-ferrous (1.22 percent) metal waste; rubber/leather reported as textile/leather; others include CandD waste (20.89 percent), used slag (3.54 percent), ash and sludge (3.16 percent), scrap tires (0.47 percent), and other (stones, ceramics, rubber, etc.) (4.24 percent)"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_rubber_leather_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_wood_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_yard_garden_green_waste_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2016,
+      "source": "Baldé, C.P., Forti V., Gray, V., Kuehr, R., Stegmann, P. 2017. \"The Global E-waste Monitor 2017- Quantities, Flows, and Resources.\" United Nations University (UNU), International Telecommunication Union (ITU) and International Solid Waste Association (ISWA), Bonn/Geneva/Vienna. ISBN Printed Version: 978-92-808-9053-2. ISBN Electronic Version: 978-92-808-9054-9. ISSN 2522-7033.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_hazardous_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "UNSD (United Nations Statistics Division). 2017. \"Hazardous waste generated.\" UNSD Environmental Indicators. United Nations Statistics Division (UNSD), United Nations. https://unstats.un.org/unsd/envstats/qindicators.cshtml",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2019,
+      "source": "National Environment Agency, Government of Singapore. \"Waste Statics and Overall Recycling.\" Accessed June 19, 2020. https://www.nea.gov.sg/our-services/waste-management/waste-statistics-and-overall-recycling",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2012,
+      "source": "UNSD (United Nations Statistics Division). 2016a. \"Environmental Indicators: Waste. Municipal Waste Collected.\" United Nations Statistics Division (UNSD), United Nations. November. http://unstats.un.org/unsd/ENVIRONMENT/qindicators.htm.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_incineration_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Singapore, Ministry of the Environment and Water Resources. 2017. \"Key Environmental Statistics 2016.\" ISSN: 1793-4524.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_landfill_unspecified_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Singapore, Ministry of the Environment and Water Resources. 2017. \"Key Environmental Statistics 2016.\" ISSN: 1793-4524.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2017,
+      "source": "Singapore, NEA (National Environment Agency). 2017. \"Waste Statistics and Overall Recycling.\" National Environment Agency (NEA), Government of Singapore. http://www.nea.gov.sg/energy-waste/waste-management/waste-statistics-and-overall-recycling.",
+      "comments": "5; yard/garden/green reported as horticultural waste; metal includes ferrous (17.9 percent) and non-ferrous (1.22 percent) metal waste; rubber/leather reported as textile/leather; others include CandD waste (20.89 percent), used slag (3.54 percent), ash and sludge (3.16 percent), scrap tires (0.47 percent), and other (stones, ceramics, rubber, etc.) (4.24 percent)"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2015,
+      "source": "Singapore, Ministry of the Environment and Water Resources. 2017. \"Key Environmental Statistics 2016.\" ISSN: 1793-4524.",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {
+    "entity_name": "Singapore",
+    "country": "Singapore",
+    "iso3": "SGP",
+    "overall_summary": "Singapore has achieved a relatively high municipal solid waste recycling rate of 61% through comprehensive policies, modern infrastructure like waste-to-energy incineration plants, and the integration of both formal and informal recycling networks. However, the country faces challenges in further reducing waste generation, extending the limited capacity of its sole landfill site, and increasing recycling rates beyond current levels.",
+    "generation_context": {
+      "scale_and_rate": "Singapore generated around 1.87 million tons of municipal solid waste in the year covered by the data, with a per capita rate of around 328 kg per person. Some reports suggest Singapore's waste generation has increased over recent decades due to economic and population growth.",
+      "contributing_factors_trends": "Key factors contributing to Singapore's waste generation include its high population density, affluent consumer economy, and role as a global trade and tourism hub. With continued urbanization and economic growth, waste generation is expected to rise further, though the government aims to decouple waste from GDP growth through its Zero Waste Masterplan."
+    },
+    "waste_stream_composition": {
+      "summary": "The waste stream composition in Singapore is predominantly other (32.3%), followed by metal (19.12%), paper/cardboard (14.86%), plastic (10.58%), food/organic (10.51%), rubber/leather (1.96%), glass (0.93%), and yard/garden green (4.26%).",
+      "data_notes": "Composition data from database record."
+    },
+    "collection_and_transport": {
+      "coverage_and_methods": "According to national data, Singapore has 100% waste collection coverage for its total population. Public waste collectors (PWCs) appointed by the National Environment Agency (NEA) typically travel fixed routes on a routine schedule to collect waste, though some reports suggest exploring more dynamic routing optimization and sensor technologies. The informal recycling sector, known as 'karang guni', also plays a role in collection alongside the formal PWC system.",
+      "key_challenges": "Some key challenges mentioned or inferred include inefficiencies from static collection routes and schedules regardless of actual bin fill levels, lack of visibility into real-time collection needs, and the need to better integrate informal recycling networks with formal municipal systems."
+    },
+    "treatment_and_disposal": {
+      "dominant_methods_summary": "According to the data, the dominant waste treatment methods in Singapore are recycling (61%), incineration (37%), and landfilling (2%). Some reports suggest Singapore has achieved a high recycling rate through effective policies and infrastructure. The country has invested in modern waste-to-energy incineration plants to minimize landfilling of waste.",
+      "infrastructure_highlights": "Key waste management infrastructure highlighted includes the Semakau Landfill, Singapore's only remaining landfill which is projected to be filled by 2035 at current rates. Singapore also operates several large waste-to-energy incineration plants and materials recovery facilities for sorting and recycling various waste streams.",
+      "key_challenges": "Extending the lifespan of Semakau Landfill is a major challenge as it has limited remaining capacity. Increasing the recycling rate to reduce waste sent for incineration or landfilling is another key focus area. Some reports indicate contamination of recyclables is an issue that hinders higher recycling rates."
+    },
+    "recycling_and_recovery_initiatives": {
+      "rates_and_targets": "According to the structured data, Singapore has a waste treatment recycling rate of 61% and a composting rate of null. Some reports suggest Singapore has set a goal of reducing waste sent to landfills by 30% by 2030 and achieving net zero carbon emissions by mid-century.",
+      "programs_mentioned": "Web findings mention the National Recycling Programme, Zero Waste Masterplan, and initiatives like the Plastic Bag Charge, Bring Your Own (BYO) container/bag campaigns, and Pay-As-You-Throw/Save-As-You-Reduce schemes using RFID tracking.",
+      "informal_sector_role": "The informal recycling sector, traditionally known as the 'karang guni' trade, plays an important role in domestic recycling according to some findings. A mobile app called 'Honk!' was developed to support these small-scale recycling entrepreneurs and increase recycling rates."
+    },
+    "policy_and_governance": {
+      "regulatory_framework": "According to web findings, Singapore has a comprehensive regulatory framework for waste management. The National Environment Agency (NEA) is the national agency responsible for waste management policies and regulations. Some key points from the findings: Singapore has a national law governing waste management. The government has laid out plans like the Zero Waste Masterplan and a goal to reduce waste sent to landfills by 30% by 2030 as part of implementing a circular economy model. The NEA appoints public waste collectors and regulates waste collection, treatment, and disposal methods like incineration and landfilling. Some reports suggest Singapore is enhancing policies like extended producer responsibility schemes to drive waste reduction and recycling.",
+      "governance_issues": "No specific governance issues were mentioned in the provided sources regarding funding or administration of waste management policies and programs."
+    },
+    "overall_assessment": {
+      "strengths": [
+        "100% waste collection coverage",
+        "Well-established regulatory framework and national agency for waste management",
+        "High recycling rate of 61% achieved through effective policies and programs",
+        "Investment in modern waste treatment infrastructure like incineration plants",
+        "Integration of informal 'karang guni' recycling networks"
+      ],
+      "weaknesses_or_challenges": [
+        "Increasing waste generation driven by economic and population growth",
+        "Limited remaining capacity at Semakau Landfill, projected to be filled by 2035",
+        "Need to further increase recycling rates and reduce contamination of recyclables",
+        "Inefficiencies in static waste collection routes and lack of real-time monitoring"
+      ],
+      "recent_developments_or_outlook": "No specific recent developments or future outlook information found in the provided sources."
+    }
+  }
+}

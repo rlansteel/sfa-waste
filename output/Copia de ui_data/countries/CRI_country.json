@@ -1,0 +1,194 @@
+{
+  "id": 45,
+  "country_code_iso3": "CRI",
+  "country_name": "Costa Rica",
+  "region": "LCN",
+  "income_group_wb": "UMC",
+  "gdp_per_capita_usd": 18168.71484,
+  "population_total": 4757575.0,
+  "total_msw_generated_tons_year": 1460000.0,
+  "waste_collection_coverage_total_percent_of_population": 90.4,
+  "waste_treatment_recycling_percent": 1.26,
+  "waste_treatment_compost_percent": null,
+  "waste_treatment_incineration_percent": null,
+  "waste_treatment_landfill_unspecified_percent": null,
+  "waste_treatment_open_dump_percent": 9.1,
+  "waste_treatment_sanitary_landfill_percent": 67.5,
+  "waste_treatment_controlled_landfill_percent": 23.5,
+  "national_law_exists": "Yes",
+  "national_agency_exists": "nan",
+  "e_waste_tons_year": 35800.0,
+  "hazardous_waste_tons_year": null,
+  "composition_food_organic": 58.0,
+  "composition_glass": 1.0,
+  "composition_metal": 2.0,
+  "composition_paper_cardboard": 21.0,
+  "composition_plastic": 11.0,
+  "composition_rubber_leather": null,
+  "composition_wood": null,
+  "composition_yard_garden_green": null,
+  "composition_other": 7.0,
+  "country_name_status": null,
+  "country_code_iso3_status": null,
+  "region_status": null,
+  "income_group_wb_status": null,
+  "gdp_per_capita_usd_status": "original",
+  "population_total_status": "original",
+  "total_msw_generated_tons_year_status": "original",
+  "waste_collection_coverage_total_percent_of_population_status": "original",
+  "waste_treatment_recycling_percent_status": "original",
+  "waste_treatment_compost_percent_status": "missing_unimputed",
+  "waste_treatment_incineration_percent_status": "missing_unimputed",
+  "waste_treatment_landfill_unspecified_percent_status": "missing_unimputed",
+  "waste_treatment_open_dump_percent_status": "original",
+  "waste_treatment_sanitary_landfill_percent_status": "original",
+  "waste_treatment_controlled_landfill_percent_status": "original",
+  "national_law_exists_status": null,
+  "national_agency_exists_status": null,
+  "e_waste_tons_year_status": "original",
+  "hazardous_waste_tons_year_status": "missing_unimputed",
+  "composition_food_organic_status": "original",
+  "composition_glass_status": "original",
+  "composition_metal_status": "original",
+  "composition_paper_cardboard_status": "original",
+  "composition_plastic_status": "original",
+  "composition_rubber_leather_status": "missing_unimputed",
+  "composition_wood_status": "missing_unimputed",
+  "composition_yard_garden_green_status": "missing_unimputed",
+  "composition_other_status": "original",
+  "latitude": null,
+  "longitude": null,
+  "latitude_geo_status": "error_mismatch_country_type",
+  "longitude_geo_status": "error_mismatch_country_type",
+  "data_quality_score": 83.58,
+  "score_details_json": "{\"methodology\": \"WB\", \"country_name_score\": 37.5, \"country_name_status\": \"original\", \"country_code_iso3_score\": 37.5, \"country_code_iso3_status\": \"original\", \"region_score\": 37.5, \"region_status\": \"original\", \"income_group_wb_score\": 37.5, \"income_group_wb_status\": \"original\", \"population_total_score\": 37.5, \"population_total_status\": \"original\", \"total_msw_generated_tons_year_score\": 37.5, \"total_msw_generated_tons_year_status\": \"original\", \"waste_collection_coverage_total_percent_of_population_score\": 37.5, \"waste_collection_coverage_total_percent_of_population_status\": \"original\", \"waste_treatment_recycling_percent_score\": 37.5, \"waste_treatment_recycling_percent_status\": \"original\", \"geocoding_score\": 0, \"geocoding_status\": \"missing\", \"composition_score\": 0.0, \"composition_status\": \"incomplete\", \"composition_sum_actual\": 100.0, \"composition_fields_present\": \"6/9\", \"measurements_unique_count\": 18, \"measurements_availability_score\": 28.0, \"measurements_details_score\": 12.6, \"measurements_recency_bonus_applied\": false, \"measurements_with_year\": 18, \"measurements_with_source\": 18, \"measurements_with_comments\": 18, \"raw_score\": 340.6, \"max_potential_score\": 407.51, \"final_normalized_score\": 83.58, \"calculation_summary\": \"Resumen C\\u00e1lculo Puntaje (Pa\\u00eds):\\n- Completitud Core (8 campos): 300.0 pts.\\n- Geolocalizaci\\u00f3n (missing): 0 pts.\\n- Composici\\u00f3n (incomplete, Suma: 100.0, Presentes: 6/9): 0.0 pts.\\n- Mediciones (18 \\u00fanicas): Disp=28.0, Detalle/Rec=12.6 pts.\\n-> Puntaje Bruto: 340.6 / 407.51 => Normalizado: 83.58\"}",
+  "measurements_data": [
+    {
+      "measurement": "composition_food_organic_waste_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_glass_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_metal_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_paper_cardboard_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "composition_plastic_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_construction_and_demolition_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2008,
+      "source": "UICN (International Union for the Conservation of Nature and Natural Resources). 2011. \"Debris and other construction waste management guide.\" [UICN (Unión Internacional para la Conservación de la Naturaleza y de los Recursos Naturales ). 2011. \"Guía de manejo de escombros y otros residuos de la construcción\"]. UICN, Oficina Regional para Mesoamérica y la Iniciativa Caribe. San José.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "special_waste_e_waste_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "ITU (International Telecommunication Union). 2015. \"Sustainable Waste Management of Electrical and Electronic Devices in Latin America\" [\"Gestión Sostenible de Residuos de Aparatos Eléctricos y Electrónicos en América Latina\"]. ITU, Basel Convention, CRBAS-Basel Regional Center for South America, UNESCO, WHO, UNIDO, WIPO, ECLAC 2015 [UIT, Convenio de Basilea, CRBAS-Centro Regional Basilea para América del Sur, UNESCO, OMS, ONUDI, OMPI, CEPAL 2015]. May.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "total_msw_total_msw_generated_tons_year",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Costa Rica, Ministry of Health. 2016. \"National Plan for Integrated Waste Management, 2016–2021\" [\"Plan Nacional para la Gestión Integral de Residuos, 2016–2021\"]. Ministry of Health [Ministerio de Salud], Government of Costa Rica. San José, March.",
+      "comments": "8 (4,000 tonnes/day)"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_geographic_area",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_households",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_population",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_collection_coverage_total_percent_of_waste",
+      "units": "Percent of population",
+      "year": 2010,
+      "source": "IDB (Inter-American Development Bank). 2015. \"Situation of SOLID WASTE management in Latin America and the Caribbean\" [BID (Banco Interamericano de Desarrollo). 2015. \"Situación de la gestión de RESIDUOS SÓLIDOS en América Latina y el Caribe\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_controlled_landfill_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_open_dump_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_other_percent",
+      "units": "%",
+      "year": 2014,
+      "source": "Costa Rica, CGR (Comptroller General of the Republic). 2016. \"Operational Audit Report on the Management of Municipalities to Guarantee the Effective and Efficient Provision of Ordinary Waste Collection Service\" [\"Informe de auditoría operativa acerca de la gestión de las municipalidades para garantizar la prestación eficaz y eficiente del servicio de recolección de residuos ordinarios\"]. Report No. DFOE-DL-IF-00001-2016. Comptroller General of the Republic [Contraloría General de la República (CGR)], Government of Costa Rica. February 12.",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_recycling_percent",
+      "units": "tonnes/year",
+      "year": 2014,
+      "source": "Costa Rica, Division of Operational and Evaluative Inspection (División de Fiscalización Operativa y Evaluativa). 2016. \"OPERATIONAL AUDIT REPORT ON MUNICIPALITIES MANAGEMENT TO GUARANTEE THE EFFICIENT PROVISION OF THE ORDINARY WASTE COLLECTION SERVICE\" [\"INFORME DE AUDITORÍA OPERATIVAACERCA DE LA GESTIÓN DE LAS MUNICIPALIDADES PARA GARANTIZAR LA PRESTACIÓN EFICAZ Y EFICIENTE DEL SERVICIO DE RECOLECCIÓN DE RESIDUOS ORDINARIOS\"].",
+      "comments": "nan"
+    },
+    {
+      "measurement": "waste_treatment_sanitary_landfill_landfill_gas_system_percent",
+      "units": "tonnes/year",
+      "year": 2010,
+      "source": "IDB-AIDIS-PAHO (Inter-American Development Bank, Inter-American Association of Sanitary and Environmental Engineering, and Pan American Health Organization). 2011. \"Report of the Regional Evalution of the Management of Municipal Solid Waste in Latin American and the Caribbean 2010\" [\"Informe de la Evaluación Regional del Manejo de Residuos Sólidos Urbanos en América Latina y el Caribe 2010\"]. Inter-American Development Bank (IDB), Inter-American Association of Sanitary and Environmental Engineering [Asociación Interamericana de Ingeniería Sanitaria y Ambiental (AIDIS)], and Pan American Health Organization (PAHO) [Organización Panamericana de la Salud (OPS)].",
+      "comments": "nan"
+    }
+  ],
+  "ai_profile_data": {}
+}

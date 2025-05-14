@@ -10,14 +10,14 @@
 # ///
 
 """
-SFA: Preparador de Datos JSON para UI desde SQLite (v7.4 - Corrección Nombres de Archivo Perfil)
+SFA: Preparador de Datos JSON para UI desde SQLite (v7.7 - Tabla Top Generadores con PIB Total y RPC)
 
 Lee la base de datos SQLite 'waste_data_clean.db', los perfiles SFA3.1 generados
 y los datos de extrapolación para generar archivos JSON estructurados
 para ser consumidos por una interfaz de usuario web.
 Crea un índice general y archivos detallados por país y ciudad.
-NUEVO v7.4: Asegura que la carga de perfiles SFA3 coincida con la convención de nombres
-             usada por sfa_profile_generator_v2_granular.py.
+NUEVO v7.7: Añade PIB Total y Residuos Per Cápita a los datos de país en index.json
+             para la tabla de principales generadores.
 """
 
 import argparse
@@ -61,7 +61,7 @@ except ImportError:
 PROFILES_DIR_DEFAULT = Path("output/profiles_sfa3_ultra_refined/")
 EXTRAPOLATIONS_DIR_DEFAULT = Path("output/extrapolations/")
 OUTPUT_DIR_DEFAULT = Path("output/ui_data/")
-UI_DATA_VERSION = "v7.4_sprint5_final_profile_fix"
+UI_DATA_VERSION = "v7.7_sprint8_enhance_top_generators_v2" # Actualizada versión
 
 def sanitize_filename(name: str) -> str:
     if not isinstance(name, str): name = str(name)
@@ -90,15 +90,26 @@ def fetch_all_countries_for_index(conn: sqlite3.Connection) -> List[Dict[str, An
         cursor = conn.cursor()
         cursor.execute("""
             SELECT
-                id as country_db_id, country_name, country_code_iso3, region, income_group_wb,
-                latitude, longitude, latitude_geo_status, longitude_geo_status,
+                id as country_db_id, 
+                country_name, 
+                country_code_iso3, 
+                region, 
+                income_group_wb,
+                latitude, 
+                longitude, 
+                latitude_geo_status, 
+                longitude_geo_status,
                 data_quality_score,
                 gdp_per_capita_usd,
+                total_msw_generated_tons_year AS total_msw_total_tonnes,
+                population_total,
+                waste_treatment_recycling_percent,
+                waste_collection_coverage_total_percent_of_population,
                 CASE
-                    WHEN population_total > 0 AND total_msw_generated_tons_year IS NOT NULL
+                    WHEN population_total > 0 AND total_msw_generated_tons_year IS NOT NULL AND population_total IS NOT NULL
                     THEN (total_msw_generated_tons_year * 1000.0) / (population_total * 365.0)
                     ELSE NULL
-                END AS waste_per_capita_kg_day
+                END AS waste_per_capita_kg_day  -- Este ya estaba, solo asegurando que se propague
             FROM countries
             WHERE country_name IS NOT NULL AND country_code_iso3 IS NOT NULL
             ORDER BY country_name
@@ -134,7 +145,7 @@ def fetch_cities_by_country_for_index(conn: sqlite3.Connection) -> Dict[str, Lis
             row_dict = dict(row_sqlite)
             iso3 = row_dict['iso3c']
             city_data = {
-                "id": row_dict['id'], # Este es el city_db_id
+                "id": row_dict['id'],
                 "name": row_dict['municipality'],
                 "latitude": row_dict.get('latitude'),
                 "longitude": row_dict.get('longitude'),
@@ -174,16 +185,13 @@ def fetch_measurements_for_entity(conn: sqlite3.Connection, measurements_table_n
     except sqlite3.Error as e: print_error(f"Error fetch mediciones '{measurements_table_name}' para '{fk_column_name}'='{entity_identifier}': {e}"); return []
     except Exception as ex: print_error(f"Error inesperado fetch_measurements: {ex}"); return []
 
-def load_sfa3_profile(entity_type: str, 
-                      identifier: str, # ISO3 para país (ej. "ARG"), ID numérico como string para ciudad (ej. "13")
+def load_sfa3_profile(entity_type: str,
+                      identifier: str,
                       profiles_dir: Path) -> Optional[Dict[str, Any]]:
-    """ Carga el perfil JSON SFA3 para una entidad. """
     profile_filename = None
     if entity_type == "country":
-        # sfa_profile_generator guarda como: ARG_country_profile.json (ISO3 en mayúsculas)
         profile_filename = f"{identifier.upper()}_country_profile.json"
     elif entity_type == "city":
-        # sfa_profile_generator guarda como: city_13_city_profile.json
         profile_filename = f"city_{identifier}_city_profile.json"
     else:
         print_warning(f"Tipo de entidad '{entity_type}' no soportado para cargar perfil IA.")
@@ -194,7 +202,6 @@ def load_sfa3_profile(entity_type: str,
         try:
             with open(profile_path, 'r', encoding='utf-8') as f:
                 profile_data_full = json.load(f)
-            # Devolver solo la parte 'waste_profile' para insertarla en la UI
             return profile_data_full.get("waste_profile")
         except json.JSONDecodeError:
             print_warning(f"Error decodificando perfil JSON SFA3: {profile_path}")
@@ -205,7 +212,7 @@ def load_sfa3_profile(entity_type: str,
     return None
 
 def load_extrapolations(extrapolations_dir: Path, entity_type_plural: str) -> Dict[str, Dict[str, Any]]:
-    filename = f"{entity_type_plural}_level_extrapolations.json" # ej. countries_level_extrapolations.json
+    filename = f"{entity_type_plural}_level_extrapolations.json"
     file_path = extrapolations_dir / filename
     if file_path.is_file():
         try:
@@ -255,14 +262,14 @@ def main():
     parser.add_argument("--profiles-input-dir", default=str(PROFILES_DIR_DEFAULT), help=f"Directorio de entrada para perfiles SFA3 (default: {PROFILES_DIR_DEFAULT}).")
     parser.add_argument("--extrapolations-input-dir", default=str(EXTRAPOLATIONS_DIR_DEFAULT), help=f"Directorio de entrada para datos de extrapolación (default: {EXTRAPOLATIONS_DIR_DEFAULT}).")
     parser.add_argument("--output-dir", default=str(OUTPUT_DIR_DEFAULT), help=f"Directorio salida JSON UI (default: {OUTPUT_DIR_DEFAULT}).")
-    
+
     args = parser.parse_args()
 
     DB_FILE = Path(args.db_file)
     PROFILES_DIR = Path(args.profiles_input_dir)
     EXTRAPOLATIONS_DIR = Path(args.extrapolations_input_dir)
     OUTPUT_DIR = Path(args.output_dir)
-    
+
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     conn = create_connection(DB_FILE)
@@ -272,13 +279,13 @@ def main():
     print_info(f"Leyendo perfiles SFA3 de: {PROFILES_DIR}")
     print_info(f"Leyendo extrapolaciones de: {EXTRAPOLATIONS_DIR}")
 
-    print_info("Obteniendo datos índice (países, ciudades, regiones, ingresos, waste_per_capita, gdp_per_capita_usd)...")
-    countries_for_index = fetch_all_countries_for_index(conn)
+    print_info("Obteniendo datos índice (países, ciudades, regiones, ingresos, etc.)...")
+    countries_for_index_raw = fetch_all_countries_for_index(conn)
     cities_by_country_for_index_map = fetch_cities_by_country_for_index(conn)
     unique_regions = fetch_unique_values(conn, "region", "countries")
     unique_income_groups = fetch_unique_values(conn, "income_group_wb", "countries")
 
-    if not countries_for_index: print_warning("No se encontraron países. index.json limitado.")
+    if not countries_for_index_raw: print_warning("No se encontraron países. index.json limitado.")
 
     index_data_structure = {
         "metadata": {
@@ -294,14 +301,25 @@ def main():
     country_extrapolations = load_extrapolations(EXTRAPOLATIONS_DIR, "countries")
     city_extrapolations = load_extrapolations(EXTRAPOLATIONS_DIR, "cities")
 
-    for country_summary_data_sqlite in countries_for_index:
-        country_summary_data = dict(country_summary_data_sqlite)
+    countries_for_index = [dict(row) for row in countries_for_index_raw]
+
+    for country_summary_data in countries_for_index:
         iso3 = country_summary_data.get('country_code_iso3')
         country_name = country_summary_data.get('country_name')
         if not iso3 or not country_name:
              print_warning(f"Registro país inválido omitido índice: {country_summary_data}")
              continue
         
+        # Calcular PIB Total
+        gdp_total = None
+        gdp_per_capita = country_summary_data.get('gdp_per_capita_usd')
+        population = country_summary_data.get('population_total')
+        if gdp_per_capita is not None and population is not None:
+            try:
+                gdp_total = float(gdp_per_capita) * float(population)
+            except (ValueError, TypeError):
+                gdp_total = None # En caso de que los valores no sean numéricos
+
         country_entry_for_index = {
             "country_name": country_name, "iso3": iso3,
             "region": country_summary_data.get('region'),
@@ -311,8 +329,13 @@ def main():
             "latitude_geo_status": country_summary_data.get('latitude_geo_status'),
             "longitude_geo_status": country_summary_data.get('longitude_geo_status'),
             "data_quality_score": country_summary_data.get('data_quality_score'),
-            "waste_per_capita_kg_day": country_summary_data.get('waste_per_capita_kg_day'),
-            "gdp_per_capita_usd": country_summary_data.get('gdp_per_capita_usd'),
+            "waste_per_capita_kg_day": country_summary_data.get('waste_per_capita_kg_day'), # Ya está en la consulta
+            "gdp_per_capita_usd": gdp_per_capita, # Ya está en la consulta
+            "gdp_total_usd": gdp_total, # NUEVO: PIB Total
+            "total_msw_total_tonnes": country_summary_data.get('total_msw_total_tonnes'),
+            "population_total": population,
+            "waste_treatment_recycling_percent": country_summary_data.get('waste_treatment_recycling_percent'),
+            "waste_collection_coverage_total_percent_of_population": country_summary_data.get('waste_collection_coverage_total_percent_of_population'),
             "cities": cities_by_country_for_index_map.get(iso3, [])
         }
         index_data_structure["countries"].append(country_entry_for_index)
@@ -321,21 +344,19 @@ def main():
     country_iterator = track(countries_for_index, description="Procesando países...") if USE_RICH else countries_for_index
     (OUTPUT_DIR / "countries").mkdir(parents=True, exist_ok=True)
 
-    for country_summary_data_sqlite in country_iterator:
-        country_summary_data = dict(country_summary_data_sqlite)
+    for country_summary_data in country_iterator:
         iso3 = country_summary_data.get('country_code_iso3')
-        country_db_id = country_summary_data.get('country_db_id') # Necesitamos el ID numérico para buscar mediciones
+        country_db_id = country_summary_data.get('country_db_id')
         if not iso3 or country_db_id is None: continue
 
-        country_details_raw = fetch_entity_details(conn, "countries", "id", country_db_id) # Usar ID numérico
+        country_details_raw = fetch_entity_details(conn, "countries", "id", country_db_id)
         if country_details_raw:
             country_details = dict(country_details_raw)
-            # Usar country_code_iso3 para buscar mediciones de país, ya que así está en la tabla country_measurements
             country_measurements = fetch_measurements_for_entity(conn, "country_measurements", "country_iso3c", iso3)
             country_details["measurements_data"] = [clean_nan_values(m) for m in country_measurements]
-            
-            ai_profile = load_sfa3_profile(entity_type="country", 
-                                           identifier=iso3, # Pasa ISO3 para la convención de nombres
+
+            ai_profile = load_sfa3_profile(entity_type="country",
+                                           identifier=iso3,
                                            profiles_dir=PROFILES_DIR)
             country_details["ai_profile_data"] = ai_profile if ai_profile else {}
 
@@ -349,7 +370,7 @@ def main():
                         print_info(f"  Extrapolado {key} para {iso3} con valor {val_dict.get('value')}")
 
             cleaned_details = clean_nan_values(country_details)
-            filename = f"{iso3.upper()}_country.json" # Guardar con ISO3 mayúsculas
+            filename = f"{iso3.upper()}_country.json"
             output_path = OUTPUT_DIR / "countries" / filename
             write_json(cleaned_details, output_path)
         else:
@@ -359,7 +380,6 @@ def main():
     all_cities_summary_for_files = []
     try:
         cursor = conn.cursor()
-        # Asegúrate de que la tabla 'cities' tiene 'iso3c'
         cursor.execute("SELECT id, municipality, iso3c FROM cities WHERE municipality IS NOT NULL AND iso3c IS NOT NULL")
         all_cities_summary_for_files = [dict(row) for row in cursor.fetchall()]
     except sqlite3.Error as e:
@@ -372,7 +392,7 @@ def main():
     for city_summary in city_iterator:
         city_id = city_summary['id']
         city_name = city_summary['municipality']
-        city_iso3 = city_summary['iso3c'] # ISO3 del país al que pertenece la ciudad
+        city_iso3 = city_summary['iso3c']
 
         city_details_raw = fetch_entity_details(conn, "cities", "id", city_id)
         if city_details_raw:
@@ -380,8 +400,8 @@ def main():
             city_measurements = fetch_measurements_for_entity(conn, "city_measurements", "city_id", city_id)
             city_details["measurements_data"] = [clean_nan_values(m) for m in city_measurements]
 
-            ai_profile_city = load_sfa3_profile(entity_type="city", 
-                                                identifier=str(city_id), # Pasa el ID de la ciudad como string
+            ai_profile_city = load_sfa3_profile(entity_type="city",
+                                                identifier=str(city_id),
                                                 profiles_dir=PROFILES_DIR)
             city_details["ai_profile_data"] = ai_profile_city if ai_profile_city else {}
 
@@ -396,8 +416,7 @@ def main():
 
             cleaned_details = clean_nan_values(city_details)
             safe_city_name_for_file = sanitize_filename(city_name)
-            # Usar el ID de la ciudad para el nombre del archivo para asegurar unicidad y consistencia
-            filename = f"city_{city_id}_{safe_city_name_for_file}_{city_iso3.lower()}.json" 
+            filename = f"city_{city_id}_{safe_city_name_for_file}_{city_iso3.lower()}.json"
             output_path = OUTPUT_DIR / "cities" / filename
             write_json(cleaned_details, output_path)
             processed_cities_count += 1
